@@ -17,16 +17,19 @@ mobile: 640px */
 /* for headings */
 h1{
   font-size: 3.75rem;
+  font-weight: 700;
 }
 
 /* for sub-headings */
 h2{
   font-size: 3rem;
+  font-weight: 500;
 }
 
 /* for text */
 p{
   font-size: 1.5rem;
+  font-weight: 400;
 }
 
 a {

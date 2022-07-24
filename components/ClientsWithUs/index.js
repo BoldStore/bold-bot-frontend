@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './client.module.css'
+import styles from './styles.module.css'
 
 function ClientsWithUs() {
   return (
