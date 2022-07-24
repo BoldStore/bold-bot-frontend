@@ -1,35 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700&display=swap");
 
 body {
   padding: 0rem 2rem;
   margin: 0;
-  font-family: 'Red Hat Display', sans-serif;
+  font-family: "Red Hat Display", sans-serif;
 }
 
 /* breakpoints: 
 tablet: 1024px
 mobile: 640px */
 
-:root{
+:root {
   --black: #121212;
   --white: #ffffff;
   --grey: #808080;
+  --blue: #3781e3;
+}
+
+::selection {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--white);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border-radius: 1rem;
 }
 
 /* for headings */
-h1{
+h1 {
   font-size: 3.75rem;
   font-weight: 700;
 }
 
 /* for sub-headings */
-h2{
+h2 {
   font-size: 3rem;
   font-weight: 500;
 }
 
 /* for text */
-p{
+p {
   font-size: 1.125rem;
   font-weight: 400;
 }
@@ -43,7 +72,6 @@ a {
   box-sizing: border-box;
 }
 
-
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -54,28 +82,34 @@ a {
   }
 } */
 
- @media (max-width: 1024px) {
-  h1{
+@media (max-width: 1024px) {
+  h1 {
     font-size: 3rem;
   }
 
-  h2{
+  h2 {
     font-size: 2.25rem;
   }
-  p{
+  p {
     font-size: 1rem;
   }
- }
+}
 
- @media (max-width: 640px) {
-  h1{
+@media (max-width: 640px) {
+  body {
+    padding: 0rem 1rem;
+  }
+  h1 {
     font-size: 2.25rem;
   }
 
-  h2{
+  h2 {
     font-size: 1.875rem;
   }
-  p{
+  p {
     font-size: 0.875rem;
-  }  
- }
+  }
+  ::-webkit-scrollbar {
+    width: 0.3rem;
+  }
+}
