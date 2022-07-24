@@ -4,6 +4,7 @@ import styles from "../styles/Home.module.css";
 import Feature from "../components/Feature";
 import Client from "../components/ClientsWithUs/Client";
 import Banner from "../components/Banner";
+import { features } from "../components/Feature/features";
 
 export default function Home() {
   return (
@@ -15,10 +16,15 @@ export default function Home() {
       </Head>
       <Banner />
       <Client />
-      <Feature />
-      <Feature isReverse={true} />
-      <Feature />
-      <Feature isReverse={true} />
+      {features.map((item, i) => {
+        if (i % 2 == 0) {
+          return <Feature title={item.title} desc={item.desc} />;
+        } else {
+          return (
+            <Feature title={item.title} desc={item.desc} isReverse={true} />
+          );
+        }
+      })}
     </div>
   );
 }
