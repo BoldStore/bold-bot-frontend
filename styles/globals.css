@@ -29,7 +29,7 @@ img {
   -o-user-drag: none;
 }
 
-/* width */
+/* Width */
 ::-webkit-scrollbar {
   width: 0.4rem;
 }
@@ -70,6 +70,14 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+button {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+input {
+  font-family: "Red Hat Display", sans-serif;
 }
 
 /* @media (prefers-color-scheme: dark) {
