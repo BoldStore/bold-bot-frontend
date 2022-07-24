@@ -5,13 +5,16 @@ import Feature from '../components/Feature'
 
 export default function Home() {
   return (
-    <div className={styles.container} style={{display:"flex", justifyContent:"center"}}>
+    <div className={styles.container}>
       <Head>
         <title>BOLDbot</title>
         <meta name="description" content="" />
-        <link rel="icon" href="/Logo.png" />
+        <link rel="icon" href="/assets/Logo.png" />
       </Head>
       <Feature/>
+      <Feature isReverse={true}/>
+      <Feature/>
+      <Feature isReverse={true}/>
     </div>
   )
 }
