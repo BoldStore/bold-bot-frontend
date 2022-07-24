@@ -3,23 +3,23 @@ import styles from "./client.module.css";
 
 function Client({ imgSrc, username, link, followers }) {
   return (
-    <div className={styles.container}>
-      <img
-        src={"https://i.ibb.co/myvq6GR/aryan.jpg"}
-        className={styles.displayPic}
-        alt="display"
-      />
-      <div className={styles.clientInfo}>
-        <a
-          href={"https://www.instagram.com/aryanteng/"}
-          target="_blank"
-          rel="noreferrer"
-        >
+    <a
+      href={"https://www.instagram.com/aryanteng/"}
+      target="_blank"
+      rel="noreferrer"
+    >
+      <div className={styles.container}>
+        <img
+          src={"https://i.ibb.co/myvq6GR/aryan.jpg"}
+          className={styles.displayPic}
+          alt="display"
+        />
+        <div className={styles.clientInfo}>
           <p style={{ cursor: "pointer" }}>@aryanteng{username}</p>
-        </a>
-        <p>Followers: 100M{followers}</p>
+          <p>Followers: 100M{followers}</p>
+        </div>
       </div>
-    </div>
+    </a>
   );
 }
 
