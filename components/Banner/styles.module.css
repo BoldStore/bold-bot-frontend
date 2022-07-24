@@ -10,6 +10,7 @@
 
 .button:hover {
   cursor: pointer;
+  opacity: 0.9;
 }
 
 .button p {
