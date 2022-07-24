@@ -1,7 +1,8 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Feature from '../components/Feature'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import Feature from "../components/Feature";
+import Client from "../components/ClientsWithUs/Client";
 
 export default function Home() {
   return (
@@ -11,10 +12,11 @@ export default function Home() {
         <meta name="description" content="" />
         <link rel="icon" href="/assets/Logo.png" />
       </Head>
-      <Feature/>
-      <Feature isReverse={true}/>
-      <Feature/>
-      <Feature isReverse={true}/>
+      <Client />
+      <Feature />
+      <Feature isReverse={true} />
+      <Feature />
+      <Feature isReverse={true} />
     </div>
-  )
+  );
 }
