@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./styles.module.css";
 import Link from "next/link";
 import DrawerComponent from "./DrawerComponent";
