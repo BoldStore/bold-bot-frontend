@@ -15,7 +15,7 @@ function Feature({
       className={styles.container}
       style={{ flexDirection: isReverse ? "row-reverse" : "" }}
     >
-      <div style={{ position: "relative" }}>
+      <div className={styles.phoneComponent} style={{ position: "relative" }}>
         <motion.img
           src={"/assets/IceBreakerSS.svg"}
           className={styles.img}
@@ -31,7 +31,7 @@ function Feature({
         <div
           className={styles.gradient}
           style={{
-            left: isReverse ? "4.5rem" : "-1.8rem",
+            left: isReverse ? "4.5rem" : "-1.0rem",
             backgroundColor: backgroundColor,
             backgroundImage: backgroundImage,
           }}

@@ -22,7 +22,6 @@
 }
 .gradient {
   position: absolute;
-
   width: 250px;
   height: 430px;
   top: 3.5rem;
@@ -37,6 +36,13 @@
   .img {
     width: 250px;
     height: 400px;
+  }
+  .gradient {
+    width: 180px;
+    height: 350px;
+    top: 4.5rem;
+    z-index: -100;
+    border-radius: 2rem;
   }
   .container p {
     margin: 0.5rem 0;
@@ -56,10 +62,18 @@
     width: 100%;
     align-items: baseline;
     margin: 0rem !important;
+    margin-top: 1rem !important;
   }
   .img {
     margin-bottom: 0.25rem;
     width: 200px;
     height: 350px;
+  }
+  .gradient {
+    top: 1.5rem;
+    left: 2rem !important;
+  }
+  .phoneComponent {
+    margin-left: -1rem;
   }
 }
