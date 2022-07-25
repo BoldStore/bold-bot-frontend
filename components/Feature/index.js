@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import styles from "./styles.module.css";
 
@@ -7,7 +8,18 @@ function Feature({ imgSrc, title, desc, isReverse }) {
       className={styles.container}
       style={{ flexDirection: isReverse ? "row-reverse" : "" }}
     >
-      <img src={"/assets/IceBreakerSS.svg"} className={styles.img} />
+      <motion.img
+        src={"/assets/IceBreakerSS.svg"}
+        className={styles.img}
+        initial={{ y: isReverse ? -7 : 7 }}
+        whileInView={{ y: 0 }}
+        transition={{
+          type: "smooth",
+          repeat: Infinity,
+          repeatType: "mirror",
+          duration: 1,
+        }}
+      />
       <div
         className={styles.infoContainer}
         style={{
