@@ -17,6 +17,9 @@ function ClientsWithUs({ clients }) {
         <Client />
         <Client />
         <Client />
+        <Client />
+        <Client />
+        <Client />
       </div>
     </div>
   );
