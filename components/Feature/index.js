@@ -44,8 +44,20 @@ function Feature({
           marginLeft: isReverse ? "0rem" : "3rem",
         }}
       >
-        <h2>{title}</h2>
-        <p>{desc}</p>
+        <motion.h2
+          initial={{ y: 10, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5, duration: 1, type: "spring" }}
+        >
+          {title}
+        </motion.h2>
+        <motion.p
+          initial={{ y: 10, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.75, duration: 1, type: "spring" }}
+        >
+          {desc}
+        </motion.p>
       </div>
     </div>
   );
