@@ -7,6 +7,7 @@ function Banner() {
   return (
     <div className={styles.container}>
       <div className={styles.imagesFlex}>
+        <div className={styles.backgroundGradient} />
         <motion.div
           className={styles.imagesColumnLeft}
           initial={{ y: 100 }}

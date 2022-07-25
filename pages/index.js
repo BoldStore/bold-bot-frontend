@@ -15,15 +15,29 @@ export default function Home() {
         <meta name="description" content="" />
         <link rel="icon" href="/assets/Logo.png" />
       </Head>
+
       <Banner />
       <div className={styles.container}>
         <ClientsWithUs />
         {features.map((item, i) => {
           if (i % 2 == 0) {
-            return <Feature title={item.title} desc={item.desc} />;
+            return (
+              <Feature
+                title={item.title}
+                desc={item.desc}
+                backgroundColor={item.backgroundColor}
+                backgroundImage={item.backgroundImage}
+              />
+            );
           } else {
             return (
-              <Feature title={item.title} desc={item.desc} isReverse={true} />
+              <Feature
+                title={item.title}
+                desc={item.desc}
+                isReverse={true}
+                backgroundColor={item.backgroundColor}
+                backgroundImage={item.backgroundImage}
+              />
             );
           }
         })}
