@@ -26,7 +26,7 @@ function Banner() {
         <motion.div
           className={styles.imagesColumnRight}
           initial={{ y: -250 }}
-          animate={{ y: 0 }}
+          animate={{ y: 130 }}
           transition={{
             type: "smooth",
             repeat: Infinity,
