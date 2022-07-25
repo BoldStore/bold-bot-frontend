@@ -3,9 +3,6 @@
   flex-direction: column;
   margin: 5rem 0;
   background-color: var(--white);
-  z-index: 100;
-  position: relative;
-  padding-top: 2rem;
 }
 
 .headingContainer {

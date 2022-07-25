@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   padding: 4rem;
   height: 90vh;
   position: relative;
@@ -11,6 +11,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll;
+  overflow: hidden;
 }
 
 .img,
@@ -28,6 +29,7 @@
   transform: rotate(-30deg);
   margin-top: 50vh;
 }
+
 .imagesColumnLeft,
 .imagesColumnRight {
   display: flex;
@@ -36,6 +38,7 @@
   justify-content: flex-start;
   width: min-content;
 }
+
 .imagesColumnLeft {
   margin-top: -7rem;
 }
@@ -44,8 +47,11 @@
   margin-left: 10rem;
   color: var(--black);
 }
+
 .para {
-  opacity: 0.5;
+  color: var(--grey);
+  margin-bottom: 2rem;
+  width: 75%;
 }
 
 .logo {
