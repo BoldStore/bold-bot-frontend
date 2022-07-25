@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem 0;
+}
+
+.headingContainer {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-right: 0.5rem;
+}
+
+.clientsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: auto;
+  padding: 0.5rem 0rem;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    margin: 4rem 0;
+  }
+  .icon {
+    font-size: 2.25rem;
+  }
+  .clientsContainer {
+    justify-content: start;
+    max-width: 100vw;
+    overflow-y: visible;
+    padding: 0rem 0.25rem;
+  }
+  .clientsContainer::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    margin: 3rem 0;
+  }
+  .icon {
+    font-size: 2rem;
+    margin-right: 0.25rem;
+  }
+}

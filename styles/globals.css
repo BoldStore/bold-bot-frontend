@@ -4,6 +4,7 @@ body {
   padding: 0rem 2rem;
   margin: 0;
   font-family: "Red Hat Display", sans-serif;
+  overflow-x: hidden;
 }
 
 /* breakpoints: 

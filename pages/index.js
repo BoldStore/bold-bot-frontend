@@ -5,6 +5,7 @@ import Feature from "../components/Feature";
 import Client from "../components/ClientsWithUs/Client";
 import Banner from "../components/Banner";
 import { features } from "../components/Feature/features";
+import ClientsWithUs from "../components/ClientsWithUs";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
         <link rel="icon" href="/assets/Logo.png" />
       </Head>
       <Banner />
-      <Client />
+      <ClientsWithUs />
       {features.map((item, i) => {
         if (i % 2 == 0) {
           return <Feature title={item.title} desc={item.desc} />;
