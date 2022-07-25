@@ -1,19 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import styles from "./styles.module.css";
 import Link from "next/link";
 import DrawerComponent from "./DrawerComponent";
 
 function Header() {
-  const [drawer, setDrawer] = useState(false);
-  const [hover, setHover] = useState(false);
-  useEffect(() => {
-    if (typeof window !== undefined) {
-      if (window.innerWidth < 800) {
-        setDrawer(true);
-      }
-    }
-  }, []);
-
   return (
     <div className={styles.navbar}>
       <Link href={"/"} passHref={true}>
@@ -36,6 +26,7 @@ function Header() {
           <span className={styles.navbarLink}>Quick Replies</span>
         </Link>
       </div>
+
       <DrawerComponent />
     </div>
   );

@@ -30,35 +30,22 @@
   cursor: pointer;
 }
 
-.link {
-  margin-right: 0rem;
-  font-size: 1.1rem;
-  padding: 0.5rem;
-  padding-right: 2rem;
-  padding-left: 2rem;
-  border-radius: 10px;
-  font-weight: 600;
-}
-
-.link:hover {
-  background-color: var(--white);
-  color: var(--theme);
-  cursor: pointer;
-  border-radius: 10px;
-  transition: all 0.3s;
-}
-
 .mobileLink {
-  color: var(--white);
+  color: var(--black);
   display: flex;
-  margin-bottom: 0.5rem;
   align-items: center;
   text-decoration: none;
+  font-size: 1rem;
+  padding: 1.2rem;
+  padding-bottom: 0rem;
+  margin-bottom: 0rem;
+  font-weight: 500;
 }
 
-.mobileLink:hover {
-  background-color: var(--white);
-  color: var(--theme);
+.mobileLink:hover,
+.navbarLink:hover {
+  text-decoration: none;
+  color: var(--blue);
   transition: 0.2s all;
 }
 
@@ -90,5 +77,11 @@
 
   .title {
     font-size: 1.25rem;
+  }
+  .linksContainer {
+    display: none;
+  }
+  .mobileNavbar {
+    display: block;
   }
 }

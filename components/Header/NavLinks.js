@@ -7,29 +7,23 @@ import styles from "./styles.module.css";
 
 function NavLinks() {
   return (
-    <List>
-      <Link href="/" className={styles.link}>
-        <ListItem className={styles.mobileLink}>Home</ListItem>
+    <div>
+      <Link href={"/#OurClients"} passHref={true}>
+        <p className={styles.mobileLink}>Our Clients</p>
       </Link>
-      <Link href="/global" className={styles.link}>
-        <ListItem className={styles.mobileLink}>Global</ListItem>
+      <Link href={"/#CustomGreetings"} passHref={true}>
+        <p className={styles.mobileLink}>Custom Greetings</p>
       </Link>
-      <Link href="/local" className={styles.link}>
-        <ListItem className={styles.mobileLink}>Local</ListItem>
+      <Link href={"/#IceBreakers"} passHref={true}>
+        <p className={styles.mobileLink}>Ice Breakers</p>
       </Link>
-      <Link href="/end-free" className={styles.link}>
-        <ListItem className={styles.mobileLink}>End-Free</ListItem>
+      <Link href={"/#PersistentMenu"} passHref={true}>
+        <p className={styles.mobileLink}>Persistent Menu</p>
       </Link>
-      <Link href="/dna-to-protein" className={styles.link}>
-        <ListItem className={styles.mobileLink}>DNA to Protein</ListItem>
+      <Link href={"/#QuickReplies"} passHref={true}>
+        <p className={styles.mobileLink}>Quick Replies</p>
       </Link>
-      <Link href="/orfs" className={styles.link}>
-        <ListItem className={styles.mobileLink}>ORFs</ListItem>
-      </Link>
-      <Link href="/about-us" className={styles.link}>
-        <ListItem className={styles.mobileLink}>About Us</ListItem>
-      </Link>
-    </List>
+    </div>
   );
 }
 

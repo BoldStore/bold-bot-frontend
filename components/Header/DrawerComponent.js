@@ -10,16 +10,14 @@ import styles from "./styles.module.css";
 const useStyles = makeStyles({
   list: {
     width: 300,
-    backgroundColor: "var(--black)",
-    color: "var(--white)",
+    backgroundColor: "var(--white)",
+    color: "var(--black)",
     height: "100%",
-    fontWeight: "500 !important",
   },
   fullList: {
     width: "auto",
-    backgroundColor: "var(--black)",
-    color: "var(--white)",
-    fontWeight: "500 !important",
+    backgroundColor: "var(--white)",
+    color: "var(--black)",
   },
 });
 
@@ -57,12 +55,8 @@ export default function DrawerComponent() {
     <div className={styles.mobileNavbar}>
       {["right"].map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button
-            onClick={toggleDrawer(anchor, true)}
-            style={{ marginTop: "0.8rem" }}
-          >
+          <Button onClick={toggleDrawer(anchor, true)}>
             <MenuIcon
-              fontSize="large"
               style={{
                 color: "var(--black)",
                 fontSize: "2rem",

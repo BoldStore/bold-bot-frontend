@@ -64,6 +64,7 @@
     align-items: baseline;
     margin: 0rem !important;
     margin-top: 1rem !important;
+    text-align: center;
   }
   .img {
     margin-bottom: 0.25rem;
@@ -76,5 +77,9 @@
   }
   .phoneComponent {
     margin-left: -1rem;
+  }
+  .heading {
+    text-align: center;
+    width: 100%;
   }
 }
