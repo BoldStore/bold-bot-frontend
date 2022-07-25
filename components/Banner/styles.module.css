@@ -74,14 +74,22 @@
 }
 
 @media (max-width: 640px) {
-  .img {
-    margin-bottom: 0.25rem;
-    width: 180px;
-    height: 350px;
+  .container {
+    height: 100%;
+  }
+
+  .img,
+  .img2 {
+    margin-bottom: 0rem !important;
+    width: 100px;
+    height: 200px;
   }
   .imagesFlex {
+    margin-left: -3rem;
     margin-top: 5vh;
+    display: none;
   }
+
   .imagesColumnLeft {
     margin-top: 3rem !important;
   }
@@ -93,14 +101,12 @@
   }
   .info {
     padding: 1rem;
+    padding-top: 2rem;
     margin: 0;
     background-color: transparent;
     z-index: 100;
-    margin-top: -18rem;
   }
-  .img2 {
-    display: none;
-  }
+
   .logo {
     width: 70%;
   }
