@@ -42,7 +42,7 @@ function Banner() {
       <div className={styles.info}>
         <p className={styles.para}>Automating your business, the bold way.</p>
         <img src="/assets/BoldBotLogoBig.svg" className={styles.logo} />
-        <p className={styles.para} style={{ marginBottom: "2rem" }}>
+        <p className={styles.para}>
           Build lasting customer relationships through conversation. Messenger
           allows you to connect with billions of people in a channel they
           prefer—making business personal and convenient.
