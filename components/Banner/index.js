@@ -9,32 +9,34 @@ function Banner() {
       <div className={styles.imagesFlex}>
         <motion.div
           className={styles.imagesColumnLeft}
-          // initial={{ y: 200 }}
-          // whileInView={{ y: 0 }}
-          // transition={{
-          //   type: "smooth",
-          //   repeat: Infinity,
-          //   repeatType: "mirror",
-          //   duration: 2,
-          //   repeatDelay: 5,
-          // }}
+          initial={{ y: 100 }}
+          animate={{ y: -150 }}
+          transition={{
+            type: "smooth",
+            repeat: Infinity,
+            repeatType: "mirror",
+            duration: 2,
+            repeatDelay: 5,
+          }}
         >
           <img src="/assets/IceBreakerSS.svg" className={styles.img} />
           <img src="/assets/IceBreakerSS.svg" className={styles.img2} />
+          <img src="/assets/IceBreakerSS.svg" className={styles.img} />
         </motion.div>
         <motion.div
           className={styles.imagesColumnRight}
-          // initial={{ y: -200 }}
-          // whileInView={{ y: 0 }}
-          // transition={{
-          //   type: "smooth",
-          //   repeat: Infinity,
-          //   repeatType: "mirror",
-          //   duration: 2,
-          //   repeatDelay: 5,
-          //   delay: 0.5,
-          // }}
+          initial={{ y: -250 }}
+          animate={{ y: 0 }}
+          transition={{
+            type: "smooth",
+            repeat: Infinity,
+            repeatType: "mirror",
+            duration: 2,
+            repeatDelay: 5,
+            delay: 0.5,
+          }}
         >
+          <img src="/assets/IceBreakerSS.svg" className={styles.img} />
           <img src="/assets/IceBreakerSS.svg" className={styles.img} />
           <img src="/assets/IceBreakerSS.svg" className={styles.img} />
         </motion.div>

@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100vw;
   padding: 4rem;
@@ -25,8 +25,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 50%;
-  transform: rotate(-30deg);
+  width: 100%;
   margin-top: 50vh;
 }
 
@@ -37,14 +36,14 @@
   align-items: flex-start;
   justify-content: flex-start;
   width: min-content;
+  margin-top: -15rem;
 }
 
 .imagesColumnLeft {
-  margin-top: -7rem;
+  margin-top: 0rem;
 }
 
 .info {
-  margin-left: 10rem;
   color: var(--black);
 }
 
