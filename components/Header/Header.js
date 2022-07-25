@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import styles from "./styles.module.css";
 import Link from "next/link";
 import DrawerComponent from "./DrawerComponent";
-import { motion } from "framer-motion";
 
 function Header() {
   const [drawer, setDrawer] = useState(false);
@@ -17,33 +16,26 @@ function Header() {
 
   return (
     <div className={styles.navbar}>
-      <Link href="/">
-        <h1 style={{ marginLeft: "1rem", cursor: "pointer" }}>BOLDbot</h1>
+      <Link href={"/"} passHref={true}>
+        <span className={styles.title}>BOLDbot</span>
       </Link>
-      <div className={styles.links}>
-        <div className={styles.buttonElement}></div>
-        <Link href="/" passHref={true}>
-          <p className={styles.link}>Home</p>
+      <div className={styles.linksContainer}>
+        <Link href={"/#OurClients"} passHref={true}>
+          <span className={styles.navbarLink}>Our Clients</span>
         </Link>
-        <Link href="/" passHref={true}>
-          <p className={styles.link}>Tutorial</p>
+        <Link href={"/#CustomGreetings"} passHref={true}>
+          <span className={styles.navbarLink}>Custom Greetings</span>
         </Link>
-        <Link href="/local" passHref={true}>
-          <p className={styles.link}>Local</p>
+        <Link href={"/#IceBreakers"} passHref={true}>
+          <span className={styles.navbarLink}>Ice Breakers</span>
         </Link>
-
-        <Link href="/end-free" passHref={true}>
-          <p className={styles.link}>End Free</p>
+        <Link href={"/#PersistentMenu"} passHref={true}>
+          <span className={styles.navbarLink}>Persistent Menu</span>
         </Link>
-
-        <Link href="/dna-to-protein" passHref={true}>
-          <p className={styles.link}>DNA to Protein</p>
-        </Link>
-        <Link href="/orfs" passHref={true}>
-          <p className={styles.link}>ORFs</p>
+        <Link href={"/#QuickReplies"} passHref={true}>
+          <span className={styles.navbarLink}>Quick Replies</span>
         </Link>
       </div>
-
       <DrawerComponent />
     </div>
   );

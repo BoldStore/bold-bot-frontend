@@ -1,27 +1,33 @@
 .navbar {
-  width: 100%;
   position: fixed;
   top: 0;
-  z-index: 100;
-  left: 0;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  width: 100vw;
+  height: 4rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: 0rem 2rem;
   background-color: var(--white);
-  color: var(--black);
-  height: 5rem;
-  border-bottom: 1px solid var(--white);
+  z-index: 101;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 }
 
-.links {
-  margin-right: 2rem;
+.linksContainer {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+.navbarLink {
+  font-size: 1rem;
+  margin-right: 1.75rem;
+  color: var(--grey);
+  cursor: pointer;
 }
 
 .link {
@@ -33,6 +39,7 @@
   border-radius: 10px;
   font-weight: 600;
 }
+
 .link:hover {
   background-color: var(--white);
   color: var(--theme);
@@ -47,7 +54,6 @@
   margin-bottom: 0.5rem;
   align-items: center;
   text-decoration: none;
-  font-family: "Poppins", sans-serif !important;
 }
 
 .mobileLink:hover {
@@ -56,44 +62,33 @@
   transition: 0.2s all;
 }
 
-.profileButton {
-  margin-right: 1rem;
-  background-color: var(--theme);
-  border-radius: 100%;
-  border: none;
-  outline: none;
-  color: var(--white);
-}
-
 .mobileNavbar {
   display: none;
 }
 
-@media (max-width: 1000px) {
-  .navbar h1 {
-    font-size: 1.8rem;
-    margin-bottom: 0.8rem;
+@media (max-width: 1024px) {
+  .navbar {
+    height: 3.5rem;
+    padding: 0rem 1.5rem;
   }
-  .navbar p {
-    font-size: 0.8rem;
-    margin-bottom: 0;
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .navbarLink {
+    font-size: 0.875rem;
+    margin-right: 1.5rem;
   }
 }
 
-@media (max-width: 900px) {
-  .navbar h1 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
+@media (max-width: 640px) {
+  .navbar {
+    height: 3rem;
+    padding: 0rem 1rem;
   }
-  .navbar p {
-    font-size: 0.6rem;
-    margin-bottom: 0;
-  }
-  .links {
-    display: none;
-  }
-  .mobileNavbar {
-    display: flex;
-    margin-right: 3rem;
+
+  .title {
+    font-size: 1.25rem;
   }
 }

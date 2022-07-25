@@ -5,7 +5,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 
 function ClientsWithUs({ clients }) {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id={"OurClients"}>
       <div className={styles.headingContainer}>
         <InstagramIcon className={styles.icon} />
         <h2>Clients With Us</h2>

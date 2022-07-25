@@ -9,11 +9,13 @@ function Feature({
   isReverse,
   backgroundColor,
   backgroundImage,
+  id,
 }) {
   return (
     <div
       className={styles.container}
       style={{ flexDirection: isReverse ? "row-reverse" : "" }}
+      id={id}
     >
       <div className={styles.phoneComponent} style={{ position: "relative" }}>
         <motion.img

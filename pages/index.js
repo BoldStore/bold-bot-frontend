@@ -1,8 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Feature from "../components/Feature";
-import Client from "../components/ClientsWithUs/Client";
 import Banner from "../components/Banner";
 import { features } from "../components/Feature/features";
 import ClientsWithUs from "../components/ClientsWithUs";
@@ -24,20 +22,24 @@ export default function Home() {
           if (i % 2 == 0) {
             return (
               <Feature
+                key={i}
                 title={item.title}
                 desc={item.desc}
                 backgroundColor={item.backgroundColor}
                 backgroundImage={item.backgroundImage}
+                id={item.id}
               />
             );
           } else {
             return (
               <Feature
+                key={i}
                 title={item.title}
                 desc={item.desc}
                 isReverse={true}
                 backgroundColor={item.backgroundColor}
                 backgroundImage={item.backgroundImage}
+                id={item.id}
               />
             );
           }

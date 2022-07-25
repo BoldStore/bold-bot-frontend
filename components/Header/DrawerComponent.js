@@ -10,14 +10,14 @@ import styles from "./styles.module.css";
 const useStyles = makeStyles({
   list: {
     width: 300,
-    backgroundColor: "var(--theme)",
+    backgroundColor: "var(--black)",
     color: "var(--white)",
     height: "100%",
     fontWeight: "500 !important",
   },
   fullList: {
     width: "auto",
-    backgroundColor: "var(--theme)",
+    backgroundColor: "var(--black)",
     color: "var(--white)",
     fontWeight: "500 !important",
   },
@@ -64,7 +64,7 @@ export default function DrawerComponent() {
             <MenuIcon
               fontSize="large"
               style={{
-                color: "var(--white)",
+                color: "var(--black)",
                 fontSize: "2rem",
               }}
             />
