@@ -15,7 +15,7 @@ export default function Home() {
         <meta name="description" content="" />
         <link rel="icon" href="/assets/Logo.png" />
       </Head>
-      <Banner />
+      {/* <Banner /> */}
       <ClientsWithUs />
       {features.map((item, i) => {
         if (i % 2 == 0) {
