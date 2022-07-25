@@ -14,7 +14,7 @@
 }
 
 .button p {
-  color: var(--white);
+  color: var(--white) !important;
   margin-left: 0.5rem;
   margin-top: 0;
   margin-bottom: 0;
