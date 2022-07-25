@@ -4,7 +4,7 @@
   align-items: center;
   width: 100vw;
   padding: 4rem;
-  height: 100vh;
+  height: 80vh;
   position: relative;
   background-attachment: fixed;
   background-position: center;
@@ -23,7 +23,7 @@
 
 .imagesFlex {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   width: 100%;
   margin-top: 50vh;
