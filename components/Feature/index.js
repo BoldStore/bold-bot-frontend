@@ -11,13 +11,13 @@ function Feature({ imgSrc, title, desc, isReverse }) {
       <motion.img
         src={"/assets/IceBreakerSS.svg"}
         className={styles.img}
-        initial={{ y: isReverse ? -7 : 7 }}
-        whileInView={{ y: 0 }}
+        animate={{
+          y: [0, 10, 0],
+        }}
         transition={{
-          type: "smooth",
+          duration: 2,
+          type: "spring",
           repeat: Infinity,
-          repeatType: "mirror",
-          duration: 1,
         }}
       />
       <div
