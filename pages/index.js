@@ -9,23 +9,25 @@ import ClientsWithUs from "../components/ClientsWithUs";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>BOLDbot</title>
         <meta name="description" content="" />
         <link rel="icon" href="/assets/Logo.png" />
       </Head>
       <Banner />
-      <ClientsWithUs />
-      {features.map((item, i) => {
-        if (i % 2 == 0) {
-          return <Feature title={item.title} desc={item.desc} />;
-        } else {
-          return (
-            <Feature title={item.title} desc={item.desc} isReverse={true} />
-          );
-        }
-      })}
+      <div className={styles.container}>
+        <ClientsWithUs />
+        {features.map((item, i) => {
+          if (i % 2 == 0) {
+            return <Feature title={item.title} desc={item.desc} />;
+          } else {
+            return (
+              <Feature title={item.title} desc={item.desc} isReverse={true} />
+            );
+          }
+        })}
+      </div>
     </div>
   );
 }
