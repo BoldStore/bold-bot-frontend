@@ -2,15 +2,18 @@ import { motion } from "framer-motion";
 import React from "react";
 import FacebookButton from "../FacebookButton";
 import styles from "./styles.module.css";
-
+import MobileBanner from "./mobileBanner";
 function Banner() {
   return (
     <div className={styles.container}>
+      <div className={styles.mobileBanner}>
+        <MobileBanner />
+      </div>
       <div className={styles.imagesFlex}>
         <div className={styles.backgroundGradient} />
         <motion.div
           className={styles.imagesColumnLeft}
-          initial={{ y: 100 }}
+          initial={{ y: 150 }}
           animate={{ y: -150 }}
           transition={{
             type: "smooth",
@@ -27,7 +30,7 @@ function Banner() {
         <motion.div
           className={styles.imagesColumnRight}
           initial={{ y: -250 }}
-          animate={{ y: 130 }}
+          animate={{ y: 200 }}
           transition={{
             type: "smooth",
             repeat: Infinity,

@@ -4,7 +4,7 @@
   align-items: center;
   width: 100vw;
   padding: 4rem;
-  height: 80vh;
+  height: 93vh;
   position: relative;
   background-attachment: fixed;
   background-position: center;
@@ -13,6 +13,10 @@
   background-attachment: scroll;
   overflow: hidden;
   margin-top: 4rem;
+}
+
+.mobileBanner {
+  display: none;
 }
 
 .img,
@@ -108,6 +112,9 @@
     height: 100%;
     width: 100%;
   }
+  .mobileBanner {
+    display: block;
+  }
 
   .img,
   .img2 {
@@ -135,14 +142,27 @@
   }
 
   .info {
-    padding: 1rem;
+    padding: 1rem !important;
     padding-top: 2rem;
     margin: 0;
     background-color: transparent;
     z-index: 100;
+    margin-top: 7rem;
   }
 
   .logo {
     width: 50%;
+  }
+  .backgroundGradient {
+    top: 15vh !important;
+    width: 75vh;
+    height: 40vh;
+    left: -17rem;
+  }
+  .mobileImg {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
