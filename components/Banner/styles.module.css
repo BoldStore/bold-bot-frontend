@@ -66,13 +66,16 @@
     height: 400px;
     margin-bottom: 0.5rem;
   }
+
   .imagesFlex {
     margin-top: 20vh;
     margin-left: -10vw;
   }
+
   .container {
     padding: 0rem !important;
   }
+
   .info {
     background-color: var(--white);
     z-index: 100;
@@ -85,18 +88,23 @@
     width: 180px;
     height: 350px;
   }
+
   .imagesFlex {
     margin-top: 5vh;
   }
+
   .imagesColumnLeft {
     margin-top: 3rem !important;
   }
+
   .imagesColumnRight {
     margin-top: -4rem;
   }
+
   .container {
     flex-direction: column;
   }
+
   .info {
     padding: 1rem;
     margin: 0;
@@ -104,9 +112,11 @@
     z-index: 100;
     margin-top: -18rem;
   }
+
   .img2 {
     display: none;
   }
+
   .logo {
     width: 70%;
   }
