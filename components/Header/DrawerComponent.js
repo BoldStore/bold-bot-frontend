@@ -2,8 +2,6 @@ import React from "react";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
-import Button from "@material-ui/core/Button";
-import MenuIcon from "@material-ui/icons/Menu";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import NavLinks from "./NavLinks";
 import styles from "./styles.module.css";
@@ -58,10 +56,7 @@ export default function DrawerComponent() {
         <React.Fragment key={anchor}>
           <MenuRoundedIcon
             onClick={toggleDrawer(anchor, true)}
-            style={{
-              color: "var(--black)",
-              fontSize: "1.75rem",
-            }}
+            className={styles.menuIcon}
           />
           <Drawer
             anchor={anchor}

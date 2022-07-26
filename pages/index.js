@@ -8,7 +8,7 @@ import Header from "../components/Header/Header";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>BOLDbot</title>
         <meta name="description" content="" />
@@ -45,6 +45,6 @@ export default function Home() {
           }
         })}
       </div>
-    </div>
+    </>
   );
 }

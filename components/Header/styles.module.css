@@ -23,6 +23,11 @@
   font-weight: 700;
 }
 
+.subTitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
 .navbarLink {
   font-size: 1rem;
   margin-right: 1.75rem;
@@ -31,26 +36,27 @@
 }
 
 .mobileLink {
-  color: var(--black);
-  display: flex;
-  align-items: center;
-  text-decoration: none;
+  color: var(--grey);
   font-size: 1rem;
-  padding: 1.2rem;
+  padding: 1.25rem;
   padding-bottom: 0rem;
   margin-bottom: 0rem;
-  font-weight: 500;
 }
 
 .mobileLink:hover,
 .navbarLink:hover {
-  text-decoration: none;
+  text-decoration: underline;
   color: var(--blue);
   transition: 0.2s all;
 }
 
 .mobileNavbar {
   display: none;
+}
+
+.menuIcon {
+  color: var(--black);
+  font-size: 1.5rem;
 }
 
 @media (max-width: 1024px) {
@@ -61,6 +67,10 @@
 
   .title {
     font-size: 1.5rem;
+  }
+
+  .subTitle {
+    font-size: 1.25rem;
   }
 
   .navbarLink {
@@ -79,11 +89,15 @@
     font-size: 1.25rem;
   }
 
+  .subTitle {
+    font-size: 1rem;
+  }
+
   .linksContainer {
     display: none;
   }
 
   .mobileNavbar {
-    display: block;
+    display: flex;
   }
 }
