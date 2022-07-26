@@ -10,8 +10,8 @@
 }
 
 .img {
-  width: 300px;
-  height: 450px;
+  width: 18rem;
+  height: 28rem;
   z-index: 100;
 }
 
@@ -23,8 +23,8 @@
 
 .gradient {
   position: absolute;
-  width: 250px;
-  height: 430px;
+  width: 15rem;
+  height: 27rem;
   top: 3.5rem;
   z-index: -100;
   border-radius: 1.5rem !important;
@@ -34,17 +34,20 @@
   .infoContainer {
     width: 60%;
   }
+
   .img {
-    width: 250px;
-    height: 400px;
+    width: 16rem;
+    height: 25rem;
   }
+
   .gradient {
-    width: 180px;
-    height: 350px;
+    width: 12rem;
+    height: 22rem;
     top: 4.5rem;
     z-index: -100;
     border-radius: 2rem;
   }
+
   .container p {
     margin: 0.5rem 0;
   }
@@ -55,27 +58,33 @@
     flex-direction: column !important;
     margin: 4rem 0rem;
   }
+
   .container p {
     color: var(--grey);
     margin: 0rem;
   }
+
   .infoContainer {
     width: 100%;
     margin: 0rem !important;
     margin-top: 1rem !important;
   }
+
   .img {
     margin-bottom: 0.25rem;
-    width: 200px;
-    height: 350px;
+    width: 12rem;
+    height: 22rem;
   }
+
   .gradient {
     top: 1.5rem;
     left: 2rem !important;
   }
+
   .phoneComponent {
     margin-left: -1rem;
   }
+
   .heading {
     width: 100%;
   }

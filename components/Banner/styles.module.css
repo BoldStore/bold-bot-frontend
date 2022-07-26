@@ -21,8 +21,8 @@
 
 .img,
 .img2 {
-  width: 275px;
-  height: 500px;
+  width: 18rem;
+  height: 32rem;
   margin-bottom: 0.75rem;
 }
 
@@ -85,8 +85,8 @@
 
   .img,
   .img2 {
-    width: 160px;
-    height: 300px;
+    width: 10rem;
+    height: 20rem;
     margin-bottom: 0.5rem;
   }
 
@@ -133,25 +133,10 @@
     margin-bottom: 1rem;
   }
 
-  .img,
-  .img2 {
-    margin-bottom: 0rem !important;
-    width: 100px;
-    height: 200px;
-  }
-
   .imagesFlex {
     margin-left: -3rem;
     margin-top: 5vh;
     display: none;
-  }
-
-  .imagesColumnLeft {
-    margin-top: 3rem !important;
-  }
-
-  .imagesColumnRight {
-    margin-top: -4rem;
   }
 
   .container {
