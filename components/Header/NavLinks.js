@@ -1,6 +1,3 @@
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
 import { Link } from "@material-ui/core";
 import React from "react";
 import styles from "./styles.module.css";
