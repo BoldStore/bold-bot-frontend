@@ -1,10 +1,10 @@
-import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Feature from "../components/Feature";
 import Banner from "../components/Banner";
 import { features } from "../components/Feature/features";
 import ClientsWithUs from "../components/ClientsWithUs";
 import Header from "../components/Header/Header";
+import Head from "next/head";
 
 export default function Home() {
   return (

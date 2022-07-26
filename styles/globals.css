@@ -60,6 +60,11 @@ h2 {
   font-weight: 500;
 }
 
+h3 {
+  font-size: 2.25rem;
+  font-weight: 500;
+}
+
 /* for text */
 p {
   font-size: 1.125rem;
@@ -101,6 +106,11 @@ input {
   h2 {
     font-size: 2.25rem;
   }
+
+  h3 {
+    font-size: 1.875rem;
+  }
+
   p {
     font-size: 1rem;
   }
@@ -110,6 +120,7 @@ input {
   body {
     padding: 0rem 0rem;
   }
+
   h1 {
     font-size: 2.25rem;
   }
@@ -117,9 +128,15 @@ input {
   h2 {
     font-size: 1.875rem;
   }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
   p {
     font-size: 0.875rem;
   }
+
   ::-webkit-scrollbar {
     width: 0.3rem;
   }
