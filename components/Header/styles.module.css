@@ -45,7 +45,6 @@
 
 .mobileLink:hover,
 .navbarLink:hover {
-  text-decoration: underline;
   color: var(--blue);
   transition: 0.2s all;
 }

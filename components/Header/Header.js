@@ -28,7 +28,6 @@ function Header() {
           <span className={styles.navbarLink}>Quick Replies</span>
         </Link>
       </div>
-
       <DrawerComponent />
     </div>
   );
