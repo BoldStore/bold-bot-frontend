@@ -4,7 +4,7 @@
   align-items: center;
   width: 100vw;
   padding: 4rem;
-  height: 90vh;
+  height: 93vh;
   position: relative;
   background-attachment: fixed;
   background-position: center;
@@ -68,8 +68,8 @@
   position: absolute;
   z-index: -10;
   background-image: linear-gradient(120deg, #89f7fe 0%, var(--blue) 100%);
-  width: 70%;
-  height: 35rem;
+  width: 65%;
+  height: 50rem;
   top: 10rem;
   transform: rotate(30deg);
   left: -20rem;
