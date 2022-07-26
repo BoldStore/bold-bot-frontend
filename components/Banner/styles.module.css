@@ -50,7 +50,7 @@
 
 .info {
   color: var(--black);
-  margin-left: 8rem;
+  margin-left: 10rem;
 }
 
 .para {
@@ -70,7 +70,7 @@
   background-image: linear-gradient(120deg, #89f7fe 0%, var(--blue) 100%);
   width: 70%;
   height: 35rem;
-  top: 24vh;
+  top: 10rem;
   transform: rotate(30deg);
   left: -20rem;
   border-radius: 5rem;
@@ -106,7 +106,7 @@
   }
 
   .para {
-    width: 100%;
+    width: 90%;
   }
 }
 
@@ -163,7 +163,7 @@
   }
 
   .backgroundGradientMobile {
-    top: 15vh !important;
+    top: 8.5rem;
     width: 75vh;
     height: 50%;
     right: -15rem;
@@ -179,5 +179,9 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .para {
+    width: 95%;
   }
 }
