@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../../styles/Dashboard.module.css";
 import Head from "next/head";
 import OverviewCard from "../../components/OverviewCard";
+import ProfileCard from "../../components/ProfileCard";
 
 function Dashboard() {
   return (
@@ -19,7 +20,7 @@ function Dashboard() {
           alignItems: "center",
         }}
       >
-        <OverviewCard />
+        <ProfileCard />
       </div>
     </>
   );

@@ -1,0 +1,75 @@
+.container {
+  background-image: linear-gradient(
+    to top,
+    #1e3c72 0%,
+    #1e3c72 1%,
+    #2a5298 100%
+  );
+  width: 22rem;
+  height: 45rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0rem;
+  border-radius: 1rem;
+  color: var(--white);
+}
+
+.userInfoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.displayPic {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.membershipBanner {
+  padding: 1rem 4rem;
+  border-radius: 2rem;
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+}
+
+.membershipBanner p {
+  color: var(--black);
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 20rem;
+  }
+
+  .displayPic {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .membershipBanner {
+    padding: 0.75rem 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: 25rem;
+    height: 30rem;
+  }
+
+  .displayPic {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .membershipBanner {
+    padding: 0.75rem 3rem;
+  }
+}
