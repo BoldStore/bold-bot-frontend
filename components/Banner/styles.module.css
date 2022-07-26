@@ -116,6 +116,10 @@
     display: block;
   }
 
+  .para {
+    margin-bottom: 1rem;
+  }
+
   .img,
   .img2 {
     margin-bottom: 0rem !important;
@@ -143,22 +147,23 @@
 
   .info {
     padding: 1rem !important;
-    padding-top: 2rem;
     margin: 0;
     background-color: transparent;
     z-index: 100;
-    margin-top: 7rem;
+    margin-top: 5rem;
   }
 
   .logo {
     width: 50%;
   }
+
   .backgroundGradient {
-    top: 15vh !important;
+    top: 13vh !important;
     width: 75vh;
     height: 40vh;
     left: -17rem;
   }
+
   .mobileImg {
     width: 50%;
     display: block;
