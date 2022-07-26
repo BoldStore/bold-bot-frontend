@@ -27,7 +27,7 @@
   height: 430px;
   top: 3.5rem;
   z-index: -100;
-  border-radius: 2rem;
+  border-radius: 1.5rem !important;
 }
 
 @media (max-width: 1024px) {

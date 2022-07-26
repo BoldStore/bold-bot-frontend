@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 function MobileBanner() {
   return (
     <>
-      <div className={styles.backgroundGradient} />
+      <div className={styles.backgroundGradientMobile} />
       <div>
         <img src="/assets/IceBreakerSS.svg" className={styles.mobileImg} />
       </div>

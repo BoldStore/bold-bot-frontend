@@ -72,7 +72,7 @@
   height: 35rem;
   top: 24vh;
   transform: rotate(30deg);
-  right: -20rem;
+  left: -20rem;
   border-radius: 5rem;
 }
 
@@ -160,11 +160,16 @@
     width: 50%;
   }
 
-  .backgroundGradient {
+  .backgroundGradientMobile {
     top: 15vh !important;
     width: 75vh;
     height: 50%;
     right: -15rem;
+    position: absolute;
+    z-index: -10;
+    background-image: linear-gradient(120deg, #89f7fe 0%, var(--blue) 100%);
+    transform: rotate(30deg);
+    border-radius: 5rem;
   }
 
   .mobileImg {
