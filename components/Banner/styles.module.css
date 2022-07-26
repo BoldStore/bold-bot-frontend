@@ -80,7 +80,7 @@
   .container {
     margin-top: 3.5rem;
     padding: 0rem !important;
-    height: 50vh;
+    height: 30rem;
   }
 
   .img,
@@ -96,9 +96,8 @@
   }
 
   .info {
-    background-color: var(--white);
     z-index: 100;
-    margin-left: 3rem;
+    margin-left: 4rem;
   }
 
   .logo {
@@ -107,6 +106,15 @@
 
   .para {
     width: 90%;
+  }
+
+  .backgroundGradient {
+    width: 70%;
+    height: 35rem;
+    top: 10rem;
+    transform: rotate(30deg);
+    left: -16rem;
+    border-radius: 2rem;
   }
 }
 
@@ -164,7 +172,7 @@
 
   .backgroundGradientMobile {
     top: 8.5rem;
-    width: 75vh;
+    width: 70vh;
     height: 50%;
     right: -15rem;
     position: absolute;
