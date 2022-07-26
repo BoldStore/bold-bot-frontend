@@ -68,11 +68,11 @@
   position: absolute;
   z-index: -10;
   background-image: linear-gradient(120deg, #89f7fe 0%, var(--blue) 100%);
-  width: 67%;
+  width: 70%;
   height: 35rem;
   top: 24vh;
-  transform: rotate(-30deg);
-  left: -20rem;
+  transform: rotate(30deg);
+  right: -20rem;
   border-radius: 5rem;
 }
 
@@ -99,9 +99,11 @@
     z-index: 100;
     margin-left: 3rem;
   }
+
   .logo {
     width: 70%;
   }
+
   .para {
     width: 100%;
   }
@@ -112,6 +114,7 @@
     height: 100%;
     width: 100%;
   }
+
   .mobileBanner {
     display: block;
   }
@@ -146,7 +149,7 @@
   }
 
   .info {
-    padding: 1rem !important;
+    padding: 0rem 1rem;
     margin: 0;
     background-color: transparent;
     z-index: 100;
@@ -158,10 +161,10 @@
   }
 
   .backgroundGradient {
-    top: 13vh !important;
+    top: 15vh !important;
     width: 75vh;
-    height: 40vh;
-    left: -17rem;
+    height: 50%;
+    right: -15rem;
   }
 
   .mobileImg {
