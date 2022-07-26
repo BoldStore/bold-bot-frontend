@@ -8,7 +8,7 @@ function Header() {
     <div className={styles.navbar}>
       <Link href={"/"} passHref={true}>
         <span className={styles.title}>
-          BOLD<span className={styles.subTitle}>bot</span>
+          BOLD<span className={styles.subTitle}>BOT</span>
         </span>
       </Link>
       <div className={styles.linksContainer}>

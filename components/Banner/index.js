@@ -49,7 +49,7 @@ function Banner() {
       <div className={styles.info}>
         <p className={styles.para}>Automating your business, the bold way.</p>
         {/* <img src="/assets/BoldBotLogoBig.svg" className={styles.logo} /> */}
-        <h1>
+        <h1 className={styles.heading}>
           BOLD<span className={styles.gradientText}>BOT</span>
         </h1>
         <p className={styles.para}>
