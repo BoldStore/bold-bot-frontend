@@ -47,6 +47,7 @@
 .navbarLink:hover {
   color: var(--blue);
   transition: 0.2s all;
+  cursor: pointer;
 }
 
 .mobileNavbar {
