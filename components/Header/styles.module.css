@@ -45,7 +45,7 @@
 
 .mobileLink:hover,
 .navbarLink:hover {
-  color: var(--blue);
+  color: var(--black);
   transition: 0.2s all;
   cursor: pointer;
 }

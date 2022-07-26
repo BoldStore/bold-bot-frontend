@@ -17,7 +17,7 @@ export default function Home() {
       <Header />
       <Banner />
       <div className={styles.container}>
-        <ClientsWithUs />
+        {/* <ClientsWithUs /> */}
         {features.map((item, i) => {
           if (i % 2 == 0) {
             return (
