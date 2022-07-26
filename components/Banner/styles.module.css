@@ -76,6 +76,10 @@
   border-radius: 5rem;
 }
 
+.gradientText {
+  color: var(--blue);
+}
+
 @media (max-width: 1024px) {
   .container {
     margin-top: 3.5rem;

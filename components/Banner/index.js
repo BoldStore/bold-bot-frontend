@@ -48,7 +48,10 @@ function Banner() {
       </div>
       <div className={styles.info}>
         <p className={styles.para}>Automating your business, the bold way.</p>
-        <img src="/assets/BoldBotLogoBig.svg" className={styles.logo} />
+        {/* <img src="/assets/BoldBotLogoBig.svg" className={styles.logo} /> */}
+        <h1>
+          BOLD<span className={styles.gradientText}>BOT</span>
+        </h1>
         <p className={styles.para}>
           Build lasting customer relationships through conversation. Messenger
           allows you to connect with billions of people in a channel they
