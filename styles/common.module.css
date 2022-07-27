@@ -1,0 +1,11 @@
+.container {
+  width: 83%;
+  display: block;
+  margin-left: auto;
+  padding-left: 3rem;
+  padding-top: 1rem;
+  padding-right: 2rem;
+}
+.container h1 {
+  margin-bottom: 0rem;
+}

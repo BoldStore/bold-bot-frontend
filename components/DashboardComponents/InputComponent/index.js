@@ -1,8 +1,13 @@
 import React from "react";
 import styles from "./styles.module.css";
 
-function InputComponent() {
-  return <div>InputComponent</div>;
+function InputComponent({ title, type, placeholder }) {
+  return (
+    <div className={styles.container}>
+      {title && <h3>Greeting Message</h3>}
+      <input type={type ?? "text"} placeholder={placeholder} />
+    </div>
+  );
 }
 
 export default InputComponent;
