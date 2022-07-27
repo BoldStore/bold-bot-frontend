@@ -5,10 +5,8 @@
   align-items: flex-start;
   width: 83%;
   margin-left: auto;
-  padding-top: 2rem;
-  height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
+  padding-top: 10rem;
+  max-height: 100vh;
 }
 
 .overviewFlex {
@@ -19,7 +17,7 @@
   width: 100%;
 }
 .backgroundGradient {
-  position: absolute;
+  position: fixed;
   z-index: -10;
   background-image: linear-gradient(120deg, var(--blue) 20%, #89f7fe 100%);
   width: 75%;
@@ -41,8 +39,7 @@
     padding-left: 13.5rem;
     padding-right: 0.5rem;
     height: 100vh;
-    overflow-y: auto;
-    overflow-x: hidden;
+    padding-top: 1rem;
   }
 
   .overviewFlex {
@@ -52,6 +49,13 @@
     padding-right: 1rem;
     padding-left: 0.5rem;
   }
+  /* 
+  .pageDiv {
+    max-height: 100vh;
+    max-width: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  } */
 }
 
 @media (max-width: 640px) {
@@ -76,9 +80,9 @@
     width: 70vh;
     height: 100%;
     right: -15rem;
-    position: absolute;
+    position: fixed;
     z-index: -10;
-    background-image: linear-gradient(120deg, #89f7fe 0%, var(--blue) 100%);
+    background-image: linear-gradient(120deg, var(--blue) 0%, #89f7fe 100%);
     transform: rotate(30deg);
     border-radius: 2rem;
   }

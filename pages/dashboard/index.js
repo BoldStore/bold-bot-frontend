@@ -6,7 +6,7 @@ import DashboardHeader from "../../components/DashboardComponents/DashboardHeade
 import OverviewCard from "../../components/DashboardComponents/OverviewCard";
 function Dashboard() {
   return (
-    <>
+    <div className={styles.pageDiv}>
       <Head>
         <title>Dashboard</title>
         <meta name="description" content="" />
@@ -24,7 +24,7 @@ function Dashboard() {
         </div>
         <ProfileCard />
       </div>
-    </>
+    </div>
   );
 }
 
