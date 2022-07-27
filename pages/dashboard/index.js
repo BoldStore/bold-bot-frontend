@@ -13,6 +13,7 @@ function Dashboard() {
         <link rel="icon" href="/assets/Logo.png" />
       </Head>
       <DashboardHeader />
+      <div className={styles.backgroundGradient} />
       <div className={styles.container}>
         <div className={styles.overviewFlex}>
           <OverviewCard />
