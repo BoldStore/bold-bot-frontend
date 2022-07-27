@@ -10,12 +10,12 @@ function ProfileCard({ displayPic, name, membership }) {
           className={styles.displayPic}
           alt="display"
         />
-        <h3>Aryan</h3>
-        <div className={styles.membershipBanner}>
-          <p>Premium Member</p>
-        </div>
+        <h3>Aryan Teng</h3>
       </div>
-      <p style={{ textAlign: "center" }}>Membership expires on 29/07/2022</p>
+      <div className={styles.membershipBox}>
+        <p className={styles.membershipBanner}>Premium Member</p>
+        <p className={styles.expiry}>Membership expires on 29/07/2022</p>
+      </div>
     </div>
   );
 }

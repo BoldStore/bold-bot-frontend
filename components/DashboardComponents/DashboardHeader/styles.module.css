@@ -6,6 +6,8 @@
   height: 100vh;
   z-index: 100;
   position: fixed;
+  left: 0;
+  top: 0;
   padding: 3rem;
   padding-top: 5rem;
   color: var(--white);
