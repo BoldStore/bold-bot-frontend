@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import FacebookButton from "../FacebookButton";
 import styles from "./styles.module.css";
-import MobileBanner from "./MobileBanner";
+import MobileBanner from "./mobileBanner";
 
 function Banner() {
   return (
