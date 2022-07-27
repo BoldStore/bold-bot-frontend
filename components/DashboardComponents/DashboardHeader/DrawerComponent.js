@@ -8,7 +8,7 @@ import styles from "./styles.module.css";
 
 const useStyles = makeStyles({
   list: {
-    width: 300,
+    width: 190,
     backgroundImage: "linear-gradient(to top, #09203f 0%, #537895 100%)",
     color: "var(--white)",
     height: "100%",
