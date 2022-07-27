@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "../../styles/Dashboard.module.css";
 import Head from "next/head";
-import OverviewCard from "../../components/OverviewCard";
-import ProfileCard from "../../components/ProfileCard";
-
+import ProfileCard from "../../components/DashboardComponents/ProfileCard";
+import DashboardHeader from "../../components/DashboardComponents/DashboardHeader";
+import OverviewCard from "../../components/DashboardComponents/OverviewCard";
 function Dashboard() {
   return (
     <>
@@ -12,14 +12,14 @@ function Dashboard() {
         <meta name="description" content="" />
         <link rel="icon" href="/assets/Logo.png" />
       </Head>
-      <div
-        className={styles.container}
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+      <DashboardHeader />
+      <div className={styles.container}>
+        <div className={styles.overviewFlex}>
+          <OverviewCard />
+          <OverviewCard />
+          <OverviewCard />
+          <OverviewCard />
+        </div>
         <ProfileCard />
       </div>
     </>

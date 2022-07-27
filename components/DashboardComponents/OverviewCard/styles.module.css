@@ -6,17 +6,19 @@
     #2a5298 100%
   );
   color: var(--white);
-  width: 35rem;
+  width: 45%;
+  /* min-width: 30rem; */
   height: 25rem;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   padding: 0rem 2rem;
+  margin: 0.5rem;
 }
 
 @media (max-width: 1024px) {
   .container {
-    width: 30rem;
+    width: 100%;
     height: 20rem;
     padding: 0rem 1.75rem;
   }
@@ -24,7 +26,8 @@
 
 @media (max-width: 640px) {
   .container {
-    width: 25rem;
-    padding: 0rem 1.5rem;
+    width: 100%;
+    margin: 0rem;
+    margin-top: 1rem;
   }
 }
