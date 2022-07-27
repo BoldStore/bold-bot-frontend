@@ -2,10 +2,28 @@
   width: 83%;
   display: block;
   margin-left: auto;
-  padding-left: 3rem;
+  padding: 5rem;
   padding-top: 1rem;
-  padding-right: 2rem;
 }
 .container h1 {
   margin-bottom: 0rem;
+}
+
+.title {
+  color: var(--blue);
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 77%;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: 100%;
+    padding: 1rem;
+    padding-top: 2rem;
+  }
 }

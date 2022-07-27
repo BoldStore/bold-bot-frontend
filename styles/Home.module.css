@@ -4,6 +4,6 @@
 
 @media (max-width: 640px) {
   .container {
-    padding: 1rem;
+    padding: 0rem 2rem;
   }
 }

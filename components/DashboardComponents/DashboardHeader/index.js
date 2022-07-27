@@ -6,7 +6,7 @@ function DashboardHeader() {
   return (
     <>
       <div className={styles.container}>
-        <Link href="/dashboard/quick-replies">
+        <Link href="/dashboard/">
           <p className={styles.link}>Home</p>
         </Link>
         <Link href="/dashboard/greetings">

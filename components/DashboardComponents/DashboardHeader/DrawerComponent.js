@@ -9,13 +9,13 @@ import styles from "./styles.module.css";
 const useStyles = makeStyles({
   list: {
     width: 190,
-    backgroundImage: "var(--dashboardGradient)",
+    backgroundColor: "var(--blue)",
     color: "var(--white)",
     height: "100%",
   },
   fullList: {
     width: "auto",
-    backgroundImage: "var(--dashboardGradient)",
+    backgroundColor: "var(--blue)",
     color: "var(--white)",
   },
 });
