@@ -15,7 +15,7 @@ function ProfileCard({ displayPic, name, membership }) {
           <p>Premium Member</p>
         </div>
       </div>
-      <p>Membership expires on 29/07/2022</p>
+      <p style={{ textAlign: "center" }}>Membership expires on 29/07/2022</p>
     </div>
   );
 }
