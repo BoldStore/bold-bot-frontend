@@ -1,7 +1,7 @@
 import React from "react";
 import DashboardHeader from "../../components/DashboardComponents/DashboardHeader";
 
-function QuickReplies() {
+function GreetingsPage() {
   return (
     <div>
       <DashboardHeader />
@@ -9,4 +9,4 @@ function QuickReplies() {
   );
 }
 
-export default QuickReplies;
+export default GreetingsPage;
