@@ -86,4 +86,8 @@
   .membershipBanner {
     padding: 0.75rem 3rem;
   }
+  .membershipBanner p {
+    font-size: 1rem;
+    text-align: center;
+  }
 }
