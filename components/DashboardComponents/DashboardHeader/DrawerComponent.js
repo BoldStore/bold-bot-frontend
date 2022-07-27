@@ -9,13 +9,13 @@ import styles from "./styles.module.css";
 const useStyles = makeStyles({
   list: {
     width: 190,
-    backgroundImage: "linear-gradient(to top, #09203f 0%, #537895 100%)",
+    backgroundImage: "var(--dashboardGradient)",
     color: "var(--white)",
     height: "100%",
   },
   fullList: {
     width: "auto",
-    backgroundImage: "linear-gradient(to top, #09203f 0%, #537895 100%)",
+    backgroundImage: "var(--dashboardGradient)",
     color: "var(--white)",
   },
 });

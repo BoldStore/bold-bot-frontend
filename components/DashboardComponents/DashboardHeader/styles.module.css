@@ -1,7 +1,7 @@
 .container {
   width: 17%;
   min-width: 200px;
-  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  background-image: var(--dashboardGradient);
   height: 100vh;
   z-index: 100;
   position: fixed;
@@ -27,6 +27,10 @@
   opacity: 1;
 }
 
+.mobileNavbar {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   .container {
     min-width: 180px;
@@ -44,7 +48,7 @@
     display: flex;
     width: auto;
     color: var(--white);
-    background-image: linear-gradient(to right, #09203f 0%, #537895 100%);
+    background-image: var(--dashboardGradient);
     position: fixed;
     border-radius: 50%;
     justify-content: center;
@@ -52,10 +56,12 @@
     padding: 0.75rem;
     margin: 0.5rem;
   }
+
   .links {
     padding: 2rem;
     padding-top: 3rem;
   }
+
   .link {
     padding: 0.5rem;
   }

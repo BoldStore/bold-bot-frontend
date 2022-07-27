@@ -18,6 +18,12 @@ mobile: 640px */
   --white: #ffffff;
   --grey: #808080;
   --blue: #3781e3;
+  --dashboardGradient: linear-gradient(
+    to top,
+    #1e3c72 0%,
+    #1e3c72 1%,
+    #2a5298 100%
+  );
 }
 
 ::selection {
