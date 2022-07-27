@@ -59,11 +59,6 @@
   width: 75%;
 }
 
-.logo {
-  width: 100%;
-  max-width: 400px;
-}
-
 .backgroundGradient {
   position: absolute;
   z-index: -10;
@@ -76,8 +71,13 @@
   border-radius: 5rem;
 }
 
+.heading {
+  font-weight: 500;
+}
+
 .gradientText {
   color: var(--blue);
+  font-size: 2.25rem;
 }
 
 @media (max-width: 1024px) {
@@ -119,6 +119,10 @@
     transform: rotate(30deg);
     left: -16rem;
     border-radius: 2rem;
+  }
+
+  .gradientText {
+    font-size: 1.875rem;
   }
 }
 
@@ -180,5 +184,9 @@
 
   .para {
     width: 95%;
+  }
+
+  .gradientText {
+    font-size: 1.5rem;
   }
 }
