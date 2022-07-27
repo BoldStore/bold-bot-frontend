@@ -5,12 +5,14 @@
   padding: 5rem;
   padding-top: 1rem;
 }
-.container h1 {
-  margin-bottom: 0rem;
-}
 
 .title {
   color: var(--blue);
+}
+
+.introPara {
+  width: 90%;
+  margin-bottom: 2rem;
 }
 
 @media (max-width: 1024px) {
@@ -18,12 +20,21 @@
     width: 77%;
     padding: 2rem;
   }
+
+  .introPara {
+    width: 95%;
+    margin-bottom: 1.75rem;
+  }
 }
 
 @media (max-width: 640px) {
   .container {
     width: 100%;
-    padding: 1rem;
-    padding-top: 2rem;
+    padding: 0rem 1rem;
+    margin-top: 4.5rem;
+  }
+  .introPara {
+    width: 100%;
+    margin-bottom: 1.5rem;
   }
 }

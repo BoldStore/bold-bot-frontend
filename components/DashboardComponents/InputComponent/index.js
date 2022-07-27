@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "./styles.module.css";
 
-function InputComponent({ title, type, placeholder }) {
+function InputComponent({ title, type, placeholder, desc }) {
   return (
     <div className={styles.container}>
-      {title && <h3 className={styles.title}>{title}</h3>}
+      {title && <p className={styles.title}>{title}</p>}
+      {desc && <p className={styles.desc}>{desc}</p>}
       <input
         type={type ?? "text"}
         placeholder={placeholder}

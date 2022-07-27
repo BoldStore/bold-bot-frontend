@@ -2,12 +2,13 @@ import React from "react";
 import DashboardHeader from "../../components/DashboardComponents/DashboardHeader";
 import InputComponent from "../../components/DashboardComponents/InputComponent";
 import styles from "../../styles/common.module.css";
+
 function GreetingsPage() {
   return (
-    <div>
+    <>
       <DashboardHeader />
       <div className={styles.container}>
-        <h1 className={styles.title}>Greetings</h1>
+        <h2 className={styles.title}>Greetings</h2>
         <p className={styles.introPara}>
           Ice Breakers provide a way for users to start a conversation with a
           business with a list of frequently asked questions. A maximum of 4
@@ -15,16 +16,22 @@ function GreetingsPage() {
         </p>
         <InputComponent
           title="Intro text"
+          desc={
+            "This is an introductory message that will be sent to your patron when they are opening your direct messages."
+          }
           placeholder={
-            "Hi {{customer}} ! It's Amazing to see you, what can we help you with ??"
+            "Hi {{customer}}! It's amazing to see you, what can we help you with?"
           }
         />
         <InputComponent
           title="Fallback Text"
           placeholder={"Didn't quite get that, could you repeat?"}
+          desc={
+            "This is an introductory message that will be sent to your patron when they are opening your direct messages."
+          }
         />
       </div>
-    </div>
+    </>
   );
 }
 
