@@ -15,7 +15,7 @@ function GreetingsPage() {
           questions can be set via the Ice Breaker API.
         </p>
         <InputComponent
-          title="Intro text"
+          title="Introductory Text"
           desc={
             "This is an introductory message that will be sent to your patron when they are opening your direct messages."
           }

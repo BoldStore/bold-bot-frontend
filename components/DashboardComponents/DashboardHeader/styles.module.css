@@ -1,7 +1,7 @@
 .container {
-  width: 17%;
+  width: 15%;
   min-width: 200px;
-  background-color: var(--blue);
+  background-color: var(--dashboardTheme);
   height: 100vh;
   z-index: 100;
   position: absolute;
@@ -18,14 +18,7 @@
 .link {
   font-weight: 500;
   color: var(--white);
-  opacity: 1;
   cursor: pointer;
-}
-
-.link:hover {
-  color: var(--white);
-  transition: all 0.3s;
-  opacity: 1;
 }
 
 .mobileNavbar {
@@ -42,7 +35,7 @@
 
 @media (max-width: 640px) {
   .menuIcon {
-    color: var(--blue);
+    color: var(--dashboardTheme);
   }
   .container {
     display: none;
