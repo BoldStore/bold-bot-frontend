@@ -9,8 +9,9 @@
   color: var(--black);
 }
 
-.container p {
+.container h6 {
   color: var(--grey);
+  margin: 1rem 0rem;
 }
 
 .img {
@@ -52,7 +53,7 @@
     border-radius: 2rem;
   }
 
-  .container p {
+  .container h6 {
     margin: 0.5rem 0;
   }
 }
@@ -63,8 +64,7 @@
     margin: 4rem 0rem;
   }
 
-  .container p {
-    color: var(--grey);
+  .container h6 {
     margin: 0rem;
   }
 

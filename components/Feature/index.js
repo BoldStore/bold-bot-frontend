@@ -54,13 +54,13 @@ function Feature({
         >
           {title}
         </motion.h3>
-        <motion.p
+        <motion.h6
           initial={{ y: 10, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.75, duration: 1, type: "spring" }}
         >
           {desc}
-        </motion.p>
+        </motion.h6>
       </div>
     </div>
   );
