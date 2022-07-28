@@ -3,8 +3,8 @@
   height: 100vh;
   display: block;
   margin-left: auto;
-  padding: 5rem;
-  padding-top: 1rem;
+  padding: 4rem;
+  padding-top: 0rem;
 }
 
 .title {
@@ -21,6 +21,7 @@
   .container {
     width: 77%;
     padding: 2rem;
+    padding-top: 0rem;
   }
 
   .introPara {
