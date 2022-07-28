@@ -45,9 +45,9 @@ export default function DrawerComponent() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <div className={styles.title}>
+      {/* <div className={styles.title}>
         <h6>BOLDbot</h6>
-      </div>
+      </div> */}
       <NavLinks />
     </div>
   );
