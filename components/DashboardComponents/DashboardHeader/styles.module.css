@@ -7,7 +7,6 @@
   position: absolute;
   left: 0;
   top: 0;
-  padding: 1rem 0rem;
   color: var(--white);
   display: flex;
   flex-direction: column;
@@ -39,7 +38,7 @@
 
 @media (max-width: 1024px) {
   .container {
-    min-width: 180px;
+    min-width: 12rem;
   }
   .title {
     padding: 0rem 1rem;

@@ -78,9 +78,13 @@ h4 {
   font-weight: 500;
 }
 
+h5 {
+  font-size: 1.5rem;
+}
+
 /* for text */
 p {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 
@@ -128,8 +132,12 @@ input {
     font-size: 1.5rem;
   }
 
+  h5 {
+    font-size: 1.25rem;
+  }
+
   p {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -150,8 +158,12 @@ input {
     font-size: 1.25rem;
   }
 
+  h5 {
+    font-size: 1.125rem;
+  }
+
   p {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
   }
 
   ::-webkit-scrollbar {
