@@ -8,7 +8,7 @@ import Head from "next/head";
 
 export default function Home() {
   return (
-    <div style={{ overflowY: "hidden" }}>
+    <>
       <Head>
         <title>BOLDbot</title>
         <meta name="description" content="" />
@@ -49,6 +49,6 @@ export default function Home() {
           }
         })}
       </div>
-    </div>
+    </>
   );
 }

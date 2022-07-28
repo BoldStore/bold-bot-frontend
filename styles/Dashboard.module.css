@@ -16,6 +16,7 @@
   align-items: center;
   width: 100%;
 }
+
 .backgroundGradient {
   position: fixed;
   z-index: -10;
@@ -49,13 +50,6 @@
     padding-right: 1rem;
     padding-left: 0.5rem;
   }
-  /* 
-  .pageDiv {
-    max-height: 100vh;
-    max-width: 100vh;
-    overflow-y: hidden;
-    overflow-x: hidden;
-  } */
 }
 
 @media (max-width: 640px) {
