@@ -8,7 +8,7 @@ function DashboardHeader() {
     <>
       <div className={styles.container}>
         <div className={styles.title}>
-          <h4>BOLDbot</h4>
+          <h6>BOLDbot</h6>
         </div>
         <Link href="/dashboard/">
           <p className={styles.link}>Home</p>

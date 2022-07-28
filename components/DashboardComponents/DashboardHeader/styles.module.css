@@ -32,8 +32,9 @@
   padding: 0rem 1.25rem;
 }
 
-.title h4 {
-  margin: 1rem 0rem;
+.title h6 {
+  font-weight: 500;
+  margin: 0.75rem 0rem;
 }
 
 @media (max-width: 1024px) {
@@ -79,5 +80,8 @@
     color: var(--white) !important;
     padding: 0.5rem;
     opacity: 1;
+  }
+  .title {
+    padding: 0rem 1.25rem;
   }
 }
