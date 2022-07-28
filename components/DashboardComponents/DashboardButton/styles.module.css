@@ -1,0 +1,13 @@
+.container {
+  padding: 1rem 1.5rem;
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: 2rem;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0.75rem 1rem;
+    font-size: 0.75rem;
+  }
+}
