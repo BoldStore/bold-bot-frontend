@@ -7,7 +7,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  padding: 3rem 1.5rem;
+  padding: 1rem 0rem;
   color: var(--white);
   display: flex;
   flex-direction: column;
@@ -17,6 +17,7 @@
 
 .link {
   font-weight: 500;
+  padding: 0rem 1.25rem;
   color: var(--white);
   cursor: pointer;
 }
@@ -25,11 +26,26 @@
   display: none;
 }
 
+.title {
+  width: 100%;
+  border-bottom: 1px solid var(--white);
+  margin-bottom: 1rem;
+  padding: 0rem 1.25rem;
+}
+
+.title h4 {
+  margin: 1rem 0rem;
+}
+
 @media (max-width: 1024px) {
   .container {
     min-width: 180px;
-    padding-right: 1rem;
-    padding-left: 1.5rem;
+  }
+  .title {
+    padding: 0rem 1rem;
+  }
+  .link {
+    padding: 0rem 1rem;
   }
 }
 
@@ -57,7 +73,7 @@
   }
 
   .links {
-    padding: 3rem 1.5rem;
+    padding: 0rem 0.5rem;
   }
 
   .link {
