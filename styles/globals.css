@@ -73,6 +73,11 @@ h3 {
   font-weight: 500;
 }
 
+h4 {
+  font-size: 1.875rem;
+  font-weight: 500;
+}
+
 /* for text */
 p {
   font-size: 1.125rem;
@@ -119,6 +124,10 @@ input {
     font-size: 1.875rem;
   }
 
+  h4 {
+    font-size: 1.5rem;
+  }
+
   p {
     font-size: 1rem;
   }
@@ -135,6 +144,10 @@ input {
 
   h3 {
     font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
   }
 
   p {
