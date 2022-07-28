@@ -17,14 +17,14 @@
 .button p {
   color: var(--white) !important;
   font-size: 1rem;
-  margin-left: 0.5rem;
+  margin-left: 0.375rem;
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 500;
 }
 
 .icon {
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 
 @media (max-width: 1024px) {
@@ -33,9 +33,10 @@
   }
   .button p {
     font-size: 0.875rem;
+    margin-left: 0.25rem;
   }
   .icon {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -43,7 +44,10 @@
   .button {
     padding: 0.375rem 0.75rem;
   }
+  .button p {
+    font-size: 0.75rem;
+  }
   .icon {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 }
