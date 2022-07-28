@@ -4,10 +4,9 @@
   justify-content: center;
   align-items: center;
   width: 85%;
-  margin: 1rem 0rem;
+  padding: 1rem 0rem;
   margin-left: auto;
   padding-top: 0rem;
-  overflow-y: auto;
 }
 
 .overviewFlex {
