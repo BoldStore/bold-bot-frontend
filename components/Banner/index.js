@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { motion } from "framer-motion";
 import React from "react";
 import FacebookButton from "../FacebookButton";
@@ -24,9 +25,21 @@ function Banner() {
             repeatDelay: 5,
           }}
         >
-          <img src="/assets/IceBreakerSS.svg" className={styles.img} />
-          <img src="/assets/IceBreakerSS.svg" className={styles.img2} />
-          <img src="/assets/IceBreakerSS.svg" className={styles.img} />
+          <img
+            src="/assets/IceBreakerSS.svg"
+            className={styles.img}
+            alt="Ice Breaker"
+          />
+          <img
+            src="/assets/IceBreakerSS.svg"
+            className={styles.img2}
+            alt="Ice Breaker"
+          />
+          <img
+            src="/assets/IceBreakerSS.svg"
+            className={styles.img}
+            alt="Ice Breaker"
+          />
         </motion.div>
         <motion.div
           className={styles.imagesColumnRight}
@@ -41,9 +54,21 @@ function Banner() {
             delay: 0.5,
           }}
         >
-          <img src="/assets/IceBreakerSS.svg" className={styles.img} />
-          <img src="/assets/IceBreakerSS.svg" className={styles.img} />
-          <img src="/assets/IceBreakerSS.svg" className={styles.img} />
+          <img
+            src="/assets/IceBreakerSS.svg"
+            className={styles.img}
+            alt="Ice Breaker"
+          />
+          <img
+            src="/assets/IceBreakerSS.svg"
+            className={styles.img}
+            alt="Ice Breaker"
+          />
+          <img
+            src="/assets/IceBreakerSS.svg"
+            className={styles.img}
+            alt="Ice Breaker"
+          />
         </motion.div>
       </div>
       <div className={styles.info}>
