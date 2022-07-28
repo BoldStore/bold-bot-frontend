@@ -46,14 +46,14 @@ function Feature({
           marginLeft: isReverse ? "0rem" : "3rem",
         }}
       >
-        <motion.h2
+        <motion.h3
           initial={{ y: 10, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5, duration: 1, type: "spring" }}
           className={styles.heading}
         >
           {title}
-        </motion.h2>
+        </motion.h3>
         <motion.p
           initial={{ y: 10, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}

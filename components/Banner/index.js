@@ -47,7 +47,7 @@ function Banner() {
         </motion.div>
       </div>
       <div className={styles.info}>
-        <p className={styles.para}>Automating your business, the bold way.</p>
+        <p className={styles.p}>Automating your business, the bold way.</p>
         {/* <img src="/assets/BoldBotLogoBig.svg" className={styles.logo} /> */}
         <h1 className={styles.heading}>
           BOLD<span className={styles.gradientText}>BOT</span>

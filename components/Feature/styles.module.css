@@ -5,6 +5,10 @@
   margin: 5rem 0rem;
 }
 
+.container h3 {
+  color: var(--black);
+}
+
 .container p {
   color: var(--grey);
 }
