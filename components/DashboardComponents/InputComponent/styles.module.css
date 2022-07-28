@@ -7,10 +7,13 @@
   border: 1px solid var(--grey);
   width: 100%;
   border-radius: 0.5rem;
+  background-color: var(--white);
+  color: var(--black);
 }
 
 .title {
   margin-bottom: 0.5rem;
+  color: var(--black);
 }
 
 .input:focus {

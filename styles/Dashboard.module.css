@@ -4,9 +4,14 @@
   justify-content: center;
   align-items: flex-start;
   width: 83%;
+  margin: 3rem 0rem;
   margin-left: auto;
   padding-top: 10rem;
   max-height: 100vh;
+}
+
+.container::-webkit-scrollbar {
+  display: none !important;
 }
 
 .overviewFlex {
@@ -41,6 +46,7 @@
     padding-right: 0.5rem;
     height: 100vh;
     padding-top: 1rem;
+    margin-top: 0rem;
   }
 
   .overviewFlex {

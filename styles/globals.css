@@ -8,6 +8,7 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  background-color: var(--white);
 }
 
 /* breakpoints: 
@@ -15,8 +16,8 @@ tablet: 1024px
 mobile: 640px */
 
 :root {
-  --black: #1f2327;
-  --white: #ffffff;
+  --black: #ffffff;
+  --white: #1f2327;
   --grey: #808080;
   --blue: #3781e3;
   --dashboardGradient: linear-gradient(

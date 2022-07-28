@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import styles from "./styles.module.css";
 import DrawerComponent from "./DrawerComponent";
-import ProfileCard from "../ProfileCard";
+
 function DashboardHeader() {
   return (
     <>
@@ -25,7 +25,6 @@ function DashboardHeader() {
         <Link href="/dashboard/profile">
           <p className={styles.link}>Profile</p>
         </Link>
-        {/* <ProfileCard /> */}
       </div>
       <DrawerComponent />
     </>

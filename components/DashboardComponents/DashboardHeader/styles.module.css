@@ -1,15 +1,13 @@
 .container {
   width: 17%;
   min-width: 200px;
-  /* background-image: var(--dashboardGradient); */
   background-color: var(--blue);
   height: 100vh;
   z-index: 100;
   position: absolute;
   left: 0;
   top: 0;
-  padding: 3rem;
-  padding-top: 5rem;
+  padding: 3rem 1.5rem;
   color: var(--white);
   display: flex;
   flex-direction: column;
@@ -53,6 +51,7 @@
   .mobileNavbar {
     display: flex;
     color: var(--white);
+    cursor: pointer;
     background-color: var(--white);
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
     position: fixed;
@@ -65,8 +64,7 @@
   }
 
   .links {
-    padding: 2rem;
-    padding-top: 3rem;
+    padding: 3rem 1.5rem;
   }
 
   .link {
