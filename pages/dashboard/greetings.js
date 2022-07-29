@@ -1,11 +1,13 @@
 import React from "react";
 import DashboardHeader from "../../components/DashboardComponents/DashboardHeader";
+import TopHeader from "../../components/DashboardComponents/DashboardHeader/topHeader";
 import InputComponent from "../../components/DashboardComponents/InputComponent";
 import styles from "../../styles/common.module.css";
 
 function GreetingsPage() {
   return (
     <>
+      <TopHeader />
       <DashboardHeader />
       <div className={styles.container}>
         <h2 className={styles.title}>Greetings</h2>

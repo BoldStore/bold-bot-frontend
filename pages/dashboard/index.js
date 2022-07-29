@@ -4,6 +4,7 @@ import Head from "next/head";
 import ProfileCard from "../../components/DashboardComponents/ProfileCard";
 import DashboardHeader from "../../components/DashboardComponents/DashboardHeader";
 import OverviewCard from "../../components/DashboardComponents/OverviewCard";
+import TopHeader from "../../components/DashboardComponents/DashboardHeader/topHeader";
 function Dashboard() {
   return (
     <div className={styles.pageDiv}>
@@ -12,6 +13,7 @@ function Dashboard() {
         <meta name="description" content="" />
         <link rel="icon" href="/assets/Logo.png" />
       </Head>
+      <TopHeader />
       <DashboardHeader />
       <div className={styles.container}>
         <div className={styles.backgroundGradient} />

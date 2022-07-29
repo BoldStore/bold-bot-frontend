@@ -37,6 +37,38 @@
   margin: 0.75rem 0rem;
 }
 
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 2rem;
+  background-color: var(--dashboardTheme);
+  z-index: 101;
+  color: var(--white);
+  border-bottom: 1px solid var(--white);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+.linksContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  margin-left: -1rem;
+}
+
+.user {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
 @media (max-width: 1024px) {
   .container {
     min-width: 12rem;
@@ -83,5 +115,9 @@
   }
   .title {
     padding: 0rem 1.25rem;
+  }
+
+  .navbar {
+    display: none;
   }
 }
