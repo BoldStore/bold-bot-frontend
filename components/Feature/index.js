@@ -19,7 +19,7 @@ function Feature({
     >
       <div className={styles.phoneComponent} style={{ position: "relative" }}>
         <motion.img
-          src={"/assets/IceBreakerSS.svg"}
+          src={imgSrc}
           className={styles.img}
           animate={{
             y: [0, 10, 0],

@@ -32,6 +32,7 @@ export default function Home() {
                 backgroundColor={item.backgroundColor}
                 backgroundImage={item.backgroundImage}
                 id={item.id}
+                imgSrc={item.imgSrc}
               />
             );
           } else {
@@ -44,6 +45,7 @@ export default function Home() {
                 backgroundColor={item.backgroundColor}
                 backgroundImage={item.backgroundImage}
                 id={item.id}
+                imgSrc={item.imgSrc}
               />
             );
           }
