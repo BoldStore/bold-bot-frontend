@@ -72,15 +72,20 @@ function Banner() {
         </motion.div>
       </div>
       <div className={styles.info}>
-        <p className={styles.p}>Automating your business, the bold way.</p>
+        <p className={styles.p}>Automate your business, the Bold way.</p>
         {/* <img src="/assets/BoldBotLogoBig.svg" className={styles.logo} /> */}
         <h1 className={styles.heading}>
           BOLD<span className={styles.gradientText}>BOT</span>
         </h1>
         <p className={styles.para}>
-          Build lasting customer relationships through conversation. Messenger
-          allows you to connect with billions of people in a channel they
-          prefer—making business personal and convenient.
+          BoldBot is the next step in automating customer service for Instagram
+          businesses. It’s personalised greetings and range of choices increases
+          the ease with which your patrons can inquire or communicate with the
+          store via direct messages. The persistent menu removes the
+          miscommunication quotient by providing the option of starting over or
+          redirecting to a new topic. BoldBot levels up the professionalism of
+          your business by increasing efficacy and simplifying interaction with
+          your consumer.
         </p>
         <FacebookButton />
       </div>
