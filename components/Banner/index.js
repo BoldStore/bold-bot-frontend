@@ -79,13 +79,8 @@ function Banner() {
         </h1>
         <p className={styles.para}>
           BoldBot is the next step in automating customer service for Instagram
-          businesses. It’s personalised greetings and range of choices increases
-          the ease with which your patrons can inquire or communicate with the
-          store via direct messages. The persistent menu removes the
-          miscommunication quotient by providing the option of starting over or
-          redirecting to a new topic. BoldBot levels up the professionalism of
-          your business by increasing efficacy and simplifying interaction with
-          your consumer.
+          businesses. BoldBot levels up the professionalism of your business by
+          increasing efficacy and simplifying interaction with your consumer.
         </p>
         <FacebookButton />
       </div>
