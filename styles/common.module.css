@@ -1,6 +1,6 @@
 .container {
   width: 87%;
-  height: 100vh;
+  min-height: 100vh;
   display: block;
   margin-left: auto;
   padding: 4rem;

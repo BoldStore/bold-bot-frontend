@@ -1,8 +1,9 @@
 .container {
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 2.5rem;
   background-color: var(--blue);
   color: var(--white);
   border-radius: 2rem;
+  width: fit-content;
 }
 
 @media (max-width: 640px) {

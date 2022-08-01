@@ -20,9 +20,9 @@ function DashboardHeader() {
         <Link href="/dashboard/persistent-menu">
           <p className={styles.link}>Persistent Menu</p>
         </Link>
-        <Link href="/dashboard/quick-replies">
+        {/* <Link href="/dashboard/quick-replies">
           <p className={styles.link}>Quick Replies</p>
-        </Link>
+        </Link> */}
         <Link href="/dashboard/ice-breakers">
           <p className={styles.link}>Ice Breakers</p>
         </Link>
