@@ -72,14 +72,13 @@ function Banner() {
         </motion.div>
       </div>
       <div className={styles.info}>
-        <p className={styles.p}>Automate your business, the Bold way.</p>
-        {/* <img src="/assets/BoldBotLogoBig.svg" className={styles.logo} /> */}
+        <p className={styles.p}>Automate your business, the bold way.</p>
         <h1 className={styles.heading}>
           BOLD<span className={styles.gradientText}>BOT</span>
         </h1>
         <p className={styles.para}>
-          BoldBot is the next step in automating customer service for Instagram
-          businesses. BoldBot levels up the professionalism of your business by
+          BOLDbot is the next step in automating customer service for Instagram
+          businesses. It levels up the professionalism of your business by
           increasing efficacy and simplifying interaction with your consumer.
         </p>
         <FacebookButton />
