@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import Head from "next/head";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { wrapper } from "../store/configureStore";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -18,4 +19,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default wrapper.withRedux(MyApp);

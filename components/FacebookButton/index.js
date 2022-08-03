@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from "react";
 import styles from "./styles.module.css";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
@@ -5,23 +6,43 @@ import { useSignInWithFacebook } from "react-firebase-hooks/auth";
 import { toast } from "react-toastify";
 import { auth } from "../../firebaseConfig";
 import { useRouter } from "next/router";
-import { FACEBOOK_GRAPH_URL } from "../../constants";
+import {
+  CLIENT_ID,
+  FACEBOOK_AUTH_URL,
+  REDIRECT_URI,
+  SCOPE,
+} from "../../constants";
+import { useDispatch } from "react-redux";
+import { createUser } from "../../store/actions/user";
 
 function FacebookButton() {
   const router = useRouter();
+  const dispatch = useDispatch();
   const [signInWithFacebook, user, loading, error] =
     useSignInWithFacebook(auth);
 
   useEffect(() => {
     if (user) {
-      toast.success("Successfully Signed In", {
-        autoClose: 3000,
-      });
-      const accessToken = user?._tokenResponse?.oauthAccessToken;
-      const url = `${FACEBOOK_GRAPH_URL}/${user?.user?.providerData[0]?.uid}//accounts?fields=name,access_token&access_token=${accessToken}`;
-      router.replace(url);
+      success();
     }
-  }, [router, user]);
+  }, [user]);
+
+  const success = async () => {
+    toast.success("Successfully Signed In", {
+      autoClose: 3000,
+    });
+
+    dispatch(createUser());
+    const url = `${FACEBOOK_AUTH_URL}?response_type=token&display=popup&client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${SCOPE}`;
+    router.replace(url);
+    getToken();
+  };
+
+  const getToken = async () => {
+    await auth.currentUser.getIdToken(true).then((token) => {
+      console.log("TOKEN>>>>", token);
+    });
+  };
 
   useEffect(() => {
     if (error) toast(error);
