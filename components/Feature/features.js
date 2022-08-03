@@ -5,7 +5,7 @@ export const features = [
     backgroundImage: "linear-gradient(19deg, #21D4FD 0%, #B721FF 100%)",
     backgroundColor: "#21D4FD",
     id: "CustomGreetings",
-    imgSrc: "/assets/greeting.svg",
+    imgSrc: "/assets/greeting.png",
   },
   {
     title: "Ice Breakers",
@@ -13,7 +13,7 @@ export const features = [
     backgroundImage: "linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%)",
     backgroundColor: "#8BC6EC",
     id: "IceBreakers",
-    imgSrc: "/assets/iceBreaker.svg",
+    imgSrc: "/assets/iceBreaker.png",
   },
   {
     title: "Persistent Menu",
@@ -21,7 +21,7 @@ export const features = [
     backgroundImage: "linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%)",
     backgroundColor: "#85FFBD",
     id: "PersistentMenu",
-    imgSrc: "/assets/persistentMenu.svg",
+    imgSrc: "/assets/persistentMenu.png",
   },
   {
     title: "Quick Replies",
@@ -29,6 +29,6 @@ export const features = [
     backgroundImage: "linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%)",
     backgroundColor: "#FBDA61",
     id: "QuickReplies",
-    imgSrc: "/assets/quickReplies.svg",
+    imgSrc: "/assets/quickReplies.png",
   },
 ];

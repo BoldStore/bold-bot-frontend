@@ -26,17 +26,17 @@ function Banner() {
           }}
         >
           <img
-            src="/assets/genericTemplate.svg"
+            src="/assets/genericTemplate.png"
             className={styles.img}
             alt="Ice Breaker"
           />
           <img
-            src="/assets/iceBreaker.svg"
+            src="/assets/iceBreaker.png"
             className={styles.img2}
             alt="Ice Breaker"
           />
           <img
-            src="/assets/quickReplies.svg"
+            src="/assets/quickReplies.png"
             className={styles.img}
             alt="Ice Breaker"
           />
@@ -55,17 +55,17 @@ function Banner() {
           }}
         >
           <img
-            src="/assets/greeting.svg"
+            src="/assets/greeting.png"
             className={styles.img}
             alt="Ice Breaker"
           />
           <img
-            src="/assets/IceBreakerSS.svg"
+            src="/assets/iceBreaker.png"
             className={styles.img}
             alt="Ice Breaker"
           />
           <img
-            src="/assets/persistentMenu.svg"
+            src="/assets/persistentMenu.png"
             className={styles.img}
             alt="Ice Breaker"
           />
