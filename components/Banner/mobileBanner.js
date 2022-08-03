@@ -6,7 +6,7 @@ function MobileBanner() {
     <>
       <div className={styles.backgroundGradientMobile} />
       <div>
-        <img src="/assets/IceBreakerSS.svg" className={styles.mobileImg} />
+        <img src="/assets/iceBreaker.png" className={styles.mobileImg} />
       </div>
     </>
   );
