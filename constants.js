@@ -7,3 +7,5 @@ export const REDIRECT_URI = "http://localhost:3000/facebookPage/";
 export const API_URL = "http://localhost:3001";
 export const CREATE_USER = "/user";
 export const ADD_PAGE = "/user/page";
+
+export const GREETING = "/message/greeting";
