@@ -21,7 +21,7 @@ const userReducer = (state = initState, action) => {
         ...state,
         isLoading: false,
         errmess: null,
-        user: action.user,
+        user: action.data,
       };
 
     case ActionTypes.GET_USER_FAILED:
