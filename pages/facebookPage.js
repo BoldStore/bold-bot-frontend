@@ -3,11 +3,14 @@ import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addPage } from "../store/actions/page";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../firebaseConfig";
 
 function FacebookPage() {
   const { query, replace } = useRouter();
   const dispatch = useDispatch();
   const page = useSelector((state) => state.page);
+  const [user, loading] = useAuthState(auth);
 
   const handleAddPage = () => {
     const access_token = query.access_token;
@@ -26,18 +29,18 @@ function FacebookPage() {
   };
 
   useEffect(() => {
-    if (page.success) {
+    if (page?.success) {
       replace("/dashboard");
     }
   }, [page]);
 
   useEffect(() => {
-    if (query) {
+    if (query && user) {
       handleAddPage();
     }
-  }, [query]);
+  }, [query, user]);
 
-  return <div></div>;
+  return <div>{loading ? "Loading..." : user?.accessToken}</div>;
 }
 
 export default FacebookPage;

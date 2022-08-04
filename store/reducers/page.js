@@ -22,6 +22,7 @@ const pageReducer = (state = initState, action) => {
         isLoading: false,
         errmess: null,
         page: action.page,
+        success: true,
       };
 
     case ActionTypes.ADD_PAGE_FAILED:
