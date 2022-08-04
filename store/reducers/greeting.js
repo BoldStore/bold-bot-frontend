@@ -22,7 +22,7 @@ const greetingReducer = (state = initState, action) => {
         ...state,
         isLoading: false,
         errmess: null,
-        page: action.page,
+        message: action.data,
         add_success: true,
       };
 
@@ -45,7 +45,7 @@ const greetingReducer = (state = initState, action) => {
         ...state,
         isLoading: false,
         errmess: null,
-        message: action.message,
+        message: action.data,
         get_success: true,
       };
 

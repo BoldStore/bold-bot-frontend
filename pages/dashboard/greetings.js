@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import DashboardHeader from "../../components/DashboardComponents/DashboardHeader";
 import TopHeader from "../../components/DashboardComponents/DashboardHeader/topHeader";
 import InputComponent from "../../components/DashboardComponents/InputComponent";
@@ -13,12 +13,50 @@ function GreetingsPage() {
   const disptach = useDispatch();
   const user = useSelector((state) => state.user);
   const greeting = useSelector((state) => state.greeting);
+  const [form, setForm] = useState([
+    {
+      key: "introduction",
+      value: "",
+    },
+    {
+      key: "welcome",
+      value: "",
+    },
+    {
+      key: "fallback",
+      value: "",
+    },
+  ]);
+
+  const setValue = (e, itemKey) => {
+    const arr = form;
+    arr.find((e) => e.key == itemKey).value = e.target.value;
+    setForm(arr);
+  };
 
   useEffect(() => {
     if (user && user.user && user?.user?.pages?.length > 0) {
       disptach(getGreeting(user?.user?.pages[0].id));
     }
   }, [user.user]);
+
+  useEffect(() => {
+    if (greeting?.message && greeting?.message?.texts?.length > 0) {
+      const arr = form;
+      for (let i = 0; i < greeting?.message?.texts.length; i++) {
+        for (let j = 0; j < arr.length; j++) {
+          if (arr[j].key === greeting?.message?.texts[i].key) {
+            arr[j].value = greeting?.message?.texts[i].value;
+          }
+        }
+      }
+      setForm(arr);
+    }
+  }, [greeting.message]);
+
+  useEffect(() => {
+    console.log(form);
+  }, [form]);
 
   if (greeting.isLoading) {
     return <div>Loading...</div>;
@@ -40,7 +78,10 @@ function GreetingsPage() {
             key={i}
             title={item.title}
             desc={item.desc}
+            value={form.find((e) => e.key == item.key).value}
             placeholder={item.placeholder}
+            itemKey={item.key}
+            setValue={setValue}
           />
         ))}
         <DashboardButton text={"Save"} />

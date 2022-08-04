@@ -1,7 +1,15 @@
 import React from "react";
 import styles from "./styles.module.css";
 
-function InputComponent({ title, type, placeholder, desc }) {
+function InputComponent({
+  title,
+  type,
+  placeholder,
+  desc,
+  value,
+  setValue,
+  itemKey,
+}) {
   return (
     <div className={styles.container}>
       {title && <h6 className={styles.title}>{title}</h6>}
@@ -10,6 +18,8 @@ function InputComponent({ title, type, placeholder, desc }) {
         type={type ?? "text"}
         placeholder={placeholder}
         className={styles.input}
+        value={value}
+        onChange={(e) => setValue(e, itemKey)}
       />
     </div>
   );
