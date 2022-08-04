@@ -7,7 +7,7 @@ import { greetings } from "../../components/DashboardComponents/Lists/greetings"
 import styles from "../../styles/common.module.css";
 import DashboardButton from "../../components/DashboardComponents/DashboardButton";
 import { useDispatch, useSelector } from "react-redux";
-import { getGreeting } from "../../store/actions/greeting";
+import { addGreeting, getGreeting } from "../../store/actions/greeting";
 
 function GreetingsPage() {
   const disptach = useDispatch();
@@ -39,6 +39,12 @@ function GreetingsPage() {
       disptach(getGreeting(user?.user?.pages[0].id));
     }
   }, [user.user]);
+
+  const saveGreeting = () => {
+    if (user && user.user && user?.user?.pages?.length > 0) {
+      disptach(addGreeting(user?.user?.pages[0].id, form));
+    }
+  };
 
   useEffect(() => {
     if (greeting?.message && greeting?.message?.texts?.length > 0) {
@@ -84,7 +90,7 @@ function GreetingsPage() {
             setValue={setValue}
           />
         ))}
-        <DashboardButton text={"Save"} />
+        <DashboardButton text={"Save"} onClick={saveGreeting} />
       </div>
     </>
   );
