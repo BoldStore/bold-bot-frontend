@@ -27,11 +27,13 @@ function OverviewCard({ title, desc, gradient }) {
             })}
           />
         </div>
-        <h5 className={styles.completeText}>5/5 Complete</h5>
-        <DashboardButton
+        <h5 className={styles.completeText}>
+          5/5 <span className={styles.complete}> Complete</span>
+        </h5>
+        {/* <DashboardButton
           text={"Upgrade Plan"}
           onClick={() => alert("wohooo")}
-        />
+        /> */}
       </div>
     </div>
   );

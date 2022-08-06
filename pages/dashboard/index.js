@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../../styles/Dashboard.module.css";
 import Head from "next/head";
 import ProfileCard from "../../components/DashboardComponents/ProfileCard";
-import DashboardHeader from "../../components/DashboardComponents/DashboardHeader";
+import DashboardSidebar from "../../components/DashboardComponents/DashboardSidebar";
 import OverviewCard from "../../components/DashboardComponents/OverviewCard";
 import TopHeader from "../../components/DashboardComponents/DashboardHeader/topHeader";
 function Dashboard() {
@@ -13,8 +13,8 @@ function Dashboard() {
         <meta name="description" content="" />
         <link rel="icon" href="/assets/Logo.png" />
       </Head>
-      <TopHeader />
-      <DashboardHeader />
+
+      <DashboardSidebar />
       <div className={styles.container}>
         <div className={styles.backgroundGradient} />
         <div className={styles.backgroundGradientMobile} />
