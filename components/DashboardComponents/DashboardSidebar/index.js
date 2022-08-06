@@ -1,5 +1,5 @@
 import styles from "./styles.module.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   ProSidebar,
   Menu,
@@ -21,6 +21,8 @@ import {
 // import "react-pro-sidebar/dist/css/styles.css";
 import Link from "next/link";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 
 function DashboardSidebar() {
   const [collapsed, setCollapsed] = useState(false);
@@ -34,6 +36,24 @@ function DashboardSidebar() {
     setToggled(value);
   };
 
+  useEffect(() => {
+    if (!(typeof window === "undefined")) {
+      if (window.innerWidth < 1024) {
+        setCollapsed(true);
+      }
+    }
+  }, []);
+
+  if (!(typeof window === "undefined")) {
+    window.addEventListener("resize", () => {
+      if (window.innerWidth < 1024) {
+        setCollapsed(true);
+      } else {
+        setCollapsed(false);
+      }
+    });
+  }
+
   return (
     <>
       <div className={styles.mobileNavbar}>
@@ -43,12 +63,6 @@ function DashboardSidebar() {
         />
       </div>
 
-      {/* <div
-        className="btn-toggle"
-        onClick={() => handleCollapsedChange(!collapsed)}
-      >
-        <FaBars />
-      </div> */}
       <div className={styles.sideBarDiv}>
         <ProSidebar
           collapsed={collapsed}
@@ -58,16 +72,21 @@ function DashboardSidebar() {
         >
           <SidebarHeader>
             <div
-              style={{
-                overflow: "hidden",
-                textOverflow: "ellipsis",
-                whiteSpace: "nowrap",
-                height: "3rem",
-                padding: "0.75rem",
-                borderBottom: "1px solid var(--white)",
-              }}
+              className={styles.header}
+              style={{ justifyContent: collapsed && "center" }}
             >
-              BOLDBOT
+              {!collapsed && <p>BOLDBOT</p>}
+              {collapsed ? (
+                <ChevronRightIcon
+                  className={styles.expandIcon}
+                  onClick={() => handleCollapsedChange(!collapsed)}
+                />
+              ) : (
+                <ChevronLeftIcon
+                  className={styles.expandIcon}
+                  onClick={() => handleCollapsedChange(!collapsed)}
+                />
+              )}
             </div>
           </SidebarHeader>
 

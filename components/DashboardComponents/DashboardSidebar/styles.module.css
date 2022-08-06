@@ -6,6 +6,26 @@
   display: none;
 }
 
+.expandIcon {
+  color: var(--white);
+  font-size: 1.8rem;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  padding: 0.2rem;
+}
+.header {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 3rem;
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 @media (max-width: 640px) {
   .sideBarDiv {
     display: hidden;
