@@ -1,7 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
-import DashboardHeader from "../../components/DashboardComponents/DashboardHeader";
-import TopHeader from "../../components/DashboardComponents/DashboardHeader/topHeader";
+import DashboardSidebar from "../../components/DashboardComponents/DashboardSidebar";
 import InputComponent from "../../components/DashboardComponents/InputComponent";
 import { greetings } from "../../components/DashboardComponents/Lists/greetings";
 import styles from "../../styles/common.module.css";
@@ -69,9 +68,8 @@ function GreetingsPage() {
   }
 
   return (
-    <>
-      <TopHeader />
-      <DashboardHeader />
+    <div className={styles.pageDiv}>
+      <DashboardSidebar />
       <div className={styles.container}>
         <h2 className={styles.title}>Greetings</h2>
         <p className={styles.introPara}>
@@ -92,7 +90,7 @@ function GreetingsPage() {
         ))}
         <DashboardButton text={"Save"} onClick={saveGreeting} />
       </div>
-    </>
+    </div>
   );
 }
 

@@ -1,15 +1,13 @@
 import React from "react";
-import DashboardHeader from "../../components/DashboardComponents/DashboardHeader";
-import TopHeader from "../../components/DashboardComponents/DashboardHeader/topHeader";
+import DashboardSidebar from "../../components/DashboardComponents/DashboardSidebar";
 import InputComponent from "../../components/DashboardComponents/InputComponent";
 import { iceBreakers } from "../../components/DashboardComponents/Lists/iceBreakers";
 import styles from "../../styles/common.module.css";
 import DashboardButton from "../../components/DashboardComponents/DashboardButton";
 function IceBreakerPage() {
   return (
-    <>
-      <TopHeader />
-      <DashboardHeader />
+    <div className={styles.pageDiv}>
+      <DashboardSidebar />
       <div className={styles.container}>
         <h2 className={styles.title}>Ice Breakers</h2>
         <p className={styles.introPara}>
@@ -27,7 +25,7 @@ function IceBreakerPage() {
         ))}
         <DashboardButton text={"Save"} />
       </div>
-    </>
+    </div>
   );
 }
 

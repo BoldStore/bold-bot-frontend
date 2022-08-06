@@ -1,6 +1,5 @@
 import React from "react";
-import DashboardHeader from "../../components/DashboardComponents/DashboardHeader";
-import TopHeader from "../../components/DashboardComponents/DashboardHeader/topHeader";
+import DashboardSidebar from "../../components/DashboardComponents/DashboardSidebar";
 import InputComponent from "../../components/DashboardComponents/InputComponent";
 import DashboardButton from "../../components/DashboardComponents/DashboardButton";
 import { persistentMenu } from "../../components/DashboardComponents/Lists/persistent-menu";
@@ -8,9 +7,8 @@ import styles from "../../styles/common.module.css";
 
 function PersistentMenu() {
   return (
-    <>
-      <TopHeader />
-      <DashboardHeader />
+    <div className={styles.pageDiv}>
+      <DashboardSidebar />
       <div className={styles.container}>
         <h2 className={styles.title}>Persistent Menu</h2>
         <p className={styles.introPara}>
@@ -28,7 +26,7 @@ function PersistentMenu() {
         ))}
         <DashboardButton text={"Save"} />
       </div>
-    </>
+    </div>
   );
 }
 

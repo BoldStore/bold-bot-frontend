@@ -1,11 +1,13 @@
 .container {
-  width: 87%;
-  min-height: 100vh;
-  display: block;
-  margin-left: auto;
-  padding: 4rem;
-  padding-top: 0rem;
-  margin-top: 5rem;
+  width: 100%;
+  padding: 2rem;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.pageDiv {
+  height: 100%;
+  display: flex;
 }
 
 .title {
@@ -17,13 +19,16 @@
   color: var(--black);
   margin-bottom: 2rem;
 }
+.title {
+  margin-top: 0rem;
+}
 
 @media (max-width: 1024px) {
-  .container {
+  /* .container {
     width: 77%;
     padding: 2rem;
     padding-top: 0rem;
-  }
+  } */
 
   .introPara {
     width: 95%;
