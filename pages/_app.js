@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { auth } from "../firebaseConfig";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "../store/actions/user";
+import "../styles/App.scss";
 
 function MyApp({ Component, pageProps }) {
   const dispatch = useDispatch();
