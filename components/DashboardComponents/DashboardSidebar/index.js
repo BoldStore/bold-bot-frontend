@@ -20,6 +20,9 @@ import {
 } from "react-icons/fa";
 // import "react-pro-sidebar/dist/css/styles.css";
 import Link from "next/link";
+import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
+import EmojiPeopleRoundedIcon from "@mui/icons-material/EmojiPeopleRounded";
+import AcUnitRoundedIcon from "@mui/icons-material/AcUnitRounded";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
@@ -93,19 +96,22 @@ function DashboardSidebar() {
           <SidebarContent>
             <Menu iconShape="circle">
               <Link href="/dashboard/">
-                <MenuItem icon={<FaTachometerAlt />}>Home</MenuItem>
+                <MenuItem icon={<HomeRoundedIcon />}>Home</MenuItem>
               </Link>
               <Link href="/dashboard/greetings">
-                <MenuItem icon={<FaRegLaughWink />}> Greetings</MenuItem>
+                <MenuItem icon={<EmojiPeopleRoundedIcon />}>
+                  {" "}
+                  Greetings
+                </MenuItem>
               </Link>
               <Link href="/dashboard/persistent-menu">
-                <MenuItem icon={<FaHeart />}> Persistent Menu</MenuItem>
+                <MenuItem icon={<MenuRoundedIcon />}>Persistent Menu</MenuItem>
               </Link>
               <Link href="/dashboard/ice-breakers">
-                <MenuItem icon={<FaGem />}> Ice Breakers</MenuItem>
+                <MenuItem icon={<AcUnitRoundedIcon />}>Ice Breakers</MenuItem>
               </Link>
               <Link href="/dashboard/profile">
-                <MenuItem icon={<FaUser />}> Profile</MenuItem>
+                <MenuItem icon={<FaUser />}>Profile</MenuItem>
               </Link>
             </Menu>
             {/* <Menu iconShape="circle">
