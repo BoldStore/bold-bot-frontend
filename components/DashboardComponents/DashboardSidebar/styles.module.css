@@ -1,6 +1,5 @@
 .sideBarDiv {
   height: 100vh;
-  /* position: fixed; */
 }
 
 .mobileNavbar {
@@ -15,6 +14,7 @@
   border-radius: 50%;
   padding: 0.2rem;
 }
+
 .header {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -27,9 +27,18 @@
   align-items: center;
 }
 
+@media (max-width: 1024px) {
+  .expandIcon {
+    display: none;
+  }
+}
+
 @media (max-width: 640px) {
   .sideBarDiv {
     display: hidden;
+  }
+  .expandIcon {
+    display: flex;
   }
   /* .drawerIcon {
     display: block;

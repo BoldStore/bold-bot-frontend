@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  padding: 2rem;
+  padding: 1rem 2rem;
   overflow-y: auto;
   height: 100vh;
 }
@@ -24,12 +24,6 @@
 }
 
 @media (max-width: 1024px) {
-  /* .container {
-    width: 77%;
-    padding: 2rem;
-    padding-top: 0rem;
-  } */
-
   .introPara {
     width: 95%;
     margin-bottom: 1.75rem;

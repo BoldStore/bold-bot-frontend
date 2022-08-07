@@ -9,7 +9,7 @@ function IceBreakerPage() {
     <div className={styles.pageDiv}>
       <DashboardSidebar />
       <div className={styles.container}>
-        <h2 className={styles.title}>Ice Breakers</h2>
+        <h3 className={styles.title}>Ice Breakers</h3>
         <p className={styles.introPara}>
           Ice Breakers provide a way for users to start a conversation with a
           business with a list of frequently asked questions. A maximum of 4
