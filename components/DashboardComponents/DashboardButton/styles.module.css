@@ -10,6 +10,7 @@
 
 .container p {
   margin: 0;
+  font-weight: 500;
 }
 
 @media (max-width: 1024px) {
@@ -21,7 +22,7 @@
 @media (max-width: 640px) {
   .container {
     margin: 2rem 0;
-    padding: 0.5rem 2rem;
+    padding: 0.625rem 2rem;
     width: 100%;
   }
 }
