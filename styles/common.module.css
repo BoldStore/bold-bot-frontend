@@ -1,6 +1,8 @@
 .container {
   width: 100%;
-  padding: 1rem 2rem;
+  overflow-y: auto;
+  height: 100vh;
+  padding: 2rem;
 }
 
 .pageDiv {
@@ -20,6 +22,13 @@
 }
 
 @media (max-width: 1024px) {
+  .container {
+    width: 100%;
+    overflow-y: auto;
+    height: 100vh;
+    padding: 1.75rem;
+  }
+
   .introPara {
     width: 95%;
     margin-bottom: 1.75rem;
@@ -31,6 +40,8 @@
     width: 100%;
     padding: 2rem 0.75rem;
     margin-top: 2rem;
+    overflow: none;
+    height: 100%;
   }
 
   .introPara {
