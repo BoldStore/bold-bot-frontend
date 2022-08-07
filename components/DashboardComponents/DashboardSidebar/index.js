@@ -9,21 +9,12 @@ import {
   SidebarFooter,
   SidebarContent,
 } from "react-pro-sidebar";
-import {
-  FaTachometerAlt,
-  FaGem,
-  FaList,
-  FaGithub,
-  FaRegLaughWink,
-  FaUser,
-  FaHeart,
-} from "react-icons/fa";
-// import "react-pro-sidebar/dist/css/styles.css";
 import Link from "next/link";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import EmojiPeopleRoundedIcon from "@mui/icons-material/EmojiPeopleRounded";
 import AcUnitRoundedIcon from "@mui/icons-material/AcUnitRounded";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
+import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 
@@ -65,7 +56,6 @@ function DashboardSidebar() {
           onClick={() => handleToggleSidebar(true)}
         />
       </div>
-
       <div className={styles.sideBarDiv}>
         <ProSidebar
           collapsed={collapsed}
@@ -92,7 +82,6 @@ function DashboardSidebar() {
               )}
             </div>
           </SidebarHeader>
-
           <SidebarContent>
             <Menu iconShape="circle">
               <Link href="/dashboard/">
@@ -111,7 +100,7 @@ function DashboardSidebar() {
                 <MenuItem icon={<AcUnitRoundedIcon />}>Ice Breakers</MenuItem>
               </Link>
               <Link href="/dashboard/profile">
-                <MenuItem icon={<FaUser />}>Profile</MenuItem>
+                <MenuItem icon={<PersonRoundedIcon />}>Profile</MenuItem>
               </Link>
             </Menu>
             {/* <Menu iconShape="circle">
@@ -148,7 +137,6 @@ function DashboardSidebar() {
               </SubMenu>
             </Menu> */}
           </SidebarContent>
-
           {/* <SidebarFooter style={{ textAlign: "center" }}>
             <div
               className="sidebar-btn-wrapper"
