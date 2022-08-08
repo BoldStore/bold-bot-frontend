@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import DashboardSidebar from "../../components/DashboardComponents/DashboardSidebar";
-import InputComponent from "../../components/DashboardComponents/InputComponent";
 import DashboardButton from "../../components/DashboardComponents/DashboardButton";
 import { persistentMenu } from "../../components/DashboardComponents/Lists/persistent-menu";
 import styles from "../../styles/common.module.css";
 import { features } from "../../components/Feature/features";
+import DoubleInputComponent from "../../components/DashboardComponents/InputComponent/doubleInput";
 
 function PersistentMenu() {
   const [showExample, setShowExample] = useState(false);
@@ -30,11 +30,11 @@ function PersistentMenu() {
           </div>
         )}
         {persistentMenu.map((item, i) => (
-          <InputComponent
+          <DoubleInputComponent
             key={i}
             title={item.title}
-            desc={item.desc}
-            placeholder={item.placeholder}
+            placeholderHeading={item.placeholderHeading}
+            placeholderReply={item.placeholderReply}
           />
         ))}
         <DashboardButton text={"Save"} />

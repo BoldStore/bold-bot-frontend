@@ -1,32 +1,26 @@
 export const iceBreakers = [
   {
-    title: "Customer Support",
-    desc: "This is the text your customers click on if they want support",
-    placeholder: "Customer Support",
+    title: "Ice Breaker 1",
+    placeholderHeading: "Customer Support",
+    placeholderReply:
+      "You can visit our customer support website at: http://www.boldstore.in/customer-support to contact our customer support!",
   },
   {
-    title: "Where is my order?",
-    desc: "This is the text your customers click on if they want to know where their orders are",
-    placeholder: "Where is my order?",
+    title: "Ice Breaker 2",
+    placeholderHeading: "Customer Support",
+    placeholderReply:
+      "You can visit our customer support website at: http://www.boldstore.in/customer-support to contact our customer support!",
   },
   {
-    title: "Reach Product Expert",
-    desc: "This is the text your customers click on if they want to know where their orders are",
-    placeholder: "Reach Product Expert",
+    title: "Ice Breaker 3",
+    placeholderHeading: "Customer Support",
+    placeholderReply:
+      "You can visit our customer support website at: http://www.boldstore.in/customer-support to contact our customer support!",
   },
   {
-    title: "New Products",
-    desc: "This is the text your customers click on if they want to find New Products",
-    placeholder: "New Products",
-  },
-  {
-    title: "Shop Now",
-    desc: "This is the text your customers click on if they want to visit the website",
-    placeholder: "Shop Now",
-  },
-  {
-    title: "Start Over",
-    desc: "This is the text your customers click on if they want to Start Over",
-    placeholder: "Start Over",
+    title: "Ice Breaker 4",
+    placeholderHeading: "Customer Support",
+    placeholderReply:
+      "You can visit our customer support website at: http://www.boldstore.in/customer-support to contact our customer support!",
   },
 ];

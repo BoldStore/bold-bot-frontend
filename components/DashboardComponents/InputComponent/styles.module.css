@@ -11,9 +11,14 @@
   color: var(--black);
 }
 
-.title {
+.title,
+.title2 {
   margin-bottom: 0.5rem;
   color: var(--black);
+}
+
+.title2 {
+  font-weight: 500;
 }
 
 .input:focus {

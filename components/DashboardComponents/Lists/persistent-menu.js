@@ -1,32 +1,14 @@
 export const persistentMenu = [
   {
-    title: "Customer Support",
-    desc: "This is the text your customers click on if they want support",
-    placeholder: "Customer Support",
+    title: "Menu Option 1",
+    placeholderHeading: "Visit Website",
+    placeholderReply:
+      "You can visit our website at: http://www.boldstore.in/home to know more!",
   },
   {
-    title: "Where is my order?",
-    desc: "This is the text your customers click on if they want to know where their orders are",
-    placeholder: "Where is my order?",
-  },
-  {
-    title: "Reach Product Expert",
-    desc: "This is the text your customers click on if they want to know where their orders are",
-    placeholder: "Reach Product Expert",
-  },
-  {
-    title: "New Products",
-    desc: "This is the text your customers click on if they want to find New Products",
-    placeholder: "New Products",
-  },
-  {
-    title: "Shop Now",
-    desc: "This is the text your customers click on if they want to visit the website",
-    placeholder: "Shop Now",
-  },
-  {
-    title: "Start Over",
-    desc: "This is the text your customers click on if they want to Start Over",
-    placeholder: "Start Over",
+    title: "Menu Option 2",
+    placeholderHeading: "Buy Products",
+    placeholderReply:
+      "You can buy our products at: http://www.boldstore.in/shop!",
   },
 ];
