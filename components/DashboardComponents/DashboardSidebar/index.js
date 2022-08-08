@@ -15,8 +15,8 @@ import EmojiPeopleRoundedIcon from "@mui/icons-material/EmojiPeopleRounded";
 import AcUnitRoundedIcon from "@mui/icons-material/AcUnitRounded";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronLeftRoundedIcon from "@mui/icons-material/ChevronLeftRounded";
+import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
 
 function DashboardSidebar() {
   const [collapsed, setCollapsed] = useState(false);
@@ -70,12 +70,12 @@ function DashboardSidebar() {
             >
               {!collapsed && <p>BOLDBOT</p>}
               {collapsed ? (
-                <ChevronRightIcon
+                <ChevronRightRoundedIcon
                   className={styles.expandIcon}
                   onClick={() => handleCollapsedChange(!collapsed)}
                 />
               ) : (
-                <ChevronLeftIcon
+                <ChevronLeftRoundedIcon
                   className={styles.expandIcon}
                   onClick={() => handleCollapsedChange(!collapsed)}
                 />
