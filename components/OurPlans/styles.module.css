@@ -34,6 +34,7 @@
 
   .plansContainerMobile {
     display: flex;
+    margin-top: 3rem;
   }
 }
 
@@ -43,5 +44,9 @@
   }
   .swiper {
     height: 23rem;
+  }
+  .plansContainerMobile {
+    display: flex;
+    margin-top: 2rem;
   }
 }
