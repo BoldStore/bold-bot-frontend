@@ -71,6 +71,7 @@
     margin-left: auto;
     flex-direction: column-reverse;
     margin-top: 4rem;
+    -webkit-overflow-scrolling: auto !important;
     padding-top: 0rem;
   }
 

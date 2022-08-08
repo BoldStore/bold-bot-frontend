@@ -42,6 +42,7 @@
     margin-top: 2rem;
     overflow: none;
     height: 100%;
+    -webkit-overflow-scrolling: auto !important;
   }
 
   .introPara {
