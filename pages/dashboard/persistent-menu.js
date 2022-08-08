@@ -4,7 +4,7 @@ import DashboardButton from "../../components/DashboardComponents/DashboardButto
 import { persistentMenu } from "../../components/DashboardComponents/Lists/persistent-menu";
 import styles from "../../styles/common.module.css";
 import { features } from "../../components/Feature/features";
-import DoubleInputComponent from "../../components/DashboardComponents/InputComponent/doubleInput";
+import SecondaryInputComponent from "../../components/DashboardComponents/InputComponent/secondaryInput";
 
 function PersistentMenu() {
   const [showExample, setShowExample] = useState(false);
@@ -30,7 +30,7 @@ function PersistentMenu() {
           </div>
         )}
         {persistentMenu.map((item, i) => (
-          <DoubleInputComponent
+          <SecondaryInputComponent
             key={i}
             title={item.title}
             placeholderHeading={item.placeholderHeading}

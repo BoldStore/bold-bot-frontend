@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./styles.module.css";
 
-function DoubleInputComponent({
+function SecondaryInputComponent({
   title,
   type,
   placeholderHeading,
@@ -12,8 +12,8 @@ function DoubleInputComponent({
 }) {
   return (
     <div className={styles.container}>
-      {title && <h6 className={styles.title2}>{title}</h6>}
-      <p className={styles.desc}>{"Heading"}</p>
+      {title && <h6 className={styles.title}>{title}</h6>}
+      <p className={styles.desc2}>{"Heading"}</p>
       <input
         type={type ?? "text"}
         placeholder={placeholderHeading}
@@ -21,7 +21,7 @@ function DoubleInputComponent({
         value={value}
         onChange={(e) => setValue(e, itemKey)}
       />
-      <p className={styles.desc}>{"Reply"}</p>
+      <p className={styles.desc2}>{"Reply"}</p>
       <input
         type={type ?? "text"}
         placeholder={placeholderReply}
@@ -33,4 +33,4 @@ function DoubleInputComponent({
   );
 }
 
-export default DoubleInputComponent;
+export default SecondaryInputComponent;

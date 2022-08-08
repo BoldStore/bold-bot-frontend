@@ -4,7 +4,7 @@ import { iceBreakers } from "../../components/DashboardComponents/Lists/iceBreak
 import styles from "../../styles/common.module.css";
 import DashboardButton from "../../components/DashboardComponents/DashboardButton";
 import { features } from "../../components/Feature/features";
-import DoubleInputComponent from "../../components/DashboardComponents/InputComponent/doubleInput";
+import SecondaryInputComponent from "../../components/DashboardComponents/InputComponent/secondaryInput";
 
 function IceBreakerPage() {
   const [showExample, setShowExample] = useState(false);
@@ -30,7 +30,7 @@ function IceBreakerPage() {
           </div>
         )}
         {iceBreakers.map((item, i) => (
-          <DoubleInputComponent
+          <SecondaryInputComponent
             key={i}
             title={item.title}
             placeholderHeading={item.placeholderHeading}
