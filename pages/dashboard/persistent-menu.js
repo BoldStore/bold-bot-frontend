@@ -8,6 +8,54 @@ import SecondaryInputComponent from "../../components/DashboardComponents/InputC
 
 function PersistentMenu() {
   const [showExample, setShowExample] = useState(false);
+  const [form, setForm] = useState([
+    {
+      key: "menuOption1",
+      heading: "",
+      reply: "",
+    },
+    {
+      key: "menuOption2",
+      heading: "",
+      reply: "",
+    },
+  ]);
+
+  const setValueHeading = (e, itemKey) => {
+    const inputIndex = form.findIndex((i) => {
+      return i.key === itemKey;
+    });
+
+    const input = {
+      ...form[inputIndex],
+    };
+
+    input.heading = e.target.value;
+
+    const inputs = [...form];
+    inputs[inputIndex] = input;
+
+    setForm(inputs);
+    console.log(form);
+  };
+
+  const setValueReply = (e, itemKey) => {
+    const inputIndex = form.findIndex((i) => {
+      return i.key === itemKey;
+    });
+
+    const input = {
+      ...form[inputIndex],
+    };
+
+    input.reply = e.target.value;
+
+    const inputs = [...form];
+    inputs[inputIndex] = input;
+
+    setForm(inputs);
+    console.log(form);
+  };
   return (
     <div className={styles.pageDiv}>
       <DashboardSidebar />
@@ -35,6 +83,11 @@ function PersistentMenu() {
             title={item.title}
             placeholderHeading={item.placeholderHeading}
             placeholderReply={item.placeholderReply}
+            valueHeading={form.find((e) => e.key == item.key)?.heading}
+            valueReply={form.find((e) => e.key == item.key)?.reply}
+            itemKey={item.key}
+            setValueReply={setValueReply}
+            setValueHeading={setValueHeading}
           />
         ))}
         <DashboardButton text={"Save"} />

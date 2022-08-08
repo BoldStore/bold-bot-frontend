@@ -23,16 +23,23 @@ function GreetingsPage() {
       key: "welcome",
       value: "",
     },
-    {
-      key: "fallback",
-      value: "",
-    },
   ]);
 
   const setValue = (e, itemKey) => {
-    const arr = form;
-    arr.find((e) => e.key == itemKey).value = e.target.value;
-    setForm(arr);
+    const inputIndex = form.findIndex((i) => {
+      return i.key === itemKey;
+    });
+
+    const input = {
+      ...form[inputIndex],
+    };
+
+    input.value = e.target.value;
+
+    const inputs = [...form];
+    inputs[inputIndex] = input;
+
+    setForm(inputs);
   };
 
   useEffect(() => {

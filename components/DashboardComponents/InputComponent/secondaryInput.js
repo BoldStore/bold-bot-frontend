@@ -6,8 +6,10 @@ function SecondaryInputComponent({
   type,
   placeholderHeading,
   placeholderReply,
-  value,
-  setValue,
+  valueHeading,
+  valueReply,
+  setValueHeading,
+  setValueReply,
   itemKey,
 }) {
   return (
@@ -18,16 +20,16 @@ function SecondaryInputComponent({
         type={type ?? "text"}
         placeholder={placeholderHeading}
         className={styles.input}
-        value={value}
-        onChange={(e) => setValue(e, itemKey)}
+        value={valueHeading}
+        onChange={(e) => setValueHeading(e, itemKey)}
       />
       <p className={styles.desc2}>{"Reply"}</p>
       <input
         type={type ?? "text"}
         placeholder={placeholderReply}
         className={styles.input}
-        value={value}
-        onChange={(e) => setValue(e, itemKey)}
+        value={valueReply}
+        onChange={(e) => setValueReply(e, itemKey)}
       />
     </div>
   );
