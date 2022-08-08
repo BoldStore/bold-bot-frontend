@@ -25,8 +25,8 @@ function Dashboard() {
               key={i}
               title={item.title}
               desc={item.desc.slice(0, 50)}
-              used={5}
-              total={5}
+              used={3}
+              total={4}
               pageHref={item.pageHref}
             />
           ))}
