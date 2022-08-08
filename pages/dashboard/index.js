@@ -14,7 +14,6 @@ function Dashboard() {
         <meta name="description" content="" />
         <link rel="icon" href="/assets/Logo.png" />
       </Head>
-
       <DashboardSidebar />
       <div className={styles.container}>
         <div className={styles.backgroundGradient} />

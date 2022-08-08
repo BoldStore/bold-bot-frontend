@@ -21,6 +21,21 @@
   margin-bottom: 2rem;
 }
 
+.example {
+  color: var(--dashboardTheme);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.img {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15rem;
+  height: 28rem;
+  z-index: 100;
+}
+
 @media (max-width: 1024px) {
   .container {
     width: 100%;
@@ -32,6 +47,11 @@
   .introPara {
     width: 95%;
     margin-bottom: 1.75rem;
+  }
+
+  .img {
+    width: 13rem;
+    height: 25rem;
   }
 }
 

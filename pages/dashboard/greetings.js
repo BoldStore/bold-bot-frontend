@@ -7,10 +7,12 @@ import styles from "../../styles/common.module.css";
 import DashboardButton from "../../components/DashboardComponents/DashboardButton";
 import { useDispatch, useSelector } from "react-redux";
 import { addGreeting, getGreeting } from "../../store/actions/greeting";
+import { features } from "../../components/Feature/features";
 
 function GreetingsPage() {
   const disptach = useDispatch();
   const user = useSelector((state) => state.user);
+  const [showExample, setShowExample] = useState(false);
   const greeting = useSelector((state) => state.greeting);
   const [form, setForm] = useState([
     {
@@ -72,11 +74,22 @@ function GreetingsPage() {
       <DashboardSidebar />
       <div className={styles.container}>
         <h3 className={styles.title}>Greetings</h3>
-        <p className={styles.introPara}>
-          Ice Breakers provide a way for users to start a conversation with a
-          business with a list of frequently asked questions. A maximum of 4
-          questions can be set via the Ice Breaker API.
+        <p className={styles.introPara}>{features[0]["desc"]}</p>
+        <p
+          className={styles.example}
+          onClick={() => setShowExample(!showExample)}
+        >
+          Click here to view an example
         </p>
+        {showExample && (
+          <div>
+            <img
+              src="/assets/greeting.png"
+              alt="example"
+              className={styles.img}
+            />
+          </div>
+        )}
         {greetings.map((item, i) => (
           <InputComponent
             key={i}
