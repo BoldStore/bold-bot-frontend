@@ -13,8 +13,8 @@ function OverviewCard({ title, desc, percentage, used, total, pageHref }) {
         <div className={styles.flex}>
           <div className={styles.percentage}>
             <CircularProgressbar
-              value={{ percentage }}
-              text={`${Math.round(percentage ?? 0)}%`}
+              value={Math.round((used / total) * 100)}
+              text={`${Math.round((used / total) * 100)}%`}
               strokeWidth={1}
               styles={buildStyles({
                 strokeLinecap: "butt",
