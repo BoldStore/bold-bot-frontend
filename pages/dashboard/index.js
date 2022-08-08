@@ -5,6 +5,7 @@ import ProfileCard from "../../components/DashboardComponents/ProfileCard";
 import DashboardSidebar from "../../components/DashboardComponents/DashboardSidebar";
 import OverviewCard from "../../components/DashboardComponents/OverviewCard";
 import TopHeader from "../../components/DashboardComponents/DashboardHeader/topHeader";
+import { features } from "../../components/Feature/features";
 function Dashboard() {
   return (
     <div className={styles.pageDiv}>
@@ -19,10 +20,17 @@ function Dashboard() {
         <div className={styles.backgroundGradient} />
         <div className={styles.backgroundGradientMobile} />
         <div className={styles.overviewFlex}>
-          <OverviewCard />
-          <OverviewCard />
-          <OverviewCard />
-          <OverviewCard />
+          {features.map((item, i) => (
+            <OverviewCard
+              key={i}
+              title={item.title}
+              desc={item.desc.slice(0, 50)}
+              percentage={100}
+              used={5}
+              total={5}
+              pageHref={item.pageHref}
+            />
+          ))}
         </div>
         <ProfileCard />
       </div>

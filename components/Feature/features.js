@@ -6,6 +6,7 @@ export const features = [
     backgroundColor: "#21D4FD",
     id: "CustomGreetings",
     imgSrc: "/assets/greeting.png",
+    pageHref: "/dashboard/greetings",
   },
   {
     title: "Ice Breakers",
@@ -14,6 +15,7 @@ export const features = [
     backgroundColor: "#8BC6EC",
     id: "IceBreakers",
     imgSrc: "/assets/iceBreaker.png",
+    pageHref: "/dashboard/ice-breakers",
   },
   {
     title: "Persistent Menu",
@@ -22,6 +24,7 @@ export const features = [
     backgroundColor: "#85FFBD",
     id: "PersistentMenu",
     imgSrc: "/assets/persistentMenu.png",
+    pageHref: "/dashboard/persistent-menu",
   },
   {
     title: "Quick Replies",
@@ -30,5 +33,6 @@ export const features = [
     backgroundColor: "#FBDA61",
     id: "QuickReplies",
     imgSrc: "/assets/quickReplies.png",
+    pageHref: "/dashboard/greetings",
   },
 ];

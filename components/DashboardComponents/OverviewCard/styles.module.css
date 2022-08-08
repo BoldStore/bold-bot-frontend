@@ -7,8 +7,7 @@
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  padding: 0rem 2rem;
-  padding-bottom: 1rem;
+  padding: 1rem 2rem;
   margin: 1rem 0rem;
   cursor: pointer;
 }
@@ -19,6 +18,10 @@
   transition: 500ms ease;
 }
 
+.container h4 {
+  margin-top: 0.5rem;
+}
+
 .desc {
   margin-top: 0px;
 }
@@ -27,7 +30,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 .completeText {
   margin-right: 1rem;
