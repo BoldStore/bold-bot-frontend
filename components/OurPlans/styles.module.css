@@ -1,0 +1,47 @@
+.container {
+  margin: 2rem 0;
+}
+
+.container h3 {
+  text-align: center;
+  color: var(--black);
+}
+
+.plansContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding: 0rem 3rem;
+}
+
+.swiper {
+  height: 55vh;
+}
+
+.plansContainerMobile {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .swiper {
+    height: 25rem;
+  }
+
+  .plansContainer {
+    display: none;
+  }
+
+  .plansContainerMobile {
+    display: flex;
+  }
+}
+
+@media (max-width: 640px) {
+  .container h3 {
+    text-align: left;
+  }
+  .swiper {
+    height: 23rem;
+  }
+}
