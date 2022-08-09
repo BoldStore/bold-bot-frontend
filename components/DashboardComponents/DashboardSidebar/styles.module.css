@@ -26,10 +26,33 @@
   justify-content: space-between;
   align-items: center;
 }
+.profileFlex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.displayPic {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  margin: 20px;
+}
+.username {
+  font-size: 15px;
+}
 
 @media (max-width: 1024px) {
   .expandIcon {
     display: none;
+  }
+  .displayPic {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    display: block;
   }
 }
 

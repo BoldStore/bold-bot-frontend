@@ -16,9 +16,12 @@ import AcUnitRoundedIcon from "@mui/icons-material/AcUnitRounded";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
 import ChevronLeftRoundedIcon from "@mui/icons-material/ChevronLeftRounded";
+import LogoutRoundedIcon from "@mui/icons-material/LogoutRounded";
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
+import { useSelector } from "react-redux";
 
 function DashboardSidebar() {
+  const userState = useSelector((state) => state.user);
   const [collapsed, setCollapsed] = useState(false);
   const [toggled, setToggled] = useState(false);
 
@@ -102,6 +105,9 @@ function DashboardSidebar() {
               <Link href="/dashboard/profile">
                 <MenuItem icon={<PersonRoundedIcon />}>Profile</MenuItem>
               </Link>
+              <Link href="/">
+                <MenuItem icon={<LogoutRoundedIcon />}>Logout</MenuItem>
+              </Link>
             </Menu>
             {/* <Menu iconShape="circle">
               <SubMenu
@@ -137,32 +143,33 @@ function DashboardSidebar() {
               </SubMenu>
             </Menu> */}
           </SidebarContent>
-          {/* <SidebarFooter style={{ textAlign: "center" }}>
-            <div
-              className="sidebar-btn-wrapper"
-              style={{
-                padding: "20px 24px",
-              }}
-            >
-              <a
-                href="https://github.com/azouaoui-med/react-pro-sidebar"
-                target="_blank"
-                className="sidebar-btn"
-                rel="noopener noreferrer"
-              >
-                <FaGithub />
-                <span
-                  style={{
-                    whiteSpace: "nowrap",
-                    textOverflow: "ellipsis",
-                    overflow: "hidden",
-                  }}
-                >
-                  {"hi"}
-                </span>
-              </a>
+          <SidebarFooter style={{ textAlign: "center" }}>
+            <div className={styles.sidebarFooter}>
+              <Link href="/dashboard/profile" passHref={true}>
+                <div className={styles.profileFlex}>
+                  <img
+                    src={
+                      userState?.user?.profile_pic ??
+                      "https://i.ibb.co/myvq6GR/aryan.jpg"
+                    }
+                    className={styles.displayPic}
+                    style={{
+                      marginLeft: collapsed && "auto",
+                      marginRight: collapsed && "auto",
+                      height: collapsed && "2.5rem",
+                      width: collapsed && "2.5rem",
+                    }}
+                    alt="display"
+                  />
+                  {!collapsed && (
+                    <h6 className={styles.username}>
+                      {userState?.user?.name ?? "Aryan Teng"}
+                    </h6>
+                  )}
+                </div>
+              </Link>
             </div>
-          </SidebarFooter> */}
+          </SidebarFooter>
         </ProSidebar>
       </div>
     </>
