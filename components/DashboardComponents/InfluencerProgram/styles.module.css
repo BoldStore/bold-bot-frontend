@@ -1,0 +1,27 @@
+.container {
+  width: 93%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+.example {
+  color: var(--dashboardTheme);
+  text-decoration: underline;
+  cursor: pointer;
+  text-align: left;
+}
+@media (max-width: 1024px) {
+  .container {
+    width: 97%;
+    min-width: 0rem;
+    margin: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: 100%;
+    margin: 1rem 0rem;
+  }
+}

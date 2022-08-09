@@ -5,6 +5,7 @@ import ConnectedPages from "../../components/DashboardComponents/ProfileComponen
 import Plan from "../../components/Plan";
 import FAQs from "../../components/FAQs";
 import styles from "../../styles/Profile.module.css";
+import InfluencerProgram from "../../components/DashboardComponents/InfluencerProgram";
 
 function ProfilePage() {
   return (
@@ -16,6 +17,7 @@ function ProfilePage() {
         {/* <OurPlans center={true} /> */}
         <h4 className={styles.heading4}>My Plan</h4>
         <Plan />
+        <InfluencerProgram />
         <FAQs />
       </div>
     </div>
