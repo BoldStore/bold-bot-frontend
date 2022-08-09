@@ -24,10 +24,10 @@ function SecondaryInputComponent({
         onChange={(e) => setValueHeading(e, itemKey)}
       />
       <p className={styles.desc2}>{"Reply"}</p>
-      <input
+      <textarea
         type={type ?? "text"}
         placeholder={placeholderReply}
-        className={styles.input}
+        className={styles.textarea}
         value={valueReply}
         onChange={(e) => setValueReply(e, itemKey)}
       />
