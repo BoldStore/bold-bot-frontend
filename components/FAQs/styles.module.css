@@ -1,13 +1,27 @@
 .container {
   margin: 2rem 0;
+  width: 93%;
 }
-.swiper {
-  height: auto;
+
+.accordion {
   width: 100%;
+  border: 0px solid var(--white);
+  box-shadow: none;
+  border: 0px !important;
 }
-.video {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+.accordion:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  transition: ease-in-out 0.2s;
+}
+@media (max-width: 1024px) {
+  .container {
+    width: 97%;
+    min-width: 0rem;
+  }
+}
+@media (max-width: 640px) {
+  .container {
+    width: 100%;
+    margin: 1rem 0rem;
+  }
 }

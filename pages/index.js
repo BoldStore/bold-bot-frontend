@@ -8,6 +8,7 @@ import Head from "next/head";
 import Footer from "../components/Footer";
 import Plan from "../components/Plan";
 import OurPlans from "../components/OurPlans";
+import FAQs from "../components/FAQs";
 
 export default function Home() {
   return (

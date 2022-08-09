@@ -16,7 +16,14 @@
   display: flex;
 }
 
+.heading4 {
+  width: 93%;
+  text-align: left;
+}
 @media (max-width: 1024px) {
+  .heading4 {
+    width: 97%;
+  }
 }
 
 @media (max-width: 640px) {
@@ -28,5 +35,9 @@
     margin-top: 4rem;
     -webkit-overflow-scrolling: auto !important;
     padding-top: 0rem;
+  }
+
+  .heading4 {
+    width: 100%;
   }
 }

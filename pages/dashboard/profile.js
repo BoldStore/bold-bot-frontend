@@ -2,7 +2,7 @@ import React from "react";
 import DashboardSidebar from "../../components/DashboardComponents/DashboardSidebar";
 import ProfileCard from "../../components/DashboardComponents/ProfileCard";
 import ConnectedPages from "../../components/DashboardComponents/ProfileComponents/ConnectedPages";
-import OurPlans from "../../components/OurPlans";
+import Plan from "../../components/Plan";
 import FAQs from "../../components/FAQs";
 import styles from "../../styles/Profile.module.css";
 
@@ -13,7 +13,9 @@ function ProfilePage() {
       <div className={styles.container}>
         <ProfileCard />
         <ConnectedPages />
-        <OurPlans center={true} />
+        {/* <OurPlans center={true} /> */}
+        <h4 className={styles.heading4}>My Plan</h4>
+        <Plan />
         <FAQs />
       </div>
     </div>
