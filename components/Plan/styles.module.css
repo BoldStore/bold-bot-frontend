@@ -35,6 +35,17 @@
   transition: 500ms;
 }
 
+.packName {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon {
+  color: var(--blue);
+  font-size: 1.75rem;
+}
+
 @media (max-width: 1024px) {
   .container {
     width: 24rem;
@@ -42,11 +53,17 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .icon {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 640px) {
   .container {
     width: 20rem;
     padding: 1.5rem 1rem;
+  }
+  .icon {
+    font-size: 1.25rem;
   }
 }
