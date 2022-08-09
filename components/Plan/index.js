@@ -12,8 +12,6 @@ function Plan({ planName, planDesc, planPrice, icons }) {
           {icons.map((item) => {
             return iconArr[item];
           })}
-          {/* <EmojiPeopleRoundedIcon className={styles.icon} />
-          <AcUnitRoundedIcon className={styles.icon} /> */}
         </div>
       </div>
       <h6>{planDesc}</h6>
