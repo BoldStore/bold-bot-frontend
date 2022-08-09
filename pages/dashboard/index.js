@@ -5,6 +5,7 @@ import ProfileCard from "../../components/DashboardComponents/ProfileCard";
 import DashboardSidebar from "../../components/DashboardComponents/DashboardSidebar";
 import OverviewCard from "../../components/DashboardComponents/OverviewCard";
 import { features } from "../../components/Feature/features";
+
 function Dashboard() {
   return (
     <div className={styles.pageDiv}>

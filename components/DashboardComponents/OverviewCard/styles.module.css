@@ -4,7 +4,7 @@
   color: var(--black);
   width: 45%;
   height: auto;
-  border-radius: 1rem;
+  border-radius: 0.75rem;
   display: flex;
   flex-direction: column;
   padding: 1rem 2rem;
@@ -18,13 +18,18 @@
   transition: 500ms ease;
 }
 
-.container h4 {
-  margin-top: 0.5rem;
+.container h5 {
+  font-weight: 500;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: var(--black);
 }
 
 .desc {
-  margin-top: 0px;
+  margin-top: 0;
+  color: var(--grey);
 }
+
 .flex {
   display: flex;
   justify-content: space-between;
@@ -32,9 +37,11 @@
   width: 100%;
   padding: 0.5rem;
 }
+
 .completeText {
   margin-right: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
+  color: var(--black);
 }
 
 .percentage {
@@ -48,14 +55,17 @@
     width: 100%;
     margin: 0.875rem 0rem;
     height: auto;
-    padding: 0rem 1.75rem;
+    padding: 1rem 1.75rem;
   }
+
   .percentage {
     width: 20%;
     min-width: 3rem;
     margin-right: 0.5rem;
   }
+
   .completeText {
+    font-size: 1rem;
     margin-right: 0.5rem;
   }
 }
@@ -63,15 +73,13 @@
 @media (max-width: 640px) {
   .container {
     margin: 0.75rem 0rem;
+    padding: 1rem;
     height: auto;
   }
+
   .percentage {
     width: 20%;
     min-width: 3rem;
-    margin-right: 0.5rem;
-  }
-  .completeText {
-    font-size: 0.75rem;
     margin-right: 0.5rem;
   }
 }

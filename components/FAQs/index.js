@@ -4,12 +4,12 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded";
 
-function FAQs() {
+function FAQs({ faqArr }) {
   const accordians = [
-    { heading: "What is BOLDBot and How can I Use it?", answer: "hi" },
-    { heading: "I am an influencer, how can I use BOLDBot?", answer: "hhsuu" },
+    { heading: "What is BOLDbot and how can I Use it?", answer: "hi" },
+    { heading: "I am an influencer, how can I use BOLDbot?", answer: "hhsuu" },
   ];
   return (
     <div className={styles.container}>
@@ -17,11 +17,18 @@ function FAQs() {
       <div>
         {accordians.map((item, i) => (
           <Accordion className={styles.accordion} key={i}>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography>{item.heading}</Typography>
+            <AccordionSummary
+              expandIcon={<ExpandMoreRoundedIcon className={styles.icon} />}
+              className={styles.summary}
+            >
+              <Typography className={styles.typography}>
+                {item.heading}
+              </Typography>
             </AccordionSummary>
-            <AccordionDetails>
-              <Typography>{item.answer}</Typography>
+            <AccordionDetails className={styles.summary}>
+              <Typography className={styles.typography}>
+                {item.answer}
+              </Typography>
             </AccordionDetails>
           </Accordion>
         ))}

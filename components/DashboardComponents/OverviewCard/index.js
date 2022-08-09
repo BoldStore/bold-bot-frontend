@@ -8,7 +8,7 @@ function OverviewCard({ title, desc, percentage, used, total, pageHref }) {
   return (
     <Link href={pageHref} passHref={true}>
       <div className={styles.container}>
-        <h4>{title}</h4>
+        <h5>{title}</h5>
         <p className={styles.desc}>{desc}</p>
         <div className={styles.flex}>
           <div className={styles.percentage}>

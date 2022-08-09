@@ -16,11 +16,11 @@ function ProfileCard() {
           className={styles.displayPic}
           alt="display"
         />
-        <h3>{userState?.user?.name}</h3>
+        <h3>{userState?.user?.name}Aryan Teng</h3>
       </div>
       <div className={styles.membershipBox}>
         <p className={styles.membershipBanner}>Premium Member</p>
-        <p className={styles.expiry}>Membership expires on 29/07/2022</p>
+        {/* <p className={styles.expiry}>Membership expires on 29/07/2022</p> */}
       </div>
     </div>
   );
