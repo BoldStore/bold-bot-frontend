@@ -27,6 +27,7 @@ function Dashboard() {
               used={3}
               total={4}
               pageHref={item.pageHref}
+              comingSoon={item.comingSoon}
             />
           ))}
         </div>

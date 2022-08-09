@@ -27,12 +27,13 @@ export const features = [
     pageHref: "/dashboard/persistent-menu",
   },
   {
-    title: "Quick Replies",
+    title: "Custom Replies",
     desc: "Don’t know how or what to say? Let BOLDbot help! The quick reply feature presents customers with a set of buttons in-conversation to respond with. An array of options to simplify customer experience with your store.",
     backgroundImage: "linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%)",
     backgroundColor: "#FBDA61",
-    id: "QuickReplies",
+    id: "CustomReplies",
     imgSrc: "/assets/quickReplies.png",
     pageHref: "/dashboard/greetings",
+    comingSoon: true,
   },
 ];
