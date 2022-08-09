@@ -3,8 +3,20 @@ import styles from "./styles.module.css";
 import DashboardButton from "../DashboardComponents/DashboardButton";
 import EmojiPeopleRoundedIcon from "@mui/icons-material/EmojiPeopleRounded";
 import AcUnitRoundedIcon from "@mui/icons-material/AcUnitRounded";
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 
 function Plan(planName, planDesc, planPrice) {
+  const iconArr = [
+    {
+      greeting: <EmojiPeopleRoundedIcon className={styles.icon} />,
+    },
+    {
+      persistent_menu: <MenuRoundedIcon className={styles.icon} />,
+    },
+    {
+      ice_breakers: <AcUnitRoundedIcon className={styles.icon} />,
+    },
+  ];
   return (
     <div className={styles.container}>
       <div className={styles.packName}>
