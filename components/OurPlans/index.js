@@ -7,10 +7,10 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 
-function OurPlans() {
+function OurPlans({ center }) {
   return (
     <div className={styles.container}>
-      <h3>Our Plans</h3>
+      <h3 style={{ textAlign: center && "center" }}>Our Plans</h3>
       <div className={styles.plansContainer}>
         <Plan />
         <Plan />
