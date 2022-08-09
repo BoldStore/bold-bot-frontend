@@ -1,16 +1,22 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
+import { useSelector } from "react-redux";
 import styles from "./styles.module.css";
 
-function ProfileCard({ displayPic, name, membership }) {
+function ProfileCard() {
+  const userState = useSelector((state) => state.user);
+
   return (
     <div className={styles.container}>
       <div className={styles.userInfoContainer}>
         <img
-          src={"https://i.ibb.co/myvq6GR/aryan.jpg"}
+          src={
+            userState?.user?.profile_pic ?? "https://i.ibb.co/myvq6GR/aryan.jpg"
+          }
           className={styles.displayPic}
           alt="display"
         />
-        <h3>Aryan Teng</h3>
+        <h3>{userState?.user?.name}</h3>
       </div>
       <div className={styles.membershipBox}>
         <p className={styles.membershipBanner}>Premium Member</p>
