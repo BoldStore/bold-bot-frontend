@@ -13,4 +13,10 @@ export const persistentMenu = [
       "You can buy our products at: http://www.boldstore.in/shop!",
     key: "menuOption2",
   },
+  {
+    title: "Store Link",
+    placeholderHeading: "Visit Store",
+    placeholderReply: "https://www.boldstore.in/",
+    key: "storeLink",
+  },
 ];

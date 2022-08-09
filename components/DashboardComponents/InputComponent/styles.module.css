@@ -24,6 +24,10 @@
   resize: vertical;
 }
 
+.textarea::-webkit-scrollbar {
+  width: 0.2rem;
+}
+
 .title {
   margin-bottom: 0.5rem;
   color: var(--black);

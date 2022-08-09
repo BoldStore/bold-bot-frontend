@@ -23,14 +23,30 @@ function SecondaryInputComponent({
         value={valueHeading}
         onChange={(e) => setValueHeading(e, itemKey)}
       />
-      <p className={styles.desc2}>{"Reply"}</p>
-      <textarea
-        type={type ?? "text"}
-        placeholder={placeholderReply}
-        className={styles.textarea}
-        value={valueReply}
-        onChange={(e) => setValueReply(e, itemKey)}
-      />
+
+      {itemKey != "storeLink" ? (
+        <>
+          <p className={styles.desc2}>{"Reply"}</p>
+          <textarea
+            type={type ?? "text"}
+            placeholder={placeholderReply}
+            className={styles.textarea}
+            value={valueReply}
+            onChange={(e) => setValueReply(e, itemKey)}
+          />
+        </>
+      ) : (
+        <>
+          <p className={styles.desc2}>{"Link"}</p>
+          <input
+            type={type ?? "text"}
+            placeholder={placeholderReply}
+            className={styles.input}
+            value={valueHeading}
+            onChange={(e) => setValueHeading(e, itemKey)}
+          />
+        </>
+      )}
     </div>
   );
 }
