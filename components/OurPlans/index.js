@@ -6,15 +6,24 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
+import { plans } from "./plans";
 
-function OurPlans({ center }) {
+function OurPlans() {
   return (
     <div className={styles.container}>
-      <h3 style={{ textAlign: center && "center" }}>Our Plans</h3>
+      <h3>Our Plans</h3>
       <div className={styles.plansContainer}>
-        <Plan />
-        <Plan />
-        <Plan />
+        {plans.map((item, i) => {
+          return (
+            <Plan
+              key={i}
+              planName={item.planName}
+              planDesc={item.planDesc}
+              planPrice={item.planPrice}
+              icons={item.icons}
+            />
+          );
+        })}
       </div>
       <div className={styles.plansContainerMobile}>
         <Swiper
@@ -25,15 +34,18 @@ function OurPlans({ center }) {
           modules={[Navigation, Pagination]}
           className={styles.swiper}
         >
-          <SwiperSlide>
-            <Plan />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Plan />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Plan />
-          </SwiperSlide>
+          {plans.map((item, i) => {
+            return (
+              <SwiperSlide key={i}>
+                <Plan
+                  planName={item.planName}
+                  planDesc={item.planDesc}
+                  planPrice={item.planPrice}
+                  icons={item.icons}
+                />
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </div>
     </div>

@@ -44,6 +44,7 @@
 .icon {
   color: var(--blue);
   font-size: 1.75rem;
+  margin-right: 0.25rem;
 }
 
 @media (max-width: 1024px) {
