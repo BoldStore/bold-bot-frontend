@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import Header from "../components/Header/Header";
 import styles from "../styles/Error.module.css";
-function ErrorPage() {
+function Page404() {
   return (
     <div>
       <Header />
@@ -28,4 +28,4 @@ function ErrorPage() {
   );
 }
 
-export default ErrorPage;
+export default Page404;
