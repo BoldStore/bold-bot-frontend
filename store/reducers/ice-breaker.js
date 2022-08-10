@@ -10,14 +10,14 @@ const initState = {
 
 const iceBreakerReducer = (state = initState, action) => {
   switch (action.type) {
-    case ActionTypes.ADD_MENU_REQUEST:
+    case ActionTypes.ADD_ICE_BREAKER_REQUEST:
       return {
         ...state,
         isLoading: true,
         errmess: null,
       };
 
-    case ActionTypes.ADD_MENU_SUCCESS:
+    case ActionTypes.ADD_ICE_BREAKER_SUCCESS:
       return {
         ...state,
         isLoading: false,
@@ -26,21 +26,21 @@ const iceBreakerReducer = (state = initState, action) => {
         add_success: true,
       };
 
-    case ActionTypes.ADD_MENU_FAILED:
+    case ActionTypes.ADD_ICE_BREAKER_FAILED:
       return {
         ...state,
         isLoading: false,
         errmess: action.errmess,
       };
 
-    case ActionTypes.GET_MENU_REQUEST:
+    case ActionTypes.GET_ICE_BREAKER_REQUEST:
       return {
         ...state,
         isLoading: true,
         errmess: null,
       };
 
-    case ActionTypes.GET_MENU_SUCCESS:
+    case ActionTypes.GET_ICE_BREAKER_SUCCESS:
       return {
         ...state,
         isLoading: false,
@@ -49,7 +49,7 @@ const iceBreakerReducer = (state = initState, action) => {
         get_success: true,
       };
 
-    case ActionTypes.GET_MENU_FAILED:
+    case ActionTypes.GET_ICE_BREAKER_FAILED:
       return {
         ...state,
         isLoading: false,
