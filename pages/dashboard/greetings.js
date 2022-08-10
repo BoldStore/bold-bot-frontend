@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import DashboardSidebar from "../../components/DashboardComponents/DashboardSidebar";
@@ -82,7 +83,7 @@ function GreetingsPage() {
       <div className={styles.container}>
         <h3 className={styles.title}>Greetings</h3>
         <p className={styles.introPara}>
-          Custom greetings are the first responses to a buyer&pos;s dm, design
+          Custom greetings are the first responses to a buyer&apos;s dm, design
           your own automated replies which define you as a brand.
         </p>
         <p
