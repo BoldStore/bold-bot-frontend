@@ -31,7 +31,7 @@ function OurPlans() {
           spaceBetween={30}
           loop={true}
           pagination={true}
-          modules={[Navigation, Pagination]}
+          modules={Pagination}
           className={styles.swiper}
         >
           {plans.map((item, i) => {

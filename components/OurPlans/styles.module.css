@@ -42,9 +42,11 @@
   .container h3 {
     text-align: left;
   }
+
   .swiper {
     height: 23rem;
   }
+
   .plansContainerMobile {
     display: flex;
     margin-top: 2.5rem;
