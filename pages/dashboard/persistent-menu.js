@@ -134,7 +134,12 @@ function PersistentMenu() {
       <DashboardSidebar />
       <div className={styles.container}>
         <h3 className={styles.title}>Persistent Menu</h3>
-        <p className={styles.introPara}>{features[2]["desc"]}</p>
+        <p className={styles.introPara}>
+          The persistent menu in the tab section allows for customers to
+          navigate the conversation better by giving them the option of not just
+          starting over but also the choice to introduce other points of
+          interest .
+        </p>
         <p
           className={styles.example}
           onClick={() => setShowExample(!showExample)}

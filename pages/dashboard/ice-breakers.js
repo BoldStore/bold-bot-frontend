@@ -130,7 +130,11 @@ function IceBreakerPage() {
       <DashboardSidebar />
       <div className={styles.container}>
         <h3 className={styles.title}>Ice Breakers</h3>
-        <p className={styles.introPara}>{features[1]["desc"]}</p>
+        <p className={styles.introPara}>
+          Increase efficiency by adding ice breakers to your dms, skip the
+          repetitive questions by introducing standardised texts which answer
+          FAQs.
+        </p>
         <p
           className={styles.example}
           onClick={() => setShowExample(!showExample)}
