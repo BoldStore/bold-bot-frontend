@@ -10,7 +10,7 @@ import { plans } from "./plans";
 
 function OurPlans() {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id={"OurPlans"}>
       <h3>Our Plans</h3>
       <div className={styles.plansContainer}>
         {plans.map((item, i) => {

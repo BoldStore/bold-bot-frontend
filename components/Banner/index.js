@@ -74,7 +74,7 @@ function Banner() {
       <div className={styles.info}>
         <p className={styles.p}>Automate your business, the bold way.</p>
         <h1 className={styles.heading}>
-          BOLD<span className={styles.gradientText}>BOT</span>
+          BOLD<span className={styles.gradientText}>bot</span>
         </h1>
         <p className={styles.para}>
           BOLDbot is the next step in automating customer service for Instagram

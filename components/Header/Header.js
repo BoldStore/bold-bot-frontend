@@ -8,15 +8,18 @@ function Header() {
     <div className={styles.navbar}>
       <Link href={"/"} passHref={true}>
         <span className={styles.title}>
-          BOLD<span className={styles.subTitle}>BOT</span>
+          BOLD<span className={styles.subTitle}>bot</span>
         </span>
       </Link>
       <div className={styles.linksContainer}>
-        <Link href={"/#OurClients"} passHref={true}>
+        {/* <Link href={"/#OurClients"} passHref={true}>
           <span className={styles.navbarLink}>Our Clients</span>
+        </Link> */}
+        <Link href={"/#OurPlans"} passHref={true}>
+          <span className={styles.navbarLink}>Our Plans</span>
         </Link>
-        <Link href={"/#CustomGreetings"} passHref={true}>
-          <span className={styles.navbarLink}>Custom Greetings</span>
+        <Link href={"/#Greetings"} passHref={true}>
+          <span className={styles.navbarLink}>Greetings</span>
         </Link>
         <Link href={"/#IceBreakers"} passHref={true}>
           <span className={styles.navbarLink}>Ice Breakers</span>
@@ -24,8 +27,8 @@ function Header() {
         <Link href={"/#PersistentMenu"} passHref={true}>
           <span className={styles.navbarLink}>Persistent Menu</span>
         </Link>
-        <Link href={"/#QuickReplies"} passHref={true}>
-          <span className={styles.navbarLink}>Quick Replies</span>
+        <Link href={"/#CustomReplies"} passHref={true}>
+          <span className={styles.navbarLink}>Custom Replies</span>
         </Link>
       </div>
       <DrawerComponent />
