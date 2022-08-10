@@ -9,6 +9,7 @@
   overflow-y: auto;
   height: 100vh;
   overflow-x: hidden;
+  padding-left: 17rem;
 }
 
 .pageDiv {
@@ -23,6 +24,9 @@
 @media (max-width: 1024px) {
   .heading4 {
     width: 97%;
+  }
+  .container {
+    padding-left: 5rem;
   }
 }
 
