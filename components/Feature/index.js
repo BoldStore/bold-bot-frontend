@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 import styles from "./styles.module.css";
 
@@ -49,6 +49,7 @@ function Feature({
         <motion.h3
           initial={{ y: 10, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
           transition={{ delay: 0.5, duration: 1, type: "spring" }}
           className={styles.heading}
         >
@@ -57,6 +58,7 @@ function Feature({
         <motion.h6
           initial={{ y: 10, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
           transition={{ delay: 0.75, duration: 1, type: "spring" }}
         >
           {desc}
