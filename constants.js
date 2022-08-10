@@ -13,3 +13,5 @@ export const CREATE_USER = "/user";
 export const ADD_PAGE = "/user/page";
 
 export const GREETING = "/message/greeting";
+
+export const MENU = "/message/persistent-menu";
