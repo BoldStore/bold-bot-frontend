@@ -22,7 +22,9 @@ function Page404() {
             src={"/assets/404iPhone.png"}
           />
         </div>
-        <h2 className={styles.title}>404 Page Not Found.</h2>
+        <h2 className={styles.title}>
+          <span style={{ color: "var(--blue)" }}>404</span> Page Not Found.
+        </h2>
       </div>
     </div>
   );

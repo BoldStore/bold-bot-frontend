@@ -22,7 +22,10 @@ function Page500() {
             src={"/assets/404iPhone.png"}
           />
         </div>
-        <h2 className={styles.title}>500 Internal Server Error.</h2>
+        <h2 className={styles.title}>
+          <span style={{ color: "var(--blue)" }}>500</span> Internal Server
+          Error.
+        </h2>
       </div>
     </div>
   );
