@@ -18,7 +18,7 @@ export default function Home() {
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1"
         ></meta>
-        <link rel="icon" href="/assets/Logo.png" />
+        <link rel="icon" href="/assets/Logo.svg" />
       </Head>
       <Header />
       <Banner />
