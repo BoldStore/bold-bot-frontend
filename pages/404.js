@@ -9,10 +9,20 @@ function ErrorPage() {
       <Header />
       <div className={styles.container}>
         <div className={styles.gradient}>
-          <img className={styles.phone} src={"/assets/greeting.png"} />
-          <div className={styles.shadow} />
+          <motion.img
+            animate={{
+              y: [0, 10, 0],
+            }}
+            transition={{
+              duration: 2,
+              type: "spring",
+              repeat: Infinity,
+            }}
+            className={styles.phone}
+            src={"/assets/404iPhone.png"}
+          />
         </div>
-        <h1 className={styles.title}>404 Page Not Found.</h1>
+        <h2 className={styles.title}>404 Page Not Found.</h2>
       </div>
     </div>
   );
