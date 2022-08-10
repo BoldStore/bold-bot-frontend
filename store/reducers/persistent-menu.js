@@ -23,8 +23,8 @@ const persistentMenuReducer = (state = initState, action) => {
         ...state,
         isLoading: false,
         errmess: null,
-        menu: action.data.filter((item) => item.question !== null),
-        web_data: action.data.where((item) => item.question === null),
+        menu: action?.data?.filter((item) => item.question !== null),
+        web_data: action?.data?.find((item) => item.question === null),
         add_success: true,
       };
 
@@ -47,8 +47,8 @@ const persistentMenuReducer = (state = initState, action) => {
         ...state,
         isLoading: false,
         errmess: null,
-        menu: action.data.filter((item) => item.question !== null),
-        web_data: action.data.where((item) => item.question === null),
+        menu: action?.data?.filter((item) => item.question !== null),
+        web_data: action?.data?.find((item) => item.question === null),
         get_success: true,
       };
 
