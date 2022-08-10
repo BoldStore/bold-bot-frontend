@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
 import DashboardSidebar from "../../components/DashboardComponents/DashboardSidebar";
 import { iceBreakers } from "../../components/DashboardComponents/Lists/iceBreakers";

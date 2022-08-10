@@ -10,5 +10,5 @@ export const iconArr = {
   persistent_menu: <MenuRoundedIcon className={styles.icon} />,
   ice_breakers: <AcUnitRoundedIcon className={styles.icon} />,
   website_link: <InsertLinkRoundedIcon className={styles.icon} />,
-  reply: <ReplyRoundedIcon className={styles.icon} />,
+  custom_replies: <ReplyRoundedIcon className={styles.icon} />,
 };
