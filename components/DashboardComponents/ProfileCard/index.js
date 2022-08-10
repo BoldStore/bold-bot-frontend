@@ -16,7 +16,7 @@ function ProfileCard() {
           className={styles.displayPic}
           alt="display"
         />
-        <h3>{userState?.user?.name}Aryan Teng</h3>
+        <h3>{userState?.user?.name ?? "Username"}</h3>
       </div>
       <div className={styles.membershipBox}>
         <p className={styles.membershipBanner}>Premium Member</p>

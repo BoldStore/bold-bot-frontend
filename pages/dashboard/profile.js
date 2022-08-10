@@ -6,6 +6,7 @@ import Plan from "../../components/Plan";
 import FAQs from "../../components/FAQs";
 import styles from "../../styles/Profile.module.css";
 import InfluencerProgram from "../../components/DashboardComponents/InfluencerProgram";
+import { plans } from "../../components/OurPlans/plans";
 
 function ProfilePage() {
   return (
@@ -16,7 +17,12 @@ function ProfilePage() {
         <ConnectedPages />
         {/* <OurPlans center={true} /> */}
         <h4 className={styles.heading4}>My Plan</h4>
-        <Plan />
+        <Plan
+          planName={plans[0].planName}
+          planDesc={plans[0].planDesc}
+          planPrice={plans[0].planPrice}
+          icons={plans[0].icons}
+        />
         <InfluencerProgram />
         <FAQs />
       </div>
