@@ -1,10 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 import styles from "./styles.module.css";
 import React, { useEffect, useState } from "react";
 import {
   ProSidebar,
   Menu,
   MenuItem,
-  SubMenu,
   SidebarHeader,
   SidebarFooter,
   SidebarContent,
@@ -19,8 +19,12 @@ import ChevronLeftRoundedIcon from "@mui/icons-material/ChevronLeftRounded";
 import LogoutRoundedIcon from "@mui/icons-material/LogoutRounded";
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
 import { useSelector } from "react-redux";
+import { auth } from "../../../firebaseConfig";
+import { signOut } from "firebase/auth";
+import { useRouter } from "next/router";
 
 function DashboardSidebar() {
+  const router = useRouter();
   const userState = useSelector((state) => state.user);
   const [collapsed, setCollapsed] = useState(false);
   const [toggled, setToggled] = useState(false);
@@ -50,6 +54,11 @@ function DashboardSidebar() {
       }
     });
   }
+
+  const logout = () => {
+    signOut(auth);
+    router.replace("/");
+  };
 
   return (
     <>
@@ -105,9 +114,11 @@ function DashboardSidebar() {
               <Link href="/dashboard/profile">
                 <MenuItem icon={<PersonRoundedIcon />}>Profile</MenuItem>
               </Link>
-              <Link href="/">
-                <MenuItem icon={<LogoutRoundedIcon />}>Logout</MenuItem>
-              </Link>
+              <>
+                <MenuItem icon={<LogoutRoundedIcon />} onClick={logout}>
+                  Logout
+                </MenuItem>
+              </>
             </Menu>
             {/* <Menu iconShape="circle">
               <SubMenu
