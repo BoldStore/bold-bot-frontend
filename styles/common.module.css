@@ -3,6 +3,7 @@
   overflow-y: auto;
   height: 100vh;
   padding: 2rem;
+  padding-left: 18rem;
 }
 
 .pageDiv {
@@ -42,6 +43,7 @@
     overflow-y: auto;
     height: 100vh;
     padding: 1.75rem;
+    padding-left: 6.5rem;
   }
 
   .introPara {

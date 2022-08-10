@@ -7,7 +7,8 @@
   padding-top: 1rem;
   padding-bottom: 2rem;
   overflow-y: auto;
-  height: 100vh;
+  min-height: 100vh;
+  padding-left: 17rem;
 }
 
 .pageDiv {
@@ -53,6 +54,10 @@
     margin-top: 0rem;
     padding-top: 4.5rem;
   } */
+
+  .container {
+    padding-left: 5rem;
+  }
 
   .overviewFlex {
     flex-direction: column;

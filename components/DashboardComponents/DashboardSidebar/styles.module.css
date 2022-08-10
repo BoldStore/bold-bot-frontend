@@ -1,5 +1,7 @@
 .sideBarDiv {
   height: 100vh;
+  position: fixed;
+  z-index: 201;
 }
 
 .mobileNavbar {
