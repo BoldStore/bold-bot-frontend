@@ -82,7 +82,6 @@
 
 .gradientText {
   color: var(--blue);
-  font-size: 2.25rem;
 }
 
 @media (max-width: 1024px) {
@@ -125,10 +124,6 @@
     transform: rotate(30deg);
     left: -16rem;
     border-radius: 2rem;
-  }
-
-  .gradientText {
-    font-size: 1.875rem;
   }
 
   .heading {
@@ -191,10 +186,6 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .gradientText {
-    font-size: 1.5rem;
   }
 
   .heading {
