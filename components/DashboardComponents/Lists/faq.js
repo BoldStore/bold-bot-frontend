@@ -12,6 +12,6 @@ export const faqs = [
   {
     heading: "What information sources does BOLDbot use?",
     answer:
-      "All data accessed by BoldBot functions in compliance to the privacy policies of Instagram and Meta. The customisable nature of certain text features is dependent on the user and all standardised texts are per the pre-approved content that the patron may verify and agree to.",
+      "All data accessed by BOLDbot functions in compliance to the privacy policies of Instagram and Meta. The customisable nature of certain text features is dependent on the user and all standardised texts are per the pre-approved content that the patron may verify and agree to.",
   },
 ];

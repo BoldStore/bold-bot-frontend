@@ -12,11 +12,11 @@
 }
 
 .typography {
-  font-family: "Red Hat Display", "sans-serif";
+  font-family: "Red Hat Display", "sans-serif" !important;
 }
 
 .icon {
-  color: var(--grey);
+  color: var(--black);
 }
 
 @media (max-width: 1024px) {

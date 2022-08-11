@@ -23,13 +23,16 @@ function FAQs() {
               expandIcon={<ExpandMoreRoundedIcon className={styles.icon} />}
               className={styles.summary}
             >
-              <Typography className={styles.typography}>
-                {item.heading}
+              <Typography
+                className={styles.typography}
+                sx={{ color: "var(--black)" }}
+              >
+                <h6 style={{ margin: 0 }}>{item.heading}</h6>
               </Typography>
             </AccordionSummary>
             <AccordionDetails className={styles.summary}>
               <Typography className={styles.typography}>
-                {item.answer}
+                <p>{item.answer}</p>
               </Typography>
             </AccordionDetails>
           </Accordion>

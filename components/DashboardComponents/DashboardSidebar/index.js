@@ -80,7 +80,7 @@ function DashboardSidebar() {
               className={styles.header}
               style={{ justifyContent: collapsed && "center" }}
             >
-              {!collapsed && <p>BOLDBOT</p>}
+              {!collapsed && <p>BOLDbot</p>}
               {collapsed ? (
                 <ChevronRightRoundedIcon
                   className={styles.expandIcon}
