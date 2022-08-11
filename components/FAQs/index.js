@@ -5,18 +5,20 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded";
+import { faqs } from "../DashboardComponents/Lists/faq";
 
-function FAQs({ faqArr }) {
-  const accordians = [
-    { heading: "What is BOLDbot and how can I Use it?", answer: "hi" },
-    { heading: "I am an influencer, how can I use BOLDbot?", answer: "hhsuu" },
-  ];
+function FAQs() {
+  const AccordionStyle = {
+    "&:before": {
+      backgroundColor: "transparent !important",
+    },
+  };
   return (
     <div className={styles.container}>
       <h4>FAQs</h4>
       <div>
-        {accordians.map((item, i) => (
-          <Accordion className={styles.accordion} key={i}>
+        {faqs.map((item, i) => (
+          <Accordion className={styles.accordion} key={i} sx={AccordionStyle}>
             <AccordionSummary
               expandIcon={<ExpandMoreRoundedIcon className={styles.icon} />}
               className={styles.summary}
