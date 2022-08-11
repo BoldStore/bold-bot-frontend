@@ -15,8 +15,8 @@ function Banner() {
         <div className={styles.backgroundGradient} />
         <motion.div
           className={styles.imagesColumnLeft}
-          initial={{ y: 150 }}
-          animate={{ y: -150 }}
+          initial={{ y: -110 }}
+          animate={{ y: -340 }}
           transition={{
             type: "smooth",
             repeat: Infinity,
@@ -36,7 +36,7 @@ function Banner() {
             alt="Ice Breaker"
           />
           <img
-            src="/assets/quickReplies.png"
+            src="/assets/greeting.png"
             className={styles.img}
             alt="Ice Breaker"
           />
