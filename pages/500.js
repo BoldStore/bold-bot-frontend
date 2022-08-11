@@ -19,7 +19,7 @@ function Page500() {
               repeat: Infinity,
             }}
             className={styles.phone}
-            src={"/assets/404iPhone.png"}
+            src={"/assets/Erroriphone.png"}
           />
         </div>
         <h2 className={styles.title}>

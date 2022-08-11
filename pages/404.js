@@ -19,7 +19,7 @@ function Page404() {
               repeat: Infinity,
             }}
             className={styles.phone}
-            src={"/assets/404iPhone.png"}
+            src={"/assets/ErrorIphone.png"}
           />
         </div>
         <h2 className={styles.title}>
