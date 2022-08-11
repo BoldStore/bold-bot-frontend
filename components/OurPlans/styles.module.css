@@ -18,10 +18,6 @@
   padding: 0rem 3rem;
 }
 
-.swiper {
-  height: 55vh;
-}
-
 .plansContainerMobile {
   display: none;
 }
@@ -47,7 +43,7 @@
   }
 
   .swiper {
-    height: 23rem;
+    height: 24rem;
   }
 
   .plansContainerMobile {
