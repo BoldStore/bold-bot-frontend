@@ -12,7 +12,7 @@ function Dashboard() {
       <Head>
         <title>Dashboard</title>
         <meta name="description" content="" />
-        <link rel="icon" href="/assets/Logo.png" />
+        <link rel="icon" href="/assets/Logo.svg" />
       </Head>
       <DashboardSidebar />
       <div className={styles.container}>
