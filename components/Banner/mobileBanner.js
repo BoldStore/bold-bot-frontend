@@ -8,7 +8,7 @@ function MobileBanner() {
       <div className={styles.backgroundGradientMobile} />
       <div>
         <motion.img
-          src={"/assets/iceBreaker.png"}
+          src={"/assets/genericTemplate.png"}
           className={styles.mobileImg}
           animate={{
             y: [0, 10, 0],

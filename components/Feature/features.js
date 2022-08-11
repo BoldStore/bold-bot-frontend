@@ -32,7 +32,7 @@ export const features = [
     backgroundImage: "linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%)",
     backgroundColor: "#FBDA61",
     id: "CustomReplies",
-    imgSrc: "/assets/quickReplies.png",
+    imgSrc: "/assets/customReplies.png",
     pageHref: "/dashboard/greetings",
     comingSoon: true,
   },
