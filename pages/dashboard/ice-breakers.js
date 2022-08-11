@@ -144,7 +144,7 @@ function IceBreakerPage() {
         {showExample && (
           <div>
             <img
-              src="/assets/iceBreaker.png"
+              src="/assets/iceBreakerExample.png"
               alt="example"
               className={styles.img}
             />
