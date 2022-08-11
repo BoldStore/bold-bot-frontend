@@ -115,6 +115,10 @@ input {
   font-family: "Red Hat Display", sans-serif;
 }
 
+textarea {
+  font-family: "Red Hat Display", sans-serif;
+}
+
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

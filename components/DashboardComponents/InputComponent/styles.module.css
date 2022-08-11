@@ -20,7 +20,6 @@
   color: var(--black);
   min-height: 3.5rem;
   height: 6rem;
-  font-family: "Red Hat Display", sans-serif;
   resize: vertical;
 }
 
@@ -43,7 +42,6 @@
 .input::placeholder,
 .textarea::placeholder {
   font-size: 1rem;
-  font-family: "Red Hat Display", sans-serif;
 }
 
 .desc {
@@ -53,14 +51,19 @@
 .desc2 {
   color: var(--black) !important;
 }
+
 @media (max-width: 1024px) {
   .container {
     margin: 1.75rem 0rem;
   }
-  .input {
+
+  .input,
+  .textarea {
     padding: 0.875rem 0.375rem;
   }
-  .input::placeholder {
+
+  .input::placeholder,
+  .textarea::placeholder {
     font-size: 0.875rem;
   }
 }
@@ -69,9 +72,12 @@
   .container {
     margin: 1.5rem 0rem;
   }
-  .input {
+
+  .input,
+  .textarea {
     padding: 0.75rem 0.375rem;
   }
+
   .input::placeholder {
     font-size: 0.75rem;
   }
