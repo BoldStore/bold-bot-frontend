@@ -79,10 +79,11 @@
   }
 
   .textarea {
-    min-height: 2.75rem;
+    min-height: 2.5rem;
   }
 
-  .input::placeholder {
+  .input::placeholder,
+  .textarea::placeholder {
     font-size: 0.75rem;
   }
 }
