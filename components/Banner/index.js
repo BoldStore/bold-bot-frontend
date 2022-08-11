@@ -55,12 +55,12 @@ function Banner() {
           }}
         >
           <img
-            src="/assets/greeting.png"
+            src="/assets/genericTemplate.png"
             className={styles.img}
             alt="Ice Breaker"
           />
           <img
-            src="/assets/iceBreaker.png"
+            src="/assets/greeting.png"
             className={styles.img}
             alt="Ice Breaker"
           />
