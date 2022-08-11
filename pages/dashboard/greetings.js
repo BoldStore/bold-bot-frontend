@@ -8,12 +8,10 @@ import styles from "../../styles/common.module.css";
 import DashboardButton from "../../components/DashboardComponents/DashboardButton";
 import { useDispatch, useSelector } from "react-redux";
 import { addGreeting, getGreeting } from "../../store/actions/greeting";
-import { features } from "../../components/Feature/features";
 
 function GreetingsPage() {
   const disptach = useDispatch();
   const user = useSelector((state) => state.user);
-  const [showExample, setShowExample] = useState(false);
   const greeting = useSelector((state) => state.greeting);
   const [form, setForm] = useState([
     {
@@ -86,21 +84,13 @@ function GreetingsPage() {
           Custom greetings are the first responses to a buyer&apos;s dm, design
           your own automated replies which define you as a brand.
         </p>
-        <p
-          className={styles.example}
-          onClick={() => setShowExample(!showExample)}
-        >
-          Click here to view an example
-        </p>
-        {showExample && (
-          <div>
-            <img
-              src="/assets/greeting.png"
-              alt="example"
-              className={styles.img}
-            />
-          </div>
-        )}
+        <div>
+          <img
+            src="/assets/greetingExample.png"
+            alt="example"
+            className={styles.img}
+          />
+        </div>
         {greetings.map((item, i) => (
           <InputComponent
             key={i}

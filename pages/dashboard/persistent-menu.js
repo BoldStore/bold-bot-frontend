@@ -5,7 +5,6 @@ import DashboardSidebar from "../../components/DashboardComponents/DashboardSide
 import DashboardButton from "../../components/DashboardComponents/DashboardButton";
 import { persistentMenu } from "../../components/DashboardComponents/Lists/persistent-menu";
 import styles from "../../styles/common.module.css";
-import { features } from "../../components/Feature/features";
 import SecondaryInputComponent from "../../components/DashboardComponents/InputComponent/secondaryInput";
 import { useDispatch, useSelector } from "react-redux";
 import { addMenu, getMenu } from "../../store/actions/persistent-menu";
@@ -15,8 +14,6 @@ function PersistentMenu() {
   const dispatch = useDispatch();
   const menuState = useSelector((state) => state.menu);
   const userState = useSelector((state) => state.user);
-
-  const [showExample, setShowExample] = useState(false);
   const [form, setForm] = useState([
     {
       key: "menuOption1",
@@ -140,21 +137,13 @@ function PersistentMenu() {
           starting over but also the choice to introduce other points of
           interest .
         </p>
-        <p
-          className={styles.example}
-          onClick={() => setShowExample(!showExample)}
-        >
-          Click here to view an example
-        </p>
-        {showExample && (
-          <div>
-            <img
-              src="/assets/persistentMenu.png"
-              alt="example"
-              className={styles.img}
-            />
-          </div>
-        )}
+        <div>
+          <img
+            src="/assets/persistentMenuExample.png"
+            alt="example"
+            className={styles.img}
+          />
+        </div>
         {persistentMenu.map((item, i) => (
           <SecondaryInputComponent
             key={i}

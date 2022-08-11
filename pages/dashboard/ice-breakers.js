@@ -5,7 +5,6 @@ import DashboardSidebar from "../../components/DashboardComponents/DashboardSide
 import { iceBreakers } from "../../components/DashboardComponents/Lists/iceBreakers";
 import styles from "../../styles/common.module.css";
 import DashboardButton from "../../components/DashboardComponents/DashboardButton";
-import { features } from "../../components/Feature/features";
 import SecondaryInputComponent from "../../components/DashboardComponents/InputComponent/secondaryInput";
 import { useDispatch, useSelector } from "react-redux";
 import { addIceBreaker, getIceBreaker } from "../../store/actions/ice-breaker";
@@ -15,8 +14,6 @@ function IceBreakerPage() {
   const dispatch = useDispatch();
   const iceBreakerState = useSelector((state) => state.iceBreaker);
   const userState = useSelector((state) => state.user);
-
-  const [showExample, setShowExample] = useState(false);
   const [form, setForm] = useState([
     {
       key: "iceBreaker1",
@@ -135,21 +132,13 @@ function IceBreakerPage() {
           repetitive questions by introducing standardised texts which answer
           FAQs.
         </p>
-        <p
-          className={styles.example}
-          onClick={() => setShowExample(!showExample)}
-        >
-          Click here to view an example
-        </p>
-        {showExample && (
-          <div>
-            <img
-              src="/assets/iceBreakerExample.png"
-              alt="example"
-              className={styles.img}
-            />
-          </div>
-        )}
+        <div>
+          <img
+            src="/assets/iceBreakerExample.png"
+            alt="example"
+            className={styles.img}
+          />
+        </div>
         {iceBreakers.map((item, i) => (
           <SecondaryInputComponent
             key={i}
