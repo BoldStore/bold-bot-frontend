@@ -9,13 +9,13 @@
 }
 
 .expandIcon {
+  display: none;
   color: var(--white);
   font-size: 1.8rem;
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   padding: 0.2rem;
-  display: none;
 }
 
 .header {
@@ -55,6 +55,7 @@
   .expandIcon {
     display: flex;
   }
+
   .displayPic {
     height: 2.5rem;
     width: 2.5rem;
@@ -67,19 +68,7 @@
   .sideBarDiv {
     display: hidden;
   }
-  .expandIcon {
-    display: flex;
-  }
-  /* .drawerIcon {
-    display: block;
-    position: absolute;
-    margin: 1rem;
-    border: 1.5px solid var(--black);
-    border-radius: 50%;
-    padding: 0.25rem;
-    height: 2rem;
-    width: 2rem;
-  } */
+
   .mobileNavbar {
     display: flex;
     color: var(--black);
