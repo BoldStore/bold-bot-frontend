@@ -15,9 +15,9 @@ function Header() {
         {/* <Link href={"/#OurClients"} passHref={true}>
           <span className={styles.navbarLink}>Our Clients</span>
         </Link> */}
-        <Link href={"/#OurPlans"} passHref={true}>
-          <span className={styles.navbarLink}>Our Plans</span>
-        </Link>
+        {/* <Link href={"/#OurFeatures"} passHref={true}>
+          <span className={styles.navbarLink}>Our Features</span>
+        </Link> */}
         <Link href={"/#Greetings"} passHref={true}>
           <span className={styles.navbarLink}>Greetings</span>
         </Link>
@@ -29,6 +29,9 @@ function Header() {
         </Link>
         <Link href={"/#CustomReplies"} passHref={true}>
           <span className={styles.navbarLink}>Custom Replies</span>
+        </Link>
+        <Link href={"/#OurPlans"} passHref={true}>
+          <span className={styles.navbarLink}>Our Plans</span>
         </Link>
       </div>
       <DrawerComponent />
