@@ -100,16 +100,13 @@ function DashboardSidebar() {
                 <MenuItem icon={<HomeRoundedIcon />}>Home</MenuItem>
               </Link>
               <Link href="/dashboard/greetings">
-                <MenuItem icon={<EmojiPeopleRoundedIcon />}>
-                  {" "}
-                  Greetings
-                </MenuItem>
-              </Link>
-              <Link href="/dashboard/persistent-menu">
-                <MenuItem icon={<MenuRoundedIcon />}>Persistent Menu</MenuItem>
+                <MenuItem icon={<EmojiPeopleRoundedIcon />}>Greetings</MenuItem>
               </Link>
               <Link href="/dashboard/ice-breakers">
                 <MenuItem icon={<AcUnitRoundedIcon />}>Ice Breakers</MenuItem>
+              </Link>
+              <Link href="/dashboard/persistent-menu">
+                <MenuItem icon={<MenuRoundedIcon />}>Persistent Menu</MenuItem>
               </Link>
               <Link href="/dashboard/profile">
                 <MenuItem icon={<PersonRoundedIcon />}>Profile</MenuItem>
@@ -120,39 +117,6 @@ function DashboardSidebar() {
                 </MenuItem>
               </>
             </Menu>
-            {/* <Menu iconShape="circle">
-              <SubMenu
-                suffix={<span className="badge yellow">3</span>}
-                title={"hi"}
-                icon={<FaRegLaughWink />}
-              >
-                <MenuItem>{"hi"} 1</MenuItem>
-                <MenuItem>{"hi"} 2</MenuItem>
-                <MenuItem>{"hi"} 3</MenuItem>
-              </SubMenu>
-              <SubMenu
-                prefix={<span className="badge gray">3</span>}
-                title={"hi"}
-                icon={<FaHeart />}
-              >
-                <MenuItem>{"hi"} 1</MenuItem>
-                <MenuItem>{"hi"} 2</MenuItem>
-                <MenuItem>{"hi"} 3</MenuItem>
-              </SubMenu>
-              <SubMenu title={"hi"} icon={<FaList />}>
-                <MenuItem>{"hi"} 1 </MenuItem>
-                <MenuItem>{"hi"} 2 </MenuItem>
-                <SubMenu title={`${"hi"} 3`}>
-                  <MenuItem>{"hi"} 3.1 </MenuItem>
-                  <MenuItem>{"hi"} 3.2 </MenuItem>
-                  <SubMenu title={`${"hi"} 3.3`}>
-                    <MenuItem>{"hi"} 3.3.1 </MenuItem>
-                    <MenuItem>{"hi"} 3.3.2 </MenuItem>
-                    <MenuItem>{"hi"} 3.3.3 </MenuItem>
-                  </SubMenu>
-                </SubMenu>
-              </SubMenu>
-            </Menu> */}
           </SidebarContent>
           <SidebarFooter style={{ textAlign: "center" }}>
             <div className={styles.sidebarFooter}>
