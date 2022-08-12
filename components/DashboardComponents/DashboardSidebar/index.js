@@ -28,6 +28,7 @@ function DashboardSidebar() {
   const userState = useSelector((state) => state.user);
   const [collapsed, setCollapsed] = useState(false);
   const [toggled, setToggled] = useState(false);
+  const [expandIcon, setExpandIcon] = useState(false);
 
   const handleCollapsedChange = (checked) => {
     setCollapsed(checked);
@@ -38,14 +39,15 @@ function DashboardSidebar() {
   };
 
   useEffect(() => {
-    if (!(typeof window === "undefined")) {
+    if (typeof window !== "undefined") {
       if (window.innerWidth < 1024) {
         setCollapsed(true);
+        setExpandIcon(true);
       }
     }
   }, []);
 
-  if (!(typeof window === "undefined")) {
+  if (typeof window !== "undefined") {
     window.addEventListener("resize", () => {
       if (window.innerWidth < 1024) {
         setCollapsed(true);
@@ -81,16 +83,20 @@ function DashboardSidebar() {
               style={{ justifyContent: collapsed && "center" }}
             >
               {!collapsed && <p>BOLDbot</p>}
-              {collapsed ? (
-                <ChevronRightRoundedIcon
-                  className={styles.expandIcon}
-                  onClick={() => handleCollapsedChange(!collapsed)}
-                />
-              ) : (
-                <ChevronLeftRoundedIcon
-                  className={styles.expandIcon}
-                  onClick={() => handleCollapsedChange(!collapsed)}
-                />
+              {expandIcon && (
+                <>
+                  {collapsed ? (
+                    <ChevronRightRoundedIcon
+                      className={styles.expandIcon}
+                      onClick={() => handleCollapsedChange(!collapsed)}
+                    />
+                  ) : (
+                    <ChevronLeftRoundedIcon
+                      className={styles.expandIcon}
+                      onClick={() => handleCollapsedChange(!collapsed)}
+                    />
+                  )}
+                </>
               )}
             </div>
           </SidebarHeader>
