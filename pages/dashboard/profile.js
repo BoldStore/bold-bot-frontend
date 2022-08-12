@@ -7,10 +7,12 @@ import FAQs from "../../components/FAQs";
 import styles from "../../styles/Profile.module.css";
 import InfluencerProgram from "../../components/DashboardComponents/InfluencerProgram";
 import { plans } from "../../components/OurPlans/plans";
+import SEO from "../../components/SEO";
 
 function ProfilePage() {
   return (
     <div className={styles.pageDiv}>
+      <SEO title={"Profile"} />
       <DashboardSidebar />
       <div className={styles.container}>
         <ProfileCard />

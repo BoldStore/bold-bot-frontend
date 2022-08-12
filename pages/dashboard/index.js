@@ -5,15 +5,12 @@ import ProfileCard from "../../components/DashboardComponents/ProfileCard";
 import DashboardSidebar from "../../components/DashboardComponents/DashboardSidebar";
 import OverviewCard from "../../components/DashboardComponents/OverviewCard";
 import { features } from "../../components/Feature/features";
+import SEO from "../../components/SEO";
 
 function Dashboard() {
   return (
     <div className={styles.pageDiv}>
-      <Head>
-        <title>Dashboard</title>
-        <meta name="description" content="" />
-        <link rel="icon" href="/assets/Logo.svg" />
-      </Head>
+      <SEO title={"Dashboard"} />
       <DashboardSidebar />
       <div className={styles.container}>
         <div className={styles.backgroundGradient} />

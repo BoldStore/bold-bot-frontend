@@ -9,6 +9,7 @@ import SecondaryInputComponent from "../../components/DashboardComponents/InputC
 import { useDispatch, useSelector } from "react-redux";
 import { addMenu, getMenu } from "../../store/actions/persistent-menu";
 import Loader from "../../components/Loader";
+import SEO from "../../components/SEO";
 
 function PersistentMenu() {
   const dispatch = useDispatch();
@@ -128,6 +129,7 @@ function PersistentMenu() {
 
   return (
     <div className={styles.pageDiv}>
+      <SEO title={"Persistent Menu"} />
       <DashboardSidebar />
       <div className={styles.container}>
         <h3 className={styles.title}>Persistent Menu</h3>

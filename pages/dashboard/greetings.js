@@ -8,6 +8,7 @@ import styles from "../../styles/common.module.css";
 import DashboardButton from "../../components/DashboardComponents/DashboardButton";
 import { useDispatch, useSelector } from "react-redux";
 import { addGreeting, getGreeting } from "../../store/actions/greeting";
+import SEO from "../../components/SEO";
 
 function GreetingsPage() {
   const disptach = useDispatch();
@@ -77,6 +78,7 @@ function GreetingsPage() {
 
   return (
     <div className={styles.pageDiv}>
+      <SEO title={"Greetings"} />
       <DashboardSidebar />
       <div className={styles.container}>
         <h3 className={styles.title}>Greetings</h3>

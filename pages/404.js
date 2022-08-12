@@ -1,11 +1,13 @@
-import { style } from "@mui/system";
 import { motion } from "framer-motion";
 import React from "react";
 import Header from "../components/Header/Header";
+import SEO from "../components/SEO";
 import styles from "../styles/Error.module.css";
+
 function Page404() {
   return (
-    <div>
+    <>
+      <SEO title={"Error: 404"} />
       <Header />
       <div className={styles.container}>
         <div className={styles.gradient}>
@@ -26,7 +28,7 @@ function Page404() {
           <span style={{ color: "var(--blue)" }}>404</span> Page Not Found.
         </h2>
       </div>
-    </div>
+    </>
   );
 }
 

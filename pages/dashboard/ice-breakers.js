@@ -9,6 +9,7 @@ import SecondaryInputComponent from "../../components/DashboardComponents/InputC
 import { useDispatch, useSelector } from "react-redux";
 import { addIceBreaker, getIceBreaker } from "../../store/actions/ice-breaker";
 import Loader from "../../components/Loader";
+import SEO from "../../components/SEO";
 
 function IceBreakerPage() {
   const dispatch = useDispatch();
@@ -124,6 +125,7 @@ function IceBreakerPage() {
 
   return (
     <div className={styles.pageDiv}>
+      <SEO title={"Ice Breakers"} />
       <DashboardSidebar />
       <div className={styles.container}>
         <h3 className={styles.title}>Ice Breakers</h3>
