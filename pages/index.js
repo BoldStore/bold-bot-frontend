@@ -7,6 +7,7 @@ import Header from "../components/Header/Header";
 import Head from "next/head";
 import Footer from "../components/Footer";
 import OurPlans from "../components/OurPlans";
+import OurFeatures from "../components/OurFeatures";
 
 export default function Home() {
   return (
@@ -24,34 +25,7 @@ export default function Home() {
       <Banner />
       <div className={styles.container}>
         {/* <ClientsWithUs /> */}
-        {features.map((item, i) => {
-          if (i % 2 == 0) {
-            return (
-              <Feature
-                key={i}
-                title={item.title}
-                desc={item.desc}
-                backgroundColor={item.backgroundColor}
-                backgroundImage={item.backgroundImage}
-                id={item.id}
-                imgSrc={item.imgSrc}
-              />
-            );
-          } else {
-            return (
-              <Feature
-                key={i}
-                title={item.title}
-                desc={item.desc}
-                isReverse={true}
-                backgroundColor={item.backgroundColor}
-                backgroundImage={item.backgroundImage}
-                id={item.id}
-                imgSrc={item.imgSrc}
-              />
-            );
-          }
-        })}
+        <OurFeatures />
         <OurPlans />
       </div>
       <Footer />

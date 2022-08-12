@@ -49,6 +49,9 @@
 }
 
 @media (max-width: 640px) {
+  .container {
+    margin: 3rem 0;
+  }
   .container h3 {
     text-align: left;
   }
