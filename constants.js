@@ -4,8 +4,7 @@ export const CLIENT_ID = "1594390537593636";
 export const SCOPE = "pages_read_engagement";
 export const REDIRECT_URI = "http://localhost:3000/facebookPage/";
 
-export const API_URL =
-  "https://5d2f-2405-201-400b-eb2a-c079-3b86-a856-1cac.in.ngrok.io";
+export const API_URL = "https://api.boldbot.in";
 
 export const GET_USER = "/user/me";
 export const CREATE_USER = "/user";
