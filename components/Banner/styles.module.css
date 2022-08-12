@@ -84,6 +84,16 @@
   color: var(--blue);
 }
 
+@media (max-width: 1280px) {
+  .info {
+    color: var(--black);
+    margin-left: 5rem;
+  }
+  .para {
+    width: 100%;
+  }
+}
+
 @media (max-width: 1024px) {
   .container {
     margin-top: 3.5rem;
