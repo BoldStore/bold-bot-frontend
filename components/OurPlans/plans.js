@@ -2,14 +2,14 @@ export const plans = [
   {
     planName: "Starter Plan",
     planDesc:
-      "This starter plan elevates your dm’s to the next level by including the simplest assets to automating your interactions— custom greetings and ice breakers. ",
+      "This starter plan elevates your DM’s to the next level by including the simplest assets to automating your interactions — custom greetings and ice breakers.",
     planPrice: "₹500",
     icons: ["greeting", "ice_breakers"],
   },
   {
     planName: "Standard Plan",
     planDesc:
-      "The standard plan includes all the superior features of the starter pack with the addition of the persistent menu. ",
+      "The standard plan includes all the superior features of the starter pack with the addition of the persistent menu.",
     planPrice: "₹1000",
     icons: ["ice_breakers", "persistent_menu", "website_link"],
   },
