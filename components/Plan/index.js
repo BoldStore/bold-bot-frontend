@@ -14,7 +14,7 @@ function Plan({ planName, planDesc, planPrice, icons }) {
           })}
         </div>
       </div>
-      <h6>{planDesc}</h6>
+      <p>{planDesc}</p>
       <div className={styles.priceContainer}>
         <h6>{planPrice}/month</h6>
         <DashboardButton text={"Buy Plan"} />

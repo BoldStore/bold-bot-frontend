@@ -7,7 +7,7 @@
   border-radius: 1rem;
   border: 1px solid #dbdbdd;
   margin: 0rem 0.75rem;
-  min-height: 25rem;
+  min-height: 24rem;
 }
 
 .container h5 {
@@ -15,7 +15,7 @@
   color: var(--black);
 }
 
-.container h6 {
+.container p {
   color: var(--grey);
 }
 
@@ -23,6 +23,10 @@
   color: var(--black);
   font-weight: 500;
   margin-top: 0rem;
+}
+
+.priceContainer p {
+  color: var(--white);
 }
 
 .container h5 {
@@ -43,10 +47,11 @@
 
 .icon {
   color: var(--blue);
-  font-size: 1.75rem;
+  font-size: 1.75rem !important;
   margin-right: 0.25rem;
 }
 
+/* desktop breakpoint for swiper.js */
 @media (max-width: 1280px) {
   .container {
     width: 24rem;
@@ -55,19 +60,33 @@
     margin-right: auto;
     min-height: 24rem;
   }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 20rem;
+    padding: 1.75rem 1.25rem;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 20rem;
+  }
 
   .icon {
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
+  }
+
+  .priceContainer h6 {
+    margin-bottom: 2rem;
   }
 }
 
 @media (max-width: 640px) {
   .container {
-    width: 20rem;
     padding: 1.5rem 1rem;
-    min-height: 20rem;
+    min-height: 18rem;
   }
+
   .icon {
-    font-size: 1.25rem;
+    font-size: 1.25rem !important;
   }
 }

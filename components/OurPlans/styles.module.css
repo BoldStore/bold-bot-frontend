@@ -37,13 +37,24 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .swiper {
+    height: 24rem;
+  }
+
+  .plansContainerMobile {
+    display: flex;
+    margin-top: 2.75rem;
+  }
+}
+
 @media (max-width: 640px) {
   .container h3 {
     text-align: left;
   }
 
   .swiper {
-    height: 23rem;
+    height: 22rem;
   }
 
   .plansContainerMobile {
