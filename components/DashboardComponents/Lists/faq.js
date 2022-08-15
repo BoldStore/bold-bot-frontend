@@ -14,4 +14,24 @@ export const faqs = [
     answer:
       "All data accessed by BOLDbot functions in compliance to the privacy policies of Instagram and Meta. The customisable nature of certain text features is dependent on the user and all standardised texts are per the pre-approved content that the patron may verify and agree to.",
   },
+  {
+    heading: "How does BOLDbot  help businesses?",
+    answer:
+      "Automated customer servicing means human agents can focus on more challenging tasks or high value work which would require the human touch while the BOLDbot handles the more mechanical aspects of multiple conversations. This translates into repetitive texts being automated and customer service being provided round the clock. The patron may also chose to switch to human support per their convenience whenever required.",
+  },
+  {
+    heading: "What kind of questions can BOLDbot assist with?",
+    answer:
+      "BOLDbot is highly customisable and user-friendly. One of the primary features of the bot is it’s ability to render designated responses to unique questions input by the user. The bot is created to answer all of the frequently asked questions that the user lists.",
+  },
+  {
+    heading: "What mediums does BOLDbot support as of now?",
+    answer:
+      "Currently our bot services Instagram DMs but the team here at BOLDbot is working to expand to new areas.",
+  },
+  {
+    heading: "How easy is it to configure your own BOLDbot?",
+    answer:
+      "Here at BOLDbot we pride ourselves on the simplistic and user-friendly design of the bot. Any individual with a basic grasp on technology and social media will be able to make complete use of BOLDbot’s premium features by following the instructions provided while customising the bot.",
+  },
 ];
