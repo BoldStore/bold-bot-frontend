@@ -38,6 +38,7 @@ function OurPlans() {
             return (
               <SwiperSlide key={i}>
                 <Plan
+                  key={i}
                   planName={item.planName}
                   planDesc={item.planDesc}
                   planPrice={item.planPrice}
