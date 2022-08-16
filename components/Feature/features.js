@@ -28,7 +28,7 @@ export const features = [
   },
   {
     title: "Custom Replies",
-    desc: "Time is money here at Bold,make your interactions with patrons faster with BoldBot’s custom reply feature. Employing this feature allows the user to design textual responses unique to trigger words. Custom replies cut out the need for multiple drop menus and make customer servicing rapid.",
+    desc: "Time is money here at BOLDbot, make your interactions with patrons faster with our custom reply feature. Employing this feature allows the user to design textual responses unique to trigger words. Custom replies cut out the need for multiple drop menus and make customer servicing rapid.",
     backgroundImage: "linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%)",
     backgroundColor: "#FBDA61",
     id: "CustomReplies",
