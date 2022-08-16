@@ -42,7 +42,6 @@ function MyApp({ Component, pageProps }) {
       </Script>
       <Component {...pageProps} />
       <ToastContainer autoClose={false} />
-      {/* <!-- Google tag (gtag.js) --> */}
     </>
   );
 }
