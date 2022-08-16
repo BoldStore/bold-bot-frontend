@@ -9,7 +9,6 @@ import { getUser } from "../store/actions/user";
 import "../styles/App.scss";
 import Script from "next/script";
 import SEO from "../components/SEO";
-import { GOOGLE_ANALYTICS_ID } from "../constants";
 
 function MyApp({ Component, pageProps }) {
   const dispatch = useDispatch();
