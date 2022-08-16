@@ -1,6 +1,10 @@
 .container {
   padding: 0rem 2rem;
 }
+.container2 {
+  padding: 0rem 2rem;
+  margin-top: 6rem;
+}
 
 @media (max-width: 640px) {
   .container {
