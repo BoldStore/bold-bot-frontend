@@ -8,6 +8,8 @@ import { auth } from "../firebaseConfig";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "../store/actions/user";
 import "../styles/App.scss";
+import Script from "next/script";
+import SEO from "../components/SEO";
 
 function MyApp({ Component, pageProps }) {
   const dispatch = useDispatch();
@@ -26,12 +28,20 @@ function MyApp({ Component, pageProps }) {
     <>
       <Component {...pageProps} />
       <ToastContainer autoClose={false} />
-      <Head>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1"
-        ></meta>
-      </Head>
+      {/* <!-- Google tag (gtag.js) --> */}
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-1ZBB6TQ926"
+      />
+      <Script strategy="lazyOnload" id="google-analytics-script">
+        {`window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-1ZBB6TQ926'), {
+          page_path: window.location.pathname,
+        });`}
+      </Script>
+      <SEO />
     </>
   );
 }
