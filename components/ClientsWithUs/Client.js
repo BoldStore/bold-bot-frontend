@@ -5,7 +5,7 @@ function Client({ imgSrc, username, link, followers }) {
   return (
     <div className={styles.container}>
       <img
-        src={"https://i.ibb.co/myvq6GR/aryan.jpg"}
+        src={"https://i.ibb.co/bRmp6KC/BOLDbot.png"}
         className={styles.displayPic}
         alt="display"
       />
