@@ -24,13 +24,17 @@ function SEO({ title, desc }) {
       site={`${WEB_URL}`}
       additionalMetaTags={[
         {
+          property: "og:title",
+          content: "BOLDbot",
+        },
+        {
           property: "og:image",
           itemprop: "image",
           content: logoSrc,
         },
         {
-          name: "msapplication-TileImage",
-          content: logoSrc,
+          property: "og:description",
+          content: "Automate your business, the bold way.",
         },
         {
           property: "og:site_name",
@@ -39,10 +43,6 @@ function SEO({ title, desc }) {
         {
           itemprop: "thumbnailUrl",
           href: logoSrc,
-        },
-        {
-          property: "og:title",
-          content: "BOLDbot",
         },
         {
           property: "og:type",
@@ -59,6 +59,10 @@ function SEO({ title, desc }) {
         {
           itemProp: "description",
           content: description,
+        },
+        {
+          name: "msapplication-TileImage",
+          content: logoSrc,
         },
       ]}
       additionalLinkTags={[
