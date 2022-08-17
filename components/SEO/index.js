@@ -30,6 +30,10 @@ function SEO({ title, desc }) {
           content: "/assets/Logo.svg",
         },
         {
+          property: "og:site_name",
+          content: "BOLDbot",
+        },
+        {
           property: "dc:creator",
           content: "Jane Doe",
         },
