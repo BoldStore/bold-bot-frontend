@@ -8,7 +8,7 @@ function SEO({ title, desc }) {
       title={title}
       defaultTitle="BOLDbot"
       description={
-        desc ??
+        desc +
         "BOLDbot is the next step in automating customer service for Instagram businesses. It levels up the professionalism of your business by increasing efficacy and simplifying interaction with your consumer."
       }
       keywords={"Instagram, "}
