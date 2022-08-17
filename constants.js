@@ -8,7 +8,7 @@ export const SCOPE = "pages_read_engagement,instagram_manage_messages";
 
 export const REDIRECT_URI = "http://localhost:3000/facebookPage/";
 
-export const API_URL = "https://api.boldbot.in";
+export const API_URL = "http://localhost:3001/";
 
 export const GET_USER = "/user/me";
 

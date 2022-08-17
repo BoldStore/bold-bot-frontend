@@ -28,7 +28,7 @@ function ConnectedPages() {
             className={styles.displayPic}
             alt="display"
           />
-          <h6>@avi_vashishta29</h6>
+          <h6>@{userState?.user?.pages[0]?.insta_username}</h6>
         </div>
         <h6>Instagram ID : {userState?.user?.pages[0]?.insta_id}</h6>
       </div>
