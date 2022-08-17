@@ -51,6 +51,8 @@
   }
   .img {
     width: 75%;
+    margin-left: auto !important;
+    margin-right: 0px !important;
   }
   .swiperContainer {
     width: 100%;
