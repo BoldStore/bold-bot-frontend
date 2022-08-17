@@ -24,12 +24,28 @@ function SEO({ title, desc }) {
       additionalMetaTags={[
         {
           property: "og:image",
-          itemProp: "image",
+          itemprop: "image",
+          content: "https://i.ibb.co/bRmp6KC/BOLDbot.png",
+        },
+        {
+          name: "msapplication-TileImage",
           content: "https://i.ibb.co/bRmp6KC/BOLDbot.png",
         },
         {
           property: "og:site_name",
           content: "BOLDbot",
+        },
+        {
+          property: "og:image:width",
+          content: "300",
+        },
+        {
+          property: "og:image:height",
+          content: "300",
+        },
+        {
+          itemprop: "thumbnailUrl",
+          href: "https://i.ibb.co/bRmp6KC/BOLDbot.png",
         },
         {
           property: "og:title",
