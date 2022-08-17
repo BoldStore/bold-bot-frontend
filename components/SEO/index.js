@@ -17,7 +17,7 @@ function SEO({ title, desc }) {
         title: "BOLDbot",
         site: WEB_URL,
         image: "/assets/Logo.svg",
-        cardType: "/assets/Logo.svg",
+        cardType: "https://i.ibb.co/bRmp6KC/BOLDbot.png",
         description:
           "BOLDbot is the next step in automating customer service for Instagram businesses. It levels up the professionalism of your business by increasing efficacy and simplifying interaction with your consumer.",
       }}
