@@ -40,24 +40,12 @@ function SEO({ title, desc }) {
           content: "BOLDbot",
         },
         {
-          property: "og:image:width",
-          content: "300",
-        },
-        {
-          property: "og:image:height",
-          content: "300",
-        },
-        {
           itemprop: "thumbnailUrl",
           href: "https://i.ibb.co/bRmp6KC/BOLDbot.png",
         },
         {
           property: "og:title",
           content: "BOLDbot",
-        },
-        {
-          property: "og:url",
-          content: WEB_URL,
         },
         {
           property: "og:type",
