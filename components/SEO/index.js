@@ -34,7 +34,7 @@ function SEO({ title, desc }) {
         },
         {
           property: "og:description",
-          content: "Automate your business, the bold way.",
+          content: desc,
         },
         {
           property: "og:site_name",
