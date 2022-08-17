@@ -24,6 +24,10 @@ function SEO({ title, desc }) {
       additionalMetaTags={[
         {
           property: "og:image",
+          content: "https://i.ibb.co/bRmp6KC/BOLDbot.png",
+        },
+        {
+          property: "og:image",
           itemprop: "image",
           content: "https://i.ibb.co/bRmp6KC/BOLDbot.png",
         },
