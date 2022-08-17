@@ -23,6 +23,17 @@ function SEO({ title, desc }) {
       }}
       image={"/assets/Logo.svg"}
       site={`${WEB_URL}`}
+      additionalMetaTags={[
+        {
+          property: "og:image",
+          itemprop: "image",
+          content: "/assets/Logo.svg",
+        },
+        {
+          property: "dc:creator",
+          content: "Jane Doe",
+        },
+      ]}
       additionalLinkTags={[
         {
           rel: "icon",
