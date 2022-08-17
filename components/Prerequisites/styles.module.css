@@ -21,7 +21,7 @@
 }
 
 .swiperContainer {
-  width: 50%;
+  width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,7 +32,7 @@
 }
 
 .img {
-  width: 75%;
+  width: 72%;
   display: flex;
   margin-left: auto;
 }
@@ -40,6 +40,12 @@
 @media (max-width: 1024px) {
   .swiper {
     padding-bottom: 3rem !important;
+  }
+  .swiperContainer {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   /* .img {
@@ -59,7 +65,7 @@
   }
 
   .img {
-    width: 70%;
+    width: 75%;
     margin-left: auto !important;
     margin-right: 0rem !important;
   }
