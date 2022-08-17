@@ -3,14 +3,13 @@ import { WEB_URL } from "../../constants";
 import { NextSeo } from "next-seo";
 
 function SEO({ title, desc }) {
+  const description =
+    "BOLDbot is the next step in automating customer service for Instagram businesses. It levels up the professionalism of your business by increasing efficacy and simplifying interaction with your consumer";
   return (
     <NextSeo
       title={title}
       defaultTitle="BOLDbot"
-      description={
-        desc ??
-        "BOLDbot is the next step in automating customer service for Instagram businesses. It levels up the professionalism of your business by increasing efficacy and simplifying interaction with your consumer."
-      }
+      description={desc ?? description}
       keywords={"Instagram, "}
       canonical={`${WEB_URL}`}
       twitter={{
@@ -18,15 +17,13 @@ function SEO({ title, desc }) {
         site: WEB_URL,
         image: "/assets/Logo.svg",
         cardType: "https://i.ibb.co/bRmp6KC/BOLDbot.png",
-        description:
-          "BOLDbot is the next step in automating customer service for Instagram businesses. It levels up the professionalism of your business by increasing efficacy and simplifying interaction with your consumer.",
+        description: description,
       }}
       image={"/assets/Logo.svg"}
       site={`${WEB_URL}`}
       additionalMetaTags={[
         {
           property: "og:image",
-          itemprop: "image",
           content: "/assets/Logo.svg",
         },
         {
@@ -34,8 +31,24 @@ function SEO({ title, desc }) {
           content: "BOLDbot",
         },
         {
-          property: "dc:creator",
-          content: "Jane Doe",
+          property: "og:title",
+          content: "BOLDbot",
+        },
+        {
+          property: "og:type",
+          content: "Automation Service",
+        },
+        {
+          property: "og:url",
+          content: WEB_URL,
+        },
+        {
+          itemProp: "image",
+          content: "/assets/Logo.svg",
+        },
+        {
+          itemProp: "description",
+          content: "/assets/Logo.svg",
         },
       ]}
       additionalLinkTags={[
