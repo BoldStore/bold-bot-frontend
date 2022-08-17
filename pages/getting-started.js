@@ -3,14 +3,15 @@ import Header from "../components/Header/Header";
 import Prerequisites from "../components/Prerequisites";
 import styles from "../styles/Home.module.css";
 import { prerequisites } from "../components/DashboardComponents/Lists/prerequisites";
+
 function GettingStarted() {
   return (
     <div>
       <Header />
       <div className={styles.container2}>
         <h2>
-          Things you need to{" "}
-          <span style={{ color: "var(--blue)" }}>Get Started.</span>
+          Things you need before{" "}
+          <span style={{ color: "var(--blue)" }}>Getting Started.</span>
         </h2>
         {prerequisites.map((item, i) => (
           <Prerequisites
