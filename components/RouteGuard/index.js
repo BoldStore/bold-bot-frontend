@@ -34,7 +34,7 @@ export default function RouteGuard({ children }) {
     // redirect to login page if accessing a private page and not logged in
     const path = url?.split("?")[0] ?? "";
 
-    const publicPaths = ["/"];
+    const publicPaths = ["/", "/getting-started"];
 
     if (!user && !publicPaths.includes(path ?? "")) {
       setAuthorized(false);

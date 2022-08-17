@@ -5,10 +5,12 @@
   justify-content: space-between;
   margin-bottom: 4rem;
 }
+
 .info {
   width: 100%;
   margin-top: 1rem;
 }
+
 .text {
   color: var(--grey);
 }
@@ -24,12 +26,13 @@
   justify-content: center;
   align-items: center;
 }
+
 .swiper {
   padding-bottom: 4rem !important;
 }
 
 .img {
-  width: 70%;
+  width: 75%;
   display: flex;
   margin-left: auto;
 }
@@ -38,6 +41,11 @@
   .swiper {
     padding-bottom: 3rem !important;
   }
+
+  /* .img {
+    max-width: 300px;
+  } */
+
   .container {
     align-items: bottom;
   }
@@ -49,11 +57,13 @@
     justify-content: center;
     align-items: center;
   }
+
   .img {
-    width: 75%;
+    width: 70%;
     margin-left: auto !important;
-    margin-right: 0px !important;
+    margin-right: 0rem !important;
   }
+
   .swiperContainer {
     width: 100%;
   }

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 import styles from "./styles.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -16,7 +15,7 @@ function Prerequisites({ isReverse, title, imgArr, desc, link }) {
       <div className={styles.info}>
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.text}>{desc}</p>
-        <Link href={link} passHref={true}>
+        <a href={link} target="_blank" rel="noreferrer">
           <p
             style={{
               color: "var(--blue)",
@@ -24,9 +23,9 @@ function Prerequisites({ isReverse, title, imgArr, desc, link }) {
               cursor: "pointer",
             }}
           >
-            Facebook&apos;s Tutorial
+            Instagram&apos;s Tutorial
           </p>
-        </Link>
+        </a>
       </div>
       <div className={styles.swiperContainer}>
         <Swiper
