@@ -5,6 +5,7 @@ import { NextSeo } from "next-seo";
 function SEO({ title, desc }) {
   const description =
     "BOLDbot is the next step in automating customer service for Instagram businesses. It levels up the professionalism of your business by increasing efficacy and simplifying interaction with your consumer";
+  const logoSrc = logoSrc;
   return (
     <NextSeo
       title={title}
@@ -16,7 +17,7 @@ function SEO({ title, desc }) {
         title: "BOLDbot",
         site: WEB_URL,
         image: "/assets/Logo.svg",
-        cardType: "https://i.ibb.co/bRmp6KC/BOLDbot.png",
+        cardType: logoSrc,
         description: description,
       }}
       image={"/assets/Logo.svg"}
@@ -24,16 +25,12 @@ function SEO({ title, desc }) {
       additionalMetaTags={[
         {
           property: "og:image",
-          content: "https://i.ibb.co/bRmp6KC/BOLDbot.png",
-        },
-        {
-          property: "og:image",
           itemprop: "image",
-          content: "/assets/Logo.svg",
+          content: logoSrc,
         },
         {
           name: "msapplication-TileImage",
-          content: "https://i.ibb.co/bRmp6KC/BOLDbot.png",
+          content: logoSrc,
         },
         {
           property: "og:site_name",
@@ -41,7 +38,7 @@ function SEO({ title, desc }) {
         },
         {
           itemprop: "thumbnailUrl",
-          href: "https://i.ibb.co/bRmp6KC/BOLDbot.png",
+          href: logoSrc,
         },
         {
           property: "og:title",
@@ -57,7 +54,7 @@ function SEO({ title, desc }) {
         },
         {
           itemProp: "image",
-          content: "https://i.ibb.co/bRmp6KC/BOLDbot.png",
+          content: logoSrc,
         },
         {
           itemProp: "description",
