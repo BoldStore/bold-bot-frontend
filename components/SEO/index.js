@@ -21,7 +21,8 @@ function SEO({ title, desc }) {
         description:
           "BOLDbot is the next step in automating customer service for Instagram businesses. It levels up the professionalism of your business by increasing efficacy and simplifying interaction with your consumer.",
       }}
-      image="/assets/Logo.svg"
+      image={"/assets/Logo.svg"}
+      site={`${WEB_URL}`}
       additionalLinkTags={[
         {
           rel: "icon",
