@@ -11,11 +11,12 @@ function SEO({ title, desc }) {
         desc ??
         "BOLDbot is the next step in automating customer service for Instagram businesses. It levels up the professionalism of your business by increasing efficacy and simplifying interaction with your consumer."
       }
-      keywords
+      keywords={"Instagram, "}
       canonical={`${WEB_URL}`}
       twitter={{
         title: "BOLDbot",
         site: WEB_URL,
+        image: "/assets/Logo.svg",
         cardType: "/assets/Logo.svg",
         description:
           "BOLDbot is the next step in automating customer service for Instagram businesses. It levels up the professionalism of your business by increasing efficacy and simplifying interaction with your consumer.",
