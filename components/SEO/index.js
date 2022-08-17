@@ -29,7 +29,7 @@ function SEO({ title, desc }) {
         {
           property: "og:image",
           itemprop: "image",
-          content: "https://i.ibb.co/XbWkxPY/banner.png",
+          content: "/assets/Logo.svg",
         },
         {
           name: "msapplication-TileImage",
