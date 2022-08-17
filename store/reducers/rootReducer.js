@@ -1,4 +1,5 @@
 import { combineReducers } from "redux";
+import contactReducer from "./contact";
 import greetingReducer from "./greeting";
 import iceBreakerReducer from "./ice-breaker";
 import pageReducer from "./page";
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
   greeting: greetingReducer,
   menu: persistentMenuReducer,
   iceBreaker: iceBreakerReducer,
+  contact: contactReducer,
 });
 
 export default rootReducer;
