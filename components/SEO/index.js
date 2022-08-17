@@ -24,7 +24,8 @@ function SEO({ title, desc }) {
       additionalMetaTags={[
         {
           property: "og:image",
-          content: "/assets/Logo.svg",
+          itemProp: "image",
+          content: "https://i.ibb.co/bRmp6KC/BOLDbot.png",
         },
         {
           property: "og:site_name",
@@ -33,6 +34,10 @@ function SEO({ title, desc }) {
         {
           property: "og:title",
           content: "BOLDbot",
+        },
+        {
+          property: "og:url",
+          content: WEB_URL,
         },
         {
           property: "og:type",
@@ -44,11 +49,11 @@ function SEO({ title, desc }) {
         },
         {
           itemProp: "image",
-          content: "/assets/Logo.svg",
+          content: "https://i.ibb.co/bRmp6KC/BOLDbot.png",
         },
         {
           itemProp: "description",
-          content: "/assets/Logo.svg",
+          content: description,
         },
       ]}
       additionalLinkTags={[
