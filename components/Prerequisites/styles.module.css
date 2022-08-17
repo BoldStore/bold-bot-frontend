@@ -25,11 +25,34 @@
   align-items: center;
 }
 .swiper {
-  padding-bottom: 4rem;
+  padding-bottom: 4rem !important;
 }
 
 .img {
   width: 70%;
   display: flex;
   margin-left: auto;
+}
+
+@media (max-width: 1024px) {
+  .swiper {
+    padding-bottom: 3rem !important;
+  }
+  .container {
+    align-items: bottom;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    flex-direction: column-reverse !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .img {
+    width: 75%;
+  }
+  .swiperContainer {
+    width: 100%;
+  }
 }
