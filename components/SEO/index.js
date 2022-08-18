@@ -33,7 +33,7 @@ function SEO({ title, desc }) {
         },
         {
           property: "og:description",
-          content: desc,
+          content: description,
         },
         {
           property: "og:site_name",
