@@ -12,7 +12,7 @@ import {
   REDIRECT_URI,
   SCOPE,
 } from "../../constants";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { createUser } from "../../store/actions/user";
 
 function FacebookButton() {
@@ -20,6 +20,7 @@ function FacebookButton() {
   const dispatch = useDispatch();
   const [signInWithFacebook, user, loading, error] =
     useSignInWithFacebook(auth);
+  const currentUser = useSelector((state) => state.user);
 
   useEffect(() => {
     if (user) {
@@ -32,16 +33,13 @@ function FacebookButton() {
       autoClose: 3000,
     });
 
-    dispatch(createUser());
-    const url = `${FACEBOOK_AUTH_URL}?response_type=token&display=popup&client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${SCOPE}`;
-    router.replace(url);
-    getToken();
-  };
-
-  const getToken = async () => {
-    await auth.currentUser.getIdToken(true).then((token) => {
-      console.log("TOKEN>>>>", token);
-    });
+    if (currentUser?.user?.pages?.length === 0) {
+      dispatch(createUser());
+      const url = `${FACEBOOK_AUTH_URL}?response_type=token&display=popup&client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${SCOPE}`;
+      router.replace(url);
+    } else {
+      router.replace("/dashboard");
+    }
   };
 
   useEffect(() => {

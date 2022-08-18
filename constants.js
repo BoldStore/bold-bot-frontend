@@ -6,7 +6,7 @@ export const CLIENT_ID = "1594390537593636";
 
 export const SCOPE = "pages_read_engagement,instagram_manage_messages";
 
-export const REDIRECT_URI = "http://localhost:3000/facebookPage/";
+export const REDIRECT_URI = "http://localhost:3000/facebook-page/";
 
 export const API_URL = "http://localhost:3001/";
 
