@@ -34,7 +34,7 @@ function Header() {
           <span className={styles.navbarLink}>Our Plans</span>
         </Link>
         <Link href={"/getting-started"} passHref={true}>
-          <span className={styles.navbarLink}>Get Started</span>
+          <span className={styles.navbarLink}>Prerequisites</span>
         </Link>
       </div>
       <DrawerComponent />
