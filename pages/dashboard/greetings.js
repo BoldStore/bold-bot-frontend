@@ -78,7 +78,12 @@ function GreetingsPage() {
 
   return (
     <div className={styles.pageDiv}>
-      <SEO title={"Greetings"} />
+      <SEO
+        title={"Greetings"}
+        desc={
+          "Automated never means generic here at Bold. These are the first responses to a buyer’s dm. Each store can customize its greetings to cater to the needs and wants of its clientele as well as target markets. Design your own custom greetings which define you as a store when interacting with patrons."
+        }
+      />
       <DashboardSidebar />
       <div className={styles.container}>
         <h3 className={styles.title}>Greetings</h3>

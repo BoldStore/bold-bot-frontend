@@ -129,7 +129,12 @@ function PersistentMenu() {
 
   return (
     <div className={styles.pageDiv}>
-      <SEO title={"Persistent Menu"} />
+      <SEO
+        title={"Persistent Menu"}
+        desc={
+          "Made an error along the way? No worries, we got you! The persistent menu in the tab allows customers to navigate the conversation better by giving them the option of not just starting over but also the choice to introduce other points of interest."
+        }
+      />
       <DashboardSidebar />
       <div className={styles.container}>
         <h3 className={styles.title}>Persistent Menu</h3>

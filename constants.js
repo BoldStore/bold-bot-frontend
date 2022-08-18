@@ -23,3 +23,5 @@ export const MENU = "/message/persistent-menu";
 export const ICE_BREAKER = "/message/ice-breaker";
 
 export const CONATCT_US = "/contact";
+
+export const WEB_URL = "https://www.boldbot.in";

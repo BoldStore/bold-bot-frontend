@@ -20,8 +20,11 @@ function NavLinks() {
       <Link href={"/#PersistentMenu"} passHref={true}>
         <p className={styles.mobileLink}>Persistent Menu</p>
       </Link>
-      <Link href={"/#QuickReplies"} passHref={true}>
+      {/* <Link href={"/#QuickReplies"} passHref={true}>
         <p className={styles.mobileLink}>Custom Replies</p>
+      </Link> */}
+      <Link href={"/getting-started"} passHref={true}>
+        <p className={styles.mobileLink}>Get Started</p>
       </Link>
     </div>
   );

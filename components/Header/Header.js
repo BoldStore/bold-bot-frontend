@@ -27,11 +27,14 @@ function Header() {
         <Link href={"/#PersistentMenu"} passHref={true}>
           <span className={styles.navbarLink}>Persistent Menu</span>
         </Link>
-        <Link href={"/#CustomReplies"} passHref={true}>
+        {/* <Link href={"/#CustomReplies"} passHref={true}>
           <span className={styles.navbarLink}>Custom Replies</span>
-        </Link>
+        </Link> */}
         <Link href={"/#OurPlans"} passHref={true}>
           <span className={styles.navbarLink}>Our Plans</span>
+        </Link>
+        <Link href={"/getting-started"} passHref={true}>
+          <span className={styles.navbarLink}>Prerequisites</span>
         </Link>
       </div>
       <DrawerComponent />

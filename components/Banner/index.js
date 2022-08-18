@@ -72,7 +72,10 @@ function Banner() {
         </motion.div>
       </div>
       <div className={styles.info}>
-        <p className={styles.p}>Automate your business, the bold way.</p>
+        <p style={{ color: "var(--black)" }}>
+          Automate your business, the{" "}
+          <span style={{ color: "var(--blue)" }}>bold</span> way.
+        </p>
         <h1 className={styles.heading}>
           BOLD<span className={styles.gradientText}>bot</span>
         </h1>

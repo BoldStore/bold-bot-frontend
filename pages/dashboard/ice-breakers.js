@@ -125,7 +125,12 @@ function IceBreakerPage() {
 
   return (
     <div className={styles.pageDiv}>
-      <SEO title={"Ice Breakers"} />
+      <SEO
+        title={"Ice Breakers"}
+        desc={
+          "Increase efficiency of service by introducing ice breakers to your customer’s DMs. These standardised texts cover certain frequently asked questions for your patrons to choose from. This allows the customer to verbalise and convey their concerns or queries to the store with ease."
+        }
+      />
       <DashboardSidebar />
       <div className={styles.container}>
         <h3 className={styles.title}>Ice Breakers</h3>
