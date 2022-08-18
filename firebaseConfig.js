@@ -4,13 +4,12 @@ import { connectAuthEmulator, getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC58rnwX7Zas-GdxfettF49Qjh6J6vSPAY",
-  authDomain: "bold-96a92.firebaseapp.com",
-  projectId: "bold-96a92",
-  storageBucket: "bold-96a92.appspot.com",
-  messagingSenderId: "1033134164289",
-  appId: "1:1033134164289:web:4f7675c97c498d5a5879c0",
-  measurementId: "G-TRWHN385YE",
+  apiKey: "AIzaSyADS5PKbETzkbNbRcSKiW1Sc8yMZdJCoGU",
+  authDomain: "boldbot-e3702.firebaseapp.com",
+  projectId: "boldbot-e3702",
+  storageBucket: "boldbot-e3702.appspot.com",
+  messagingSenderId: "967797322005",
+  appId: "1:967797322005:web:6d8a049b779866f106391c",
 };
 
 // Initialize Firebase
