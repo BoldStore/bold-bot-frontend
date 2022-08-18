@@ -11,7 +11,6 @@ function SEO({ title, desc }) {
       title={title}
       defaultTitle="BOLDbot"
       description={desc ?? description}
-      keywords={"Instagram, "}
       canonical={`${WEB_URL}`}
       twitter={{
         title: "BOLDbot",
