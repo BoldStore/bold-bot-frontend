@@ -12,7 +12,7 @@ function ConnectedPages() {
       <div className={styles.flex}>
         <div className={styles.displayFlex}>
           <img
-            src={"https://i.ibb.co/myvq6GR/aryan.jpg"}
+            src={userState?.user?.pages[0]?.facebook_profile_pic}
             className={styles.displayPic}
             alt="display"
           />
@@ -24,7 +24,7 @@ function ConnectedPages() {
       <div className={styles.flex}>
         <div className={styles.displayFlex}>
           <img
-            src={"https://i.ibb.co/myvq6GR/aryan.jpg"}
+            src={userState?.user?.pages[0]?.insta_profile_pic}
             className={styles.displayPic}
             alt="display"
           />
