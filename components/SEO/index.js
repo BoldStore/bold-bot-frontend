@@ -5,7 +5,7 @@ import { NextSeo } from "next-seo";
 function SEO({ title, desc }) {
   const description =
     "BOLDbot is the next step in automating customer service for Instagram businesses. It levels up the professionalism of your business by increasing efficacy and simplifying interaction with your consumer";
-  const logoSrc = "https://i.ibb.co/bRmp6KC/BOLDbot.png";
+  const logoSrc = "https://i.ibb.co/7Yyp9LV/Logo.png";
   return (
     <NextSeo
       title={title}
