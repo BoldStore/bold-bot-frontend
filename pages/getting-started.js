@@ -12,8 +12,8 @@ function GettingStarted() {
       <Header />
       <div className={styles.gettingStartedContainer}>
         <h2>
-          Things you need before{" "}
-          <span style={{ color: "var(--blue)" }}>Getting Started.</span>
+          Things you need before
+          <span style={{ color: "var(--blue)" }}> Getting Started.</span>
         </h2>
         {prerequisites.map((item, i) => (
           <Prerequisites
