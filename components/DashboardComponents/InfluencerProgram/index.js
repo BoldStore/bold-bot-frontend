@@ -18,7 +18,7 @@ function InfluencerProgram() {
           <InputComponent
             title={"Influencer Program"}
             desc={
-              "The Influencer program is for influencers to come and do free marketing for us please write more text here"
+              "The Influencer Program is our first step towards nurturing the Influencer market by providing our premium features for free to a select few through referral codes offered by the team at BOLDbot."
             }
             value={code}
             placeholder={"Referral Code Here"}
