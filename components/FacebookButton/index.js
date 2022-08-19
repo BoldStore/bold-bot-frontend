@@ -33,7 +33,7 @@ function FacebookButton() {
       autoClose: 3000,
     });
 
-    if (currentUser?.user?.pages?.length === 0) {
+    if (currentUser?.user?.pages?.length === 0 || !currentUser.user) {
       dispatch(createUser());
       const url = `${FACEBOOK_AUTH_URL}?response_type=token&display=popup&client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${SCOPE}`;
       router.replace(url);
