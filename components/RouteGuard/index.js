@@ -37,12 +37,9 @@ export default function RouteGuard({ children }) {
     const publicPaths = [
       "/",
       "/getting-started",
-      "/#Greetings",
       "/#OurPlans",
-      "/#IceBreakers",
-      "/#PersistentMenu",
-      "/#CustomReplies",
-      "/trial",
+      "/#OurFeatures",
+      "/#ContactUs",
     ];
 
     if (!user && !publicPaths.includes(path ?? "")) {

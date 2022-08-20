@@ -5,7 +5,7 @@ import styles from "./styles.module.css";
 
 function OurFeatures() {
   return (
-    <div className={styles.container} id="OurFeatures">
+    <div className={styles.container} id={"OurFeatures"}>
       <h3 className={styles.heading}>Our Features</h3>
       {features.map((item, i) => {
         if (i % 2 == 0) {

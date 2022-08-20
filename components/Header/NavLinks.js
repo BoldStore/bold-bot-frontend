@@ -8,23 +8,17 @@ function NavLinks() {
       {/* <Link href={"/#OurClients"} passHref={true}>
         <p className={styles.mobileLink}>Our Clients</p>
       </Link> */}
+      <Link href={"/#OurFeatures"} passHref={true}>
+        <p className={styles.mobileLink}>Our Features</p>
+      </Link>
       <Link href={"/#OurPlans"} passHref={true}>
         <p className={styles.mobileLink}>Our Plans</p>
       </Link>
-      <Link href={"/#Greetings"} passHref={true}>
-        <p className={styles.mobileLink}>Greetings</p>
+      <Link href={"/#ContactUs"} passHref={true}>
+        <p className={styles.mobileLink}>Contact Us</p>
       </Link>
-      <Link href={"/#IceBreakers"} passHref={true}>
-        <p className={styles.mobileLink}>Ice Breakers</p>
-      </Link>
-      <Link href={"/#PersistentMenu"} passHref={true}>
-        <p className={styles.mobileLink}>Persistent Menu</p>
-      </Link>
-      {/* <Link href={"/#QuickReplies"} passHref={true}>
-        <p className={styles.mobileLink}>Custom Replies</p>
-      </Link> */}
       <Link href={"/getting-started"} passHref={true}>
-        <p className={styles.mobileLink}>Get Started</p>
+        <p className={styles.mobileLink}>Prerequisites</p>
       </Link>
     </div>
   );

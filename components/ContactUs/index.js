@@ -36,7 +36,7 @@ function ContactUs() {
     setForm(inputs);
   };
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="ContactUs">
       <div>
         <h2>Contact Us</h2>
         <h6>

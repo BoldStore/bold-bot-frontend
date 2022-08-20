@@ -7,7 +7,7 @@ export const contactUs = [
   },
   {
     title: "Instagram Username",
-    desc: "Your instagram business or professional account username.",
+    desc: "Your Instagram business/professional account username.",
     placeholder: "ex: @johnappleseed",
     key: "username",
   },
