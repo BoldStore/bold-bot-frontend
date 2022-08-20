@@ -9,8 +9,8 @@ function Plan({ planName, planDesc, planPrice, icons }) {
       <div className={styles.packName}>
         <h5>{planName}</h5>
         <div>
-          {icons.map((item) => {
-            return iconArr[item];
+          {icons.map((item, i) => {
+            return <span key={i}>{iconArr[item]}</span>;
           })}
         </div>
       </div>

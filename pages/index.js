@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import OurPlans from "../components/OurPlans";
 import OurFeatures from "../components/OurFeatures";
 import SEO from "../components/SEO";
+import ContactUs from "../components/ContactUs";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <OurFeatures />
         <OurPlans />
       </div>
+      <ContactUs />
       <Footer />
     </>
   );

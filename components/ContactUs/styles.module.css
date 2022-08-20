@@ -1,0 +1,41 @@
+.container {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 5rem;
+  margin: 5rem 0rem;
+}
+
+.img {
+  width: 20rem;
+  margin-left: 5rem;
+}
+
+.link {
+  text-decoration: underline;
+  color: var(--blue);
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0rem 2rem;
+  }
+  .container h6 {
+    margin-top: 0;
+  }
+  .img {
+    width: 30%;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    flex-direction: column-reverse;
+    padding: 0rem 1rem;
+    margin: 2rem 0;
+  }
+  .img {
+    margin-left: auto;
+    width: 60%;
+  }
+}

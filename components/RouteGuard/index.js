@@ -42,6 +42,7 @@ export default function RouteGuard({ children }) {
       "/#IceBreakers",
       "/#PersistentMenu",
       "/#CustomReplies",
+      "/trial",
     ];
 
     if (!user && !publicPaths.includes(path ?? "")) {
