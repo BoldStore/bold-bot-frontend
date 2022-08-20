@@ -40,6 +40,7 @@ export default function RouteGuard({ children }) {
       "/#OurPlans",
       "/#OurFeatures",
       "/#ContactUs",
+      "/dashboard/profile",
     ];
 
     if (!user && !publicPaths.includes(path ?? "")) {

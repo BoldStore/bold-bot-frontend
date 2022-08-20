@@ -18,7 +18,12 @@ function FAQs() {
       <h4>FAQs</h4>
       <div>
         {faqs.map((item, i) => (
-          <Accordion className={styles.accordion} key={i} sx={AccordionStyle}>
+          <Accordion
+            className={styles.accordion}
+            key={i}
+            sx={AccordionStyle}
+            elevation={0.25}
+          >
             <AccordionSummary
               expandIcon={<ExpandMoreRoundedIcon className={styles.icon} />}
               className={styles.summary}
@@ -31,7 +36,10 @@ function FAQs() {
               </Typography>
             </AccordionSummary>
             <AccordionDetails className={styles.summary}>
-              <Typography className={styles.typography}>
+              <Typography
+                className={styles.typography}
+                sx={{ color: "var(--grey)" }}
+              >
                 <p>{item.answer}</p>
               </Typography>
             </AccordionDetails>
