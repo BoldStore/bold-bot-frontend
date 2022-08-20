@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination } from "swiper";
 
-function Prerequisites({ isReverse, title, imgArr, desc, link, steps }) {
+function Prerequisites({ isReverse, title, imgArr, link, steps }) {
   return (
     <div
       className={styles.container}
