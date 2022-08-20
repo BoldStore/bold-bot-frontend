@@ -4,10 +4,15 @@ import { motion } from "framer-motion";
 import InputComponent from "../DashboardComponents/InputComponent";
 import DashboardButton from "../DashboardComponents/DashboardButton";
 import { contactUs } from "./contactUs";
+import { toast } from "react-toastify";
 
 function ContactUs() {
   const submit = () => {
     console.log(form, "bkl");
+    // On form success toast do not remove
+    toast.success("Form Submitted Successfully!", {
+      autoClose: 3000,
+    });
   };
   const [form, setForm] = useState([
     {
