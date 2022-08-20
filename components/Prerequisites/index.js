@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination } from "swiper";
 
-function Prerequisites({ isReverse, title, imgArr, desc, link }) {
+function Prerequisites({ isReverse, title, imgArr, desc, link, steps }) {
   return (
     <div
       className={styles.container}
@@ -14,7 +14,13 @@ function Prerequisites({ isReverse, title, imgArr, desc, link }) {
     >
       <div className={styles.info}>
         <h3 className={styles.title}>{title}</h3>
-        <p className={styles.text}>{desc}</p>
+        <ol style={{ paddingLeft: "1rem" }}>
+          {steps.map((item, i) => (
+            <li key={i} className={styles.text}>
+              {item}
+            </li>
+          ))}
+        </ol>
         <a href={link} target="_blank" rel="noreferrer">
           <p
             style={{

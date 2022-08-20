@@ -23,6 +23,7 @@ function GettingStarted() {
             isReverse={item.isReverse ?? false}
             imgArr={item.imgArr}
             link={item.link}
+            steps={item.steps}
           />
         ))}
       </div>
