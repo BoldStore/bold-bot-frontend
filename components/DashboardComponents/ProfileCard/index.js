@@ -19,7 +19,7 @@ function ProfileCard() {
         <h3>{userState?.user?.name ?? "Username"}</h3>
       </div>
       <div className={styles.membershipBox}>
-        <p className={styles.membershipBanner}>Premium Member</p>
+        <p className={styles.membershipBanner}>Standard Member</p>
         {/* <p className={styles.expiry}>Membership expires on 29/07/2022</p> */}
       </div>
     </div>

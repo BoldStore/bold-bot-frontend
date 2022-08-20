@@ -13,8 +13,8 @@ function Dashboard() {
       <SEO title={"Dashboard"} />
       <DashboardSidebar />
       <div className={styles.container}>
-        <div className={styles.backgroundGradient} />
-        <div className={styles.backgroundGradientMobile} />
+        {/* <div className={styles.backgroundGradient} />
+        <div className={styles.backgroundGradientMobile} /> */}
         <div className={styles.overviewFlex}>
           {features.map((item, i) => (
             <OverviewCard
