@@ -37,7 +37,9 @@ function ContactUs() {
   };
   return (
     <div className={styles.container} id="ContactUs">
-      <div>
+      <div className={styles.backgroundGradient} />
+      <div className={styles.backgroundGradientMobile} />
+      <div className={styles.contactUs}>
         <h2>Contact Us</h2>
         <h6>
           Want your own BOLDbot? Fill in your details below or DM us{" "}
