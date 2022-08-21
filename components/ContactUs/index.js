@@ -28,6 +28,7 @@ function ContactUs() {
       toast.error("Email is required");
       return false;
     }
+    return true;
   };
 
   const submit = () => {
