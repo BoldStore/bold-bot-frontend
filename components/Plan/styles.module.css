@@ -82,6 +82,7 @@
 
 @media (max-width: 640px) {
   .container {
+    width: 18rem;
     padding: 1.5rem 1rem;
     min-height: 18rem;
   }
