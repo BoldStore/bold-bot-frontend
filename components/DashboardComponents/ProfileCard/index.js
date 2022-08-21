@@ -11,7 +11,9 @@ function ProfileCard() {
       <div className={styles.userInfoContainer}>
         <img
           src={
-            userState?.user?.profile_pic ?? "https://i.ibb.co/myvq6GR/aryan.jpg"
+            userState?.user?.pages[0]?.insta_profile_pic ??
+            userState?.user?.profile_pic ??
+            "https://i.ibb.co/myvq6GR/aryan.jpg"
           }
           className={styles.displayPic}
           alt="display"

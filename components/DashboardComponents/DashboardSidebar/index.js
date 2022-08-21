@@ -130,6 +130,7 @@ function DashboardSidebar() {
                 <div className={styles.profileFlex}>
                   <img
                     src={
+                      userState?.user?.pages[0]?.insta_profile_pic ??
                       userState?.user?.profile_pic ??
                       "https://i.ibb.co/myvq6GR/aryan.jpg"
                     }
