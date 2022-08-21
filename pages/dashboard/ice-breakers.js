@@ -12,6 +12,7 @@ import Loader from "../../components/Loader";
 import SEO from "../../components/SEO";
 
 function IceBreakerPage() {
+  const hasPlan = false;
   const dispatch = useDispatch();
   const iceBreakerState = useSelector((state) => state.iceBreaker);
   const userState = useSelector((state) => state.user);
@@ -157,6 +158,7 @@ function IceBreakerPage() {
             itemKey={item.key}
             setValueReply={setValueReply}
             setValueHeading={setValueHeading}
+            disable={!hasPlan}
           />
         ))}
         <DashboardButton

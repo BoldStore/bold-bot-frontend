@@ -145,7 +145,7 @@ function DashboardSidebar() {
                   />
                   {!collapsed && (
                     <h6 className={styles.username}>
-                      {userState?.user?.name ?? "Aryan Teng"}
+                      {userState?.user?.name ?? "Username"}
                     </h6>
                   )}
                 </div>

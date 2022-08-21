@@ -12,6 +12,7 @@ import Loader from "../../components/Loader";
 import SEO from "../../components/SEO";
 
 function PersistentMenu() {
+  const hasPlan = false;
   const dispatch = useDispatch();
   const menuState = useSelector((state) => state.menu);
   const userState = useSelector((state) => state.user);
@@ -162,6 +163,7 @@ function PersistentMenu() {
             itemKey={item.key}
             setValueReply={setValueReply}
             setValueHeading={setValueHeading}
+            disable={!hasPlan}
           />
         ))}
         <DashboardButton

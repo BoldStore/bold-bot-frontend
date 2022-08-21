@@ -11,6 +11,7 @@ function SecondaryInputComponent({
   setValueHeading,
   setValueReply,
   itemKey,
+  disable,
 }) {
   return (
     <div className={styles.container}>
@@ -22,6 +23,7 @@ function SecondaryInputComponent({
         className={styles.input}
         value={valueHeading}
         onChange={(e) => setValueHeading(e, itemKey)}
+        disabled={disable}
       />
 
       {itemKey != "storeLink" ? (
@@ -33,6 +35,7 @@ function SecondaryInputComponent({
             className={styles.textarea}
             value={valueReply}
             onChange={(e) => setValueReply(e, itemKey)}
+            disabled={disable}
           />
         </>
       ) : (
@@ -44,6 +47,7 @@ function SecondaryInputComponent({
             className={styles.input}
             value={valueHeading}
             onChange={(e) => setValueHeading(e, itemKey)}
+            disabled={disable}
           />
         </>
       )}

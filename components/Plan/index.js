@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import DashboardButton from "../DashboardComponents/DashboardButton";
 import { iconArr } from "./iconArr";
 
-function Plan({ planName, planDesc, planPrice, icons }) {
+function Plan({ planName, planDesc, planPrice, icons, noButton }) {
   return (
     <div className={styles.container}>
       <div className={styles.packName}>
@@ -17,7 +17,7 @@ function Plan({ planName, planDesc, planPrice, icons }) {
       <p>{planDesc}</p>
       <div className={styles.priceContainer}>
         <h6>{planPrice}/month</h6>
-        <DashboardButton text={"Buy Plan"} />
+        {!noButton && <DashboardButton text={"Buy Plan"} />}
       </div>
     </div>
   );

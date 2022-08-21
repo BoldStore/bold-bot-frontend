@@ -21,8 +21,18 @@
   width: 93%;
   text-align: left;
 }
+
+.link {
+  color: var(--dashboardTheme);
+  text-decoration: underline;
+  cursor: pointer;
+  text-align: left;
+  width: 93%;
+}
+
 @media (max-width: 1024px) {
-  .heading4 {
+  .heading4,
+  .link {
     width: 97%;
   }
   .container {
@@ -41,7 +51,8 @@
     padding-top: 0rem;
   }
 
-  .heading4 {
+  .heading4,
+  .link {
     width: 100%;
   }
 }

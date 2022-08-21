@@ -9,6 +9,7 @@ function InputComponent({
   value,
   setValue,
   itemKey,
+  disable,
 }) {
   return (
     <div className={styles.container}>
@@ -20,6 +21,7 @@ function InputComponent({
         className={styles.input}
         value={value}
         onChange={(e) => setValue(e, itemKey)}
+        disabled={disable}
       />
     </div>
   );

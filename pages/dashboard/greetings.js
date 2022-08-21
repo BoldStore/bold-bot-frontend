@@ -11,6 +11,7 @@ import { addGreeting, getGreeting } from "../../store/actions/greeting";
 import SEO from "../../components/SEO";
 
 function GreetingsPage() {
+  const hasPlan = false;
   const disptach = useDispatch();
   const user = useSelector((state) => state.user);
   const greeting = useSelector((state) => state.greeting);
@@ -107,6 +108,7 @@ function GreetingsPage() {
             placeholder={item.placeholder}
             itemKey={item.key}
             setValue={setValue}
+            disable={!hasPlan}
           />
         ))}
         <DashboardButton text={"Save"} onClick={saveGreeting} />

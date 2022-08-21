@@ -11,12 +11,14 @@ import { plans } from "../../components/OurPlans/plans";
 import SEO from "../../components/SEO";
 import { useDispatch } from "react-redux";
 import { getUser } from "../../store/actions/user";
+import Link from "next/link";
 
 function ProfilePage() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getUser());
   }, []);
+  const hasPlan = true;
 
   return (
     <div className={styles.pageDiv}>
@@ -25,15 +27,22 @@ function ProfilePage() {
       <div className={styles.container}>
         <ProfileCard />
         <ConnectedPages />
-        {/* <OurPlans center={true} /> */}
+
         <h4 className={styles.heading4}>My Plan</h4>
-        <Plan
-          planName={plans[0].planName}
-          planDesc={plans[0].planDesc}
-          planPrice={plans[0].planPrice}
-          icons={plans[0].icons}
-        />
-        {/* <InfluencerProgram /> */}
+        {hasPlan ? (
+          <Plan
+            planName={plans[0].planName}
+            planDesc={plans[0].planDesc}
+            planPrice={plans[0].planPrice}
+            icons={plans[0].icons}
+            noButton={true}
+          />
+        ) : (
+          <Link href="/dashboard">
+            <p className={styles.link}>Click Here To Buy A Plan.</p>
+          </Link>
+        )}
+
         <FAQs />
       </div>
     </div>
