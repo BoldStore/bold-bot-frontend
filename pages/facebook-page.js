@@ -7,7 +7,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../firebaseConfig";
 
 function FacebookPage() {
-  const { query, replace } = useRouter();
+  const { query, replace, asPath } = useRouter();
   const dispatch = useDispatch();
   const page = useSelector((state) => state.page);
   const [user, loading] = useAuthState(auth);
@@ -37,6 +37,11 @@ function FacebookPage() {
   useEffect(() => {
     if (query && user) {
       handleAddPage();
+    }
+
+    if (asPath.includes("#")) {
+      const url = asPath.replace("#", "?");
+      replace(url);
     }
   }, [query, user]);
 
