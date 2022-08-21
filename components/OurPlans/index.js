@@ -30,7 +30,9 @@ function OurPlans() {
           slidesPerView={1}
           spaceBetween={30}
           loop={true}
-          pagination={true}
+          pagination={{
+            dynamicBullets: true,
+          }}
           modules={[Pagination]}
           className={styles.swiper}
         >

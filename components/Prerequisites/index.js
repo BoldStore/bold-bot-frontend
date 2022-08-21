@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import styles from "./styles.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -38,7 +40,9 @@ function Prerequisites({ isReverse, title, imgArr, link, steps }) {
           slidesPerView={1}
           spaceBetween={30}
           loop={false}
-          pagination={true}
+          pagination={{
+            dynamicBullets: true,
+          }}
           modules={[Pagination]}
           className={styles.swiper}
         >
