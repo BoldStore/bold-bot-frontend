@@ -1,7 +1,7 @@
 export const features = [
   {
     title: "Greetings",
-    desc: "Automated never means generic here at BOLD. These are the first responses to a buyer’s DM. Each store can customize their greetings to cater to the needs and wants of their clientele as well as target markets. Design your own custom greetings which define you as a store when interacting with patrons.",
+    desc: "Automated never means generic here at BOLDbot. These are the first responses to a buyer’s DM. Each store can customize their greetings to cater to the needs and wants of their clientele as well as target markets. Design your own custom greetings which define you as a store when interacting with patrons.",
     backgroundImage: "linear-gradient(19deg, #21D4FD 0%, #B721FF 100%)",
     backgroundColor: "#21D4FD",
     imgSrc: "/assets/greeting.png",

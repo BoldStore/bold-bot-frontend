@@ -47,7 +47,8 @@ function ContactUs() {
       <div className={styles.contactUs}>
         <h2>Contact Us</h2>
         <h6>
-          Want your own BOLDbot? Fill in your details below or DM us{" "}
+          Want your own BOLD<span style={{ color: "var(--blue)" }}>bot</span>?{" "}
+          Fill in your details below or DM us{" "}
           <a
             href="https://www.instagram.com/boldbot.in/"
             target={"_blank"}
