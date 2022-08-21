@@ -32,7 +32,7 @@ function ConnectedPages() {
         </div>
         <h6>Instagram ID : {userState?.user?.pages[0]?.insta_id}</h6>
       </div>
-      <p className={styles.example}>Having Trouble? Click Here.</p>
+      {/* <p className={styles.example}>Having Trouble? Click Here.</p> */}
     </div>
   );
 }
