@@ -33,7 +33,7 @@ function ProfilePage() {
           planPrice={plans[0].planPrice}
           icons={plans[0].icons}
         />
-        <InfluencerProgram />
+        {/* <InfluencerProgram /> */}
         <FAQs />
       </div>
     </div>

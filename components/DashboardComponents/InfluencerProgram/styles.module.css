@@ -9,7 +9,7 @@
   color: var(--dashboardTheme);
   text-decoration: underline;
   cursor: pointer;
-  text-align: left;
+  text-align: center;
 }
 @media (max-width: 1024px) {
   .container {

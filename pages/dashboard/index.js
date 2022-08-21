@@ -6,30 +6,60 @@ import DashboardSidebar from "../../components/DashboardComponents/DashboardSide
 import OverviewCard from "../../components/DashboardComponents/OverviewCard";
 import { features } from "../../components/Feature/features";
 import SEO from "../../components/SEO";
+import OurPlans from "../../components/OurPlans";
+import { plans } from "../../components/OurPlans/plans";
+import Plan from "../../components/Plan";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination } from "swiper";
+import InfluencerProgram from "../../components/DashboardComponents/InfluencerProgram";
 
 function Dashboard() {
+  const hasPlan = false;
   return (
     <div className={styles.pageDiv}>
       <SEO title={"Dashboard"} />
       <DashboardSidebar />
-      <div className={styles.container}>
-        {/* <div className={styles.backgroundGradient} />
-        <div className={styles.backgroundGradientMobile} /> */}
-        <div className={styles.overviewFlex}>
-          {features.map((item, i) => (
-            <OverviewCard
-              key={i}
-              title={item.title}
-              desc={item.desc.slice(0, 70) + "..."}
-              used={3}
-              total={4}
-              pageHref={item.pageHref}
-              comingSoon={item.comingSoon}
-            />
-          ))}
+      {!hasPlan ? (
+        <div className={styles.container2}>
+          <h2>Choose A Plan</h2>
+          <div className={styles.plansFlex}>
+            {plans.map((item, i) => {
+              return (
+                <div className={styles.planDiv}>
+                  <Plan
+                    key={i}
+                    planName={item.planName}
+                    planDesc={item.planDesc}
+                    planPrice={item.planPrice}
+                    icons={item.icons}
+                  />
+                </div>
+              );
+            })}
+          </div>
+          <InfluencerProgram />
         </div>
-        <ProfileCard />
-      </div>
+      ) : (
+        <div className={styles.container}>
+          <ProfileCard />
+          <div className={styles.overviewFlex}>
+            {features.map((item, i) => (
+              <OverviewCard
+                key={i}
+                title={item.title}
+                desc={item.desc.slice(0, 70) + "..."}
+                used={3}
+                total={4}
+                pageHref={item.pageHref}
+                comingSoon={item.comingSoon}
+              />
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
