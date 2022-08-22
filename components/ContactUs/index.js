@@ -5,15 +5,12 @@ import InputComponent from "../DashboardComponents/InputComponent";
 import DashboardButton from "../DashboardComponents/DashboardButton";
 import { contactUs } from "./contactUs";
 import { toast } from "react-toastify";
+import { useDispatch } from "react-redux";
+import { contactBold } from "../../store/actions/contact";
 
 function ContactUs() {
-  const submit = () => {
-    console.log(form, "bkl");
-    // On form success toast do not remove
-    toast.success("Form Submitted Successfully!", {
-      autoClose: 3000,
-    });
-  };
+  const dispatch = useDispatch();
+
   const [form, setForm] = useState([
     {
       key: "email",
@@ -24,6 +21,31 @@ function ContactUs() {
       value: "",
     },
   ]);
+
+  const validate = () => {
+    // Email empty
+    if (form.find((e) => (e.key = "email")).value == "") {
+      toast.error("Email is required");
+      return false;
+    }
+    return true;
+  };
+
+  const submit = () => {
+    if (!validate()) return;
+
+    dispatch(
+      contactBold(
+        form.find((e) => (e.key = "email")).value,
+        form.find((e) => (e.key = "username")).value
+      )
+    );
+    // On form success toast do not remove
+    toast.success("Form Submitted Successfully!", {
+      autoClose: 3000,
+    });
+  };
+
   const setValue = (e, itemKey) => {
     const inputIndex = form.findIndex((i) => {
       return i.key === itemKey;

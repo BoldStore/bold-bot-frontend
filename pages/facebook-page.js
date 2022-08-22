@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addPage } from "../store/actions/page";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../firebaseConfig";
+import Loader from "../components/Loader";
 
 function FacebookPage() {
   const { query, replace, asPath } = useRouter();
@@ -45,7 +46,11 @@ function FacebookPage() {
     }
   }, [query, user]);
 
-  return <div>{loading ? "Loading..." : user?.accessToken}</div>;
+  return (
+    <div>
+      <Loader />
+    </div>
+  );
 }
 
 export default FacebookPage;
