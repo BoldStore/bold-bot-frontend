@@ -36,6 +36,7 @@ export default function RouteGuard({ children }) {
 
     const publicPaths = [
       "/",
+      "/terms-and-conditions",
       "/getting-started",
       "/#OurPlans",
       "/#OurFeatures",
