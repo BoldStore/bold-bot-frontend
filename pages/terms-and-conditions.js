@@ -8,8 +8,7 @@ function TermsAndConditions() {
     <div>
       <Header />
       <div className={styles.container}>
-        <img src={"/assets/logoBanner.png"} width="100%" alt="Banner" />
-
+        <img src={"/assets/Banner.png"} width="100%" alt="Banner" />
         <h2>Terms and Conditions[Last Edited on 22nd August 2022].</h2>
         <br />
         <p>
