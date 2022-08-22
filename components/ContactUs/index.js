@@ -23,27 +23,41 @@ function ContactUs() {
   ]);
 
   const validate = () => {
-    // Email empty
-    if (form.find((e) => (e.key = "email")).value == "") {
-      toast.error("Email is required");
+    if (
+      form.find((item) => item.key == "email").value === "" &&
+      form.find((item) => item.key == "username").value === ""
+    ) {
+      toast.error("Please fill in your details!");
+      return false;
+    }
+    if (form.find((item) => item.key == "email").value === "") {
+      toast.error("Please fill in your email!");
+      return false;
+    }
+    if (form.find((item) => item.key == "username").value === "") {
+      toast.error("Please fill in your username!");
+      return false;
+    }
+    if (!form.find((item) => item.key == "email").value.includes("@")) {
+      toast.error("Please fill a valid email address!");
       return false;
     }
     return true;
   };
 
   const submit = () => {
-    if (!validate()) return;
-
-    dispatch(
-      contactBold(
-        form.find((e) => (e.key = "email")).value,
-        form.find((e) => (e.key = "username")).value
-      )
-    );
-    // On form success toast do not remove
-    toast.success("Form Submitted Successfully!", {
-      autoClose: 3000,
-    });
+    if (validate()) {
+      dispatch(
+        contactBold(
+          form.find((e) => (e.key = "email")).value,
+          form.find((e) => (e.key = "username")).value
+        )
+      );
+      toast.success("Form Submitted Successfully!", {
+        autoClose: 3000,
+      });
+    }
+    return;
   };
 
   const setValue = (e, itemKey) => {
