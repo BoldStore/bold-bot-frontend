@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from "react";
 import DashboardSidebar from "../../components/DashboardComponents/DashboardSidebar";
-import { iceBreakers } from "../../components/DashboardComponents/Lists/iceBreakers";
+import { iceBreakers } from "../../components/Lists/iceBreakers";
 import styles from "../../styles/common.module.css";
 import DashboardButton from "../../components/DashboardComponents/DashboardButton";
 import SecondaryInputComponent from "../../components/DashboardComponents/InputComponent/secondaryInput";

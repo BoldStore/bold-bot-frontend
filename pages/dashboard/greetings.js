@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import DashboardSidebar from "../../components/DashboardComponents/DashboardSidebar";
 import InputComponent from "../../components/DashboardComponents/InputComponent";
-import { greetings } from "../../components/DashboardComponents/Lists/greetings";
+import { greetings } from "../../components/Lists/greetings";
 import styles from "../../styles/common.module.css";
 import DashboardButton from "../../components/DashboardComponents/DashboardButton";
 import { useDispatch, useSelector } from "react-redux";

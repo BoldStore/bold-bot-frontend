@@ -5,7 +5,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded";
-import { faqs } from "../DashboardComponents/Lists/faq";
+import { faqs } from "../Lists/faq";
 
 function FAQs() {
   const AccordionStyle = {
