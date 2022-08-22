@@ -3,6 +3,10 @@
   margin-bottom: 4rem;
 }
 
+.container p {
+  color: var(--grey);
+}
+
 .banner {
   margin-top: 4rem;
 }
