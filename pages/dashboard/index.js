@@ -1,15 +1,12 @@
 import React from "react";
 import styles from "../../styles/Dashboard.module.css";
-import Head from "next/head";
 import ProfileCard from "../../components/DashboardComponents/ProfileCard";
 import DashboardSidebar from "../../components/DashboardComponents/DashboardSidebar";
 import OverviewCard from "../../components/DashboardComponents/OverviewCard";
 import { features } from "../../components/Feature/features";
 import SEO from "../../components/SEO";
-import OurPlans from "../../components/OurPlans";
 import { plans } from "../../components/OurPlans/plans";
 import Plan from "../../components/Plan";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
