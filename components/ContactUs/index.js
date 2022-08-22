@@ -7,9 +7,11 @@ import { contactUs } from "./contactUs";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { contactBold } from "../../store/actions/contact";
+import { useRouter } from "next/router";
 
 function ContactUs() {
   const dispatch = useDispatch();
+  const router = useRouter();
 
   const [form, setForm] = useState([
     {
@@ -56,6 +58,7 @@ function ContactUs() {
       toast.success("Form Submitted Successfully!", {
         autoClose: 3000,
       });
+      router.push("/");
     }
     return;
   };
