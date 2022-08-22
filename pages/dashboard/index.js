@@ -28,7 +28,7 @@ function Dashboard() {
           <div className={styles.plansFlex}>
             {plans.map((item, i) => {
               return (
-                <div className={styles.planDiv}>
+                <div className={styles.planDiv} key={i}>
                   <Plan
                     key={i}
                     planName={item.planName}
