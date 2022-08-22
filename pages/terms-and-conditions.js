@@ -3,10 +3,12 @@ import React from "react";
 import Header from "../components/Header/Header";
 import styles from "../styles/Policy.module.css";
 import Link from "next/link";
+import SEO from "../components/SEO";
 
 function TermsAndConditions() {
   return (
     <>
+      <SEO title={"Terms and Conditions"} />
       <Header />
       <img
         src={"/assets/automateBanner.png"}
