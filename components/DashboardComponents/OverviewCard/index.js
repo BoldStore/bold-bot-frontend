@@ -20,7 +20,7 @@ function OverviewCard({
         <div className={styles.titleFlex}>
           <h5>{title}</h5>
           <h5 className={styles.completeText}>
-            Status :<span className={styles.complete}> Active</span>
+            Status :<span className={styles.complete}> Not Active</span>
           </h5>
         </div>
         {/* <p className={styles.desc}>{desc}</p> */}
@@ -45,7 +45,7 @@ function OverviewCard({
             </div>
             <h5 className={styles.completeText}>
               Interactions Completed :
-              <span className={styles.complete}> 1000</span>
+              <span className={styles.complete}> 0</span>
             </h5>
             {/* <DashboardButton
           text={"Upgrade Plan"}

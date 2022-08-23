@@ -13,7 +13,7 @@ import "swiper/css/navigation";
 import InfluencerProgram from "../../components/DashboardComponents/InfluencerProgram";
 
 function Dashboard() {
-  const hasPlan = false;
+  const hasPlan = true;
   return (
     <div className={styles.pageDiv}>
       <SEO title={"Dashboard"} />
@@ -47,7 +47,7 @@ function Dashboard() {
                 key={i}
                 title={item.title}
                 desc={item.desc.slice(0, 70) + "..."}
-                used={3}
+                used={0}
                 total={4}
                 pageHref={item.pageHref}
                 comingSoon={item.comingSoon}

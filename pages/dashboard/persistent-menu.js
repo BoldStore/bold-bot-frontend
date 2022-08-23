@@ -12,7 +12,7 @@ import Loader from "../../components/Loader";
 import SEO from "../../components/SEO";
 
 function PersistentMenu() {
-  const hasPlan = false;
+  const hasPlan = true;
   const dispatch = useDispatch();
   const menuState = useSelector((state) => state.menu);
   const userState = useSelector((state) => state.user);
@@ -146,11 +146,11 @@ function PersistentMenu() {
           interest .
         </p>
         <div>
-          <img
+          {/* <img
             src="/assets/persistentMenuExample.png"
             alt="example"
             className={styles.img}
-          />
+          /> */}
         </div>
         {persistentMenu.map((item, i) => (
           <SecondaryInputComponent

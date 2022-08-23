@@ -11,7 +11,7 @@ import { addGreeting, getGreeting } from "../../store/actions/greeting";
 import SEO from "../../components/SEO";
 
 function GreetingsPage() {
-  const hasPlan = false;
+  const hasPlan = true;
   const disptach = useDispatch();
   const user = useSelector((state) => state.user);
   const greeting = useSelector((state) => state.greeting);
@@ -93,11 +93,11 @@ function GreetingsPage() {
           your own automated replies which define you as a brand.
         </p>
         <div>
-          <img
+          {/* <img
             src="/assets/greetingExample.png"
             alt="example"
             className={styles.img}
-          />
+          /> */}
         </div>
         {greetings.map((item, i) => (
           <InputComponent

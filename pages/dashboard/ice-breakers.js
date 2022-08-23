@@ -12,7 +12,7 @@ import Loader from "../../components/Loader";
 import SEO from "../../components/SEO";
 
 function IceBreakerPage() {
-  const hasPlan = false;
+  const hasPlan = true;
   const dispatch = useDispatch();
   const iceBreakerState = useSelector((state) => state.iceBreaker);
   const userState = useSelector((state) => state.user);
@@ -141,11 +141,11 @@ function IceBreakerPage() {
           FAQs.
         </p>
         <div>
-          <img
+          {/* <img
             src="/assets/iceBreakerExample.png"
             alt="example"
             className={styles.img}
-          />
+          /> */}
         </div>
         {iceBreakers.map((item, i) => (
           <SecondaryInputComponent
