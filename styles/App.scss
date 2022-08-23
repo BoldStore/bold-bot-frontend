@@ -9,7 +9,7 @@ $submenu-bg-color-collapsed: rgba(#0c1e35, 0.95);
 $sidebar-color: var(--white);
 $highlight-color: var(--white);
 $icon-bg-color: rgba(255, 255, 255, 0.05);
-$icon-size: 35px;
+$icon-size: 2.25rem;
 
 @import "~react-pro-sidebar/dist/scss/styles.scss";
 
@@ -24,8 +24,8 @@ $icon-size: 35px;
 
   .btn-toggle {
     cursor: pointer;
-    width: 35px;
-    height: 35px;
+    width: 2.25rem;
+    height: 2.25rem;
     background: #353535;
     color: #fff;
     text-align: center;
@@ -33,7 +33,7 @@ $icon-size: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 15px;
+    font-size: 1rem;
     display: none;
   }
 
@@ -43,14 +43,14 @@ $icon-size: 35px;
     justify-content: center;
     .sidebar-btn {
       transition: width 0.3s;
-      width: 150px;
-      padding: 1px 15px;
-      border-radius: 40px;
+      width: 9.375rem;
+      padding: 1px 1rem;
+      border-radius: 2.5rem;
       background: rgba(255, 255, 255, 0.05);
       color: #adadad;
       text-decoration: none;
       margin: 0 auto;
-      height: 35px;
+      height: 2.25rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -69,19 +69,19 @@ $icon-size: 35px;
   .collapsed {
     .sidebar-btn {
       display: inline-block;
-      line-height: 40px;
+      line-height: 2.5rem;
       padding: 0;
     }
   }
 
   main {
-    padding: 24px;
+    padding: 1.5rem;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
     header {
-      margin-bottom: 40px;
+      margin-bottom: 2.5rem;
       border-bottom: 1px solid #efefef;
       h1 {
         display: flex;
@@ -112,8 +112,8 @@ $icon-size: 35px;
 
   .block {
     display: flex;
-    margin-bottom: 24px;
-    font-size: 14px;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
     color: #545454;
     > span {
       margin-left: 10px;
@@ -126,7 +126,7 @@ $icon-size: 35px;
 
     header {
       h1 {
-        transform: translateX(20px);
+        transform: translateX(1.25rem);
       }
     }
     .block {
@@ -150,7 +150,7 @@ $icon-size: 35px;
     overflow-x: hidden;
     header {
       h1 {
-        font-size: 24px;
+        font-size: 1.5rem;
       }
     }
   }
@@ -172,7 +172,7 @@ $icon-size: 35px;
   padding: 3px 6px;
   font-size: 9px;
   letter-spacing: 1px;
-  border-radius: 15px;
+  border-radius: 1rem;
   &.red {
     color: #ffffff;
     background: #d63030;
