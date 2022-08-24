@@ -4,6 +4,8 @@ import greetingReducer from "./greeting";
 import iceBreakerReducer from "./ice-breaker";
 import pageReducer from "./page";
 import persistentMenuReducer from "./persistent-menu";
+import mentionReducer from "./story-mention";
+import replyReducer from "./story-reply";
 import userReducer from "./user";
 
 const rootReducer = combineReducers({
@@ -13,6 +15,8 @@ const rootReducer = combineReducers({
   menu: persistentMenuReducer,
   iceBreaker: iceBreakerReducer,
   contact: contactReducer,
+  mention: mentionReducer,
+  reply: replyReducer,
 });
 
 export default rootReducer;
