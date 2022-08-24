@@ -20,7 +20,7 @@ function TermsAndConditions() {
         <h2>
           Terms and Conditions
           <br />
-          [Last Edited on 22nd August 2022].
+          [Last Edited on 22nd August 2022]
         </h2>
         <br />
         <p>
