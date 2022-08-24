@@ -84,27 +84,39 @@ function StoryRepliesPage() {
           /> */}
         </div>
 
-        <SecondaryInputComponent
-          title={story[0].title}
-          placeholderHeading={story[0].placeholderHeading}
-          placeholderReply={story[0].placeholderReply}
-          valueHeading={form.find((e) => e.key == story[0].key)?.heading}
-          valueReply={form.find((e) => e.key == story[0].key)?.reply}
-          itemKey={story[0].key}
-          disable={!hasPlan}
-          form={form}
-          setForm={setForm}
-        />
-        <InputComponent
-          title={story[1].title}
-          desc={story[1].desc}
-          value={form.find((e) => e.key == story[1].key).value}
-          placeholder={story[1].placeholder}
-          itemKey={story[1].key}
-          disable={!hasPlan}
-          form={form}
-          setForm={setForm}
-        />
+        {story.map((item, i) => {
+          if (item.placeholderReply && item.placeholderHeading) {
+            return (
+              <SecondaryInputComponent
+                key={i}
+                title={item.title}
+                placeholderHeading={item.placeholderHeading}
+                placeholderReply={item.placeholderReply}
+                valueHeading={form.find((e) => e.key == item.key)?.heading}
+                valueReply={form.find((e) => e.key == item.key)?.reply}
+                itemKey={item.key}
+                disable={!hasPlan}
+                form={form}
+                setForm={setForm}
+              />
+            );
+          } else if (item.placeholder) {
+            return (
+              <InputComponent
+                key={i}
+                title={item.title}
+                desc={item.desc}
+                value={form.find((e) => e.key == item.key).value}
+                placeholder={item.placeholder}
+                itemKey={item.key}
+                disable={!hasPlan}
+                form={form}
+                setForm={setForm}
+              />
+            );
+          }
+        })}
+
         <DashboardButton text={"Save"} onClick={saveGreeting} />
       </div>
     </div>
