@@ -44,6 +44,8 @@ export default function RouteGuard({ children }) {
       "/dashboard",
       "/dashboard/greetings",
       "/dashboard/profile",
+      "/404",
+      "/500",
     ];
 
     if (!user && !publicPaths.includes(path ?? "")) {
