@@ -28,23 +28,6 @@ function StoryRepliesPage() {
     },
   ]);
 
-  const setValue = (e, itemKey) => {
-    const inputIndex = form.findIndex((i) => {
-      return i.key === itemKey;
-    });
-
-    const input = {
-      ...form[inputIndex],
-    };
-
-    input.value = e.target.value;
-
-    const inputs = [...form];
-    inputs[inputIndex] = input;
-
-    setForm(inputs);
-  };
-
   useEffect(() => {
     if (user && user.user && user?.user?.pages?.length > 0) {
       disptach(getGreeting(user?.user?.pages[0].id));
@@ -79,42 +62,6 @@ function StoryRepliesPage() {
     return <div>Loading...</div>;
   }
 
-  const setValueHeading = (e, itemKey) => {
-    const inputIndex = form.findIndex((i) => {
-      return i.key === itemKey;
-    });
-
-    const input = {
-      ...form[inputIndex],
-    };
-
-    input.heading = e.target.value;
-
-    const inputs = [...form];
-    inputs[inputIndex] = input;
-
-    setForm(inputs);
-    console.log(form);
-  };
-
-  const setValueReply = (e, itemKey) => {
-    const inputIndex = form.findIndex((i) => {
-      return i.key === itemKey;
-    });
-
-    const input = {
-      ...form[inputIndex],
-    };
-
-    input.reply = e.target.value;
-
-    const inputs = [...form];
-    inputs[inputIndex] = input;
-
-    setForm(inputs);
-    console.log(form);
-  };
-
   return (
     <div className={styles.pageDiv}>
       <SEO
@@ -144,9 +91,9 @@ function StoryRepliesPage() {
           valueHeading={form.find((e) => e.key == story[0].key)?.heading}
           valueReply={form.find((e) => e.key == story[0].key)?.reply}
           itemKey={story[0].key}
-          setValueReply={setValueReply}
-          setValueHeading={setValueHeading}
           disable={!hasPlan}
+          form={form}
+          setForm={setForm}
         />
         <InputComponent
           title={story[1].title}
@@ -154,8 +101,9 @@ function StoryRepliesPage() {
           value={form.find((e) => e.key == story[1].key).value}
           placeholder={story[1].placeholder}
           itemKey={story[1].key}
-          setValue={setValue}
           disable={!hasPlan}
+          form={form}
+          setForm={setForm}
         />
         <DashboardButton text={"Save"} onClick={saveGreeting} />
       </div>

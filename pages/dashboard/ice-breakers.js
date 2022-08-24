@@ -66,42 +66,6 @@ function IceBreakerPage() {
     }
   };
 
-  const setValueHeading = (e, itemKey) => {
-    const inputIndex = form.findIndex((i) => {
-      return i.key === itemKey;
-    });
-
-    const input = {
-      ...form[inputIndex],
-    };
-
-    input.heading = e.target.value;
-
-    const inputs = [...form];
-    inputs[inputIndex] = input;
-
-    setForm(inputs);
-    console.log(form);
-  };
-
-  const setValueReply = (e, itemKey) => {
-    const inputIndex = form.findIndex((i) => {
-      return i.key === itemKey;
-    });
-
-    const input = {
-      ...form[inputIndex],
-    };
-
-    input.reply = e.target.value;
-
-    const inputs = [...form];
-    inputs[inputIndex] = input;
-
-    setForm(inputs);
-    console.log(form);
-  };
-
   const submit = () => {
     const ice_breakers = [];
 
@@ -156,8 +120,8 @@ function IceBreakerPage() {
             valueHeading={form.find((e) => e.key == item.key)?.heading}
             valueReply={form.find((e) => e.key == item.key)?.reply}
             itemKey={item.key}
-            setValueReply={setValueReply}
-            setValueHeading={setValueHeading}
+            form={form}
+            setForm={setForm}
             disable={!hasPlan}
           />
         ))}
