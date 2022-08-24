@@ -9,16 +9,32 @@ import styles from "../../styles/Profile.module.css";
 import InfluencerProgram from "../../components/DashboardComponents/InfluencerProgram";
 import { plans } from "../../components/OurPlans/plans";
 import SEO from "../../components/SEO";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "../../store/actions/user";
 import Link from "next/link";
+import DashboardButton from "../../components/DashboardComponents/DashboardButton";
+import {
+  CLIENT_ID,
+  FACEBOOK_AUTH_URL,
+  REDIRECT_URI,
+  SCOPE,
+} from "../../constants";
+import { useRouter } from "next/router";
 
 function ProfilePage() {
+  const router = useRouter();
   const dispatch = useDispatch();
+  const user = useSelector((state) => state.user);
+
   useEffect(() => {
     dispatch(getUser());
   }, []);
   const hasPlan = true;
+
+  const connectPage = () => {
+    const url = `${FACEBOOK_AUTH_URL}?response_type=token&display=popup&client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${SCOPE}`;
+    router.push(url);
+  };
 
   return (
     <div className={styles.pageDiv}>
@@ -26,7 +42,15 @@ function ProfilePage() {
       <DashboardSidebar />
       <div className={styles.container}>
         <ProfileCard />
-        <ConnectedPages />
+
+        {user?.user?.pages?.length > 0 ? (
+          <ConnectedPages />
+        ) : (
+          <>
+            <div>No pages connected</div>
+            <DashboardButton onClick={connectPage} text="Connect Page" />
+          </>
+        )}
 
         <h4 className={styles.heading4}>My Plan</h4>
         {hasPlan ? (
