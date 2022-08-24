@@ -17,7 +17,7 @@ export const plans = [
     planName: "Super Plan",
     planDesc:
       "Includes all features from the starter and standard packages, the super plan goes one step above with the addition of the custom replies.",
-    planPrice: "₹1500",
+    planPrice: "₹2000",
     icons: ["greeting", "ice_breakers", "persistent_menu", "custom_replies"],
   },
 ];
