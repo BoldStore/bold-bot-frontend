@@ -9,6 +9,7 @@ import DashboardButton from "../../components/DashboardComponents/DashboardButto
 import { useDispatch, useSelector } from "react-redux";
 import { addGreeting, getGreeting } from "../../store/actions/greeting";
 import SEO from "../../components/SEO";
+import SecondaryInputComponent from "../../components/DashboardComponents/InputComponent/secondaryInput";
 
 function StoryRepliesPage() {
   const hasPlan = true;
@@ -18,7 +19,8 @@ function StoryRepliesPage() {
   const [form, setForm] = useState([
     {
       key: "story-reply",
-      value: "",
+      heading: "",
+      reply: "",
     },
     {
       key: "story-mention",
@@ -77,6 +79,42 @@ function StoryRepliesPage() {
     return <div>Loading...</div>;
   }
 
+  const setValueHeading = (e, itemKey) => {
+    const inputIndex = form.findIndex((i) => {
+      return i.key === itemKey;
+    });
+
+    const input = {
+      ...form[inputIndex],
+    };
+
+    input.heading = e.target.value;
+
+    const inputs = [...form];
+    inputs[inputIndex] = input;
+
+    setForm(inputs);
+    console.log(form);
+  };
+
+  const setValueReply = (e, itemKey) => {
+    const inputIndex = form.findIndex((i) => {
+      return i.key === itemKey;
+    });
+
+    const input = {
+      ...form[inputIndex],
+    };
+
+    input.reply = e.target.value;
+
+    const inputs = [...form];
+    inputs[inputIndex] = input;
+
+    setForm(inputs);
+    console.log(form);
+  };
+
   return (
     <div className={styles.pageDiv}>
       <SEO
@@ -98,18 +136,27 @@ function StoryRepliesPage() {
             className={styles.img}
           /> */}
         </div>
-        {story.map((item, i) => (
-          <InputComponent
-            key={i}
-            title={item.title}
-            desc={item.desc}
-            value={form.find((e) => e.key == item.key).value}
-            placeholder={item.placeholder}
-            itemKey={item.key}
-            setValue={setValue}
-            disable={!hasPlan}
-          />
-        ))}
+
+        <SecondaryInputComponent
+          title={story[0].title}
+          placeholderHeading={story[0].placeholderHeading}
+          placeholderReply={story[0].placeholderReply}
+          valueHeading={form.find((e) => e.key == story[0].key)?.heading}
+          valueReply={form.find((e) => e.key == story[0].key)?.reply}
+          itemKey={story[0].key}
+          setValueReply={setValueReply}
+          setValueHeading={setValueHeading}
+          disable={!hasPlan}
+        />
+        <InputComponent
+          title={story[1].title}
+          desc={story[1].desc}
+          value={form.find((e) => e.key == story[1].key).value}
+          placeholder={story[1].placeholder}
+          itemKey={story[1].key}
+          setValue={setValue}
+          disable={!hasPlan}
+        />
         <DashboardButton text={"Save"} onClick={saveGreeting} />
       </div>
     </div>

@@ -2,8 +2,9 @@ export const story = [
   {
     title: "Respone to Story Reply",
     desc: "This is what will be sent to the user when they reply to your stories.",
-    placeholder:
-      "Hi Thankyou for replying to my story! I'll get back to you soon",
+    placeholderHeading: "Book Tickets",
+    placeholderReply:
+      "Hi Thankyou for replying to my story! Go to www.bolbot.in/tickets to book your ticket.",
     key: "story-reply",
   },
   {
