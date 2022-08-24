@@ -18,6 +18,7 @@ import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
 import ChevronLeftRoundedIcon from "@mui/icons-material/ChevronLeftRounded";
 import LogoutRoundedIcon from "@mui/icons-material/LogoutRounded";
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
+import ReplyRoundedIcon from "@mui/icons-material/ReplyRounded";
 import { useSelector } from "react-redux";
 import { auth } from "../../../firebaseConfig";
 import { signOut } from "firebase/auth";
@@ -107,6 +108,9 @@ function DashboardSidebar() {
               </Link>
               <Link href="/dashboard/greetings">
                 <MenuItem icon={<EmojiPeopleRoundedIcon />}>Greetings</MenuItem>
+              </Link>
+              <Link href="/dashboard/story">
+                <MenuItem icon={<ReplyRoundedIcon />}>Story Replies</MenuItem>
               </Link>
               <Link href="/dashboard/ice-breakers">
                 <MenuItem icon={<AcUnitRoundedIcon />}>Ice Breakers</MenuItem>

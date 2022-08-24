@@ -30,10 +30,10 @@ function FacebookPage() {
   };
 
   useEffect(() => {
-    if (page?.success) {
+    if (page?.success || page?.errmess) {
       replace("/dashboard");
     }
-  }, [page]);
+  }, [page?.success, page?.errmess]);
 
   useEffect(() => {
     if (query && user) {

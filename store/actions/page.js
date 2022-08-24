@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import instance from "../../axios";
 import { ADD_PAGE } from "../../constants";
 import * as ActionTypes from "../ActionTypes";
@@ -22,9 +23,10 @@ export const addPage = (
         data: response.data,
       });
     } catch (e) {
+      toast.error(e.response?.data?.message ?? "There was an error");
       dispatch({
         type: ActionTypes.ADD_PAGE_FAILED,
-        errmess: e.response?.data?.err?.message ?? e,
+        errmess: e.response?.data?.message ?? e,
       });
     }
   };
