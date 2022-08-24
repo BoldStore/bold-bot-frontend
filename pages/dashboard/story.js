@@ -10,12 +10,21 @@ import { useDispatch, useSelector } from "react-redux";
 import { addGreeting, getGreeting } from "../../store/actions/greeting";
 import SEO from "../../components/SEO";
 import SecondaryInputComponent from "../../components/DashboardComponents/InputComponent/secondaryInput";
+import {
+  addStoryMention,
+  getStoryMentions,
+} from "../../store/actions/story-mention";
+import {
+  addStoryReplies,
+  getStoryReplies,
+} from "../../store/actions/story-reply";
 
 function StoryRepliesPage() {
   const hasPlan = true;
-  const disptach = useDispatch();
+  const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
-  const greeting = useSelector((state) => state.greeting);
+  const replies = useSelector((state) => state.reply);
+  const mentions = useSelector((state) => state.mention);
   const [form, setForm] = useState([
     {
       key: "story-reply",
@@ -47,35 +56,68 @@ function StoryRepliesPage() {
 
   useEffect(() => {
     if (user && user.user && user?.user?.pages?.length > 0) {
-      disptach(getGreeting(user?.user?.pages[0].id));
+      dispatch(getStoryMentions(user?.user?.pages[0].id));
+      dispatch(getStoryReplies(user?.user?.pages[0].id));
     }
   }, [user.user]);
 
-  const saveGreeting = () => {
+  const save = () => {
     if (user && user.user && user?.user?.pages?.length > 0) {
-      disptach(addGreeting(user?.user?.pages[0].id, form));
+      // Story mention
+      const texts = [];
+      texts.push({
+        key: "1",
+        value: form[1].value,
+      });
+      dispatch(addStoryMention(user?.user?.pages[0].id, texts));
+
+      // Story reply
+      const replies = [];
+      replies.push({
+        question: form[0].heading,
+        texts: [
+          {
+            key: "1",
+            value: form[0].reply,
+          },
+        ],
+      });
+      dispatch(addStoryReplies(user?.user?.pages[0].id, replies));
     }
   };
 
   useEffect(() => {
-    if (greeting?.message && greeting?.message?.texts?.length > 0) {
+    if (
+      mentions?.message &&
+      mentions?.message?.length > 0 &&
+      mentions?.message[0]?.texts?.length > 0
+    ) {
       const arr = form;
-      for (let i = 0; i < greeting?.message?.texts.length; i++) {
-        for (let j = 0; j < arr.length; j++) {
-          if (arr[j].key === greeting?.message?.texts[i].key) {
-            arr[j].value = greeting?.message?.texts[i].value;
-          }
-        }
-      }
+      const i = arr.findIndex((e) => e.key == "story-mention");
+      arr[i] = {
+        key: "story-mention",
+        value: mentions.message[0].texts[0].value,
+      };
       setForm(arr);
     }
-  }, [greeting.message]);
 
-  useEffect(() => {
-    console.log(form);
-  }, [form]);
+    if (
+      replies?.message &&
+      replies?.message?.length > 0 &&
+      replies?.message[0].texts?.length > 0
+    ) {
+      const arr = form;
+      const i = arr.findIndex((e) => e.key == "story-reply");
+      arr[i] = {
+        key: "story-reply",
+        heading: replies.message[0].question,
+        reply: replies.message[0].texts[0].value,
+      };
+      setForm(arr);
+    }
+  }, [mentions.message, replies.message]);
 
-  if (greeting.isLoading) {
+  if (replies?.isLoading || mentions?.isLoading) {
     return <div>Loading...</div>;
   }
 
@@ -94,7 +136,6 @@ function StoryRepliesPage() {
     inputs[inputIndex] = input;
 
     setForm(inputs);
-    console.log(form);
   };
 
   const setValueReply = (e, itemKey) => {
@@ -112,7 +153,6 @@ function StoryRepliesPage() {
     inputs[inputIndex] = input;
 
     setForm(inputs);
-    console.log(form);
   };
 
   return (
@@ -157,7 +197,7 @@ function StoryRepliesPage() {
           setValue={setValue}
           disable={!hasPlan}
         />
-        <DashboardButton text={"Save"} onClick={saveGreeting} />
+        <DashboardButton text={"Save"} onClick={save} />
       </div>
     </div>
   );
