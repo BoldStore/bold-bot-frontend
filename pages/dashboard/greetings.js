@@ -26,23 +26,6 @@ function GreetingsPage() {
     },
   ]);
 
-  const setValue = (e, itemKey) => {
-    const inputIndex = form.findIndex((i) => {
-      return i.key === itemKey;
-    });
-
-    const input = {
-      ...form[inputIndex],
-    };
-
-    input.value = e.target.value;
-
-    const inputs = [...form];
-    inputs[inputIndex] = input;
-
-    setForm(inputs);
-  };
-
   useEffect(() => {
     if (user && user.user && user?.user?.pages?.length > 0) {
       disptach(getGreeting(user?.user?.pages[0].id));
@@ -107,8 +90,9 @@ function GreetingsPage() {
             value={form.find((e) => e.key == item.key).value}
             placeholder={item.placeholder}
             itemKey={item.key}
-            setValue={setValue}
             disable={!hasPlan}
+            form={form}
+            setForm={setForm}
           />
         ))}
         <DashboardButton text={"Save"} onClick={saveGreeting} />

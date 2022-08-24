@@ -7,10 +7,28 @@ function InputComponent({
   placeholder,
   desc,
   value,
-  setValue,
   itemKey,
   disable,
+  form,
+  setForm,
 }) {
+  const setValue = (e, itemKey) => {
+    const inputIndex = form.findIndex((i) => {
+      return i.key === itemKey;
+    });
+
+    const input = {
+      ...form[inputIndex],
+    };
+
+    input.value = e.target.value;
+
+    const inputs = [...form];
+    inputs[inputIndex] = input;
+
+    setForm(inputs);
+  };
+
   return (
     <div className={styles.container}>
       {title && <h6 className={styles.title}>{title}</h6>}

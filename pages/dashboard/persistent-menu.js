@@ -69,42 +69,6 @@ function PersistentMenu() {
     }
   };
 
-  const setValueHeading = (e, itemKey) => {
-    const inputIndex = form.findIndex((i) => {
-      return i.key === itemKey;
-    });
-
-    const input = {
-      ...form[inputIndex],
-    };
-
-    input.heading = e.target.value;
-
-    const inputs = [...form];
-    inputs[inputIndex] = input;
-
-    setForm(inputs);
-    console.log(form);
-  };
-
-  const setValueReply = (e, itemKey) => {
-    const inputIndex = form.findIndex((i) => {
-      return i.key === itemKey;
-    });
-
-    const input = {
-      ...form[inputIndex],
-    };
-
-    input.reply = e.target.value;
-
-    const inputs = [...form];
-    inputs[inputIndex] = input;
-
-    setForm(inputs);
-    console.log(form);
-  };
-
   const submit = () => {
     const menu = [];
     const web_data = null;
@@ -155,14 +119,14 @@ function PersistentMenu() {
         {persistentMenu.map((item, i) => (
           <SecondaryInputComponent
             key={i}
+            form={form}
+            setForm={setForm}
             title={item.title}
             placeholderHeading={item.placeholderHeading}
             placeholderReply={item.placeholderReply}
             valueHeading={form.find((e) => e.key == item.key)?.heading}
             valueReply={form.find((e) => e.key == item.key)?.reply}
             itemKey={item.key}
-            setValueReply={setValueReply}
-            setValueHeading={setValueHeading}
             disable={!hasPlan}
           />
         ))}
