@@ -31,4 +31,20 @@ export const features = [
     imgSrc: "/assets/customReplies.png",
     pageHref: "/dashboard/greetings",
   },
+  {
+    title: "Story Replies",
+    desc: "Set customised automated replies whenever someone replies to your story with the keyword of your choice! This takes advertisements and brand/event promotions to a new level! Set a custom word for your followers to reply to your story, set a custom response to that word with respective information of that event and relax while BOLDbot does the job for you!",
+    backgroundImage: "linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%)",
+    backgroundColor: "#FBDA61",
+    imgSrc: "/assets/storyReplies.png",
+    pageHref: "/dashboard/story",
+  },
+  {
+    title: "Story Mentions",
+    desc: "Set customisable automated replies whenever someone mentions you in their Instagram stories! Assign unique texts to keep your interactions going with patrons and followers.",
+    backgroundImage: "linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%)",
+    backgroundColor: "#FBDA61",
+    imgSrc: "/assets/storyMentions.png",
+    pageHref: "/dashboard/story",
+  },
 ];
