@@ -27,25 +27,6 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <Head>
-        <meta charset="utf-8" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta
-          name="viewport"
-          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
-        />
-        <meta
-          name="description"
-          content="BOLDbot is the next step in automating customer service for Instagram
-          businesses. It levels up the professionalism of your business by
-          increasing efficacy and simplifying interaction with your consumer."
-        />
-        <meta name="theme-color" content="#3781e3" />
-        <title>BOLDbot</title>
-        <link rel="manifest" href="/manifest.json" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-icon.png"></link>
-      </Head>
       <Script
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
