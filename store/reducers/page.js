@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import * as ActionTypes from "../ActionTypes";
 
 const initState = {
@@ -17,6 +18,7 @@ const pageReducer = (state = initState, action) => {
       };
 
     case ActionTypes.ADD_PAGE_SUCCESS:
+      toast.success("Page add success");
       return {
         ...state,
         isLoading: false,

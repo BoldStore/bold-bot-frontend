@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import * as ActionTypes from "../ActionTypes";
 
 const initState = {
@@ -18,6 +19,7 @@ const replyReducer = (state = initState, action) => {
       };
 
     case ActionTypes.ADD_STORY_REPLY_SUCCESS:
+      toast.success("Successfully added story reply");
       return {
         ...state,
         isLoading: false,

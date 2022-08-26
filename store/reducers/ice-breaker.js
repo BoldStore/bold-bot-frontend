@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import * as ActionTypes from "../ActionTypes";
 
 const initState = {
@@ -18,6 +19,7 @@ const iceBreakerReducer = (state = initState, action) => {
       };
 
     case ActionTypes.ADD_ICE_BREAKER_SUCCESS:
+      toast.success("Successfully added Ice Breakers");
       return {
         ...state,
         isLoading: false,

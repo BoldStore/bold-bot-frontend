@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import * as ActionTypes from "../ActionTypes";
 
 const initState = {
@@ -16,6 +17,7 @@ const contactReducer = (state = initState, action) => {
       };
 
     case ActionTypes.CONTACT_US_SUCCESS:
+      toast.success("Contact Successful");
       return {
         ...state,
         isLoading: false,

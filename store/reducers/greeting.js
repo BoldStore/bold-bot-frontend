@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import * as ActionTypes from "../ActionTypes";
 
 const initState = {
@@ -18,6 +19,7 @@ const greetingReducer = (state = initState, action) => {
       };
 
     case ActionTypes.ADD_GREETING_SUCCESS:
+      toast.success("Successfully added greeting");
       return {
         ...state,
         isLoading: false,

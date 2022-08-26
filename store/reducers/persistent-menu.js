@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import * as ActionTypes from "../ActionTypes";
 
 const initState = {
@@ -19,6 +20,7 @@ const persistentMenuReducer = (state = initState, action) => {
       };
 
     case ActionTypes.ADD_MENU_SUCCESS:
+      toast.success("Successfully added Persistent Menu");
       return {
         ...state,
         isLoading: false,

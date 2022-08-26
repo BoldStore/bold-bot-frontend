@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import * as ActionTypes from "../ActionTypes";
 
 const initState = {
@@ -18,6 +19,7 @@ const mentionReducer = (state = initState, action) => {
       };
 
     case ActionTypes.ADD_STORY_MENTION_SUCCESS:
+      toast.success("Successfully added Story Mention");
       return {
         ...state,
         isLoading: false,
