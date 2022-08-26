@@ -23,19 +23,18 @@ export const features = [
     imgSrc: "/assets/persistentMenu.png",
     pageHref: "/dashboard/persistent-menu",
   },
-  {
-    title: "Custom Replies",
-    desc: "Time is money here at BOLDbot, make your interactions with patrons faster with our custom reply feature. Employing this feature allows the user to design textual responses unique to trigger words. Custom replies cut out the need for multiple drop menus and make customer servicing rapid.",
-    backgroundImage:
-      "linear-gradient(90deg, hsla(167, 68%, 73%, 1) 0%, hsla(178, 59%, 48%, 1) 100%)",
-    backgroundColor: "#FBDA61",
-    imgSrc: "/assets/customReplies.png",
-    pageHref: "/dashboard/greetings",
-  },
+  // {
+  //   title: "Custom Replies",
+  //   desc: "Time is money here at BOLDbot, make your interactions with patrons faster with our custom reply feature. Employing this feature allows the user to design textual responses unique to trigger words. Custom replies cut out the need for multiple drop menus and make customer servicing rapid.",
+  //   backgroundImage:
+  //     "linear-gradient(90deg, hsla(167, 68%, 73%, 1) 0%, hsla(178, 59%, 48%, 1) 100%)",
+  //   backgroundColor: "#FBDA61",
+  //   imgSrc: "/assets/customReplies.png",
+  //   pageHref: "/dashboard/greetings",
+  // },
   {
     title: "Story Replies",
     desc: "Set customised automated replies whenever someone replies to your story with the keyword of your choice! This will help you take product advertisements and brand/event promotions to a new level. Set a custom word for your followers to reply to your story, then set a custom response to that word with respective information of that event/product, and relax while BOLDbot does the job for you!",
-
     backgroundImage: "linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%)",
     backgroundColor: "#FBDA61",
     imgSrc: "/assets/storyReplies.png",
