@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "start:prod": "NODE_ENV=production && yarn start"
   },
   "dependencies": {
     "@emotion/react": "^11.9.3",
