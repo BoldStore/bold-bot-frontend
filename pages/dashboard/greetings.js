@@ -9,6 +9,7 @@ import DashboardButton from "../../components/DashboardComponents/DashboardButto
 import { useDispatch, useSelector } from "react-redux";
 import { addGreeting, getGreeting } from "../../store/actions/greeting";
 import SEO from "../../components/SEO";
+import Loader from "../../components/Loader";
 
 function GreetingsPage() {
   const hasPlan = true;
@@ -57,7 +58,7 @@ function GreetingsPage() {
   }, [form]);
 
   if (greeting.isLoading) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
 
   return (

@@ -18,6 +18,7 @@ import {
   addStoryReplies,
   getStoryReplies,
 } from "../../store/actions/story-reply";
+import Loader from "../../components/Loader";
 
 function StoryRepliesPage() {
   const hasPlan = true;
@@ -101,16 +102,14 @@ function StoryRepliesPage() {
   }, [mentions.message, replies.message]);
 
   if (replies?.isLoading || mentions?.isLoading) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
 
   return (
     <div className={styles.pageDiv}>
       <SEO
-        title={"Story Replies and Mentions"}
-        desc={
-          "Automated never means generic here at Bold. These are the first responses to a buyer’s dm. Each store can customize its greetings to cater to the needs and wants of its clientele as well as target markets. Design your own custom greetings which define you as a store when interacting with patrons."
-        }
+        title={"Story Replies & Story Mentions"}
+        desc="Set customised automated replies whenever someone replies to your story with the keyword of your choice! This will help you take product advertisements and brand/event promotions to a new level! Convert your DMs into the automated assistant of your dreams with our custom templates to help sell your merchandise. Use our templates to link your products with ease."
       />
       <DashboardSidebar />
       <div className={styles.container}>
