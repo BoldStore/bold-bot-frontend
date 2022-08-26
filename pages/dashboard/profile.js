@@ -64,7 +64,6 @@ function ProfilePage() {
             <p className={styles.link}>Click Here To Buy A Plan.</p>
           </Link>
         )}
-
         <FAQs />
       </div>
     </div>
