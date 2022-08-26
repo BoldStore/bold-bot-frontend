@@ -10,7 +10,6 @@ import "../styles/App.scss";
 import Script from "next/script";
 import SEO from "../components/SEO";
 import RouteGuard from "../components/RouteGuard";
-import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   const dispatch = useDispatch();
