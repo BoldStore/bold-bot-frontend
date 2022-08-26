@@ -28,7 +28,7 @@ function SEO({ title, desc }) {
         },
         {
           property: "og:image",
-          itemprop: "image",
+          itemProp: "image",
           content: logoSrc,
         },
         {
@@ -40,7 +40,7 @@ function SEO({ title, desc }) {
           content: "BOLDbot",
         },
         {
-          itemprop: "thumbnailUrl",
+          itemProp: "thumbnailUrl",
           href: logoSrc,
         },
         {
