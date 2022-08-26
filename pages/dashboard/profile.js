@@ -42,16 +42,14 @@ function ProfilePage() {
       <DashboardSidebar />
       <div className={styles.container}>
         <ProfileCard />
-
         {user?.user?.pages?.length > 0 ? (
           <ConnectedPages />
         ) : (
           <>
-            <div>No pages connected</div>
+            <h6>No pages connected</h6>
             <DashboardButton onClick={connectPage} text="Connect Page" />
           </>
         )}
-
         <h4 className={styles.heading4}>My Plan</h4>
         {hasPlan ? (
           <Plan
