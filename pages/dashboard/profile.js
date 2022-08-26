@@ -6,7 +6,6 @@ import ConnectedPages from "../../components/DashboardComponents/ProfileComponen
 import Plan from "../../components/Plan";
 import FAQs from "../../components/FAQs";
 import styles from "../../styles/Profile.module.css";
-import InfluencerProgram from "../../components/DashboardComponents/InfluencerProgram";
 import { plans } from "../../components/OurPlans/plans";
 import SEO from "../../components/SEO";
 import { useDispatch, useSelector } from "react-redux";

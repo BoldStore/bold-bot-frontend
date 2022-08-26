@@ -10,10 +10,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { addIceBreaker, getIceBreaker } from "../../store/actions/ice-breaker";
 import Loader from "../../components/Loader";
 import SEO from "../../components/SEO";
+import { toast } from "react-toastify";
 
 function IceBreakerPage() {
   const hasPlan = true;
   const dispatch = useDispatch();
+  const user = useSelector((state) => state.user);
   const iceBreakerState = useSelector((state) => state.iceBreaker);
   const userState = useSelector((state) => state.user);
   const [form, setForm] = useState([
@@ -67,21 +69,24 @@ function IceBreakerPage() {
   };
 
   const submit = () => {
-    const ice_breakers = [];
-
-    form.forEach((item, index) => {
-      ice_breakers.push({
-        question: item.heading,
-        texts: [
-          {
-            key: index.toString(),
-            value: item.reply,
-          },
-        ],
+    if (userState?.user && userState?.user?.pages?.length > 0) {
+      const ice_breakers = [];
+      form.forEach((item, index) => {
+        ice_breakers.push({
+          question: item.heading,
+          texts: [
+            {
+              key: index.toString(),
+              value: item.reply,
+            },
+          ],
+        });
       });
-    });
-
-    dispatch(addIceBreaker(userState?.user?.pages[0]?.id, ice_breakers));
+      dispatch(addIceBreaker(userState?.user?.pages[0]?.id, ice_breakers));
+      toast.success("Your Ice Breakers are live on Instagram!", {
+        autoClose: 3000,
+      });
+    }
   };
 
   if (iceBreakerState?.isLoading) {

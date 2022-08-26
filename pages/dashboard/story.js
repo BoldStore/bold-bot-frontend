@@ -7,7 +7,6 @@ import { story } from "../../components/Lists/story";
 import styles from "../../styles/common.module.css";
 import DashboardButton from "../../components/DashboardComponents/DashboardButton";
 import { useDispatch, useSelector } from "react-redux";
-import { addGreeting, getGreeting } from "../../store/actions/greeting";
 import SEO from "../../components/SEO";
 import SecondaryInputComponent from "../../components/DashboardComponents/InputComponent/secondaryInput";
 import {
@@ -19,6 +18,7 @@ import {
   getStoryReplies,
 } from "../../store/actions/story-reply";
 import Loader from "../../components/Loader";
+import { toast } from "react-toastify";
 
 function StoryRepliesPage() {
   const hasPlan = true;
@@ -53,8 +53,6 @@ function StoryRepliesPage() {
         key: "1",
         value: form[1].value,
       });
-      dispatch(addStoryMention(user?.user?.pages[0].id, texts));
-
       // Story reply
       const replies = [];
       replies.push({
@@ -66,7 +64,18 @@ function StoryRepliesPage() {
           },
         ],
       });
-      dispatch(addStoryReplies(user?.user?.pages[0].id, replies));
+      if (form[1].value != "") {
+        dispatch(addStoryMention(user?.user?.pages[0].id, texts));
+        toast.success("Your Story Mention is live on Instagram!", {
+          autoClose: 3000,
+        });
+      }
+      if (form[0].reply != "" && form[0].heading != "") {
+        dispatch(addStoryReplies(user?.user?.pages[0].id, replies));
+        toast.success("Your Story Reply is live on Instagram!", {
+          autoClose: 3000,
+        });
+      }
     }
   };
 
@@ -113,7 +122,7 @@ function StoryRepliesPage() {
       />
       <DashboardSidebar />
       <div className={styles.container}>
-        <h3 className={styles.title}>Story Replies and Mentions</h3>
+        <h3 className={styles.title}>Story Replies &#38; Story Mentions</h3>
         <p className={styles.introPara}>
           Now you can reply to the story mentions and replies sent by customers!
         </p>
@@ -157,7 +166,6 @@ function StoryRepliesPage() {
             );
           }
         })}
-
         <DashboardButton text={"Save"} onClick={save} />
       </div>
     </div>

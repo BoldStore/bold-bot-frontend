@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addMenu, getMenu } from "../../store/actions/persistent-menu";
 import Loader from "../../components/Loader";
 import SEO from "../../components/SEO";
+import { toast } from "react-toastify";
 
 function PersistentMenu() {
   const hasPlan = true;
@@ -70,22 +71,25 @@ function PersistentMenu() {
   };
 
   const submit = () => {
-    const menu = [];
-    const web_data = null;
-
-    form.forEach((item, index) => {
-      menu.push({
-        question: item.heading,
-        texts: [
-          {
-            key: index.toString(),
-            value: item.reply,
-          },
-        ],
+    if (userState?.user && userState?.user?.pages?.length > 0) {
+      const menu = [];
+      const web_data = null;
+      form.forEach((item, index) => {
+        menu.push({
+          question: item.heading,
+          texts: [
+            {
+              key: index.toString(),
+              value: item.reply,
+            },
+          ],
+        });
       });
-    });
-
-    dispatch(addMenu(userState?.user?.pages[0]?.id, menu, web_data));
+      dispatch(addMenu(userState?.user?.pages[0]?.id, menu, web_data));
+      toast.success("Your Persistent Menu is live on Instagram!", {
+        autoClose: 3000,
+      });
+    }
   };
 
   if (menuState?.isLoading) {
