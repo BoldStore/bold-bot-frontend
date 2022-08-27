@@ -92,7 +92,7 @@ function StoryRepliesPage() {
         </p>
         <div>
           {/* <img
-            src="/assets/greetingExample.png"
+            src="/assets/storyReplyExample.png"
             alt="example"
             className={styles.img}
           /> */}

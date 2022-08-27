@@ -84,7 +84,7 @@ function StoryMentionsPage() {
         </p>
         <div>
           {/* <img
-            src="/assets/greetingExample.png"
+            src="/assets/storyMentionExample.png"
             alt="example"
             className={styles.img}
           /> */}
