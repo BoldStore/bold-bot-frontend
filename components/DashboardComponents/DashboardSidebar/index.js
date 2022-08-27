@@ -109,10 +109,10 @@ function DashboardSidebar() {
               <Link href="/dashboard/greetings">
                 <MenuItem icon={<EmojiPeopleRoundedIcon />}>Greetings</MenuItem>
               </Link>
-              <Link href="/dashboard/story-replies">
+              <Link href="/dashboard/story-reply">
                 <MenuItem icon={<ReplyRoundedIcon />}>Story Replies</MenuItem>
               </Link>
-              <Link href="/dashboard/story-mentions">
+              <Link href="/dashboard/story-mention">
                 <MenuItem icon={<ReplyRoundedIcon />}>Story Mentions</MenuItem>
               </Link>
               <Link href="/dashboard/ice-breakers">
