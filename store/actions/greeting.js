@@ -17,7 +17,11 @@ export const addGreeting = (pageId, texts) => {
     } catch (e) {
       dispatch({
         type: ActionTypes.ADD_GREETING_FAILED,
-        errmess: e.response?.data?.err?.message ?? e,
+        errmess:
+          e?.response?.data?.error?.message ??
+          e?.response?.data?.message ??
+          e?.response?.message ??
+          e,
       });
     }
   };

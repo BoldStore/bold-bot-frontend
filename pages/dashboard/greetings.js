@@ -10,7 +10,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { addGreeting, getGreeting } from "../../store/actions/greeting";
 import SEO from "../../components/SEO";
 import Loader from "../../components/Loader";
-import { toast } from "react-toastify";
 
 function GreetingsPage() {
   const hasPlan = true;
@@ -37,9 +36,6 @@ function GreetingsPage() {
   const saveGreeting = () => {
     if (user && user.user && user?.user?.pages?.length > 0) {
       disptach(addGreeting(user?.user?.pages[0].id, form));
-      toast.success("Your Greetings are live on Instagram!", {
-        autoClose: 3000,
-      });
     }
   };
 

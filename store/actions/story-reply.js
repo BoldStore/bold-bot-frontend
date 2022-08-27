@@ -17,7 +17,11 @@ export const addStoryReplies = (pageId, replies) => {
     } catch (e) {
       dispatch({
         type: ActionTypes.ADD_STORY_REPLY_FAILED,
-        errmess: e.response?.data?.error?.message ?? e,
+        errmess:
+          e?.response?.data?.error?.message ??
+          e?.response?.data?.message ??
+          e?.response?.message ??
+          e,
       });
     }
   };
@@ -35,7 +39,11 @@ export const getStoryReplies = (pageId) => {
     } catch (e) {
       dispatch({
         type: ActionTypes.GET_STORY_REPLY_FAILED,
-        errmess: e.response?.data?.error?.message ?? e,
+        errmess:
+          e?.response?.data?.error?.message ??
+          e?.response?.data?.message ??
+          e?.response?.message ??
+          e,
       });
     }
   };

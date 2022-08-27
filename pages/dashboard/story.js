@@ -18,7 +18,6 @@ import {
   getStoryReplies,
 } from "../../store/actions/story-reply";
 import Loader from "../../components/Loader";
-import { toast } from "react-toastify";
 
 function StoryRepliesPage() {
   const hasPlan = true;
@@ -66,15 +65,9 @@ function StoryRepliesPage() {
       });
       if (form[1].value != "") {
         dispatch(addStoryMention(user?.user?.pages[0].id, texts));
-        toast.success("Your Story Mention is live on Instagram!", {
-          autoClose: 3000,
-        });
       }
       if (form[0].reply != "" && form[0].heading != "") {
         dispatch(addStoryReplies(user?.user?.pages[0].id, replies));
-        toast.success("Your Story Reply is live on Instagram!", {
-          autoClose: 3000,
-        });
       }
     }
   };

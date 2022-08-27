@@ -18,7 +18,11 @@ export const addMenu = (pageId, menu, web_data) => {
     } catch (e) {
       dispatch({
         type: ActionTypes.ADD_MENU_FAILED,
-        errmess: e.response?.data?.err?.message ?? e,
+        errmess:
+          e?.response?.data?.error?.message ??
+          e?.response?.data?.message ??
+          e?.response?.message ??
+          e,
       });
     }
   };

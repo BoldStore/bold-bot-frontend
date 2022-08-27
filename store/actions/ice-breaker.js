@@ -17,7 +17,11 @@ export const addIceBreaker = (pageId, ice_breakers) => {
     } catch (e) {
       dispatch({
         type: ActionTypes.ADD_ICE_BREAKER_FAILED,
-        errmess: e.response?.data?.err?.message ?? e,
+        errmess:
+          e?.response?.data?.error?.message ??
+          e?.response?.data?.message ??
+          e?.response?.data ??
+          e,
       });
     }
   };

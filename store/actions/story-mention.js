@@ -17,7 +17,11 @@ export const addStoryMention = (pageId, texts) => {
     } catch (e) {
       dispatch({
         type: ActionTypes.ADD_STORY_MENTION_FAILED,
-        errmess: e.response?.data?.error?.message ?? e,
+        errmess:
+          e?.response?.data?.error?.message ??
+          e?.response?.data?.message ??
+          e?.response?.message ??
+          e,
       });
     }
   };
@@ -35,7 +39,11 @@ export const getStoryMentions = (pageId) => {
     } catch (e) {
       dispatch({
         type: ActionTypes.GET_STORY_MENTION_FAILED,
-        errmess: e.response?.data?.error?.message ?? e,
+        errmess:
+          e?.response?.data?.error?.message ??
+          e?.response?.data?.message ??
+          e?.response?.message ??
+          e,
       });
     }
   };

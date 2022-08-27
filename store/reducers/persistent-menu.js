@@ -31,6 +31,7 @@ const persistentMenuReducer = (state = initState, action) => {
       };
 
     case ActionTypes.ADD_MENU_FAILED:
+      toast.error(action?.errmess?.toString() ?? "Error in adding Menu");
       return {
         ...state,
         isLoading: false,

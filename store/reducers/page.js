@@ -28,6 +28,7 @@ const pageReducer = (state = initState, action) => {
       };
 
     case ActionTypes.ADD_PAGE_FAILED:
+      toast.error(action?.errmess?.toString() ?? "Error in adding page");
       return {
         ...state,
         isLoading: false,

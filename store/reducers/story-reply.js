@@ -29,6 +29,7 @@ const replyReducer = (state = initState, action) => {
       };
 
     case ActionTypes.ADD_STORY_REPLY_FAILED:
+      toast.error(action?.errmess?.toString() ?? "Error in adding story reply");
       return {
         ...state,
         isLoading: false,

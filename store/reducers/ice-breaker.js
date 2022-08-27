@@ -29,6 +29,9 @@ const iceBreakerReducer = (state = initState, action) => {
       };
 
     case ActionTypes.ADD_ICE_BREAKER_FAILED:
+      toast.error(
+        action?.errmess?.toString() ?? "Error in adding Ice Breakers"
+      );
       return {
         ...state,
         isLoading: false,

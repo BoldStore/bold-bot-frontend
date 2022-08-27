@@ -10,12 +10,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { addIceBreaker, getIceBreaker } from "../../store/actions/ice-breaker";
 import Loader from "../../components/Loader";
 import SEO from "../../components/SEO";
-import { toast } from "react-toastify";
 
 function IceBreakerPage() {
   const hasPlan = true;
   const dispatch = useDispatch();
-  const user = useSelector((state) => state.user);
   const iceBreakerState = useSelector((state) => state.iceBreaker);
   const userState = useSelector((state) => state.user);
   const [form, setForm] = useState([
@@ -52,7 +50,10 @@ function IceBreakerPage() {
   }, [iceBreakerState.iceBreakers]);
 
   const setData = () => {
-    if (iceBreakerState?.iceBreakers) {
+    if (
+      iceBreakerState?.iceBreakers &&
+      iceBreakerState?.iceBreakers.length > 0
+    ) {
       const ice_breakers = [];
 
       iceBreakerState.iceBreakers.forEach((iceBreaker, index) => {
@@ -83,9 +84,6 @@ function IceBreakerPage() {
         });
       });
       dispatch(addIceBreaker(userState?.user?.pages[0]?.id, ice_breakers));
-      toast.success("Your Ice Breakers are live on Instagram!", {
-        autoClose: 3000,
-      });
     }
   };
 
@@ -98,7 +96,7 @@ function IceBreakerPage() {
       <SEO
         title={"Ice Breakers"}
         desc={
-          "Increase efficiency of service by introducing ice breakers to your customer’s DMs. These standardised texts cover certain frequently asked questions for your patrons to choose from. This allows the customer to verbalise and convey their concerns or queries to the store with ease."
+          "Increase efficiency of service by introducing ice breakers to your customer's DMs. These standardised texts cover certain frequently asked questions for your patrons to choose from. This allows the customer to verbalise and convey their concerns or queries to the store with ease."
         }
       />
       <DashboardSidebar />

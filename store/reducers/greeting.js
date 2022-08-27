@@ -29,6 +29,7 @@ const greetingReducer = (state = initState, action) => {
       };
 
     case ActionTypes.ADD_GREETING_FAILED:
+      toast.error(action?.errmess?.toString() ?? "Error in adding greeting");
       return {
         ...state,
         isLoading: false,

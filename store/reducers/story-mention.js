@@ -29,6 +29,9 @@ const mentionReducer = (state = initState, action) => {
       };
 
     case ActionTypes.ADD_STORY_MENTION_FAILED:
+      toast.error(
+        action?.errmess?.toString() ?? "Error in adding Story mention"
+      );
       return {
         ...state,
         isLoading: false,
