@@ -73,7 +73,7 @@ function GreetingsPage() {
       <div className={styles.container}>
         <h3 className={styles.title}>Greetings</h3>
         <p className={styles.introPara}>
-          Custom greetings are the first responses to a buyer&apos;s dm, design
+          Custom greetings are the first responses to a buyer&apos;s DM, design
           your own automated replies which define you as a brand.
         </p>
         <div>

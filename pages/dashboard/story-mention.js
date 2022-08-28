@@ -13,7 +13,6 @@ import {
   getStoryMentions,
 } from "../../store/actions/story-mention";
 import Loader from "../../components/Loader";
-import { toast } from "react-toastify";
 
 function StoryMentionsPage() {
   const hasPlan = true;
