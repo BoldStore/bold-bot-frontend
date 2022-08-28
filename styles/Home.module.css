@@ -3,8 +3,15 @@
 }
 
 .gettingStartedContainer {
-  padding: 0rem 2rem;
+  padding: 0rem 4rem;
   margin-top: 6rem;
+}
+
+@media (max-width: 1024px) {
+  .gettingStartedContainer {
+    padding: 0rem 2rem;
+    margin-top: 5rem;
+  }
 }
 
 @media (max-width: 640px) {
@@ -14,6 +21,6 @@
 
   .gettingStartedContainer {
     padding: 0rem 1rem;
-    margin-top: 6rem;
+    margin-top: 4.5rem;
   }
 }
