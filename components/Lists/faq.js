@@ -2,7 +2,7 @@ export const faqs = [
   {
     heading: "What is BOLDbot?",
     answer:
-      "BOLDbot is a chatbot based in the principle of automated interaction. It restructures the formatting of the Direct messaging or ‘DM’ system to cater a service of predetermined texts. These texts may range from the above defined– custom greetings, ice breakers, persistent menus and quick replies.",
+      "BOLDbot is a chatbot based in the principle of automated interaction. It restructures the formatting of the Direct messaging or ‘DM’ system to cater a service of predetermined texts. These texts may range from the above defined – custom greetings, ice breakers, persistent menus, story mentions and story replies.",
   },
   {
     heading: "Who are BOLDbot’s users?",
