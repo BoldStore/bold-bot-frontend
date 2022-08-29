@@ -38,7 +38,7 @@ export const features = [
     backgroundImage: "linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%)",
     backgroundColor: "#FBDA61",
     imgSrc: "/assets/storyReplies.png",
-    pageHref: "/dashboard/story-reply",
+    pageHref: "/dashboard/story-replies",
   },
   {
     title: "Story Mentions",
@@ -46,6 +46,6 @@ export const features = [
     backgroundImage: "linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%)",
     backgroundColor: "#304352",
     imgSrc: "/assets/storyMentions.png",
-    pageHref: "/dashboard/story-mention",
+    pageHref: "/dashboard/story-mentions",
   },
 ];
