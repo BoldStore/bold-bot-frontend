@@ -79,11 +79,11 @@ function Banner() {
         <h1 className={styles.heading}>
           BOLD<span className={styles.gradientText}>bot</span>
         </h1>
-        <p className={styles.para}>
+        <h6 className={styles.para}>
           BOLDbot is the next step in automating customer service for Instagram
           businesses. It levels up the professionalism of your business by
           increasing efficacy and simplifying interaction with your consumer.
-        </p>
+        </h6>
         <FacebookButton />
       </div>
     </div>

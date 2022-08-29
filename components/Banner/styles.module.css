@@ -57,8 +57,10 @@
 }
 
 .para {
+  margin-top: 1rem;
   margin-bottom: 1.5rem;
   width: 90%;
+  color: var(--grey);
 }
 
 .backgroundGradient {
@@ -91,6 +93,7 @@
 
   .para {
     width: 100%;
+    margin-top: 0.75rem;
   }
 }
 
@@ -124,6 +127,7 @@
 
   .para {
     width: 90%;
+    margin-top: 0.5rem;
     margin-bottom: 1.25rem;
   }
 

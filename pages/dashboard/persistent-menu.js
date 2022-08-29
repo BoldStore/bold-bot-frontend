@@ -107,7 +107,7 @@ function PersistentMenu() {
           The persistent menu in the tab section allows for customers to
           navigate the conversation better by giving them the option of not just
           starting over but also the choice to introduce other points of
-          interest .
+          interest.
         </p>
         <div>
           {/* <img

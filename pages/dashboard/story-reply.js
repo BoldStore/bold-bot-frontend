@@ -19,7 +19,6 @@ function StoryRepliesPage() {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
   const replies = useSelector((state) => state.reply);
-  const mentions = useSelector((state) => state.mention);
   const [form, setForm] = useState([
     {
       key: "story-reply",
@@ -47,7 +46,6 @@ function StoryRepliesPage() {
           },
         ],
       });
-
       if (form[0].reply != "" && form[0].heading != "") {
         dispatch(addStoryReplies(user?.user?.pages[0].id, replies));
       }
@@ -85,19 +83,17 @@ function StoryRepliesPage() {
       <div className={styles.container}>
         <h3 className={styles.title}>Story Replies</h3>
         <p className={styles.introPara}>
-          Set customisable automated replies whenever someone replies to your
-          story! You can choose a specific keyword that you want to set the
-          automated replies for. Handling story campaigns and marketing has
-          never been easier.
+          Set customised automated replies whenever someone replies to your
+          story with the keyword of your choice! This will help you take product
+          advertisements and brand/event promotions to a new level.
         </p>
         <div>
           {/* <img
-            src="/assets/greetingExample.png"
+            src="/assets/storyReplyExample.png"
             alt="example"
             className={styles.img}
           /> */}
         </div>
-
         {story.map((item, i) => {
           if (item.placeholderReply && item.placeholderHeading) {
             return (

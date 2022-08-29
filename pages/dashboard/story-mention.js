@@ -13,7 +13,6 @@ import {
   getStoryMentions,
 } from "../../store/actions/story-mention";
 import Loader from "../../components/Loader";
-import { toast } from "react-toastify";
 
 function StoryMentionsPage() {
   const hasPlan = true;
@@ -84,7 +83,7 @@ function StoryMentionsPage() {
         </p>
         <div>
           {/* <img
-            src="/assets/greetingExample.png"
+            src="/assets/storyMentionExample.png"
             alt="example"
             className={styles.img}
           /> */}
