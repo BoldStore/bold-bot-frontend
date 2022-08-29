@@ -65,4 +65,6 @@ jobs:
 
   deploy:
     runs-on: self-hosted
-    run: sudo pm2 restart boldbot
+    needs: build
+    steps:
+      -run: sudo pm2 restart boldbot
