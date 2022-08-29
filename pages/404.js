@@ -7,7 +7,7 @@ import styles from "../styles/Error.module.css";
 function Page404() {
   return (
     <>
-      <SEO title={"Error: 404"} />
+      <SEO title={"Error 404: Page Not Found"} />
       <Header />
       <div className={styles.container}>
         <div className={styles.gradient}>

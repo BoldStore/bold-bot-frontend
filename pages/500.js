@@ -7,7 +7,7 @@ import styles from "../styles/Error.module.css";
 function Page500() {
   return (
     <>
-      <SEO title={"Error: 500"} />
+      <SEO title={"Error 500: Internal Server Error"} />
       <Header />
       <div className={styles.container}>
         <div className={styles.gradient}>
