@@ -1,7 +1,7 @@
 export const iceBreakers = [
   {
     title: "Ice Breaker 1",
-    placeholderHeading: "Customer Support",
+    placeholderHeading: "Ex: Customer Support",
     placeholderReply:
       "Ex: You can visit our customer support website at: http://www.boldbot.in/customer-support to contact our customer support!",
     key: "iceBreaker1",
