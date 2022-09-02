@@ -111,7 +111,7 @@ function DashboardSidebar() {
                 <MenuItem icon={<EmojiPeopleRoundedIcon />}>Greetings</MenuItem>
               </Link>
               <Link href="/dashboard/story-replies">
-                <MenuItem icon={<ReplyRoundedIcon />}>Story Replies</MenuItem>
+                <MenuItem icon={<ReplyRoundedIcon />}>Story Replies </MenuItem>
               </Link>
               <Link href="/dashboard/story-mentions">
                 <MenuItem icon={<MarkChatUnreadRoundedIcon />}>
