@@ -9,6 +9,15 @@ export const addPage = (
   expires_in,
   long_lived_token
 ) => {
+  if (
+    !(
+      access_token &&
+      data_access_expiration_time &&
+      expires_in &&
+      long_lived_token
+    )
+  )
+    return;
   return async (dispatch) => {
     dispatch({ type: ActionTypes.ADD_PAGE_REQUEST });
     try {
