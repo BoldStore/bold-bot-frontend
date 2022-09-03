@@ -8,7 +8,7 @@ export const SCOPE = "instagram_manage_messages";
 
 export const REDIRECT_URI = "https://boldbot.in/facebook-page/";
 
-export const API_URL = "http://localhost:3001/";
+export const API_URL = "https://api.boldbot.in/";
 
 export const GET_USER = "/user/me";
 
