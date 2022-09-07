@@ -19,6 +19,16 @@ function FacebookPage() {
     const expires_in = query.expires_in;
     const long_lived_token = query.long_lived_token;
 
+    // if (
+    //   !(
+    //     access_token &&
+    //     data_access_expiration_time &&
+    //     expires_in &&
+    //     long_lived_token
+    //   )
+    // )
+    //   return;
+
     dispatch(
       addPage(
         access_token,
