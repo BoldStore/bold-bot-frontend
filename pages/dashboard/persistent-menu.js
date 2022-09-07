@@ -49,7 +49,7 @@ function PersistentMenu() {
       const menu_items = [];
 
       menuState.menu.forEach((menu, index) => {
-        if (menu?.texts?.length > 0)
+        if (menu?.texts?.length > 0 && index <= 1)
           menu_items.push({
             key: "menuOption" + (index + 1).toString(),
             heading: menu?.question,
@@ -63,6 +63,12 @@ function PersistentMenu() {
           heading: menuState?.web_data?.texts[0]?.key,
           reply: menuState?.web_data?.texts[0]?.value,
         });
+      } else {
+        menu_items.push({
+          key: "storeLink",
+          heading: "",
+          reply: "",
+        });
       }
 
       setForm(menu_items);
@@ -72,18 +78,26 @@ function PersistentMenu() {
   const submit = () => {
     if (userState?.user && userState?.user?.pages?.length > 0) {
       const menu = [];
-      const web_data = null;
+      let web_data = null;
       form.forEach((item, index) => {
-        menu.push({
-          question: item.heading,
-          texts: [
-            {
-              key: index.toString(),
-              value: item.reply,
-            },
-          ],
-        });
+        if (item.key !== "storeLink")
+          menu.push({
+            question: item.heading,
+            texts: [
+              {
+                key: index.toString(),
+                value: item.reply,
+              },
+            ],
+          });
       });
+      const web = form.find((e) => e.key == "storeLink");
+      if (web && web.key && web.reply) {
+        web_data = {
+          url: web.reply,
+          title: web.heading,
+        };
+      }
       dispatch(addMenu(userState?.user?.pages[0]?.id, menu, web_data));
     }
   };

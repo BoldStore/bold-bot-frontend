@@ -51,7 +51,7 @@ const persistentMenuReducer = (state = initState, action) => {
         isLoading: false,
         errmess: null,
         menu: action?.data?.filter((item) => item.question !== null),
-        web_data: action?.data?.find((item) => item.question === null),
+        web_data: action?.data?.find((item) => item.question == null),
         get_success: true,
       };
 

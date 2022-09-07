@@ -33,15 +33,15 @@ function StoryMentionsPage() {
   }, [user.user]);
 
   const save = () => {
-    if (user && user.user && user?.user?.pages?.length > 0) {
+    if (user && user?.user && user?.user?.pages?.length > 0) {
       // Story mention
       const texts = [];
       texts.push({
         key: "1",
-        value: form[1].value,
+        value: form[0].value,
       });
 
-      if (form[1].value != "") {
+      if (form[0].value != "") {
         dispatch(addStoryMention(user?.user?.pages[0].id, texts));
       }
     }
