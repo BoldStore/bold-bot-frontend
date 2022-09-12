@@ -4,8 +4,7 @@ export const FACEBOOK_AUTH_URL = "https://www.facebook.com/v14.0/dialog/oauth";
 
 export const CLIENT_ID = "1187703702070626";
 
-export const SCOPE =
-  "instagram_manage_messages,instagram_basic,pages_show_list,pages_manage_metadata,pages_messaging,pages_read_engagement";
+export const SCOPE = "instagram_manage_messages,instagram_basic";
 
 export const REDIRECT_URI = "https://boldbot.in/facebook-page/";
 
