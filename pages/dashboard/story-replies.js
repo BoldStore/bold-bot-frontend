@@ -88,11 +88,11 @@ function StoryRepliesPage() {
           advertisements and brand/event promotions to a new level.
         </p>
         <div>
-          {/* <img
+          <img
             src="/assets/storyReplyExample.png"
             alt="example"
             className={styles.img}
-          /> */}
+          />
         </div>
         {story.map((item, i) => {
           if (item.placeholderReply && item.placeholderHeading) {

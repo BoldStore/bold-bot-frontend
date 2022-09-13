@@ -124,11 +124,11 @@ function PersistentMenu() {
           interest.
         </p>
         <div>
-          {/* <img
+          <img
             src="/assets/persistentMenuExample.png"
             alt="example"
             className={styles.img}
-          /> */}
+          />
         </div>
         {persistentMenu.map((item, i) => (
           <SecondaryInputComponent

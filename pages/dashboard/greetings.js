@@ -77,11 +77,11 @@ function GreetingsPage() {
           your own automated replies which define you as a brand.
         </p>
         <div>
-          {/* <img
+          <img
             src="/assets/greetingExample.png"
             alt="example"
             className={styles.img}
-          /> */}
+          />
         </div>
         {greetings.map((item, i) => (
           <InputComponent

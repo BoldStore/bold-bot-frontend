@@ -108,11 +108,11 @@ function IceBreakerPage() {
           FAQs.
         </p>
         <div>
-          {/* <img
+          <img
             src="/assets/iceBreakerExample.png"
             alt="example"
             className={styles.img}
-          /> */}
+          />
         </div>
         {iceBreakers.map((item, i) => (
           <SecondaryInputComponent

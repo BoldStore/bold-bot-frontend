@@ -82,11 +82,11 @@ function StoryMentionsPage() {
           going with patrons and followers.
         </p>
         <div>
-          {/* <img
+          <img
             src="/assets/storyMentionExample.png"
             alt="example"
             className={styles.img}
-          /> */}
+          />
         </div>
 
         {story.map((item, i) => {
