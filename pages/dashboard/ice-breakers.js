@@ -46,6 +46,12 @@ function IceBreakerPage() {
   }, [userState.user]);
 
   useEffect(() => {
+    if (userState?.user && userState?.user?.pages?.length > 0) {
+      dispatch(getIceBreaker(userState?.user.pages[0]?.id));
+    }
+  }, []);
+
+  useEffect(() => {
     setData();
   }, [iceBreakerState.iceBreakers]);
 

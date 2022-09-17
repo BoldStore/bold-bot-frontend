@@ -32,6 +32,12 @@ function StoryMentionsPage() {
     }
   }, [user.user]);
 
+  useEffect(() => {
+    if (user && user.user && user?.user?.pages?.length > 0) {
+      dispatch(getStoryMentions(user?.user?.pages[0].id));
+    }
+  }, []);
+
   const save = () => {
     if (user && user?.user && user?.user?.pages?.length > 0) {
       // Story mention

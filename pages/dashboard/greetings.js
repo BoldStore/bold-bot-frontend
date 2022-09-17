@@ -33,6 +33,12 @@ function GreetingsPage() {
     }
   }, [user.user]);
 
+  useEffect(() => {
+    if (user && user.user && user?.user?.pages?.length > 0) {
+      disptach(getGreeting(user?.user?.pages[0].id));
+    }
+  }, []);
+
   const saveGreeting = () => {
     if (user && user.user && user?.user?.pages?.length > 0) {
       disptach(addGreeting(user?.user?.pages[0].id, form));
@@ -52,10 +58,6 @@ function GreetingsPage() {
       setForm(arr);
     }
   }, [greeting.message]);
-
-  useEffect(() => {
-    console.log(form);
-  }, [form]);
 
   if (greeting.isLoading) {
     return <Loader />;

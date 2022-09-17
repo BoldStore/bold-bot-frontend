@@ -41,6 +41,12 @@ function PersistentMenu() {
   }, [userState?.user]);
 
   useEffect(() => {
+    if (userState?.user && userState?.user?.pages?.length > 0) {
+      dispatch(getMenu(userState?.user?.pages[0]?.id));
+    }
+  }, []);
+
+  useEffect(() => {
     setData();
   }, [menuState?.menu || menuState?.web_data]);
 
