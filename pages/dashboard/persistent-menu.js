@@ -22,11 +22,11 @@ function PersistentMenu() {
       heading: "",
       reply: "",
     },
-    {
-      key: "menuOption2",
-      heading: "",
-      reply: "",
-    },
+    // {
+    //   key: "menuOption2",
+    //   heading: "",
+    //   reply: "",
+    // },
     {
       key: "storeLink",
       heading: "",
@@ -109,7 +109,7 @@ function PersistentMenu() {
         question: "Live Agent",
         texts: [
           {
-            key: "2",
+            key: "1",
             value:
               "Ok, I'm transferring you to a live agent now. A real person will be with you soon. Feel free to add any additional details now.",
           },
