@@ -106,11 +106,16 @@ function PersistentMenu() {
       }
       //FOR LIVE AGENT PM, TEMPORARY DELETE AFTER APPROVAL
       menu.push({
-        key: "menuOption3",
-        heading: "Live Agent",
-        reply:
-          "Ok, I'm transferring you to a live agent now. A real person will be with you soon. Feel free to add any additional details now.",
+        question: "Live Agent",
+        texts: [
+          {
+            key: "2",
+            value:
+              "Ok, I'm transferring you to a live agent now. A real person will be with you soon. Feel free to add any additional details now.",
+          },
+        ],
       });
+      console.log("MENU >>>", menu);
       dispatch(addMenu(userState?.user?.pages[0]?.id, menu, web_data));
     }
   };
