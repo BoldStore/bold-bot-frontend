@@ -21,6 +21,7 @@ function OurPlans() {
               planDesc={item.planDesc}
               planPrice={item.planPrice}
               icons={item.icons}
+              noButton={true}
             />
           );
         })}
@@ -43,6 +44,7 @@ function OurPlans() {
                   planDesc={item.planDesc}
                   planPrice={item.planPrice}
                   icons={item.icons}
+                  noButton={true}
                 />
               </SwiperSlide>
             );
