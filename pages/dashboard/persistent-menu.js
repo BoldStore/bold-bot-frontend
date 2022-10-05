@@ -104,6 +104,13 @@ function PersistentMenu() {
           title: web.heading,
         };
       }
+      //FOR LIVE AGENT PM, TEMPORARY DELETE AFTER APPROVAL
+      menu.push({
+        key: "menuOption3",
+        heading: "Live Agent",
+        reply:
+          "Ok, I'm transferring you to a live agent now. A real person will be with you soon. Feel free to add any additional details now.",
+      });
       dispatch(addMenu(userState?.user?.pages[0]?.id, menu, web_data));
     }
   };
