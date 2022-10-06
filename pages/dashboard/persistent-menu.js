@@ -22,11 +22,11 @@ function PersistentMenu() {
       heading: "",
       reply: "",
     },
-    // {
-    //   key: "menuOption2",
-    //   heading: "",
-    //   reply: "",
-    // },
+    {
+      key: "menuOption2",
+      heading: "",
+      reply: "",
+    },
     {
       key: "storeLink",
       heading: "",
@@ -104,18 +104,7 @@ function PersistentMenu() {
           title: web.heading,
         };
       }
-      //FOR LIVE AGENT PM, TEMPORARY DELETE AFTER APPROVAL
-      menu.push({
-        question: "Live Agent",
-        texts: [
-          {
-            key: "1",
-            value:
-              "Ok, I'm transferring you to a live agent now. A real person will be with you soon. Feel free to add any additional details now.",
-          },
-        ],
-      });
-      console.log("MENU >>>", menu);
+
       dispatch(addMenu(userState?.user?.pages[0]?.id, menu, web_data));
     }
   };

@@ -6,13 +6,13 @@ export const persistentMenu = [
       "Ex: You can visit our website at: http://www.boldbot.in to know more!",
     key: "menuOption1",
   },
-  // {
-  //   title: "Menu Option 2",
-  //   placeholderHeading: "Ex: Buy Products",
-  //   placeholderReply:
-  //     "Ex: You can buy our products at: http://www.boldbot.in/shop!",
-  //   key: "menuOption2",
-  // },
+  {
+    title: "Menu Option 2",
+    placeholderHeading: "Ex: Buy Products",
+    placeholderReply:
+      "Ex: You can buy our products at: http://www.boldbot.in/shop!",
+    key: "menuOption2",
+  },
   {
     title: "Website Link",
     placeholderHeading: "Ex: Visit Our Website",
