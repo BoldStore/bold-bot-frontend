@@ -20,7 +20,7 @@ function ConnectedPages() {
         </div>
         <h6>Page ID : {userState?.user?.pages[0]?.page_id}</h6>
       </div>
-      <h5>Instagram Ad Account Connected To The Page</h5>
+      <h5>Instagram Account Connected To The Page</h5>
       <div className={styles.flex}>
         <div className={styles.displayFlex}>
           <img
@@ -30,7 +30,7 @@ function ConnectedPages() {
           />
           <h6>@{userState?.user?.pages[0]?.insta_username}</h6>
         </div>
-        <h6>Ad Account ID : {userState?.user?.pages[0]?.insta_id}</h6>
+        <h6>Instagram ID : {userState?.user?.pages[0]?.insta_id}</h6>
       </div>
       {/* <p className={styles.example}>Having Trouble? Click Here.</p> */}
     </div>
