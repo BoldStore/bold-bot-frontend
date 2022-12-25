@@ -7,7 +7,7 @@ const initState = {
   user: null,
   subscription: null,
   plan: null,
-  stats: null,
+  stats: [],
 };
 
 const userReducer = (state = initState, action) => {
@@ -71,7 +71,7 @@ const userReducer = (state = initState, action) => {
         ...state,
         isLoading: false,
         errmess: null,
-        stats: action.data,
+        stats: action?.data?.count ?? [],
       };
 
     case ActionTypes.GET_STATS_FAILED:
