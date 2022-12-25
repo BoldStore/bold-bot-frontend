@@ -5,7 +5,6 @@ import DashboardSidebar from "../../components/DashboardComponents/DashboardSide
 import OverviewCard from "../../components/DashboardComponents/OverviewCard";
 import { features } from "../../components/Feature/features";
 import SEO from "../../components/SEO";
-import { plans } from "../../components/OurPlans/plans";
 import Plan from "../../components/Plan";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -81,7 +80,7 @@ function Dashboard() {
                     0
                   }
                   status={
-                    stats?.filter((e) => e.service == item.id).length > 0
+                    stats?.filter((e) => e.serviceName == item.id).length > 0
                       ? "Active"
                       : "Inactive"
                   }

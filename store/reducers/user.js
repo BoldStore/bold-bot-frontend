@@ -71,7 +71,7 @@ const userReducer = (state = initState, action) => {
         ...state,
         isLoading: false,
         errmess: null,
-        stats: action?.data?.count ?? [],
+        stats: action?.data ?? [],
       };
 
     case ActionTypes.GET_STATS_FAILED:
