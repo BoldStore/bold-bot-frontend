@@ -4,14 +4,22 @@ import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import Link from "next/link";
 
-function OverviewCard({ title, used, total, pageHref, comingSoon }) {
+function OverviewCard({
+  title,
+  used,
+  total,
+  pageHref,
+  comingSoon,
+  interactions,
+  status,
+}) {
   return (
     <Link href={pageHref} passHref={true}>
       <div className={styles.container}>
         <div className={styles.titleFlex}>
           <h5>{title}</h5>
           <h6 className={styles.completeText}>
-            Status: <span className={styles.complete}>Inactive</span>
+            Status: <span className={styles.complete}>{status}</span>
           </h6>
         </div>
         {comingSoon ? (
@@ -35,7 +43,7 @@ function OverviewCard({ title, used, total, pageHref, comingSoon }) {
             </div>
             <h6 className={styles.completeText}>
               Interactions Completed :
-              <span className={styles.complete}> 0</span>
+              <span className={styles.complete}> {interactions}</span>
             </h6>
           </div>
         )}

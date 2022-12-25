@@ -5,6 +5,9 @@ const initState = {
   errmess: null,
   success: false,
   user: null,
+  subscription: null,
+  plan: null,
+  stats: null,
 };
 
 const userReducer = (state = initState, action) => {
@@ -22,6 +25,8 @@ const userReducer = (state = initState, action) => {
         isLoading: false,
         errmess: null,
         user: action.data,
+        subscription: action.data.subscription,
+        plan: action.data.plan,
       };
 
     case ActionTypes.GET_USER_FAILED:
@@ -48,6 +53,28 @@ const userReducer = (state = initState, action) => {
       };
 
     case ActionTypes.CREATE_USER_FAILED:
+      return {
+        ...state,
+        isLoading: false,
+        errmess: action.errmess,
+      };
+
+    case ActionTypes.GET_STATS_REQUEST:
+      return {
+        ...state,
+        isLoading: true,
+        errmess: null,
+      };
+
+    case ActionTypes.GET_STATS_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        errmess: null,
+        stats: action.data,
+      };
+
+    case ActionTypes.GET_STATS_FAILED:
       return {
         ...state,
         isLoading: false,
