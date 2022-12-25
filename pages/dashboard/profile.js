@@ -6,7 +6,6 @@ import ConnectedPages from "../../components/DashboardComponents/ProfileComponen
 import Plan from "../../components/Plan";
 import FAQs from "../../components/FAQs";
 import styles from "../../styles/Profile.module.css";
-import { plans } from "../../components/OurPlans/plans";
 import SEO from "../../components/SEO";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "../../store/actions/user";
@@ -24,11 +23,11 @@ function ProfilePage() {
   const router = useRouter();
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
+  const plan = useSelector((state) => state.user.plan);
 
   useEffect(() => {
     dispatch(getUser());
   }, []);
-  const hasPlan = true;
 
   const connectPage = () => {
     const url = `${FACEBOOK_AUTH_URL}?response_type=token&display=popup&client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${SCOPE}`;
@@ -50,12 +49,12 @@ function ProfilePage() {
           </>
         )}
         <h4 className={styles.heading4}>My Plan</h4>
-        {hasPlan ? (
+        {plan ? (
           <Plan
-            planName={plans[0].planName}
-            planDesc={plans[0].planDesc}
-            planPrice={plans[0].planPrice}
-            icons={plans[0].icons}
+            planName={plan.name}
+            planDesc={plan.description}
+            planPrice={plan.price}
+            icons={[]}
             noButton={true}
           />
         ) : (

@@ -13,6 +13,10 @@ export const API_URL = "http://localhost:3001/";
 
 export const GET_USER = "/user/me";
 
+export const GET_STATS = "/stats";
+
+export const GET_PLANS = "/transaction/plan";
+
 export const CREATE_USER = "/user";
 
 export const ADD_PAGE = "/user/page";
