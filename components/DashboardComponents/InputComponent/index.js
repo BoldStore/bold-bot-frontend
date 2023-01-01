@@ -45,7 +45,7 @@ function InputComponent({
         disabled={disable}
         {...register(fieldName)}
       />
-      {error}
+      {error && <p className={styles.error}>{error}</p>}
     </div>
   );
 }
