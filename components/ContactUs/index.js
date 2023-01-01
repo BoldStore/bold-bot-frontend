@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import InputComponent from '../DashboardComponents/InputComponent';
 import DashboardButton from '../DashboardComponents/DashboardButton';
 import { contactUs } from './contactUs';
-import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 import { contactBold } from '../../store/actions/contact';
 import { useForm } from 'react-hook-form';
