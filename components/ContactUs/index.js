@@ -8,7 +8,7 @@ import { useDispatch } from 'react-redux';
 import { contactBold } from '../../store/actions/contact';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { contactValidationSchema } from './schema';
+import { contactValidationSchema } from '../Schemas/contactSchema';
 
 function ContactUs() {
   const dispatch = useDispatch();
