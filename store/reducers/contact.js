@@ -1,5 +1,5 @@
-import { toast } from "react-toastify";
-import * as ActionTypes from "../ActionTypes";
+import { toast } from 'react-toastify';
+import * as ActionTypes from '../ActionTypes';
 
 const initState = {
   isLoading: false,
@@ -17,7 +17,9 @@ const contactReducer = (state = initState, action) => {
       };
 
     case ActionTypes.CONTACT_US_SUCCESS:
-      toast.success("Contact Successful");
+      toast.success('Form Submitted Successfully!', {
+        autoClose: 3000,
+      });
       return {
         ...state,
         isLoading: false,
@@ -26,6 +28,10 @@ const contactReducer = (state = initState, action) => {
       };
 
     case ActionTypes.CONTACT_US_FAILED:
+      toast.error(action?.errmess?.toString() ?? 'Error in submiting', {
+        autoClose: 3000,
+      });
+
       return {
         ...state,
         isLoading: false,

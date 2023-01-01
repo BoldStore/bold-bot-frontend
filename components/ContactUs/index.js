@@ -25,9 +25,6 @@ function ContactUs() {
   const contactSubmitHandler = async (data) => {
     console.log('data', data);
     await dispatch(contactBold(data));
-    toast.success('Form Submitted Successfully!', {
-      autoClose: 3000,
-    });
   };
 
   return (
