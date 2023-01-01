@@ -1,16 +1,16 @@
-import "../styles/globals.css";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { wrapper } from "../store/configureStore";
-import { useEffect } from "react";
-import { auth } from "../firebaseConfig";
-import { useDispatch, useSelector } from "react-redux";
-import { getUser } from "../store/actions/user";
-import "../styles/App.scss";
-import Script from "next/script";
-import SEO from "../components/SEO";
-import RouteGuard from "../components/RouteGuard";
-import Head from "next/head";
+import '../styles/globals.css';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { wrapper } from '../store/configureStore';
+import { useEffect } from 'react';
+import { auth } from '../firebaseConfig';
+import { useDispatch, useSelector } from 'react-redux';
+import { getUser } from '../store/actions/user';
+import '../styles/App.scss';
+import Script from 'next/script';
+import SEO from '../components/SEO';
+import RouteGuard from '../components/RouteGuard';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
   const dispatch = useDispatch();
@@ -29,15 +29,15 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
+          name='viewport'
+          content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover'
         />
       </Head>
       <Script
-        strategy="lazyOnload"
+        strategy='lazyOnload'
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
       />
-      <Script strategy="lazyOnload" id="google-analytics">
+      <Script strategy='lazyOnload' id='google-analytics'>
         {`
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -48,10 +48,10 @@ function MyApp({ Component, pageProps }) {
     `}
       </Script>
       <SEO />
-      <RouteGuard>
-        <Component {...pageProps} />
-      </RouteGuard>
-      <ToastContainer autoClose={false} />
+      {/* <RouteGuard> */}
+      <Component {...pageProps} />
+      {/* </RouteGuard> */}
+      <ToastContainer />
     </>
   );
 }

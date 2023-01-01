@@ -1,6 +1,6 @@
-import instance from "../../axios";
-import { GREETING } from "../../constants";
-import * as ActionTypes from "../ActionTypes";
+import instance from '../../axios';
+import { GREETING } from '../../constants';
+import * as ActionTypes from '../ActionTypes';
 
 export const addGreeting = (pageId, texts) => {
   return async (dispatch) => {
@@ -31,7 +31,7 @@ export const getGreeting = (pageId) => {
   return async (dispatch) => {
     dispatch({ type: ActionTypes.GET_GREETING_REQUEST });
     try {
-      const response = await instance.get(GREETING + "?page=" + pageId);
+      const response = await instance.get(GREETING + '?page=' + pageId);
       dispatch({
         type: ActionTypes.GET_GREETING_SUCCESS,
         data: response.data,

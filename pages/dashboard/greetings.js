@@ -1,15 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState } from "react";
-import DashboardSidebar from "../../components/DashboardComponents/DashboardSidebar";
-import InputComponent from "../../components/DashboardComponents/InputComponent";
-import { greetings } from "../../components/Lists/greetings";
-import styles from "../../styles/common.module.css";
-import DashboardButton from "../../components/DashboardComponents/DashboardButton";
-import { useDispatch, useSelector } from "react-redux";
-import { addGreeting, getGreeting } from "../../store/actions/greeting";
-import SEO from "../../components/SEO";
-import Loader from "../../components/Loader";
+import React, { useEffect, useState } from 'react';
+import DashboardSidebar from '../../components/DashboardComponents/DashboardSidebar';
+import InputComponent from '../../components/DashboardComponents/InputComponent';
+import { greetings } from '../../components/Lists/greetings';
+import styles from '../../styles/common.module.css';
+import DashboardButton from '../../components/DashboardComponents/DashboardButton';
+import { useDispatch, useSelector } from 'react-redux';
+import { addGreeting, getGreeting } from '../../store/actions/greeting';
+import SEO from '../../components/SEO';
+import Loader from '../../components/Loader';
 
 function GreetingsPage() {
   const hasPlan = true;
@@ -18,12 +18,12 @@ function GreetingsPage() {
   const greeting = useSelector((state) => state.greeting);
   const [form, setForm] = useState([
     {
-      key: "introduction",
-      value: "",
+      key: 'introduction',
+      value: '',
     },
     {
-      key: "welcome",
-      value: "",
+      key: 'welcome',
+      value: '',
     },
   ]);
 
@@ -64,9 +64,9 @@ function GreetingsPage() {
   return (
     <div className={styles.pageDiv}>
       <SEO
-        title={"Greetings"}
+        title={'Greetings'}
         desc={
-          "Automated never means generic here at Bold. These are the first responses to a buyer’s dm. Each store can customize its greetings to cater to the needs and wants of its clientele as well as target markets. Design your own custom greetings which define you as a store when interacting with patrons."
+          'Automated never means generic here at Bold. These are the first responses to a buyer’s dm. Each store can customize its greetings to cater to the needs and wants of its clientele as well as target markets. Design your own custom greetings which define you as a store when interacting with patrons.'
         }
       />
       <DashboardSidebar />
@@ -96,7 +96,7 @@ function GreetingsPage() {
             setForm={setForm}
           />
         ))}
-        <DashboardButton text={"Save"} onClick={saveGreeting} />
+        <DashboardButton text={'Save'} onClick={saveGreeting} />
       </div>
     </div>
   );
