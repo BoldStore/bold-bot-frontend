@@ -1,18 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState } from "react";
-import DashboardSidebar from "../../components/DashboardComponents/DashboardSidebar";
-import { story } from "../../components/Lists/story";
-import styles from "../../styles/common.module.css";
-import DashboardButton from "../../components/DashboardComponents/DashboardButton";
-import { useDispatch, useSelector } from "react-redux";
-import SEO from "../../components/SEO";
-import SecondaryInputComponent from "../../components/DashboardComponents/InputComponent/secondaryInput";
+import React, { useEffect, useState } from 'react';
+import DashboardSidebar from '../../components/DashboardComponents/DashboardSidebar';
+import { story } from '../../components/Lists/story';
+import styles from '../../styles/common.module.css';
+import DashboardButton from '../../components/DashboardComponents/DashboardButton';
+import { useDispatch, useSelector } from 'react-redux';
+import SEO from '../../components/SEO';
+import SecondaryInputComponent from '../../components/DashboardComponents/InputComponent/secondaryInput';
 import {
   addStoryReplies,
   getStoryReplies,
-} from "../../store/actions/story-reply";
-import Loader from "../../components/Loader";
+} from '../../store/actions/story-reply';
+import Loader from '../../components/Loader';
 
 function StoryRepliesPage() {
   const hasPlan = true;
@@ -21,9 +21,9 @@ function StoryRepliesPage() {
   const replies = useSelector((state) => state.reply);
   const [form, setForm] = useState([
     {
-      key: "story-reply",
-      heading: "",
-      reply: "",
+      key: 'story-reply',
+      heading: '',
+      reply: '',
     },
   ]);
 
@@ -41,12 +41,12 @@ function StoryRepliesPage() {
         question: form[0].heading,
         texts: [
           {
-            key: "1",
+            key: '1',
             value: form[0].reply,
           },
         ],
       });
-      if (form[0].reply != "" && form[0].heading != "") {
+      if (form[0].reply != '' && form[0].heading != '') {
         dispatch(addStoryReplies(user?.user?.pages[0].id, replies));
       }
     }
@@ -59,9 +59,9 @@ function StoryRepliesPage() {
       replies?.message[0].texts?.length > 0
     ) {
       const arr = form;
-      const i = arr.findIndex((e) => e.key == "story-reply");
+      const i = arr.findIndex((e) => e.key == 'story-reply');
       arr[i] = {
-        key: "story-reply",
+        key: 'story-reply',
         heading: replies.message[0].question,
         reply: replies.message[0].texts[0].value,
       };
@@ -76,8 +76,8 @@ function StoryRepliesPage() {
   return (
     <div className={styles.pageDiv}>
       <SEO
-        title={"Story Replies & Story Mentions"}
-        desc="Set customised automated replies whenever someone replies to your story with the keyword of your choice! This will help you take product advertisements and brand/event promotions to a new level! Convert your DMs into the automated assistant of your dreams with our custom templates to help sell your merchandise. Use our templates to link your products with ease."
+        title={'Story Replies'}
+        desc='Set customised automated replies whenever someone replies to your story with the keyword of your choice! This will help you take product advertisements and brand/event promotions to a new level! Convert your DMs into the automated assistant of your dreams with our custom templates to help sell your merchandise. Use our templates to link your products with ease.'
       />
       <DashboardSidebar />
       <div className={styles.container}>
@@ -112,7 +112,7 @@ function StoryRepliesPage() {
             );
           }
         })}
-        <DashboardButton text={"Save"} onClick={save} />
+        <DashboardButton text={'Save'} onClick={save} />
       </div>
     </div>
   );

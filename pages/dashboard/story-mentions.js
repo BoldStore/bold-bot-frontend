@@ -71,7 +71,7 @@ function StoryMentionsPage() {
   return (
     <div className={styles.pageDiv}>
       <SEO
-        title={'Story Replies & Story Mentions'}
+        title={'Story Mentions'}
         desc='Set customised automated replies whenever someone replies to your story with the keyword of your choice! This will help you take product advertisements and brand/event promotions to a new level! Convert your DMs into the automated assistant of your dreams with our custom templates to help sell your merchandise. Use our templates to link your products with ease.'
       />
       <DashboardSidebar />
