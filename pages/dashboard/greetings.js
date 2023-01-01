@@ -20,8 +20,8 @@ function GreetingsPage() {
   const greeting = useSelector((state) => state.greeting);
 
   const defaultValues = {
-    introduction: greeting?.message?.introduction,
-    welcome: greeting?.message?.welcome,
+    introduction: greeting?.message[0].texts[0].value ?? '',
+    welcome: greeting?.message[0].texts[1].value ?? '',
   };
 
   const {

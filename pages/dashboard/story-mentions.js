@@ -1,30 +1,52 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState } from "react";
-import DashboardSidebar from "../../components/DashboardComponents/DashboardSidebar";
-import InputComponent from "../../components/DashboardComponents/InputComponent";
-import { story } from "../../components/Lists/story";
-import styles from "../../styles/common.module.css";
-import DashboardButton from "../../components/DashboardComponents/DashboardButton";
-import { useDispatch, useSelector } from "react-redux";
-import SEO from "../../components/SEO";
+import React, { useEffect, useState } from 'react';
+import DashboardSidebar from '../../components/DashboardComponents/DashboardSidebar';
+import InputComponent from '../../components/DashboardComponents/InputComponent';
+import { story } from '../../components/Lists/story';
+import styles from '../../styles/common.module.css';
+import DashboardButton from '../../components/DashboardComponents/DashboardButton';
+import { useDispatch, useSelector } from 'react-redux';
+import SEO from '../../components/SEO';
 import {
   addStoryMention,
   getStoryMentions,
-} from "../../store/actions/story-mention";
-import Loader from "../../components/Loader";
+} from '../../store/actions/story-mention';
+import Loader from '../../components/Loader';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { storyMentionValidationSchema } from '../../components/Schemas/storyMentionSchema';
 
 function StoryMentionsPage() {
-  const hasPlan = true;
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
   const mentions = useSelector((state) => state.mention);
-  const [form, setForm] = useState([
-    {
-      key: "story-mention",
-      value: "",
-    },
-  ]);
+
+  const defaultValues = {
+    storyMention: '',
+  };
+
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(storyMentionValidationSchema),
+  });
+
+  const storyMentionSubmitHandler = (data) => {
+    console.log('data', data);
+    const form = [
+      {
+        key: '1',
+        value: data.storyMention,
+      },
+    ];
+    console.log('form', form);
+    if (user && user.user && user?.user?.pages?.length > 0) {
+      dispatch(addStoryMention(user?.user?.pages[0].id, form));
+    }
+  };
 
   useEffect(() => {
     if (user && user.user && user?.user?.pages?.length > 0) {
@@ -32,34 +54,13 @@ function StoryMentionsPage() {
     }
   }, [user.user]);
 
-  const save = () => {
-    if (user && user?.user && user?.user?.pages?.length > 0) {
-      // Story mention
-      const texts = [];
-      texts.push({
-        key: "1",
-        value: form[0].value,
-      });
-
-      if (form[0].value != "") {
-        dispatch(addStoryMention(user?.user?.pages[0].id, texts));
-      }
-    }
-  };
-
   useEffect(() => {
     if (
       mentions?.message &&
       mentions?.message?.length > 0 &&
       mentions?.message[0]?.texts?.length > 0
     ) {
-      const arr = form;
-      const i = arr.findIndex((e) => e.key == "story-mention");
-      arr[i] = {
-        key: "story-mention",
-        value: mentions.message[0].texts[0].value,
-      };
-      setForm(arr);
+      defaultValues.storyMention = mentions.message[0].texts[0].value;
     }
   }, [mentions.message]);
 
@@ -70,8 +71,8 @@ function StoryMentionsPage() {
   return (
     <div className={styles.pageDiv}>
       <SEO
-        title={"Story Replies & Story Mentions"}
-        desc="Set customised automated replies whenever someone replies to your story with the keyword of your choice! This will help you take product advertisements and brand/event promotions to a new level! Convert your DMs into the automated assistant of your dreams with our custom templates to help sell your merchandise. Use our templates to link your products with ease."
+        title={'Story Replies & Story Mentions'}
+        desc='Set customised automated replies whenever someone replies to your story with the keyword of your choice! This will help you take product advertisements and brand/event promotions to a new level! Convert your DMs into the automated assistant of your dreams with our custom templates to help sell your merchandise. Use our templates to link your products with ease.'
       />
       <DashboardSidebar />
       <div className={styles.container}>
@@ -88,25 +89,24 @@ function StoryMentionsPage() {
             className={styles.img}
           /> */}
         </div>
-
-        {story.map((item, i) => {
-          if (item.placeholder) {
-            return (
-              <InputComponent
-                key={i}
-                title={item.title}
-                desc={item.desc}
-                value={form.find((e) => e.key == item.key).value}
-                placeholder={item.placeholder}
-                itemKey={item.key}
-                disable={!hasPlan}
-                form={form}
-                setForm={setForm}
-              />
-            );
-          }
-        })}
-        <DashboardButton text={"Save"} onClick={save} />
+        <form onSubmit={handleSubmit(storyMentionSubmitHandler)}>
+          {story.map((item) => {
+            if (item.key == 'story-mention') {
+              return (
+                <InputComponent
+                  register={register}
+                  key={item.key}
+                  title={item.title}
+                  desc={item.desc}
+                  fieldName={item.fieldName}
+                  placeholder={item.placeholder}
+                  error={errors[item.fieldName]?.message}
+                />
+              );
+            }
+          })}
+          <DashboardButton type={'submit'} text={'Save'} />
+        </form>
       </div>
     </div>
   );
