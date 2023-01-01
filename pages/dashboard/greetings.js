@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import DashboardSidebar from '../../components/DashboardComponents/DashboardSidebar';
 import InputComponent from '../../components/DashboardComponents/InputComponent';
 import { greetings } from '../../components/Lists/greetings';
@@ -10,52 +10,52 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addGreeting, getGreeting } from '../../store/actions/greeting';
 import SEO from '../../components/SEO';
 import Loader from '../../components/Loader';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { greetingValidationSchema } from '../../components/Schemas/greetingsSchema';
 
 function GreetingsPage() {
-  const hasPlan = true;
   const disptach = useDispatch();
   const user = useSelector((state) => state.user);
   const greeting = useSelector((state) => state.greeting);
-  const [form, setForm] = useState([
-    {
-      key: 'introduction',
-      value: '',
-    },
-    {
-      key: 'welcome',
-      value: '',
-    },
-  ]);
 
-  useEffect(() => {
-    if (user && user.user && user?.user?.pages?.length > 0) {
-      disptach(getGreeting(user?.user?.pages[0].id));
-    }
-  }, [user.user]);
+  const defaultValues = {
+    introduction: greeting?.message?.introduction,
+    welcome: greeting?.message?.welcome,
+  };
 
-  const saveGreeting = () => {
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(greetingValidationSchema),
+    defaultValues,
+  });
+
+  const submitGreetingsHandler = (data) => {
+    console.log('data', data);
+    const form = [
+      {
+        key: 'introduction',
+        value: data.introduction,
+      },
+      {
+        key: 'welcome',
+        value: data.welcome,
+      },
+    ];
+    console.log('form', form);
     if (user && user.user && user?.user?.pages?.length > 0) {
       disptach(addGreeting(user?.user?.pages[0].id, form));
     }
   };
 
   useEffect(() => {
-    if (greeting?.message && greeting?.message?.texts?.length > 0) {
-      const arr = form;
-      for (let i = 0; i < greeting?.message?.texts.length; i++) {
-        for (let j = 0; j < arr.length; j++) {
-          if (arr[j].key === greeting?.message?.texts[i].key) {
-            arr[j].value = greeting?.message?.texts[i].value;
-          }
-        }
-      }
-      setForm(arr);
+    if (user && user.user && user?.user?.pages?.length > 0) {
+      disptach(getGreeting(user?.user?.pages[0].id));
     }
-  }, [greeting.message]);
-
-  useEffect(() => {
-    console.log(form);
-  }, [form]);
+  }, [user.user]);
 
   if (greeting.isLoading) {
     return <Loader />;
@@ -83,20 +83,21 @@ function GreetingsPage() {
             className={styles.img}
           /> */}
         </div>
-        {greetings.map((item, i) => (
-          <InputComponent
-            key={i}
-            title={item.title}
-            desc={item.desc}
-            value={form.find((e) => e.key == item.key).value}
-            placeholder={item.placeholder}
-            itemKey={item.key}
-            disable={!hasPlan}
-            form={form}
-            setForm={setForm}
-          />
-        ))}
-        <DashboardButton text={'Save'} onClick={saveGreeting} />
+        <form onSubmit={handleSubmit(submitGreetingsHandler)}>
+          {greetings.map((item) => (
+            <InputComponent
+              register={register}
+              key={item.title}
+              fieldName={item.fieldName}
+              error={errors[item.fieldName]?.message}
+              title={item.title}
+              desc={item.desc}
+              placeholder={item.placeholder}
+              itemKey={item.key}
+            />
+          ))}
+          <DashboardButton type={'submit'} text={'Save'} />
+        </form>
       </div>
     </div>
   );

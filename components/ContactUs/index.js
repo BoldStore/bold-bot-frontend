@@ -21,9 +21,9 @@ function ContactUs() {
     resolver: yupResolver(contactValidationSchema),
   });
 
-  const contactSubmitHandler = async (data) => {
+  const contactSubmitHandler = (data) => {
     console.log('data', data);
-    await dispatch(contactBold(data));
+    dispatch(contactBold(data));
   };
 
   return (
@@ -56,7 +56,6 @@ function ContactUs() {
                 error={errors[item.fieldName]?.message}
                 placeholder={item.placeholder}
                 desc={item.desc}
-                itemKey={item.key}
               />
             );
           })}
