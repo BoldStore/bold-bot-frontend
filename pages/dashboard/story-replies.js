@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import DashboardSidebar from '../../components/DashboardComponents/DashboardSidebar';
-import { story } from '../../components/Lists/story';
+import { storyReply } from '../../components/Lists/story';
 import styles from '../../styles/common.module.css';
 import DashboardButton from '../../components/DashboardComponents/DashboardButton';
 import { useDispatch, useSelector } from 'react-redux';
@@ -13,19 +13,47 @@ import {
   getStoryReplies,
 } from '../../store/actions/story-reply';
 import Loader from '../../components/Loader';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { useForm } from 'react-hook-form';
+import { storyReplyValidationSchema } from '../../components/Schemas/storyReplySchema';
 
 function StoryRepliesPage() {
-  const hasPlan = true;
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
   const replies = useSelector((state) => state.reply);
-  const [form, setForm] = useState([
-    {
-      key: 'story-reply',
-      heading: '',
-      reply: '',
-    },
-  ]);
+
+  const defaultValues = {
+    heading: '',
+    reply: '',
+  };
+
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(storyReplyValidationSchema),
+    defaultValues,
+  });
+
+  const storyReplySubmitHandler = (data) => {
+    console.log('data', data);
+    const form = [
+      {
+        question: data.heading,
+        texts: [
+          {
+            key: '1',
+            value: data.reply,
+          },
+        ],
+      },
+    ];
+    console.log('form', form);
+    if (user && user.user && user?.user?.pages?.length > 0) {
+      dispatch(addStoryReplies(user?.user?.pages[0].id, form));
+    }
+  };
 
   useEffect(() => {
     if (user && user.user && user?.user?.pages?.length > 0) {
@@ -33,39 +61,14 @@ function StoryRepliesPage() {
     }
   }, [user.user]);
 
-  const save = () => {
-    if (user && user.user && user?.user?.pages?.length > 0) {
-      // Story reply
-      const replies = [];
-      replies.push({
-        question: form[0].heading,
-        texts: [
-          {
-            key: '1',
-            value: form[0].reply,
-          },
-        ],
-      });
-      if (form[0].reply != '' && form[0].heading != '') {
-        dispatch(addStoryReplies(user?.user?.pages[0].id, replies));
-      }
-    }
-  };
-
   useEffect(() => {
     if (
       replies?.message &&
       replies?.message?.length > 0 &&
       replies?.message[0].texts?.length > 0
     ) {
-      const arr = form;
-      const i = arr.findIndex((e) => e.key == 'story-reply');
-      arr[i] = {
-        key: 'story-reply',
-        heading: replies.message[0].question,
-        reply: replies.message[0].texts[0].value,
-      };
-      setForm(arr);
+      defaultValues.heading = replies.message[0].question;
+      defaultValues.reply = replies.message[0].texts[0].value;
     }
   }, [replies.message]);
 
@@ -94,25 +97,24 @@ function StoryRepliesPage() {
             className={styles.img}
           /> */}
         </div>
-        {story.map((item, i) => {
-          if (item.placeholderReply && item.placeholderHeading) {
+        <form onSubmit={handleSubmit(storyReplySubmitHandler)}>
+          {storyReply.map((item) => {
             return (
               <SecondaryInputComponent
-                key={i}
+                key={item.title}
+                register={register}
                 title={item.title}
                 placeholderHeading={item.placeholderHeading}
                 placeholderReply={item.placeholderReply}
-                valueHeading={form.find((e) => e.key == item.key)?.heading}
-                valueReply={form.find((e) => e.key == item.key)?.reply}
-                itemKey={item.key}
-                disable={!hasPlan}
-                form={form}
-                setForm={setForm}
+                fieldName1={item.fieldName1}
+                fieldName2={item.fieldName2}
+                error1={errors[item.fieldName1]?.message}
+                error2={errors[item.fieldName2]?.message}
               />
             );
-          }
-        })}
-        <DashboardButton text={'Save'} onClick={save} />
+          })}
+          <DashboardButton type={'submit'} text={'Save'} />
+        </form>
       </div>
     </div>
   );

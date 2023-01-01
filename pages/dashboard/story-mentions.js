@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import DashboardSidebar from '../../components/DashboardComponents/DashboardSidebar';
 import InputComponent from '../../components/DashboardComponents/InputComponent';
-import { story } from '../../components/Lists/story';
+import { storyMention } from '../../components/Lists/story';
 import styles from '../../styles/common.module.css';
 import DashboardButton from '../../components/DashboardComponents/DashboardButton';
 import { useDispatch, useSelector } from 'react-redux';
@@ -32,6 +32,7 @@ function StoryMentionsPage() {
     formState: { errors },
   } = useForm({
     resolver: yupResolver(storyMentionValidationSchema),
+    defaultValues,
   });
 
   const storyMentionSubmitHandler = (data) => {
@@ -90,7 +91,7 @@ function StoryMentionsPage() {
           /> */}
         </div>
         <form onSubmit={handleSubmit(storyMentionSubmitHandler)}>
-          {story.map((item) => {
+          {storyMention.map((item) => {
             if (item.key == 'story-mention') {
               return (
                 <InputComponent
