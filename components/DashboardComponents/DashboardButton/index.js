@@ -1,16 +1,21 @@
-import React from "react";
-import styles from "./styles.module.css";
+import React from 'react';
+import styles from './styles.module.css';
 
-function DashboardButton({ onClick, text }) {
+function DashboardButton({ onClick, text, type }) {
   return (
-    <div
+    <button
+      type={type}
       className={styles.container}
-      onClick={() => {
-        onClick();
-      }}
+      onClick={
+        onClick
+          ? () => {
+              onClick();
+            }
+          : null
+      }
     >
       <p>{text}</p>
-    </div>
+    </button>
   );
 }
 

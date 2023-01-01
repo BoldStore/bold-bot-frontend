@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './styles.module.css';
 import { motion } from 'framer-motion';
 import InputComponent from '../DashboardComponents/InputComponent';
@@ -7,78 +7,29 @@ import { contactUs } from './contactUs';
 import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 import { contactBold } from '../../store/actions/contact';
-import { useRouter } from 'next/router';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { contactValidationSchema } from './schema';
 
 function ContactUs() {
   const dispatch = useDispatch();
-  const router = useRouter();
 
-  const [form, setForm] = useState([
-    {
-      key: 'email',
-      value: '',
-    },
-    {
-      key: 'username',
-      value: '',
-    },
-  ]);
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(contactValidationSchema),
+  });
 
-  const validate = () => {
-    if (
-      form.find((item) => item.key == 'email').value === '' &&
-      form.find((item) => item.key == 'username').value === ''
-    ) {
-      toast.error('Please fill in your details!');
-      return false;
-    }
-    if (form.find((item) => item.key == 'email').value === '') {
-      toast.error('Please fill in your email!');
-      return false;
-    }
-    if (form.find((item) => item.key == 'username').value === '') {
-      toast.error('Please fill in your username!');
-      return false;
-    }
-    if (!form.find((item) => item.key == 'email').value.includes('@')) {
-      toast.error('Please fill a valid email address!');
-      return false;
-    }
-    return true;
-  };
-
-  const submit = () => {
-    if (validate()) {
-      dispatch(
-        contactBold(
-          form.find((e) => (e.key = 'email')).value,
-          form.find((e) => (e.key = 'username')).value
-        )
-      );
-      toast.success('Form Submitted Successfully!', {
-        autoClose: 3000,
-      });
-      router.push('/');
-    }
-    return;
-  };
-
-  const setValue = (e, itemKey) => {
-    const inputIndex = form.findIndex((i) => {
-      return i.key === itemKey;
+  const contactSubmitHandler = async (data) => {
+    console.log('data', data);
+    await dispatch(contactBold(data));
+    toast.success('Form Submitted Successfully!', {
+      autoClose: 3000,
     });
-
-    const input = {
-      ...form[inputIndex],
-    };
-
-    input.value = e.target.value;
-
-    const inputs = [...form];
-    inputs[inputIndex] = input;
-
-    setForm(inputs);
   };
+
   return (
     <div className={styles.container} id='ContactUs'>
       <div className={styles.backgroundGradient} />
@@ -98,20 +49,23 @@ function ContactUs() {
           </a>{' '}
           !
         </h6>
-        {contactUs.map((item) => {
-          return (
-            <InputComponent
-              key={item.title}
-              title={item.title}
-              placeholder={item.placeholder}
-              desc={item.desc}
-              value={form.find((e) => e.key == item.key).value}
-              itemKey={item.key}
-              setValue={setValue}
-            />
-          );
-        })}
-        <DashboardButton text={'Submit'} onClick={submit} />
+        <form onSubmit={handleSubmit(contactSubmitHandler)}>
+          {contactUs.map((item) => {
+            return (
+              <InputComponent
+                key={item.title}
+                register={register}
+                fieldName={item.fieldName}
+                title={item.title}
+                error={errors[item.fieldName]?.message}
+                placeholder={item.placeholder}
+                desc={item.desc}
+                itemKey={item.key}
+              />
+            );
+          })}
+          <DashboardButton type={'submit'} text={'Submit'} />
+        </form>
       </div>
       <motion.img
         src={'/assets/boldbotFeed.png'}
