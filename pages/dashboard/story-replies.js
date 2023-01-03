@@ -23,8 +23,18 @@ function StoryRepliesPage() {
   const replies = useSelector((state) => state.reply);
 
   const defaultValues = {
-    heading: '',
-    reply: '',
+    heading:
+      replies?.message &&
+      replies?.message?.length > 0 &&
+      replies?.message[0].texts?.length > 0
+        ? replies.message[0].question
+        : '',
+    reply:
+      replies?.message &&
+      replies?.message?.length > 0 &&
+      replies?.message[0].texts?.length > 0
+        ? replies.message[0].texts[0].value
+        : '',
   };
 
   const {
@@ -60,17 +70,6 @@ function StoryRepliesPage() {
       dispatch(getStoryReplies(user?.user?.pages[0].id));
     }
   }, [user.user]);
-
-  useEffect(() => {
-    if (
-      replies?.message &&
-      replies?.message?.length > 0 &&
-      replies?.message[0].texts?.length > 0
-    ) {
-      defaultValues.heading = replies.message[0].question;
-      defaultValues.reply = replies.message[0].texts[0].value;
-    }
-  }, [replies.message]);
 
   if (replies?.isLoading) {
     return <Loader />;

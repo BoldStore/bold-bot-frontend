@@ -20,8 +20,8 @@ function GreetingsPage() {
   const greeting = useSelector((state) => state.greeting);
 
   const defaultValues = {
-    introduction: '',
-    welcome: '',
+    introduction: greeting.message ? greeting.message[0].texts[0].value : '',
+    welcome: greeting.message ? greeting.message[0].texts[0].value : '',
   };
 
   const {
@@ -56,17 +56,6 @@ function GreetingsPage() {
       disptach(getGreeting(user?.user?.pages[0].id));
     }
   }, [user.user]);
-
-  useEffect(() => {
-    if (
-      greeting?.message &&
-      greeting?.message?.length > 0 &&
-      greeting?.message[0]?.texts?.length > 0
-    ) {
-      defaultValues.introduction = greeting.message[0].texts[0].value;
-      defaultValues.introduction = greeting?.message[0].texts[1].value;
-    }
-  }, [greeting.message]);
 
   if (greeting.isLoading) {
     return <Loader />;

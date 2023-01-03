@@ -23,7 +23,12 @@ function StoryMentionsPage() {
   const mentions = useSelector((state) => state.mention);
 
   const defaultValues = {
-    storyMention: '',
+    storyMention:
+      mentions?.message &&
+      mentions?.message?.length > 0 &&
+      mentions?.message[0]?.texts?.length > 0
+        ? mentions.message[0].texts[0].value
+        : '',
   };
 
   const {
@@ -55,16 +60,6 @@ function StoryMentionsPage() {
     }
   }, [user.user]);
 
-  useEffect(() => {
-    if (
-      mentions?.message &&
-      mentions?.message?.length > 0 &&
-      mentions?.message[0]?.texts?.length > 0
-    ) {
-      defaultValues.storyMention = mentions.message[0].texts[0].value;
-    }
-  }, [mentions.message]);
-
   if (mentions?.isLoading) {
     return <Loader />;
   }
@@ -92,19 +87,17 @@ function StoryMentionsPage() {
         </div>
         <form onSubmit={handleSubmit(storyMentionSubmitHandler)}>
           {storyMention.map((item) => {
-            if (item.key == 'story-mention') {
-              return (
-                <InputComponent
-                  register={register}
-                  key={item.key}
-                  title={item.title}
-                  desc={item.desc}
-                  fieldName={item.fieldName}
-                  placeholder={item.placeholder}
-                  error={errors[item.fieldName]?.message}
-                />
-              );
-            }
+            return (
+              <InputComponent
+                register={register}
+                key={item.key}
+                title={item.title}
+                desc={item.desc}
+                fieldName={item.fieldName}
+                placeholder={item.placeholder}
+                error={errors[item.fieldName]?.message}
+              />
+            );
           })}
           <DashboardButton text={'Save'} />
         </form>

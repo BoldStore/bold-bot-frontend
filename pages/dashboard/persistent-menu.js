@@ -20,12 +20,26 @@ function PersistentMenu() {
   const user = useSelector((state) => state.user);
 
   const defaultValues = {
-    menuOption1Heading: '',
-    menuOption1Reply: '',
-    menuOption2Heading: '',
-    menuOption2Reply: '',
-    webDataUrl: '',
-    webDataTitle: '',
+    menuOption1Heading:
+      menuState.menu?.texts?.length > 0 ? menuState?.menu[0]?.question : '',
+    menuOption1Reply:
+      menuState.menu?.texts?.length > 0
+        ? menuState?.menu[0]?.texts[0]?.value
+        : '',
+    menuOption2Heading:
+      menuState.menu?.texts?.length > 0 ? menuState?.menu[1]?.question : '',
+    menuOption2Reply:
+      menuState.menu?.texts?.length > 0
+        ? menuState?.menu[1]?.texts[0]?.value
+        : '',
+    webDataUrl:
+      menuState?.web_data && menuState?.web_data?.texts?.length > 0
+        ? menuState?.web_data?.texts[0]?.key
+        : '',
+    webDataTitle:
+      menuState?.web_data && menuState?.web_data?.texts?.length > 0
+        ? menuState?.web_data?.texts[0]?.value
+        : '',
   };
 
   const {
@@ -70,30 +84,11 @@ function PersistentMenu() {
     }
   };
 
-  const setData = () => {
-    if (menuState?.menu?.length > 0) {
-      if (menuState.menu?.texts?.length > 0 && index <= 1) {
-        defaultValues.menuOption1Heading = menuState?.menu[0]?.question;
-        defaultValues.menuOption1Reply = menuState?.menu?.texts[0]?.value;
-        defaultValues.menuOption2Heading = menuState?.menu[1]?.question;
-        defaultValues.menuOption2Reply = menuState?.menu?.texts[0]?.value;
-      }
-      if (menuState?.web_data && menuState?.web_data?.texts?.length > 0) {
-        defaultValues.webDataTitle = menuState?.web_data?.texts[0]?.key;
-        defaultValues.webDataUrl = menuState?.web_data?.texts[0]?.value;
-      }
-    }
-  };
-
   useEffect(() => {
     if (user?.user && user?.user?.pages?.length > 0) {
       dispatch(getMenu(user?.user?.pages[0]?.id));
     }
   }, [user?.user]);
-
-  useEffect(() => {
-    setData();
-  }, [menuState?.menu || menuState?.web_data]);
 
   if (menuState?.isLoading) {
     <Loader />;
@@ -135,6 +130,7 @@ function PersistentMenu() {
               placeholderReply={item.placeholderReply}
               error1={errors[item.fieldName1]?.message}
               error2={errors[item.fieldName2]?.message}
+              isLink={item.title === 'Website Link'}
             />
           ))}
           <DashboardButton text={menuState.isLoading ? 'Loading...' : 'Save'} />
