@@ -137,10 +137,7 @@ function PersistentMenu() {
               error2={errors[item.fieldName2]?.message}
             />
           ))}
-          <DashboardButton
-            type={'submit'}
-            text={menuState.isLoading ? 'Loading...' : 'Save'}
-          />
+          <DashboardButton text={menuState.isLoading ? 'Loading...' : 'Save'} />
         </form>
       </div>
     </div>

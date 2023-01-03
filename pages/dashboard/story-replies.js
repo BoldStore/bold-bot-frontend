@@ -113,7 +113,7 @@ function StoryRepliesPage() {
               />
             );
           })}
-          <DashboardButton type={'submit'} text={'Save'} />
+          <DashboardButton text={'Save'} />
         </form>
       </div>
     </div>

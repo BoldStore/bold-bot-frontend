@@ -107,7 +107,7 @@ function GreetingsPage() {
               itemKey={item.key}
             />
           ))}
-          <DashboardButton type={'submit'} text={'Save'} />
+          <DashboardButton text={'Save'} />
         </form>
       </div>
     </div>

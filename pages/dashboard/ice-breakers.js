@@ -1,91 +1,111 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @next/next/no-img-element */
-import React, { useEffect, useState } from "react";
-import DashboardSidebar from "../../components/DashboardComponents/DashboardSidebar";
-import { iceBreakers } from "../../components/Lists/iceBreakers";
-import styles from "../../styles/common.module.css";
-import DashboardButton from "../../components/DashboardComponents/DashboardButton";
-import SecondaryInputComponent from "../../components/DashboardComponents/InputComponent/secondaryInput";
-import { useDispatch, useSelector } from "react-redux";
-import { addIceBreaker, getIceBreaker } from "../../store/actions/ice-breaker";
-import Loader from "../../components/Loader";
-import SEO from "../../components/SEO";
+import React, { useEffect } from 'react';
+import DashboardSidebar from '../../components/DashboardComponents/DashboardSidebar';
+import { iceBreakers } from '../../components/Lists/iceBreakers';
+import styles from '../../styles/common.module.css';
+import DashboardButton from '../../components/DashboardComponents/DashboardButton';
+import SecondaryInputComponent from '../../components/DashboardComponents/InputComponent/secondaryInput';
+import { useDispatch, useSelector } from 'react-redux';
+import { addIceBreaker, getIceBreaker } from '../../store/actions/ice-breaker';
+import Loader from '../../components/Loader';
+import SEO from '../../components/SEO';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { useForm } from 'react-hook-form';
+import { iceBreakersValidationSchema } from '../../components/Schemas/iceBreakersSchema';
 
 function IceBreakerPage() {
-  const hasPlan = true;
   const dispatch = useDispatch();
   const iceBreakerState = useSelector((state) => state.iceBreaker);
-  const userState = useSelector((state) => state.user);
-  const [form, setForm] = useState([
-    {
-      key: "iceBreaker1",
-      heading: "",
-      reply: "",
-    },
-    {
-      key: "iceBreaker2",
-      heading: "",
-      reply: "",
-    },
-    {
-      key: "iceBreaker3",
-      heading: "",
-      reply: "",
-    },
-    {
-      key: "iceBreaker4",
-      heading: "",
-      reply: "",
-    },
-  ]);
+  const user = useSelector((state) => state.user);
 
-  useEffect(() => {
-    if (userState?.user && userState?.user?.pages?.length > 0) {
-      dispatch(getIceBreaker(userState?.user.pages[0]?.id));
-    }
-  }, [userState.user]);
+  const defaultValues = {
+    iceBreaker1Heading: iceBreakerState?.iceBreakers
+      ? iceBreakerState?.iceBreakers[0].question
+      : '',
+    iceBreaker1Reply: iceBreakerState?.iceBreakers
+      ? iceBreakerState?.iceBreaker[0]?.texts[0]?.value
+      : '',
+    iceBreaker2Heading: iceBreakerState?.iceBreakers
+      ? iceBreakerState?.iceBreakers[1].question
+      : '',
+    iceBreaker2Reply: iceBreakerState?.iceBreakers
+      ? iceBreakerState?.iceBreaker[1]?.texts[0]?.value
+      : '',
+    iceBreaker3Heading: iceBreakerState?.iceBreakers
+      ? iceBreakerState?.iceBreakers[2].question
+      : '',
+    iceBreaker3Reply: iceBreakerState?.iceBreakers
+      ? iceBreakerState?.iceBreaker[2]?.texts[0]?.value
+      : '',
+    iceBreaker4Heading: iceBreakerState?.iceBreakers
+      ? iceBreakerState?.iceBreakers[3].question
+      : '',
+    iceBreaker4Reply: iceBreakerState?.iceBreakers
+      ? iceBreakerState?.iceBreaker[3]?.texts[0]?.value
+      : '',
+  };
 
-  useEffect(() => {
-    setData();
-  }, [iceBreakerState.iceBreakers]);
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(iceBreakersValidationSchema),
+    defaultValues,
+  });
 
-  const setData = () => {
-    if (
-      iceBreakerState?.iceBreakers &&
-      iceBreakerState?.iceBreakers.length > 0
-    ) {
-      const ice_breakers = [];
-
-      iceBreakerState.iceBreakers.forEach((iceBreaker, index) => {
-        if (iceBreaker?.texts?.length > 0)
-          ice_breakers.push({
-            key: "iceBreaker" + (index + 1).toString(),
-            heading: iceBreaker?.question,
-            reply: iceBreaker?.texts[0]?.value,
-          });
-      });
-
-      setForm(ice_breakers);
+  const iceBreakersSubmitHandler = (data) => {
+    console.log('data', data);
+    const form = [
+      {
+        question: data.iceBreaker1Heading,
+        texts: [
+          {
+            key: '0',
+            value: data.iceBreaker1Reply,
+          },
+        ],
+      },
+      {
+        question: data.iceBreaker2Heading,
+        texts: [
+          {
+            key: '1',
+            value: data.iceBreaker2Reply,
+          },
+        ],
+      },
+      {
+        question: data.iceBreaker3Heading,
+        texts: [
+          {
+            key: '2',
+            value: data.iceBreaker3Reply,
+          },
+        ],
+      },
+      {
+        question: data.iceBreaker4Heading,
+        texts: [
+          {
+            key: '3',
+            value: data.iceBreaker4Reply,
+          },
+        ],
+      },
+    ];
+    console.log('form', form);
+    if (user && user.user && user?.user?.pages?.length > 0) {
+      dispatch(addIceBreaker(userState?.user?.pages[0]?.id, form));
     }
   };
 
-  const submit = () => {
-    if (userState?.user && userState?.user?.pages?.length > 0) {
-      const ice_breakers = [];
-      form.forEach((item, index) => {
-        ice_breakers.push({
-          question: item.heading,
-          texts: [
-            {
-              key: index.toString(),
-              value: item.reply,
-            },
-          ],
-        });
-      });
-      dispatch(addIceBreaker(userState?.user?.pages[0]?.id, ice_breakers));
+  useEffect(() => {
+    if (user?.user && user?.user?.pages?.length > 0) {
+      dispatch(getIceBreaker(user?.user.pages[0]?.id));
     }
-  };
+  }, [user.user]);
 
   if (iceBreakerState?.isLoading) {
     <Loader />;
@@ -94,7 +114,7 @@ function IceBreakerPage() {
   return (
     <div className={styles.pageDiv}>
       <SEO
-        title={"Ice Breakers"}
+        title={'Ice Breakers'}
         desc={
           "Increase efficiency of service by introducing ice breakers to your customer's DMs. These standardised texts cover certain frequently asked questions for your patrons to choose from. This allows the customer to verbalise and convey their concerns or queries to the store with ease."
         }
@@ -114,24 +134,24 @@ function IceBreakerPage() {
             className={styles.img}
           /> */}
         </div>
-        {iceBreakers.map((item, i) => (
-          <SecondaryInputComponent
-            key={i}
-            title={item.title}
-            placeholderHeading={item.placeholderHeading}
-            placeholderReply={item.placeholderReply}
-            valueHeading={form.find((e) => e.key == item.key)?.heading}
-            valueReply={form.find((e) => e.key == item.key)?.reply}
-            itemKey={item.key}
-            form={form}
-            setForm={setForm}
-            disable={!hasPlan}
+        <form onSubmit={handleSubmit(iceBreakersSubmitHandler)}>
+          {iceBreakers.map((item) => (
+            <SecondaryInputComponent
+              register={register}
+              fieldName1={item.fieldName1}
+              fieldName2={item.fieldName2}
+              key={item.title}
+              title={item.title}
+              placeholderHeading={item.placeholderHeading}
+              placeholderReply={item.placeholderReply}
+              error1={errors[item.fieldName1]?.message}
+              error2={errors[item.fieldName2]?.message}
+            />
+          ))}
+          <DashboardButton
+            text={iceBreakerState?.isLoading ? 'Loading...' : 'Save'}
           />
-        ))}
-        <DashboardButton
-          text={iceBreakerState?.isLoading ? "Loading..." : "Save"}
-          onClick={submit}
-        />
+        </form>
       </div>
     </div>
   );

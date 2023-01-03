@@ -1,10 +1,9 @@
 import React from 'react';
 import styles from './styles.module.css';
 
-function DashboardButton({ onClick, text, type }) {
+function DashboardButton({ onClick, text }) {
   return (
     <button
-      type={type}
       className={styles.container}
       onClick={
         onClick
