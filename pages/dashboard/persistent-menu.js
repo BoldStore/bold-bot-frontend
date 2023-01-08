@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import DashboardSidebar from '../../components/DashboardComponents/DashboardSidebar';
 import DashboardButton from '../../components/DashboardComponents/DashboardButton';
 import { persistentMenu } from '../../components/Lists/persistent-menu';
