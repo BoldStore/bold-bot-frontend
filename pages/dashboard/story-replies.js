@@ -83,13 +83,11 @@ function StoryRepliesPage() {
           story with the keyword of your choice! This will help you take product
           advertisements and brand/event promotions to a new level.
         </p>
-        <div>
-          {/* <img
-            src="/assets/storyReplyExample.png"
-            alt="example"
-            className={styles.img}
-          /> */}
-        </div>
+        <img
+          src='/assets/storyReplyExample.png'
+          alt='example'
+          className={styles.img}
+        />
         <form onSubmit={handleSubmit(storyReplySubmitHandler)}>
           {storyReply.map((item) => {
             return (
