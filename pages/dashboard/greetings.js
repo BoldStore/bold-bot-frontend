@@ -76,13 +76,11 @@ function GreetingsPage() {
           Custom greetings are the first responses to a buyer&apos;s DM, design
           your own automated replies which define you as a brand.
         </p>
-        <div>
-          {/* <img
-            src="/assets/greetingExample.png"
-            alt="example"
-            className={styles.img}
-          /> */}
-        </div>
+        <img
+          src='/assets/greetingExample.png'
+          alt='example'
+          className={styles.img}
+        />
         <form onSubmit={handleSubmit(submitGreetingsHandler)}>
           {greetings.map((item) => (
             <InputComponent
