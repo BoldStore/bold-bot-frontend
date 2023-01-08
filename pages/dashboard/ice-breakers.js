@@ -113,7 +113,7 @@ function IceBreakerPage() {
   }, [user.user]);
 
   if (iceBreakers?.isLoading) {
-    <Loader />;
+    return <Loader />;
   }
 
   return (
