@@ -51,7 +51,7 @@ function MyApp({ Component, pageProps }) {
       {/* <RouteGuard> */}
       <Component {...pageProps} />
       {/* </RouteGuard> */}
-      <ToastContainer />
+      <ToastContainer autoClose={1000} />
     </>
   );
 }

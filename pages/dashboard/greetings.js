@@ -24,7 +24,7 @@ function GreetingsPage() {
       setValue('introduction', greeting?.message?.texts[0]?.value);
       setValue('welcome', greeting?.message?.texts[1]?.value);
     }
-  }, [greeting, greeting.message]);
+  }, [greeting, greeting?.message, greeting?.message?.texts]);
 
   const {
     handleSubmit,
@@ -55,7 +55,7 @@ function GreetingsPage() {
     if (user && user.user && user?.user?.pages?.length > 0) {
       disptach(getGreeting(user?.user?.pages[0].id));
     }
-  }, [user.user]);
+  }, [user.user, greeting.add_success]);
 
   if (greeting.isLoading) {
     return <Loader />;

@@ -1,5 +1,5 @@
-import { toast } from "react-toastify";
-import * as ActionTypes from "../ActionTypes";
+import { toast } from 'react-toastify';
+import * as ActionTypes from '../ActionTypes';
 
 const initState = {
   isLoading: false,
@@ -19,7 +19,7 @@ const greetingReducer = (state = initState, action) => {
       };
 
     case ActionTypes.ADD_GREETING_SUCCESS:
-      toast.success("Successfully added greeting");
+      toast.success('Successfully added greeting');
       return {
         ...state,
         isLoading: false,
@@ -29,7 +29,7 @@ const greetingReducer = (state = initState, action) => {
       };
 
     case ActionTypes.ADD_GREETING_FAILED:
-      toast.error(action?.errmess?.toString() ?? "Error in adding greeting");
+      toast.error(action?.errmess?.toString() ?? 'Error in adding greeting');
       return {
         ...state,
         isLoading: false,
@@ -50,6 +50,7 @@ const greetingReducer = (state = initState, action) => {
         errmess: null,
         message: action.data,
         get_success: true,
+        add_success: true,
       };
 
     case ActionTypes.GET_GREETING_FAILED:
