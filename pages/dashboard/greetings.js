@@ -19,13 +19,6 @@ function GreetingsPage() {
   const user = useSelector((state) => state.user);
   const greeting = useSelector((state) => state.greeting);
 
-  useEffect(() => {
-    if (greeting?.message && greeting?.message?.texts?.length) {
-      setValue('introduction', greeting?.message?.texts[0]?.value);
-      setValue('welcome', greeting?.message?.texts[1]?.value);
-    }
-  }, [greeting, greeting?.message, greeting?.message?.texts]);
-
   const {
     handleSubmit,
     register,
@@ -50,6 +43,13 @@ function GreetingsPage() {
       disptach(addGreeting(user?.user?.pages[0].id, form));
     }
   };
+
+  useEffect(() => {
+    if (greeting?.message && greeting?.message?.texts?.length) {
+      setValue('introduction', greeting?.message?.texts[0]?.value);
+      setValue('welcome', greeting?.message?.texts[1]?.value);
+    }
+  }, [greeting]);
 
   useEffect(() => {
     if (user && user.user && user?.user?.pages?.length > 0) {

@@ -22,37 +22,32 @@ function StoryMentionsPage() {
   const user = useSelector((state) => state.user);
   const mentions = useSelector((state) => state.mention);
 
-  const defaultValues = {
-    storyMention:
-      mentions?.message &&
-      mentions?.message?.length > 0 &&
-      mentions?.message[0]?.texts?.length > 0
-        ? mentions.message[0].texts[0].value
-        : '',
-  };
-
   const {
     handleSubmit,
     register,
+    setValue,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(storyMentionValidationSchema),
-    defaultValues,
   });
 
   const storyMentionSubmitHandler = (data) => {
-    console.log('data', data);
     const form = [
       {
         key: '1',
         value: data.storyMention,
       },
     ];
-    console.log('form', form);
     if (user && user.user && user?.user?.pages?.length > 0) {
       dispatch(addStoryMention(user?.user?.pages[0].id, form));
     }
   };
+
+  useEffect(() => {
+    if (mentions?.message && mentions?.message?.texts?.length) {
+      setValue('storyMention', mentions?.message[0].texts[0]?.value);
+    }
+  }, [mentions]);
 
   useEffect(() => {
     if (user && user.user && user?.user?.pages?.length > 0) {
