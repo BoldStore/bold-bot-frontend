@@ -73,13 +73,11 @@ function StoryMentionsPage() {
           their Instagram stories! Assign unique texts to keep your interactions
           going with patrons and followers.
         </p>
-        <div>
-          {/* <img
-            src="/assets/storyMentionExample.png"
-            alt="example"
-            className={styles.img}
-          /> */}
-        </div>
+        <img
+          src='/assets/storyMentionExample.png'
+          alt='example'
+          className={styles.img}
+        />
         <form onSubmit={handleSubmit(storyMentionSubmitHandler)}>
           {storyMention.map((item) => {
             return (
