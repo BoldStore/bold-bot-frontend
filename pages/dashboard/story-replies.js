@@ -32,7 +32,6 @@ function StoryRepliesPage() {
   });
 
   const storyReplySubmitHandler = (data) => {
-    console.log('data', data);
     const form = [
       {
         question: data.heading,
@@ -44,7 +43,6 @@ function StoryRepliesPage() {
         ],
       },
     ];
-    console.log('form', form);
     if (user && user.user && user?.user?.pages?.length > 0) {
       dispatch(addStoryReplies(user?.user?.pages[0].id, form));
     }

@@ -29,7 +29,6 @@ function IceBreakerPage() {
   });
 
   const iceBreakersSubmitHandler = (data) => {
-    console.log('data', data);
     const form = [
       {
         question: data.iceBreaker1Heading,
@@ -68,7 +67,6 @@ function IceBreakerPage() {
         ],
       },
     ];
-    console.log('form', form);
     if (user && user.user && user?.user?.pages?.length > 0) {
       dispatch(addIceBreaker(user?.user?.pages[0]?.id, form));
     }
