@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect } from 'react';
 import DashboardSidebar from '../../components/DashboardComponents/DashboardSidebar';
-import { iceBreakers } from '../../components/Lists/iceBreakers';
+import { iceBreakersList } from '../../components/Lists/iceBreakers';
 import styles from '../../styles/common.module.css';
 import DashboardButton from '../../components/DashboardComponents/DashboardButton';
 import SecondaryInputComponent from '../../components/DashboardComponents/InputComponent/secondaryInput';
@@ -16,43 +16,16 @@ import { iceBreakersValidationSchema } from '../../components/Schemas/iceBreaker
 
 function IceBreakerPage() {
   const dispatch = useDispatch();
-  const iceBreakerState = useSelector((state) => state.iceBreaker);
+  const iceBreakers = useSelector((state) => state.iceBreaker);
   const user = useSelector((state) => state.user);
-
-  const defaultValues = {
-    iceBreaker1Heading: iceBreakerState?.iceBreakers
-      ? iceBreakerState?.iceBreakers[0].question
-      : '',
-    iceBreaker1Reply: iceBreakerState?.iceBreakers
-      ? iceBreakerState?.iceBreaker[0]?.texts[0]?.value
-      : '',
-    iceBreaker2Heading: iceBreakerState?.iceBreakers
-      ? iceBreakerState?.iceBreakers[1].question
-      : '',
-    iceBreaker2Reply: iceBreakerState?.iceBreakers
-      ? iceBreakerState?.iceBreaker[1]?.texts[0]?.value
-      : '',
-    iceBreaker3Heading: iceBreakerState?.iceBreakers
-      ? iceBreakerState?.iceBreakers[2].question
-      : '',
-    iceBreaker3Reply: iceBreakerState?.iceBreakers
-      ? iceBreakerState?.iceBreaker[2]?.texts[0]?.value
-      : '',
-    iceBreaker4Heading: iceBreakerState?.iceBreakers
-      ? iceBreakerState?.iceBreakers[3].question
-      : '',
-    iceBreaker4Reply: iceBreakerState?.iceBreakers
-      ? iceBreakerState?.iceBreaker[3]?.texts[0]?.value
-      : '',
-  };
 
   const {
     handleSubmit,
     register,
+    setValue,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(iceBreakersValidationSchema),
-    defaultValues,
   });
 
   const iceBreakersSubmitHandler = (data) => {
@@ -97,9 +70,41 @@ function IceBreakerPage() {
     ];
     console.log('form', form);
     if (user && user.user && user?.user?.pages?.length > 0) {
-      dispatch(addIceBreaker(userState?.user?.pages[0]?.id, form));
+      dispatch(addIceBreaker(user?.user?.pages[0]?.id, form));
     }
   };
+
+  useEffect(() => {
+    if (
+      iceBreakers?.iceBreakers &&
+      iceBreakers?.iceBreakers?.length &&
+      iceBreakers?.iceBreakers[0]?.texts &&
+      iceBreakers?.iceBreakers[1]?.texts &&
+      iceBreakers?.iceBreakers[2]?.texts &&
+      iceBreakers?.iceBreakers[3]?.texts
+    ) {
+      setValue('iceBreaker1Heading', iceBreakers?.iceBreakers[0]?.question);
+      setValue(
+        'iceBreaker1Reply',
+        iceBreakers?.iceBreakers[0]?.texts[0]?.value
+      );
+      setValue('iceBreaker2Heading', iceBreakers?.iceBreakers[1]?.question);
+      setValue(
+        'iceBreaker2Reply',
+        iceBreakers?.iceBreakers[1]?.texts[0]?.value
+      );
+      setValue('iceBreaker3Heading', iceBreakers?.iceBreakers[2]?.question);
+      setValue(
+        'iceBreaker3Reply',
+        iceBreakers?.iceBreakers[2]?.texts[0]?.value
+      );
+      setValue('iceBreaker4Heading', iceBreakers?.iceBreakers[3]?.question);
+      setValue(
+        'iceBreaker4Reply',
+        iceBreakers?.iceBreakers[3]?.texts[0]?.value
+      );
+    }
+  }, [iceBreakers]);
 
   useEffect(() => {
     if (user?.user && user?.user?.pages?.length > 0) {
@@ -107,7 +112,7 @@ function IceBreakerPage() {
     }
   }, [user.user]);
 
-  if (iceBreakerState?.isLoading) {
+  if (iceBreakers?.isLoading) {
     <Loader />;
   }
 
@@ -125,7 +130,7 @@ function IceBreakerPage() {
         <p className={styles.introPara}>
           Increase efficiency by adding ice breakers to your DMs, skip the
           repetitive questions by introducing standardised texts which answer
-          FAQs.
+          frequently asked questions.
         </p>
         <div>
           {/* <img
@@ -135,7 +140,7 @@ function IceBreakerPage() {
           /> */}
         </div>
         <form onSubmit={handleSubmit(iceBreakersSubmitHandler)}>
-          {iceBreakers.map((item) => (
+          {iceBreakersList.map((item) => (
             <SecondaryInputComponent
               register={register}
               fieldName1={item.fieldName1}
@@ -149,7 +154,7 @@ function IceBreakerPage() {
             />
           ))}
           <DashboardButton
-            text={iceBreakerState?.isLoading ? 'Loading...' : 'Save'}
+            text={iceBreakers?.isLoading ? 'Loading...' : 'Save'}
           />
         </form>
       </div>

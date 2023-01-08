@@ -45,7 +45,7 @@ function StoryMentionsPage() {
 
   useEffect(() => {
     if (mentions?.message && mentions?.message[0]?.texts?.length) {
-      setValue('storyMention', mentions?.message[0].texts[0]?.value);
+      setValue('storyMention', mentions.message[0].texts[0].value);
     }
   }, [mentions]);
 

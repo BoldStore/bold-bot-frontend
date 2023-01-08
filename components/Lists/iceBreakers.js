@@ -1,4 +1,4 @@
-export const iceBreakers = [
+export const iceBreakersList = [
   {
     title: 'Ice Breaker 1',
     placeholderHeading: 'Ex: Customer Support',
