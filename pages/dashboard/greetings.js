@@ -36,7 +36,6 @@ function GreetingsPage() {
   });
 
   const submitGreetingsHandler = (data) => {
-    console.log('data', data);
     const form = [
       {
         key: 'introduction',
@@ -47,7 +46,6 @@ function GreetingsPage() {
         value: data.welcome,
       },
     ];
-    console.log('form', form);
     if (user && user.user && user?.user?.pages?.length > 0) {
       disptach(addGreeting(user?.user?.pages[0].id, form));
     }
