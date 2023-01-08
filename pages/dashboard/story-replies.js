@@ -22,28 +22,13 @@ function StoryRepliesPage() {
   const user = useSelector((state) => state.user);
   const replies = useSelector((state) => state.reply);
 
-  const defaultValues = {
-    heading:
-      replies?.message &&
-      replies?.message?.length > 0 &&
-      replies?.message[0].texts?.length > 0
-        ? replies.message[0].question
-        : '',
-    reply:
-      replies?.message &&
-      replies?.message?.length > 0 &&
-      replies?.message[0].texts?.length > 0
-        ? replies.message[0].texts[0].value
-        : '',
-  };
-
   const {
     handleSubmit,
     register,
+    setValue,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(storyReplyValidationSchema),
-    defaultValues,
   });
 
   const storyReplySubmitHandler = (data) => {
@@ -64,6 +49,17 @@ function StoryRepliesPage() {
       dispatch(addStoryReplies(user?.user?.pages[0].id, form));
     }
   };
+
+  useEffect(() => {
+    if (
+      replies?.message &&
+      replies?.message?.length > 0 &&
+      replies?.message[0].texts?.length > 0
+    ) {
+      setValue('heading', replies.message[0].question);
+      setValue('reply', replies.message[0].texts[0].value);
+    }
+  }, [replies]);
 
   useEffect(() => {
     if (user && user.user && user?.user?.pages?.length > 0) {
