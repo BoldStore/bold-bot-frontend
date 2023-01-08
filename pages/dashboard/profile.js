@@ -1,23 +1,23 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect } from "react";
-import DashboardSidebar from "../../components/DashboardComponents/DashboardSidebar";
-import ProfileCard from "../../components/DashboardComponents/ProfileCard";
-import ConnectedPages from "../../components/DashboardComponents/ProfileComponents/ConnectedPages";
-import Plan from "../../components/Plan";
-import FAQs from "../../components/FAQs";
-import styles from "../../styles/Profile.module.css";
-import SEO from "../../components/SEO";
-import { useDispatch, useSelector } from "react-redux";
-import { getUser } from "../../store/actions/user";
-import Link from "next/link";
-import DashboardButton from "../../components/DashboardComponents/DashboardButton";
+import React, { useEffect } from 'react';
+import DashboardSidebar from '../../components/DashboardComponents/DashboardSidebar';
+import ProfileCard from '../../components/DashboardComponents/ProfileCard';
+import ConnectedPages from '../../components/DashboardComponents/ProfileComponents/ConnectedPages';
+import Plan from '../../components/Plan';
+import FAQs from '../../components/FAQs';
+import styles from '../../styles/Profile.module.css';
+import SEO from '../../components/SEO';
+import { useDispatch, useSelector } from 'react-redux';
+import { getUser } from '../../store/actions/user';
+import Link from 'next/link';
+import DashboardButton from '../../components/DashboardComponents/DashboardButton';
 import {
   CLIENT_ID,
   FACEBOOK_AUTH_URL,
   REDIRECT_URI,
   SCOPE,
-} from "../../constants";
-import { useRouter } from "next/router";
+} from '../../constants';
+import { useRouter } from 'next/router';
 
 function ProfilePage() {
   const router = useRouter();
@@ -36,7 +36,7 @@ function ProfilePage() {
 
   return (
     <div className={styles.pageDiv}>
-      <SEO title={"Profile"} />
+      <SEO title={'Profile'} />
       <DashboardSidebar />
       <div className={styles.container}>
         <ProfileCard />
@@ -45,7 +45,7 @@ function ProfilePage() {
         ) : (
           <>
             <h6>No pages connected</h6>
-            <DashboardButton onClick={connectPage} text="Connect Page" />
+            <DashboardButton onClick={connectPage} text='Connect Page' />
           </>
         )}
         <h4 className={styles.heading4}>My Plan</h4>
@@ -58,11 +58,10 @@ function ProfilePage() {
             noButton={true}
           />
         ) : (
-          <Link href="/dashboard">
+          <Link href='/dashboard'>
             <p className={styles.link}>Click Here To Buy A Plan.</p>
           </Link>
         )}
-        <FAQs />
       </div>
     </div>
   );
