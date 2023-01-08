@@ -102,13 +102,11 @@ function PersistentMenu() {
           starting over but also the choice to introduce other points of
           interest.
         </p>
-        <div>
-          {/* <img
-            src="/assets/persistentMenuExample.png"
-            alt="example"
-            className={styles.img}
-          /> */}
-        </div>
+        <img
+          src='/assets/persistentMenuExample.png'
+          alt='example'
+          className={styles.img}
+        />
         <form onSubmit={handleSubmit(persistentMenuSubmitHandler)}>
           {persistentMenu.map((item) => (
             <SecondaryInputComponent
