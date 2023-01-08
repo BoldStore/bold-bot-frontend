@@ -52,7 +52,6 @@ function PersistentMenu() {
   });
 
   const persistentMenuSubmitHandler = (data) => {
-    console.log('data', data);
     const form = [
       {
         question: data.menuOption1Heading,
@@ -77,8 +76,6 @@ function PersistentMenu() {
       url: data.webDataUrl,
       title: data.webDataTitle,
     };
-    console.log('form', form);
-    console.log('web data', web_data);
     if (user && user.user && user?.user?.pages?.length > 0) {
       dispatch(addMenu(user?.user?.pages[0]?.id, form, web_data));
     }
