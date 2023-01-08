@@ -16,7 +16,7 @@ export const persistentMenu = [
     fieldName2: 'menuOption2Reply',
   },
   {
-    title: 'Website Link',
+    title: 'Store Link',
     placeholderHeading: 'Ex: Visit Our Website',
     placeholderReply: 'Ex: https://www.boldbot.in/',
     key: 'storeLink',

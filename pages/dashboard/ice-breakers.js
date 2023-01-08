@@ -130,13 +130,11 @@ function IceBreakerPage() {
           repetitive questions by introducing standardised texts which answer
           frequently asked questions.
         </p>
-        <div>
-          {/* <img
-            src="/assets/iceBreakerExample.png"
-            alt="example"
-            className={styles.img}
-          /> */}
-        </div>
+        <img
+          src='/assets/iceBreakerExample.png'
+          alt='example'
+          className={styles.img}
+        />
         <form onSubmit={handleSubmit(iceBreakersSubmitHandler)}>
           {iceBreakersList.map((item) => (
             <SecondaryInputComponent
