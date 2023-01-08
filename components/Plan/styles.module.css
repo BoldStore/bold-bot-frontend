@@ -13,6 +13,8 @@
 .container h5 {
   margin: 0;
   color: var(--black);
+  font-weight: 500;
+  margin-top: 0rem;
 }
 
 .container p {
@@ -27,11 +29,6 @@
 
 .priceContainer p {
   color: var(--white);
-}
-
-.container h5 {
-  font-weight: 500;
-  margin-top: 0rem;
 }
 
 .container:hover {
