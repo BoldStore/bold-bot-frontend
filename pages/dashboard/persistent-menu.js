@@ -19,36 +19,13 @@ function PersistentMenu() {
   const menuState = useSelector((state) => state.menu);
   const user = useSelector((state) => state.user);
 
-  const defaultValues = {
-    menuOption1Heading:
-      menuState.menu?.texts?.length > 0 ? menuState?.menu[0]?.question : '',
-    menuOption1Reply:
-      menuState.menu?.texts?.length > 0
-        ? menuState?.menu[0]?.texts[0]?.value
-        : '',
-    menuOption2Heading:
-      menuState.menu?.texts?.length > 0 ? menuState?.menu[1]?.question : '',
-    menuOption2Reply:
-      menuState.menu?.texts?.length > 0
-        ? menuState?.menu[1]?.texts[0]?.value
-        : '',
-    webDataUrl:
-      menuState?.web_data && menuState?.web_data?.texts?.length > 0
-        ? menuState?.web_data?.texts[0]?.key
-        : '',
-    webDataTitle:
-      menuState?.web_data && menuState?.web_data?.texts?.length > 0
-        ? menuState?.web_data?.texts[0]?.value
-        : '',
-  };
-
   const {
     handleSubmit,
     register,
+    setValue,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(persistentMenuValidationSchema),
-    defaultValues,
   });
 
   const persistentMenuSubmitHandler = (data) => {
@@ -82,13 +59,30 @@ function PersistentMenu() {
   };
 
   useEffect(() => {
+    if (
+      menuState?.menu?.length &&
+      menuState.menu[0]?.texts?.length &&
+      menuState.menu[1]?.texts?.length
+    ) {
+      setValue('menuOption1Heading', menuState?.menu[0]?.question);
+      setValue('menuOption1Reply', menuState?.menu[0]?.texts[0]?.value);
+      setValue('menuOption2Heading', menuState?.menu[1]?.question);
+      setValue('menuOption2Reply', menuState?.menu[1]?.texts[0]?.value);
+    }
+    if (menuState?.web_data && menuState?.web_data?.texts?.length) {
+      setValue('webDataTitle', menuState?.web_data?.texts[0]?.key);
+      setValue('webDataUrl', menuState?.web_data?.texts[0]?.value);
+    }
+  }, [menuState]);
+
+  useEffect(() => {
     if (user?.user && user?.user?.pages?.length > 0) {
       dispatch(getMenu(user?.user?.pages[0]?.id));
     }
   }, [user?.user]);
 
   if (menuState?.isLoading) {
-    <Loader />;
+    return <Loader />;
   }
 
   return (
@@ -130,7 +124,7 @@ function PersistentMenu() {
               isLink={item.title === 'Website Link'}
             />
           ))}
-          <DashboardButton text={menuState.isLoading ? 'Loading...' : 'Save'} />
+          <DashboardButton text={'Save'} />
         </form>
       </div>
     </div>
