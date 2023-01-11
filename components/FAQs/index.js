@@ -15,14 +15,13 @@ function FAQs() {
   };
   return (
     <div className={styles.container}>
-      <h4>FAQs</h4>
+      <h3>FAQs</h3>
       <div>
         {faqs.map((item) => (
           <Accordion
             className={styles.accordion}
             key={item.heading}
             sx={AccordionStyle}
-            elevation={0.25}
           >
             <AccordionSummary
               expandIcon={<ExpandMoreRoundedIcon className={styles.icon} />}
