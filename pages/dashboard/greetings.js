@@ -19,13 +19,19 @@ function GreetingsPage() {
   const user = useSelector((state) => state.user);
   const greeting = useSelector((state) => state.greeting);
 
+  const defaultValues = {
+    introduction: greeting?.message?.texts[0]?.value ?? '',
+    welcome: greeting?.message?.texts[1]?.value ?? '',
+  };
+
   const {
     handleSubmit,
     register,
     formState: { errors },
-    setValue,
+    reset,
   } = useForm({
     resolver: yupResolver(greetingValidationSchema),
+    defaultValues,
   });
 
   const submitGreetingsHandler = (data) => {
@@ -46,8 +52,7 @@ function GreetingsPage() {
 
   useEffect(() => {
     if (greeting?.message && greeting?.message?.texts?.length) {
-      setValue('introduction', greeting?.message?.texts[0]?.value);
-      setValue('welcome', greeting?.message?.texts[1]?.value);
+      reset(defaultValues);
     }
   }, [greeting]);
 
