@@ -51,9 +51,7 @@ function GreetingsPage() {
   };
 
   useEffect(() => {
-    if (greeting?.message && greeting?.message?.texts?.length) {
-      reset(defaultValues);
-    }
+    reset(defaultValues);
   }, [greeting]);
 
   useEffect(() => {
